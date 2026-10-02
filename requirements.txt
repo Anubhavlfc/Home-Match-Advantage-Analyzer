@@ -1,0 +1,22 @@
+# Core data stack
+pandas>=2.2
+numpy>=1.26
+pyyaml>=6.0
+requests>=2.31
+
+# Statistics and machine learning (Phases 5-6)
+scipy>=1.11
+statsmodels>=0.14
+scikit-learn>=1.4
+
+# Visualization and dashboard (Phases 4 and 7)
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.20
+streamlit>=1.35
+
+# Notebooks
+jupyter>=1.0
+
+# Testing
+pytest>=8.0
