@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data: raw/interim/processed are reproducible from the pipeline and are not
+# committed. Source manifests and curated reference tables ARE committed.
+data/raw/**
+!data/raw/.gitkeep
+!data/raw/_manifest.jsonl
+data/interim/**
+!data/interim/.gitkeep
+data/processed/**
+!data/processed/.gitkeep
+
+# Generated reports
+reports/data_quality/*.csv
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
