@@ -1,0 +1,17 @@
+specification,term,coef,p_value,odds_ratio,or_ci_lo,or_ci_hi,n,pseudo_r2,sd_of_raw_variable
+without match statistics,const,-0.217773,3.41542e-06,0.804308,0.733681,0.881733,7579,0.105189,
+without match statistics,z_strength_difference,0.848505,8.4379e-126,2.33615,2.17885,2.50481,7579,0.105189,189.916
+without match statistics,behind_closed_doors,-0.279008,0.000529318,0.756534,0.646097,0.885849,7579,0.105189,
+without match statistics,restricted,-0.261117,0.256818,0.77019,0.490443,1.2095,7579,0.105189,
+without match statistics,la_liga,0.0501551,0.340742,1.05143,0.948354,1.16572,7579,0.105189,
+with match statistics,const,-0.255913,9.60026e-06,0.774209,0.69126,0.867112,7579,0.278376,
+with match statistics,z_strength_difference,0.820792,7.19701e-76,2.2723,2.08239,2.47953,7579,0.278376,189.916
+with match statistics,z_shots_on_target_diff,1.60867,1.01417e-199,4.99618,4.50012,5.54691,7579,0.278376,3.66796
+with match statistics,z_shots_diff,-0.542024,6.56401e-16,0.58157,0.509906,0.663306,7579,0.278376,8.33464
+with match statistics,z_corners_diff,-0.552262,1.98827e-50,0.575646,0.535399,0.618919,7579,0.278376,4.51856
+with match statistics,z_fouls_diff,0.122858,0.000774347,1.13072,1.05257,1.21469,7579,0.278376,5.25827
+with match statistics,z_yellow_cards_diff,-0.0151635,0.635028,0.984951,0.925171,1.04859,7579,0.278376,1.79363
+with match statistics,z_red_cards_diff,-0.282604,5.47663e-21,0.753818,0.710681,0.799574,7579,0.278376,0.412481
+with match statistics,behind_closed_doors,-0.333111,0.000267507,0.716691,0.599156,0.857283,7579,0.278376,
+with match statistics,restricted,-0.380338,0.122817,0.683631,0.421711,1.10823,7579,0.278376,
+with match statistics,la_liga,-0.000233823,0.997254,0.999766,0.875137,1.14214,7579,0.278376,

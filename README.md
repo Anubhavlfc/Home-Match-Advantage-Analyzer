@@ -110,6 +110,10 @@ python -m src.analysis.eda
 # Statistical tests and models -> reports/tables/stats_*.csv (write-up: reports/statistics.md)
 python -m src.analysis.stats
 
+# Models -> reports/tables/ml_*.csv (write-up: reports/ml.md)
+python -m src.models.logistic_model
+python -m src.models.clustering
+
 # Or one competition-season (EPL, LALIGA, UCL)
 python -m src.pipeline --competition UCL --season 2020/21
 

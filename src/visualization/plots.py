@@ -465,3 +465,165 @@ def make_stats_figures(out: dict[str, pd.DataFrame]) -> list[Path]:
         fig_stats_factors(out["coefficients"]),
         fig_stats_clubs(out["clubs_shrunk"]),
     ]
+
+
+# ---------------------------------------------------------------------------
+# Phase 6: models
+# ---------------------------------------------------------------------------
+def _or_forest(ax, rows, table, term_col="term"):
+    t = table.set_index(term_col)
+    for i, (term, label) in enumerate(rows):
+        r = t.loc[term]
+        sig = r["or_ci_lo"] > 1 or r["or_ci_hi"] < 1
+        color = COMP_COLORS["EPL"] if sig else MUTED
+        _dot_ci(ax, i, r["odds_ratio"], r["or_ci_lo"], r["or_ci_hi"], color, size=50)
+        ax.text(max(r["or_ci_hi"], 1.0), i, f"  {r['odds_ratio']:.2f}", va="center", fontsize=8.5, color=INK_2)
+    ax.axvline(1.0, color=AXIS, linewidth=1.2)
+    ax.set_xscale("log")
+    ax.minorticks_off()
+    ax.set_yticks(range(len(rows)), [r[1] for r in rows])
+    ax.invert_yaxis()
+    ax.grid(axis="y", visible=False)
+
+
+def fig_model_a_effects(coef: pd.DataFrame) -> Path:
+    rows = [
+        ("strength_difference", "Elo difference (+1 SD)"),
+        ("home_form", "Home form, last 5 (+1 SD)"),
+        ("away_form", "Away form, last 5 (+1 SD)"),
+        ("home_rest_days", "Home rest days (+1 SD)"),
+        ("away_rest_days", "Away rest days (+1 SD)"),
+        ("log_travel_km", "Away travel, log km (+1 SD)"),
+        ("crowd_status_restricted", "Restricted crowd (vs normal)"),
+        ("crowd_status_behind_closed_doors", "Behind closed doors (vs normal)"),
+        ("competition_LALIGA", "La Liga (vs Premier League)"),
+        ("competition_UCL", "Champions League (vs Premier League)"),
+        ("knockout_match", "UCL knockout match"),
+        ("neutral_venue", "Neutral venue"),
+    ]
+    fig, ax = plt.subplots(figsize=(8.5, 4.8))
+    _or_forest(ax, rows, coef)
+    ax.set_xticks([0.25, 0.5, 1, 2, 3], ["0.25", "0.5", "1", "2", "3"])
+    ax.set_xlabel("Odds ratio for a home win (log scale)")
+    _title(fig, "Model A: before kick-off, team strength is what predicts a home win",
+           "Unpenalised logit on the training seasons, club-clustered 95% intervals. Blue = interval excludes 1. "
+           "Associations, not causal effects.")
+    return _save(fig, "ml_model_a_effects")
+
+
+def fig_model_a_performance(pred: pd.DataFrame, calibration: pd.DataFrame) -> Path:
+    from sklearn.metrics import roc_auc_score, roc_curve
+
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.6))
+    ax = axes[0]
+    ax.plot([0, 1], [0, 1], color=AXIS, linewidth=1.2, linestyle=(0, (3, 3)))
+    for col, label, color in (("p_model_a", "Model A", COMP_COLORS["EPL"]), ("p_elo_only", "Elo difference only", MUTED)):
+        fpr, tpr, _ = roc_curve(pred["home_win"], pred[col])
+        auc = roc_auc_score(pred["home_win"], pred[col])
+        ax.plot(fpr, tpr, color=color, label=f"{label} (AUC {auc:.3f})")
+    ax.set_xlabel("False positive rate")
+    ax.set_ylabel("True positive rate")
+    ax.set_title("ROC curve, test seasons", fontsize=10)
+    ax.legend(loc="lower right")
+    ax.set_aspect("equal")
+    ax = axes[1]
+    ax.plot([0, 1], [0, 1], color=AXIS, linewidth=1.2, linestyle=(0, (3, 3)))
+    ax.plot(calibration["mean_predicted"], calibration["observed"], color=COMP_COLORS["EPL"], marker="o",
+            markersize=6, markeredgecolor=SURFACE, markeredgewidth=1.5)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.set_aspect("equal")
+    ax.set_xlabel("Predicted home-win probability (decile mean)")
+    ax.set_ylabel("Observed home-win rate")
+    ax.set_title("Calibration, test seasons", fontsize=10)
+    _title(fig, "Model A is well calibrated but adds little over Elo alone",
+           f"Scored once on 2024/25 and 2025/26 ({len(pred):,} matches) after tuning on 2023/24.")
+    return _save(fig, "ml_model_a_performance")
+
+
+def fig_model_b(coef: pd.DataFrame) -> Path:
+    c = coef[coef["specification"] == "with match statistics"]
+    rows = [
+        ("z_strength_difference", "Elo difference (+1 SD)"),
+        ("z_shots_on_target_diff", "Shots on target, home minus away (+1 SD)"),
+        ("z_shots_diff", "Shots, home minus away (+1 SD)"),
+        ("z_corners_diff", "Corners, home minus away (+1 SD)"),
+        ("z_fouls_diff", "Fouls, home minus away (+1 SD)"),
+        ("z_yellow_cards_diff", "Yellow cards, home minus away (+1 SD)"),
+        ("z_red_cards_diff", "Red cards, home minus away (+1 SD)"),
+        ("behind_closed_doors", "Behind closed doors (vs normal)"),
+    ]
+    fig, ax = plt.subplots(figsize=(8.5, 4.0))
+    _or_forest(ax, rows, c)
+    ax.set_xticks([0.5, 1, 2, 5], ["0.5", "1", "2", "5"])
+    ax.set_xlabel("Odds ratio for a home win (log scale)")
+    _title(fig, "Model B: shots on target explain results; closed doors still matter after them",
+           "Explanatory logit, EPL and La Liga, in-match statistics (not usable for prediction). "
+           "Club-clustered 95% intervals.")
+    return _save(fig, "ml_model_b")
+
+
+def make_model_figures(out: dict) -> list[Path]:
+    return [
+        fig_model_a_effects(out["inference_coefficients"]),
+        fig_model_a_performance(out["test_predictions"], out["calibration"]),
+        fig_model_b(out["model_b_coefficients"]),
+    ]
+
+
+CLUSTER_COLORS = ["#2a78d6", "#eb6834", "#1baf7a"]
+
+
+def fig_cluster_selection(out: dict) -> Path:
+    fig, axes = plt.subplots(1, 2, figsize=(11, 3.8))
+    specs = (("main", "All nine features", INK_2), ("gap_only", "Home-away gap features only", COMP_COLORS["EPL"]))
+    for spec, label, color in specs:
+        s = out[spec]["scores"]
+        axes[0].plot(s["k"], s["inertia"] / s["inertia"].iloc[0], color=color, marker="o", markersize=6,
+                     markeredgecolor=SURFACE, markeredgewidth=1.5, label=label)
+        axes[1].plot(s["k"], s["silhouette"], color=color, marker="o", markersize=6, markeredgecolor=SURFACE,
+                     markeredgewidth=1.5, label=label)
+        k = out[spec]["k"]
+        axes[1].scatter([k], s.loc[s["k"] == k, "silhouette"], s=160, facecolor="none", edgecolor=color, linewidth=1.5)
+    axes[0].set_title("Elbow: inertia relative to k = 2", fontsize=10)
+    axes[1].set_title("Silhouette score (ringed = chosen k)", fontsize=10)
+    for ax in axes:
+        ax.set_xlabel("Number of clusters (k)")
+        ax.grid(axis="x", visible=False)
+    axes[0].legend(loc="upper right")
+    _title(fig, "Both specifications point to two clusters",
+           "K-Means on standardised club features, 45 clubs. No clear elbow; silhouette peaks at k = 2.")
+    return _save(fig, "ml_cluster_selection")
+
+
+def fig_cluster_pca(out: dict, names: dict[str, list[str]]) -> Path:
+    fig, axes = plt.subplots(1, 2, figsize=(13, 5.2))
+    titles = {"main": "All nine features", "gap_only": "Home-away gap features only"}
+    for ax, spec in zip(axes, ("main", "gap_only")):
+        res = out[spec]
+        t = res["teams"]
+        for c in sorted(t["cluster"].unique()):
+            d = t[t["cluster"] == c]
+            ax.scatter(d["pc1"], d["pc2"], s=48, color=CLUSTER_COLORS[c], edgecolor=SURFACE, linewidth=1.5,
+                       label=f"{names[spec][c]} ({len(d)})", zorder=3)
+        # Label only the clubs at the edges of the projection to keep it legible.
+        edge = set(t.nlargest(4, "pc1").index) | set(t.nsmallest(4, "pc1").index) | \
+            set(t.nlargest(2, "pc2").index) | set(t.nsmallest(2, "pc2").index)
+        for i in edge:
+            r = t.loc[i]
+            ax.annotate(r["team"], (r["pc1"], r["pc2"]), fontsize=7.5, color=INK_2, xytext=(4, 3),
+                        textcoords="offset points")
+        ev = res["pca_explained"]
+        ax.set_xlabel(f"PC1 ({ev[0]:.0%} of variance)")
+        ax.set_ylabel(f"PC2 ({ev[1]:.0%})")
+        ax.set_title(titles[spec], fontsize=10)
+        ax.legend(loc="upper left", bbox_to_anchor=(0, -0.12), ncol=2)
+    _title(fig, "Club clusters split mainly along one axis",
+           "PCA projection for display only; clustering ran on all standardised features. League matches with normal crowds.")
+    return _save(fig, "ml_cluster_pca")
+
+
+def make_cluster_figures(out: dict) -> list[Path]:
+    names = {"main": ["Strong home sides", "Modest home sides"],
+             "gap_only": ["Larger home-away gap", "Smaller home-away gap"]}
+    return [fig_cluster_selection(out), fig_cluster_pca(out, names)]
