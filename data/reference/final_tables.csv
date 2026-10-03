@@ -1,21 +1,401 @@
-competition,season,team,played,won,drawn,lost,goals_for,goals_against,points,source,accessed
-EPL,2016/17,Chelsea,38,30,3,5,85,33,93,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Tottenham Hotspur,38,26,8,4,86,26,86,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Manchester City,38,23,9,6,80,39,78,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Liverpool,38,22,10,6,78,42,76,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Arsenal,38,23,6,9,77,44,75,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Manchester United,38,18,15,5,54,29,69,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Everton,38,17,10,11,62,44,61,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Southampton,38,12,10,16,41,48,46,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Bournemouth,38,12,10,16,55,67,46,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,West Bromwich Albion,38,12,9,17,43,51,45,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,West Ham United,38,12,9,17,47,64,45,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Leicester City,38,12,8,18,48,63,44,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Stoke City,38,11,11,16,41,56,44,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Crystal Palace,38,12,5,21,50,63,41,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Swansea City,38,12,5,21,45,70,41,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Burnley,38,11,7,20,39,55,40,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Watford,38,11,7,20,40,68,40,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Hull City,38,9,7,22,37,80,34,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Middlesbrough,38,5,13,20,27,53,28,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
-EPL,2016/17,Sunderland,38,6,6,26,29,69,24,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+competition,season,team,played,won,drawn,lost,goals_for,goals_against,points,points_deduction,source,accessed
+EPL,2016/17,Chelsea,38,30,3,5,85,33,93,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Tottenham Hotspur,38,26,8,4,86,26,86,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Manchester City,38,23,9,6,80,39,78,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Liverpool,38,22,10,6,78,42,76,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Arsenal,38,23,6,9,77,44,75,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Manchester United,38,18,15,5,54,29,69,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Everton,38,17,10,11,62,44,61,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Southampton,38,12,10,16,41,48,46,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Bournemouth,38,12,10,16,55,67,46,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,West Bromwich Albion,38,12,9,17,43,51,45,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,West Ham United,38,12,9,17,47,64,45,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Leicester City,38,12,8,18,48,63,44,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Stoke City,38,11,11,16,41,56,44,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Crystal Palace,38,12,5,21,50,63,41,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Swansea City,38,12,5,21,45,70,41,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Burnley,38,11,7,20,39,55,40,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Watford,38,11,7,20,40,68,40,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Hull City,38,9,7,22,37,80,34,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Middlesbrough,38,5,13,20,27,53,28,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2016/17,Sunderland,38,6,6,26,29,69,24,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_Premier_League,2026-10-02
+EPL,2017/18,Manchester City,38,32,4,2,106,27,100,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Manchester United,38,25,6,7,68,28,81,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Tottenham Hotspur,38,23,8,7,74,36,77,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Liverpool,38,21,12,5,84,38,75,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Chelsea,38,21,7,10,62,38,70,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Arsenal,38,19,6,13,74,51,63,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Burnley,38,14,12,12,36,39,54,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Everton,38,13,10,15,44,58,49,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Leicester City,38,12,11,15,56,60,47,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Newcastle United,38,12,8,18,39,47,44,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Crystal Palace,38,11,11,16,45,55,44,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Bournemouth,38,11,11,16,45,61,44,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,West Ham United,38,10,12,16,48,68,42,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Watford,38,11,8,19,44,64,41,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Brighton & Hove Albion,38,9,13,16,34,54,40,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Huddersfield Town,38,9,10,19,28,58,37,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Southampton,38,7,15,16,37,56,36,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Swansea City,38,8,9,21,28,56,33,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,Stoke City,38,7,12,19,35,68,33,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2017/18,West Bromwich Albion,38,6,13,19,31,56,31,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_Premier_League,2026-10-03
+EPL,2018/19,Manchester City,38,32,2,4,95,23,98,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Liverpool,38,30,7,1,89,22,97,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Chelsea,38,21,9,8,63,39,72,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Tottenham Hotspur,38,23,2,13,67,39,71,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Arsenal,38,21,7,10,73,51,70,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Manchester United,38,19,9,10,65,54,66,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Wolverhampton Wanderers,38,16,9,13,47,46,57,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Everton,38,15,9,14,54,46,54,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Leicester City,38,15,7,16,51,48,52,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,West Ham United,38,15,7,16,52,55,52,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Watford,38,14,8,16,52,59,50,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Crystal Palace,38,14,7,17,51,53,49,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Newcastle United,38,12,9,17,42,48,45,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Bournemouth,38,13,6,19,56,70,45,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Burnley,38,11,7,20,45,68,40,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Southampton,38,9,12,17,45,65,39,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Brighton & Hove Albion,38,9,9,20,35,60,36,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Cardiff City,38,10,4,24,34,69,34,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Fulham,38,7,5,26,34,81,26,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2018/19,Huddersfield Town,38,3,7,28,22,76,16,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_Premier_League,2026-10-03
+EPL,2019/20,Liverpool,38,32,3,3,85,33,99,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Manchester City,38,26,3,9,102,35,81,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Manchester United,38,18,12,8,66,36,66,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Chelsea,38,20,6,12,69,54,66,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Leicester City,38,18,8,12,67,41,62,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Tottenham Hotspur,38,16,11,11,61,47,59,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Wolverhampton Wanderers,38,15,14,9,51,40,59,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Arsenal,38,14,14,10,56,48,56,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Sheffield United,38,14,12,12,39,39,54,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Burnley,38,15,9,14,43,50,54,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Southampton,38,15,7,16,51,60,52,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Everton,38,13,10,15,44,56,49,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Newcastle United,38,11,11,16,38,58,44,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Crystal Palace,38,11,10,17,31,50,43,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Brighton & Hove Albion,38,9,14,15,39,54,41,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,West Ham United,38,10,9,19,49,62,39,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Aston Villa,38,9,8,21,41,67,35,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Bournemouth,38,9,7,22,40,65,34,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Watford,38,8,10,20,36,64,34,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2019/20,Norwich City,38,5,6,27,26,75,21,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_Premier_League,2026-10-03
+EPL,2020/21,Manchester City,38,27,5,6,83,32,86,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Manchester United,38,21,11,6,73,44,74,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Liverpool,38,20,9,9,68,42,69,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Chelsea,38,19,10,9,58,36,67,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Leicester City,38,20,6,12,68,50,66,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,West Ham United,38,19,8,11,62,47,65,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Tottenham Hotspur,38,18,8,12,68,45,62,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Arsenal,38,18,7,13,55,39,61,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Leeds United,38,18,5,15,62,54,59,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Everton,38,17,8,13,47,48,59,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Aston Villa,38,16,7,15,55,46,55,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Newcastle United,38,12,9,17,46,62,45,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Wolverhampton Wanderers,38,12,9,17,36,52,45,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Crystal Palace,38,12,8,18,41,66,44,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Southampton,38,12,7,19,47,68,43,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Brighton & Hove Albion,38,9,14,15,40,46,41,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Burnley,38,10,9,19,33,55,39,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Fulham,38,5,13,20,27,53,28,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,West Bromwich Albion,38,5,11,22,35,76,26,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2020/21,Sheffield United,38,7,2,29,20,63,23,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League,2026-10-03
+EPL,2021/22,Manchester City,38,29,6,3,99,26,93,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Liverpool,38,28,8,2,94,26,92,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Chelsea,38,21,11,6,76,33,74,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Tottenham Hotspur,38,22,5,11,69,40,71,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Arsenal,38,22,3,13,61,48,69,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Manchester United,38,16,10,12,57,57,58,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,West Ham United,38,16,8,14,60,51,56,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Leicester City,38,14,10,14,62,59,52,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Brighton & Hove Albion,38,12,15,11,42,44,51,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Wolverhampton Wanderers,38,15,6,17,38,43,51,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Newcastle United,38,13,10,15,44,62,49,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Crystal Palace,38,11,15,12,50,46,48,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Brentford,38,13,7,18,48,56,46,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Aston Villa,38,13,6,19,52,54,45,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Southampton,38,9,13,16,43,67,40,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Everton,38,11,6,21,43,66,39,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Leeds United,38,9,11,18,42,79,38,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Burnley,38,7,14,17,34,53,35,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Watford,38,6,5,27,34,77,23,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2021/22,Norwich City,38,5,7,26,23,84,22,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League,2026-10-03
+EPL,2022/23,Manchester City,38,28,5,5,94,33,89,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Arsenal,38,26,6,6,88,43,84,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Manchester United,38,23,6,9,58,43,75,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Newcastle United,38,19,14,5,68,33,71,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Liverpool,38,19,10,9,75,47,67,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Brighton & Hove Albion,38,18,8,12,72,53,62,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Aston Villa,38,18,7,13,51,46,61,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Tottenham Hotspur,38,18,6,14,70,63,60,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Brentford,38,15,14,9,58,46,59,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Fulham,38,15,7,16,55,53,52,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Crystal Palace,38,11,12,15,40,49,45,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Chelsea,38,11,11,16,38,47,44,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Wolverhampton Wanderers,38,11,8,19,31,58,41,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,West Ham United,38,11,7,20,42,55,40,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Bournemouth,38,11,6,21,37,71,39,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Nottingham Forest,38,9,11,18,38,68,38,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Everton,38,8,12,18,34,57,36,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Leicester City,38,9,7,22,51,68,34,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Leeds United,38,7,10,21,48,78,31,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2022/23,Southampton,38,6,7,25,36,73,25,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_Premier_League,2026-10-03
+EPL,2023/24,Manchester City,38,28,7,3,96,34,91,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Arsenal,38,28,5,5,91,29,89,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Liverpool,38,24,10,4,86,41,82,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Aston Villa,38,20,8,10,76,61,68,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Tottenham Hotspur,38,20,6,12,74,61,66,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Chelsea,38,18,9,11,77,63,63,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Newcastle United,38,18,6,14,85,62,60,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Manchester United,38,18,6,14,57,58,60,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,West Ham United,38,14,10,14,60,74,52,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Crystal Palace,38,13,10,15,57,58,49,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Brighton & Hove Albion,38,12,12,14,55,62,48,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Bournemouth,38,13,9,16,54,67,48,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Fulham,38,13,8,17,55,61,47,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Wolverhampton Wanderers,38,13,7,18,50,65,46,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Everton,38,13,9,16,40,51,40,8,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Brentford,38,10,9,19,56,65,39,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Nottingham Forest,38,9,9,20,49,67,32,4,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Luton Town,38,6,8,24,52,85,26,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Burnley,38,5,9,24,41,78,24,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2023/24,Sheffield United,38,3,7,28,35,104,16,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League,2026-10-03
+EPL,2024/25,Liverpool,38,25,9,4,86,41,84,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Arsenal,38,20,14,4,69,34,74,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Manchester City,38,21,8,9,72,44,71,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Chelsea,38,20,9,9,64,43,69,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Newcastle United,38,20,6,12,68,47,66,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Aston Villa,38,19,9,10,58,51,66,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Nottingham Forest,38,19,8,11,58,46,65,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Brighton & Hove Albion,38,16,13,9,66,59,61,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Bournemouth,38,15,11,12,58,46,56,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Brentford,38,16,8,14,66,57,56,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Fulham,38,15,9,14,54,54,54,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Crystal Palace,38,13,14,11,51,51,53,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Everton,38,11,15,12,42,44,48,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,West Ham United,38,11,10,17,46,62,43,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Manchester United,38,11,9,18,44,54,42,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Wolverhampton Wanderers,38,12,6,20,54,69,42,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Tottenham Hotspur,38,11,5,22,64,65,38,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Leicester City,38,6,7,25,33,80,25,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Ipswich Town,38,4,10,24,36,82,22,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2024/25,Southampton,38,2,6,30,26,86,12,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_Premier_League,2026-10-03
+EPL,2025/26,Arsenal,38,26,7,5,71,27,85,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Manchester City,38,23,9,6,77,35,78,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Manchester United,38,20,11,7,69,50,71,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Aston Villa,38,19,8,11,56,49,65,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Liverpool,38,17,9,12,63,53,60,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Bournemouth,38,13,18,7,58,54,57,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Sunderland,38,14,12,12,42,48,54,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Brighton & Hove Albion,38,14,11,13,52,46,53,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Brentford,38,14,11,13,55,52,53,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Chelsea,38,14,10,14,58,52,52,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Fulham,38,15,7,16,47,51,52,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Newcastle United,38,14,7,17,53,55,49,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Everton,38,13,10,15,47,50,49,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Leeds United,38,11,14,13,49,56,47,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Crystal Palace,38,11,12,15,41,51,45,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Nottingham Forest,38,11,11,16,48,51,44,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Tottenham Hotspur,38,10,11,17,48,57,41,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,West Ham United,38,10,9,19,46,65,39,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Burnley,38,4,10,24,38,75,22,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+EPL,2025/26,Wolverhampton Wanderers,38,3,11,24,27,68,20,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League,2026-10-03
+LALIGA,2016/17,Real Madrid,38,29,6,3,106,41,93,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Barcelona,38,28,6,4,116,37,90,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Atlético Madrid,38,23,9,6,70,27,78,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Sevilla,38,21,9,8,69,49,72,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Villarreal,38,19,10,9,56,33,67,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Real Sociedad,38,19,7,12,59,53,64,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Athletic Bilbao,38,19,6,13,53,43,63,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Espanyol,38,15,11,12,49,50,56,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Alavés,38,14,13,11,41,43,55,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Eibar,38,15,9,14,56,51,54,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Málaga,38,12,10,16,49,55,46,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Valencia,38,13,7,18,56,65,46,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Celta Vigo,38,13,6,19,53,69,45,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Las Palmas,38,10,9,19,53,74,39,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Real Betis,38,10,9,19,41,64,39,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Deportivo La Coruña,38,8,12,18,43,61,36,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Leganés,38,8,11,19,36,55,35,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Sporting Gijón,38,7,10,21,42,72,31,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Osasuna,38,4,10,24,40,94,22,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2016/17,Granada,38,4,8,26,30,82,20,0,https://en.wikipedia.org/wiki/2016%E2%80%9317_La_Liga,2026-10-03
+LALIGA,2017/18,Barcelona,38,28,9,1,99,29,93,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Atlético Madrid,38,23,10,5,58,22,79,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Real Madrid,38,22,10,6,94,44,76,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Valencia,38,22,7,9,65,38,73,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Villarreal,38,18,7,13,57,50,61,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Real Betis,38,18,6,14,60,61,60,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Sevilla,38,17,7,14,49,58,58,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Getafe,38,15,10,13,42,33,55,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Eibar,38,14,9,15,44,50,51,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Girona,38,14,9,15,50,59,51,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Espanyol,38,12,13,13,36,42,49,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Real Sociedad,38,14,7,17,66,59,49,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Celta Vigo,38,13,10,15,59,60,49,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Alavés,38,15,2,21,40,50,47,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Levante,38,11,13,14,44,58,46,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Athletic Bilbao,38,10,13,15,41,49,43,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Leganés,38,12,7,19,34,51,43,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Deportivo La Coruña,38,6,11,21,38,76,29,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Las Palmas,38,5,7,26,24,74,22,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2017/18,Málaga,38,5,5,28,24,61,20,0,https://en.wikipedia.org/wiki/2017%E2%80%9318_La_Liga,2026-10-03
+LALIGA,2018/19,Barcelona,38,26,9,3,90,36,87,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Atlético Madrid,38,22,10,6,55,29,76,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Real Madrid,38,21,5,12,63,46,68,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Valencia,38,15,16,7,51,35,61,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Getafe,38,15,14,9,48,35,59,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Sevilla,38,17,8,13,62,47,59,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Espanyol,38,14,11,13,48,50,53,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Athletic Bilbao,38,13,14,11,41,45,53,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Real Sociedad,38,13,11,14,45,46,50,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Real Betis,38,14,8,16,44,52,50,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Alavés,38,13,11,14,39,50,50,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Eibar,38,11,14,13,46,50,47,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Leganés,38,11,12,15,37,43,45,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Villarreal,38,10,14,14,49,52,44,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Levante,38,11,11,16,59,66,44,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Valladolid,38,10,11,17,32,51,41,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Celta Vigo,38,10,11,17,53,62,41,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Girona,38,9,10,19,37,53,37,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Huesca,38,7,12,19,43,65,33,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2018/19,Rayo Vallecano,38,8,8,22,41,70,32,0,https://en.wikipedia.org/wiki/2018%E2%80%9319_La_Liga,2026-10-03
+LALIGA,2019/20,Real Madrid,38,26,9,3,70,25,87,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Barcelona,38,25,7,6,86,38,82,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Atlético Madrid,38,18,16,4,51,27,70,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Sevilla,38,19,13,6,54,34,70,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Villarreal,38,18,6,14,63,49,60,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Real Sociedad,38,16,8,14,56,48,56,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Granada,38,16,8,14,52,45,56,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Getafe,38,14,12,12,43,37,54,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Valencia,38,14,11,13,46,53,53,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Osasuna,38,13,13,12,46,54,52,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Athletic Bilbao,38,13,12,13,41,38,51,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Levante,38,14,7,17,47,53,49,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Valladolid,38,9,15,14,32,43,42,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Eibar,38,11,9,18,39,56,42,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Real Betis,38,10,11,17,48,60,41,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Alavés,38,10,9,19,34,59,39,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Celta Vigo,38,7,16,15,37,49,37,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Leganés,38,8,12,18,30,51,36,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Mallorca,38,9,6,23,40,65,33,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2019/20,Espanyol,38,5,10,23,27,58,25,0,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga,2026-10-03
+LALIGA,2020/21,Atlético Madrid,38,26,8,4,67,25,86,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Real Madrid,38,25,9,4,67,28,84,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Barcelona,38,24,7,7,85,38,79,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Sevilla,38,24,5,9,53,33,77,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Real Sociedad,38,17,11,10,59,38,62,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Real Betis,38,17,10,11,50,50,61,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Villarreal,38,15,13,10,60,44,58,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Celta Vigo,38,14,11,13,55,57,53,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Granada,38,13,7,18,47,65,46,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Athletic Bilbao,38,11,13,14,46,42,46,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Osasuna,38,11,11,16,37,48,44,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Cádiz,38,11,11,16,36,58,44,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Valencia,38,10,13,15,50,53,43,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Levante,38,9,14,15,46,57,41,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Getafe,38,9,11,18,28,43,38,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Alavés,38,9,11,18,36,57,38,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Elche,38,8,12,18,34,55,36,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Huesca,38,7,13,18,34,53,34,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Valladolid,38,5,16,17,34,57,31,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2020/21,Eibar,38,6,12,20,29,52,30,0,https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga,2026-10-03
+LALIGA,2021/22,Real Madrid,38,26,8,4,80,31,86,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Barcelona,38,21,10,7,68,38,73,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Atlético Madrid,38,21,8,9,65,43,71,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Sevilla,38,18,16,4,53,30,70,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Real Betis,38,19,8,11,62,40,65,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Real Sociedad,38,17,11,10,40,37,62,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Villarreal,38,16,11,11,63,37,59,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Athletic Bilbao,38,14,13,11,43,36,55,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Valencia,38,11,15,12,48,53,48,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Osasuna,38,12,11,15,37,51,47,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Celta Vigo,38,12,10,16,43,43,46,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Rayo Vallecano,38,11,9,18,39,50,42,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Elche,38,11,9,18,40,52,42,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Espanyol,38,10,12,16,40,53,42,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Getafe,38,8,15,15,33,41,39,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Mallorca,38,10,9,19,36,63,39,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Cádiz,38,8,15,15,35,51,39,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Granada,38,8,14,16,44,61,38,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Levante,38,8,11,19,51,76,35,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2021/22,Alavés,38,8,7,23,31,65,31,0,https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga,2026-10-03
+LALIGA,2022/23,Barcelona,38,28,4,6,70,20,88,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Real Madrid,38,24,6,8,75,36,78,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Atlético Madrid,38,23,8,7,70,33,77,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Real Sociedad,38,21,8,9,51,35,71,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Villarreal,38,19,7,12,59,40,64,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Real Betis,38,17,9,12,46,41,60,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Osasuna,38,15,8,15,37,42,53,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Athletic Bilbao,38,14,9,15,47,43,51,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Mallorca,38,14,8,16,37,43,50,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Girona,38,13,10,15,58,55,49,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Rayo Vallecano,38,13,10,15,45,53,49,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Sevilla,38,13,10,15,47,54,49,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Celta Vigo,38,11,10,17,43,53,43,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Cádiz,38,10,12,16,30,53,42,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Getafe,38,10,12,16,34,45,42,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Valencia,38,11,9,18,42,45,42,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Almería,38,11,8,19,49,65,41,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Valladolid,38,11,7,20,33,63,40,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Espanyol,38,8,13,17,52,69,37,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2022/23,Elche,38,5,10,23,30,67,25,0,https://en.wikipedia.org/wiki/2022%E2%80%9323_La_Liga,2026-10-03
+LALIGA,2023/24,Real Madrid,38,29,8,1,87,26,95,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Barcelona,38,26,7,5,79,44,85,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Girona,38,25,6,7,85,46,81,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Atlético Madrid,38,24,4,10,70,43,76,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Athletic Bilbao,38,19,11,8,61,37,68,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Real Sociedad,38,16,12,10,51,39,60,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Real Betis,38,14,15,9,48,45,57,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Villarreal,38,14,11,13,65,65,53,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Valencia,38,13,10,15,40,45,49,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Alavés,38,12,10,16,36,46,46,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Osasuna,38,12,9,17,45,56,45,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Getafe,38,10,13,15,42,54,43,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Celta Vigo,38,10,11,17,46,57,41,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Sevilla,38,10,11,17,48,54,41,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Mallorca,38,8,16,14,33,44,40,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Las Palmas,38,10,10,18,33,47,40,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Rayo Vallecano,38,8,14,16,29,48,38,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Cádiz,38,6,15,17,26,55,33,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Almería,38,3,12,23,43,75,21,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2023/24,Granada,38,4,9,25,38,79,21,0,https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga,2026-10-03
+LALIGA,2024/25,Barcelona,38,28,4,6,102,39,88,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Real Madrid,38,26,6,6,78,38,84,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Atlético Madrid,38,22,10,6,68,30,76,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Athletic Bilbao,38,19,13,6,54,29,70,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Villarreal,38,20,10,8,71,51,70,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Real Betis,38,16,12,10,57,50,60,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Celta Vigo,38,16,7,15,59,57,55,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Rayo Vallecano,38,13,13,12,41,45,52,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Osasuna,38,12,16,10,48,52,52,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Mallorca,38,13,9,16,35,44,48,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Real Sociedad,38,13,7,18,35,46,46,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Valencia,38,11,13,14,44,54,46,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Getafe,38,11,9,18,34,39,42,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Espanyol,38,11,9,18,40,51,42,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Alavés,38,10,12,16,38,48,42,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Girona,38,11,8,19,44,60,41,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Sevilla,38,10,11,17,42,55,41,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Leganés,38,9,13,16,39,56,40,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Las Palmas,38,8,8,22,40,61,32,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2024/25,Valladolid,38,4,4,30,26,90,16,0,https://en.wikipedia.org/wiki/2024%E2%80%9325_La_Liga,2026-10-03
+LALIGA,2025/26,Barcelona,38,31,1,6,95,36,94,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Real Madrid,38,27,5,6,77,35,86,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Villarreal,38,22,6,10,72,46,72,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Atlético Madrid,38,21,6,11,62,44,69,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Real Betis,38,15,15,8,59,48,60,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Celta Vigo,38,14,12,12,53,48,54,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Getafe,38,15,6,17,32,38,51,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Rayo Vallecano,38,12,14,12,41,44,50,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Valencia,38,13,10,15,46,55,49,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Real Sociedad,38,11,13,14,59,61,46,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Espanyol,38,12,10,16,43,55,46,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Athletic Bilbao,38,13,6,19,43,58,45,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Sevilla,38,12,7,19,46,60,43,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Alavés,38,11,10,17,44,56,43,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Elche,38,10,13,15,49,57,43,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Levante,38,11,9,18,47,61,42,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Osasuna,38,11,9,18,44,50,42,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Mallorca,38,11,9,18,47,57,42,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Girona,38,9,14,15,39,55,41,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03
+LALIGA,2025/26,Real Oviedo,38,6,11,21,26,60,29,0,https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga,2026-10-03

@@ -119,6 +119,7 @@ class TeamNameNormalizer:
         aliases = aliases.drop_duplicates("key")
         self._name = dict(zip(aliases["key"], aliases["canonical_name"]))
         self._id = dict(zip(aliases["key"], aliases["team_id"]))
+        self._country = dict(zip(aliases["key"], aliases["country"])) if "country" in aliases else {}
 
     @classmethod
     def from_reference(cls, path: Path | None = None) -> "TeamNameNormalizer":
@@ -141,6 +142,11 @@ class TeamNameNormalizer:
     def team_id(self, names: pd.Series) -> pd.Series:
         self._check(names)
         return names.map(lambda n: self._id[self._key(n)]).astype("string")
+
+    def country(self, names: pd.Series) -> pd.Series:
+        """Country of the club's home ground (e.g. Wales for Swansea City)."""
+        self._check(names)
+        return names.map(lambda n: self._country.get(self._key(n)) or pd.NA).astype("string")
 
 
 # ---------------------------------------------------------------------------
@@ -284,7 +290,9 @@ def clean_football_data(
     # exceptions (e.g. relocated fixtures) are applied from reference data in
     # Phase 3; none exist in EPL 2016/17.
     out["neutral_venue"] = 0
-    out["country"] = comp["country"]
+    out["extra_time"] = 0
+    # Venue country = home club's country (Swansea and Cardiff play in Wales).
+    out["country"] = teams.country(raw["HomeTeam"])
 
     for src_col, dst_col in _FOOTBALL_DATA_COLUMNS.items():
         if src_col not in raw.columns:
@@ -294,6 +302,11 @@ def clean_football_data(
         else:
             out[dst_col] = raw[src_col].str.strip().replace("", pd.NA).astype("string")
 
+    out["match_id"] = build_match_id(out.assign(date=pd.to_datetime(out["date"])))
+    out = apply_stat_overrides(out)
+
+    out = apply_venue_exceptions(out)
+
     out["result"] = derive_result(out["home_goals"], out["away_goals"])
     if "FTR" in raw.columns:
         mismatch = raw["FTR"].notna() & (raw["FTR"].str.strip() != out["result"].fillna(""))
@@ -301,10 +314,84 @@ def clean_football_data(
             raise ValueError(f"Source FTR disagrees with goals on rows {raw.index[mismatch].tolist()}")
     out["home_points"], out["away_points"] = result_points(out["result"])
     out["source"] = source_id
-    out["match_id"] = build_match_id(out)
 
     out["date"] = pd.to_datetime(out["date"])
     return out[SILVER_COLUMNS].sort_values(["date", "home_team"]).reset_index(drop=True)
+
+
+def load_stat_overrides(path: Path | None = None) -> pd.DataFrame:
+    path = path or repo_path("reference") / "stat_overrides.csv"
+    if not Path(path).exists():
+        return pd.DataFrame(columns=["match_id", "column", "action", "reason"])
+    return pd.read_csv(path, dtype=str)
+
+
+def apply_stat_overrides(df: pd.DataFrame, overrides: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Blank source values that are logically impossible.
+
+    Only ``set_missing`` is supported: the correct value is unknown, so an
+    impossible one is replaced by <NA>, never by an estimate. Each override is
+    listed with its reason in ``data/reference/stat_overrides.csv``.
+    """
+    overrides = load_stat_overrides() if overrides is None else overrides
+    df = df.copy()
+    for o in overrides.itertuples():
+        if o.action != "set_missing":
+            raise ValueError(f"Unsupported override action {o.action!r}")
+        mask = df["match_id"] == o.match_id
+        if mask.any():
+            df.loc[mask, o.column] = pd.NA
+    return df
+
+
+def apply_venue_exceptions(df: pd.DataFrame, exceptions: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Record matches not played at the listed home team's usual ground.
+
+    Rows in ``data/reference/venue_exceptions.csv`` match on competition,
+    season, stage, home and away team, where ``*`` matches anything. Every
+    reference row must match at least one match, so a typo cannot silently
+    leave a final or relocated tie marked as a normal home game.
+    """
+    if exceptions is None:
+        exceptions = pd.read_csv(repo_path("reference") / "venue_exceptions.csv", dtype=str)
+    df = df.copy()
+    keys = ["competition", "season", "stage", "home_team", "away_team"]
+    exceptions = exceptions[
+        exceptions["competition"].isin(df["competition"].unique()) & exceptions["season"].isin(df["season"].unique())
+    ]
+    unmatched = []
+    for ex in exceptions.itertuples(index=False):
+        mask = pd.Series(True, index=df.index)
+        for k in keys:
+            v = getattr(ex, k)
+            if v != "*":
+                mask &= df[k] == v
+        if not mask.any():
+            unmatched.append(f"{ex.season} {ex.stage} {ex.home_team} v {ex.away_team}")
+            continue
+        df.loc[mask, ["stadium", "city", "country"]] = [ex.stadium, ex.city, ex.country]
+        df.loc[mask, "neutral_venue"] = int(ex.neutral_venue)
+        df.loc[mask, "venue_note"] = ex.reason
+    if unmatched:
+        raise ValueError(f"venue_exceptions.csv rows matched no match: {unmatched}")
+    return df
+
+
+def fill_kickoff_times(silver: pd.DataFrame, reference: pd.DataFrame) -> pd.DataFrame:
+    """Take kick-off times from an independent source where ours is missing.
+
+    Only used after the two sources agree on every fixture and score, and only
+    fills gaps; existing values are never overwritten.
+    """
+    if "kickoff_time" not in reference:
+        return silver
+    ref = reference.dropna(subset=["kickoff_time"]).drop_duplicates(["season", "home_team", "away_team"])
+    m = silver.merge(ref[["season", "home_team", "away_team", "kickoff_time"]], on=["season", "home_team", "away_team"],
+                     how="left", suffixes=("", "_ref"))
+    out = silver.copy()
+    fill = pd.Series(m["kickoff_time_ref"].values, index=out.index, dtype="string")
+    out["kickoff_time"] = out["kickoff_time"].fillna(fill)
+    return out
 
 
 def clean_openfootball_json(path: Path, competition: str, season: str, teams: TeamNameNormalizer) -> pd.DataFrame:
@@ -312,7 +399,9 @@ def clean_openfootball_json(path: Path, competition: str, season: str, teams: Te
     data = json.loads(Path(path).read_text(encoding="utf-8"))
     rows = []
     for m in data["matches"]:
-        ft = (m.get("score") or {}).get("ft")
+        score = m.get("score")
+        # Usually {"ft": [h, a], "ht": [...]}; some files give a bare [h, a].
+        ft = score.get("ft") if isinstance(score, dict) else score
         rows.append(
             {
                 "date": m["date"],
@@ -320,6 +409,7 @@ def clean_openfootball_json(path: Path, competition: str, season: str, teams: Te
                 "away_raw": m["team2"],
                 "home_goals": ft[0] if ft else pd.NA,
                 "away_goals": ft[1] if ft else pd.NA,
+                "kickoff_time": m.get("time"),
             }
         )
     df = pd.DataFrame(rows)

@@ -1,0 +1,11 @@
+name,passed,detail,severity
+row_count,True,"380 rows, expected 380",error
+unique_match_id,True,all unique,error
+no_duplicate_fixtures,True,none,error
+double_round_robin,True,20 teams; each with 19 home/19 away,error
+dates_in_season_window,True,2021-08-13 to 2022-05-22,error
+result_matches_goals,True,0 inconsistent,error
+logical_bounds,True,ok,error
+goals_exceed_shots_on_target,False,"6 matches: ['LALIGA_2122_20211128_cadiz_atletico-madrid', 'LALIGA_2122_20211205_rayo-vallecano_espanyol', 'LALIGA_2122_20220305_espanyol_getafe', 'LALIGA_2122_20220305_valencia_granada', 'LALIGA_2122_20220416_elche_mallorca', 'LALIGA_2122_20220511_osasuna_getafe']",warning
+scores_match_openfootball,True,380 matched; 0 missing from openfootball; 0 extra in openfootball; 0 score mismatches; 0 date differences (informational),error
+table_matches_published,True,all teams identical,error

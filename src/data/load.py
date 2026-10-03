@@ -21,6 +21,12 @@ def write_silver(df: pd.DataFrame, competition: str, season: str) -> Path:
     return path
 
 
+def write_combined(df: pd.DataFrame) -> Path:
+    path = repo_path("interim") / "matches_all.csv"
+    df.to_csv(path, index=False, date_format="%Y-%m-%d")
+    return path
+
+
 def read_silver(path: Path) -> pd.DataFrame:
     from src.schema import DTYPES
 
@@ -34,7 +40,7 @@ def write_quality_report(
 ) -> tuple[Path, Path]:
     out = repo_path("data_quality_reports")
     out.mkdir(parents=True, exist_ok=True)
-    stem = f"{competition}_{season_code(season)}"
+    stem = "ALL" if competition == "ALL" else f"{competition}_{season_code(season)}"
     checks_path = out / f"{stem}_checks.csv"
     miss_path = out / f"{stem}_missingness.csv"
     pd.DataFrame([c.__dict__ for c in checks]).to_csv(checks_path, index=False)

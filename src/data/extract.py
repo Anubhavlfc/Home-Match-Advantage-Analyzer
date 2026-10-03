@@ -177,3 +177,12 @@ def extract_openfootball_results(competition: str, season: str, refresh: bool = 
     url = tmpl.format(season_dash=season_dash(season), code=comp["openfootball_json_code"])
     dest = repo_path("raw") / "openfootball" / competition / f"{season_code(season)}.json"
     return _fetch_first_available([("openfootball", url)], dest, competition, season, refresh)
+
+
+def extract_openfootball_cl(season: str, refresh: bool = False) -> RawFile:
+    """Download the openfootball Champions League text file for a season."""
+    season = normalize_season(season)
+    tmpl = load_config()["sources"]["openfootball_cl_txt"]["url_template"]
+    url = tmpl.format(season_dash=season_dash(season))
+    dest = repo_path("raw") / "openfootball" / "UCL" / f"{season_code(season)}.txt"
+    return _fetch_first_available([("openfootball", url)], dest, "UCL", season, refresh)

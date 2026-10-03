@@ -1,0 +1,13 @@
+name,passed,detail,severity
+ucl_stage_counts,True,125 matches,error
+unique_match_id,True,all unique,error
+dates_in_season_window,True,2018-09-18 to 2019-06-01,error
+result_matches_goals,True,0 inconsistent,error
+logical_bounds,True,ok,error
+ucl_group_structure,True,"group sizes [4, 4, 4, 4, 4, 4, 4, 4]; duplicate pairs: False",error
+ucl_league_phase,True,n/a (group stage era),error
+two_legged_ties,True,14 ties,error
+knockout_progression,True,16 > 8 > 4 > 2,error
+extra_time_consistency,True,1 matches with extra time,error
+final_winner_matches_published,True,Liverpool (published: Liverpool),error
+neutral_venues_flagged,True,1 neutral-venue matches; final flagged: True,error

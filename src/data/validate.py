@@ -153,6 +153,12 @@ def check_table_matches_reference(df: pd.DataFrame, ref_table: pd.DataFrame) -> 
     """Standings rebuilt from match rows equal the published final table."""
     cols = ["played", "won", "drawn", "lost", "goals_for", "goals_against", "points"]
     ours = compute_table(df)
+    if "points_deduction" in ref_table:
+        # Published points include sanctions (e.g. Everton -8 in 2023/24);
+        # match results do not, so apply the documented deduction to ours.
+        ded = ref_table.set_index(["season", "team"])["points_deduction"].fillna(0)
+        ours["points"] -= ours.set_index(["season", "team"]).index.map(ded).fillna(0).astype(int)
+        ref_table = ref_table.drop(columns="points_deduction")
     m = ours.merge(ref_table, on=["season", "team"], how="outer", suffixes=("", "_ref"), indicator=True)
     unmatched = m[m["_merge"] != "both"]["team"].tolist()
     diffs = [
@@ -163,6 +169,159 @@ def check_table_matches_reference(df: pd.DataFrame, ref_table: pd.DataFrame) -> 
     ]
     ok = not unmatched and not diffs
     return CheckResult("table_matches_published", ok, "all teams identical" if ok else f"unmatched {unmatched}; diffs {diffs[:5]}")
+
+
+# ---------------------------------------------------------------------------
+# Champions League
+# ---------------------------------------------------------------------------
+UCL_EXPECTED = {
+    # group stage era: 96 group + 16 R16 + 8 QF + 4 SF + 1 F
+    "group_stage": {"group": 96, "round_of_16": 16, "quarter_final": 8, "semi_final": 4, "final": 1},
+    # 2019/20: single-match QF and SF in Lisbon
+    "group_stage_2019/20": {"group": 96, "round_of_16": 16, "quarter_final": 4, "semi_final": 2, "final": 1},
+    # league phase: 144 league + 16 play-off + 16 R16 + 8 QF + 4 SF + 1 F
+    "league_phase": {"league_phase": 144, "knockout_playoff": 16, "round_of_16": 16, "quarter_final": 8, "semi_final": 4, "final": 1},
+}
+
+
+def _stage_group(stage: pd.Series) -> pd.Series:
+    return stage.where(~stage.str.startswith("group"), "group")
+
+
+def check_ucl_stage_counts(df: pd.DataFrame) -> CheckResult:
+    season = df["season"].iloc[0]
+    fmt = df["ucl_format"].iloc[0]
+    key = "group_stage_2019/20" if season == "2019/20" else fmt
+    expected = UCL_EXPECTED[key]
+    got = _stage_group(df["stage"]).value_counts().to_dict()
+    ok = got == expected
+    return CheckResult("ucl_stage_counts", ok, f"{len(df)} matches" if ok else f"got {got}, expected {expected}")
+
+
+def check_ucl_group_structure(df: pd.DataFrame) -> CheckResult:
+    """8 groups of 4; every ordered pair inside a group plays exactly once."""
+    g = df[df["stage"].str.startswith("group")]
+    if g.empty:
+        return CheckResult("ucl_group_structure", True, "n/a (league phase)")
+    # Groups are recovered as connected components so the check also works
+    # for files that do not label the groups.
+    parent: dict[str, str] = {}
+
+    def find(x: str) -> str:
+        while parent.setdefault(x, x) != x:
+            x = parent[x]
+        return x
+
+    for h, a in zip(g["home_team"], g["away_team"]):
+        parent[find(h)] = find(a)
+    comps: dict[str, set] = {}
+    for t in set(g["home_team"]) | set(g["away_team"]):
+        comps.setdefault(find(t), set()).add(t)
+    sizes = sorted(len(c) for c in comps.values())
+    pairs_ok = not g.duplicated(["home_team", "away_team"]).any() and len(g) == 96
+    ok = sizes == [4] * 8 and pairs_ok
+    return CheckResult("ucl_group_structure", ok, f"group sizes {sizes}; duplicate pairs: {not pairs_ok}")
+
+
+def check_ucl_league_phase(df: pd.DataFrame) -> CheckResult:
+    lp = df[df["stage"] == "league_phase"]
+    if lp.empty:
+        return CheckResult("ucl_league_phase", True, "n/a (group stage era)")
+    home = lp["home_team"].value_counts()
+    away = lp["away_team"].value_counts()
+    teams = set(home.index) | set(away.index)
+    bad = [t for t in teams if home.get(t, 0) != 4 or away.get(t, 0) != 4]
+    pairs = lp.apply(lambda r: frozenset((r.home_team, r.away_team)), axis=1)
+    ok = len(teams) == 36 and not bad and not pairs.duplicated().any()
+    return CheckResult("ucl_league_phase", ok, f"{len(teams)} teams, 4 home/4 away each" if ok else f"{len(teams)} teams; off: {bad[:5]}")
+
+
+def check_two_legged_ties(df: pd.DataFrame) -> CheckResult:
+    t = df[df["two_legged_tie"] == 1]
+    bad = []
+    for tie, grp in t.groupby("tie_id"):
+        grp = grp.sort_values("leg")
+        if len(grp) != 2 or grp["leg"].tolist() != [1, 2] or not (
+            grp.iloc[0]["home_team"] == grp.iloc[1]["away_team"] and grp.iloc[0]["away_team"] == grp.iloc[1]["home_team"]
+        ):
+            bad.append(tie)
+    return CheckResult("two_legged_ties", not bad, f"{t['tie_id'].nunique()} ties" if not bad else f"broken: {bad[:5]}")
+
+
+def check_knockout_progression(df: pd.DataFrame) -> CheckResult:
+    """Each knockout round's teams are a subset of the previous round's, halving each time."""
+    order = ["round_of_16", "quarter_final", "semi_final", "final"]
+    teams = {s: set(df.loc[df["stage"] == s, "home_team"]) | set(df.loc[df["stage"] == s, "away_team"]) for s in order}
+    want = {"round_of_16": 16, "quarter_final": 8, "semi_final": 4, "final": 2}
+    problems = [f"{s}: {len(teams[s])} teams" for s in order if len(teams[s]) != want[s]]
+    for prev, nxt in zip(order, order[1:]):
+        if not teams[nxt] <= teams[prev]:
+            problems.append(f"{sorted(teams[nxt] - teams[prev])} in {nxt} but not {prev}")
+    return CheckResult("knockout_progression", not problems, "; ".join(problems) or "16 > 8 > 4 > 2")
+
+
+def match_winner(row: pd.Series) -> str:
+    if pd.notna(row["home_shootout"]):
+        return row["home_team"] if row["home_shootout"] > row["away_shootout"] else row["away_team"]
+    h = row["home_goals_aet"] if pd.notna(row["home_goals_aet"]) else row["home_goals"]
+    a = row["away_goals_aet"] if pd.notna(row["away_goals_aet"]) else row["away_goals"]
+    return row["home_team"] if h > a else row["away_team"]
+
+
+def check_final_winner(df: pd.DataFrame, finals: pd.DataFrame) -> CheckResult:
+    season = df["season"].iloc[0]
+    ref = finals.loc[finals["season"] == season, "winner"]
+    final = df[df["stage"] == "final"]
+    if ref.empty or len(final) != 1:
+        return CheckResult("final_winner_matches_published", False, "no reference or no single final", severity="warning")
+    got = match_winner(final.iloc[0])
+    return CheckResult("final_winner_matches_published", got == ref.iloc[0], f"{got} (published: {ref.iloc[0]})")
+
+
+def check_extra_time_consistency(df: pd.DataFrame) -> CheckResult:
+    et = df["extra_time"] == 1
+    problems = []
+    if (et & (df["knockout_match"] != 1)).any():
+        problems.append("extra time outside knockouts")
+    if (et & (df["home_goals_aet"] < df["home_goals"])).any() or (et & (df["away_goals_aet"] < df["away_goals"])).any():
+        problems.append("score after extra time lower than 90-minute score")
+    so = df["home_shootout"].notna()
+    if (so & ~et).any():
+        problems.append("shoot-out without extra time")
+    # A shoot-out needs the tie level after extra time: the match score for a
+    # single match, the aggregate (with leg 1) for a second leg.
+    for i in df.index[so]:
+        r = df.loc[i]
+        h, a = r["home_goals_aet"], r["away_goals_aet"]
+        if r["two_legged_tie"] == 1:
+            first = df[(df["tie_id"] == r["tie_id"]) & (df["leg"] == 1)].iloc[0]
+            h, a = h + first["away_goals"], a + first["home_goals"]
+        if h != a:
+            problems.append(f"shoot-out in {r['match_id']} although the tie was not level")
+    return CheckResult("extra_time_consistency", not problems, "; ".join(problems) or f"{int(et.sum())} matches with extra time")
+
+
+def check_neutral_venues(df: pd.DataFrame) -> CheckResult:
+    final_ok = (df.loc[df["stage"] == "final", "neutral_venue"] == 1).all()
+    n = int((df["neutral_venue"] == 1).sum())
+    return CheckResult("neutral_venues_flagged", bool(final_ok), f"{n} neutral-venue matches; final flagged: {bool(final_ok)}")
+
+
+def run_ucl_checks(df: pd.DataFrame, finals: pd.DataFrame) -> list[CheckResult]:
+    return [
+        check_ucl_stage_counts(df),
+        check_unique_match_id(df),
+        check_dates_in_season(df),
+        check_result_consistency(df),
+        check_logical_bounds(df),
+        check_ucl_group_structure(df),
+        check_ucl_league_phase(df),
+        check_two_legged_ties(df),
+        check_knockout_progression(df),
+        check_extra_time_consistency(df),
+        check_final_winner(df, finals),
+        check_neutral_venues(df),
+    ]
 
 
 def missingness_report(df: pd.DataFrame) -> pd.DataFrame:

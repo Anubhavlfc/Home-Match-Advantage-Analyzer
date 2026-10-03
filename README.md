@@ -5,9 +5,9 @@ home-field advantage in elite European football: the English Premier League,
 Spanish La Liga and UEFA Champions League, for the ten completed seasons from
 2016/17 to 2025/26.
 
-> **Status: Phase 1 (foundation) complete.** The ETL pipeline runs and is
-> validated for one season (Premier League 2016/17). No analysis has been run
-> yet, so this README contains no findings.
+> **Status: Phase 2 (ETL) complete.** 8,972 matches across the three
+> competitions and ten seasons are extracted, standardised and validated. No
+> analysis has been run yet, so this README contains no findings.
 
 ## Research question
 
@@ -49,7 +49,7 @@ informative.
 | Data | Source | Competitions |
 |---|---|---|
 | Results and match statistics | [football-data.co.uk](https://www.football-data.co.uk/) (with a GitHub mirror as fallback) | EPL, La Liga |
-| Results, stages, independent score check | [openfootball](https://github.com/openfootball) (public domain) | EPL, La Liga, UCL |
+| Results, stages, kick-off times, independent score check | [openfootball](https://github.com/openfootball) (public domain) | EPL, La Liga, UCL |
 | Stadium coordinates and capacity | Wikidata (planned) | all |
 | Attendance | under evaluation | all |
 
@@ -84,9 +84,9 @@ proposed Home Advantage Index and COVID period definitions are in
 ├── docs/                     sources, schema, data quality, methodology, roadmap
 ├── src/
 │   ├── config.py, schema.py, pipeline.py
-│   └── data/                 extract.py, clean.py, validate.py, load.py
+│   └── data/                 extract.py, clean.py, ucl.py, validate.py, load.py
 ├── reports/data_quality/     per-season check results and missingness
-└── tests/                    unit tests + EPL 2016/17 integration test
+└── tests/                    unit tests + EPL and UCL integration tests
 ```
 
 Folders for features, models, visualisation, notebooks and the dashboard are
@@ -98,8 +98,11 @@ created as each phase starts.
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# Extract, clean and validate one season
-python -m src.pipeline --competition EPL --season 2016/17
+# Extract, clean and validate everything -> data/interim/matches_all.csv
+python -m src.pipeline --all
+
+# Or one competition-season (EPL, LALIGA, UCL)
+python -m src.pipeline --competition UCL --season 2020/21
 
 # Tests (the integration test downloads the season if needed)
 pytest
@@ -114,7 +117,8 @@ learning, then presentation. Details: [`docs/roadmap.md`](docs/roadmap.md).
 
 - Attendance is not yet available from an integrated source.
 - Champions League match statistics (shots, cards, fouls) are not available from the free sources checked.
-- Penalties and possession are not available for any competition yet.
+- Penalties and possession are not available for any competition and are out of scope.
+- Domestic match statistics currently come from a mirror of football-data.co.uk; scores and tables are independently verified, shots and cards are not.
 - Rest days will be approximate because domestic cups and other European competitions are not in the dataset.
 
 ## Methodological rules

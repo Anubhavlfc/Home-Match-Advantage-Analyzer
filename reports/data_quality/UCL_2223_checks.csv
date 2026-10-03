@@ -1,0 +1,13 @@
+name,passed,detail,severity
+ucl_stage_counts,True,125 matches,error
+unique_match_id,True,all unique,error
+dates_in_season_window,True,2022-09-06 to 2023-06-10,error
+result_matches_goals,True,0 inconsistent,error
+logical_bounds,True,ok,error
+ucl_group_structure,True,"group sizes [4, 4, 4, 4, 4, 4, 4, 4]; duplicate pairs: False",error
+ucl_league_phase,True,n/a (group stage era),error
+two_legged_ties,True,14 ties,error
+knockout_progression,True,16 > 8 > 4 > 2,error
+extra_time_consistency,True,0 matches with extra time,error
+final_winner_matches_published,True,Manchester City (published: Manchester City),error
+neutral_venues_flagged,True,4 neutral-venue matches; final flagged: True,error
