@@ -563,12 +563,51 @@ def fig_model_b(coef: pd.DataFrame) -> Path:
     return _save(fig, "ml_model_b")
 
 
+def fig_model_a3(pred: pd.DataFrame, calibration: pd.DataFrame) -> Path:
+    """Q: are the three-way probabilities honest, and why is a draw never the pick?"""
+    names = {"H": "Home win", "D": "Draw", "A": "Away win"}
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.6))
+    ax = axes[0]
+    ax.plot([0, 0.8], [0, 0.8], color=AXIS, linewidth=1.2, linestyle=(0, (3, 3)))
+    for c in ("H", "D", "A"):
+        t = calibration[calibration["outcome"] == c]
+        ax.plot(t["mean_predicted"], t["observed"], color=RESULT_COLORS[c], marker="o", markersize=6,
+                markeredgecolor=INK_2 if c == "D" else SURFACE, markeredgewidth=1.0)
+        last = t.iloc[-1]
+        ax.annotate(names[c], (last["mean_predicted"], last["observed"]), xytext=(6, -3), textcoords="offset points",
+                    color=INK_2, fontsize=9)
+    ax.set_xlim(0, 0.8)
+    ax.set_ylim(0, 0.8)
+    ax.set_aspect("equal")
+    ax.set_xlabel("Predicted probability (quintile mean)")
+    ax.set_ylabel("Observed share")
+    ax.set_title("Calibration by outcome, test seasons", fontsize=10)
+    ax = axes[1]
+    bins = np.linspace(0, 0.9, 37)
+    for c in ("H", "A", "D"):
+        ax.hist(pred[f"p_{c}"], bins=bins, histtype="step", linewidth=1.8, color=RESULT_COLORS[c] if c != "D" else INK_2,
+                label=f"{names[c]} probability")
+    ax.set_xlabel("Predicted probability")
+    ax.set_ylabel("Matches")
+    ax.set_title("Spread of predicted probabilities", fontsize=10)
+    ax.legend(loc="upper right")
+    share_d = float((pred[["p_A", "p_D", "p_H"]].to_numpy().argmax(axis=1) == 1).mean())
+    _title(fig, "Draw probabilities are honest but a draw is almost never the most likely outcome",
+           f"Half of predicted draw chances fall between {pred['p_D'].quantile(0.25):.0%} and "
+           f"{pred['p_D'].quantile(0.75):.0%} (max {pred['p_D'].max():.0%}), so a draw is the top pick in "
+           f"{share_d:.1%} of the {len(pred):,} test matches.")
+    return _save(fig, "ml_model_a3")
+
+
 def make_model_figures(out: dict) -> list[Path]:
-    return [
+    figs = [
         fig_model_a_effects(out["inference_coefficients"]),
         fig_model_a_performance(out["test_predictions"], out["calibration"]),
         fig_model_b(out["model_b_coefficients"]),
     ]
+    if "a3_test_predictions" in out:
+        figs.append(fig_model_a3(out["a3_test_predictions"], out["a3_calibration"]))
+    return figs
 
 
 CLUSTER_COLORS = ["#2a78d6", "#eb6834", "#1baf7a"]

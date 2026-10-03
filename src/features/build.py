@@ -15,6 +15,7 @@ import numpy as np
 import pandas as pd
 
 from src.config import load_config, repo_path
+from src.data import other_fixtures
 from src.data.load import read_silver
 from src.features import crowd_features, team_history, venues
 from src.schema import GOLD_COLUMNS
@@ -22,7 +23,8 @@ from src.schema import GOLD_COLUMNS
 RELIABLE_MIN_MATCHES = 20
 
 
-def build_features(silver: pd.DataFrame, warmup_seasons: list[str]) -> tuple[pd.DataFrame, dict]:
+def build_features(silver: pd.DataFrame, warmup_seasons: list[str], extra: pd.DataFrame | None = None,
+                   covered_seasons: list[str] | None = None) -> tuple[pd.DataFrame, dict]:
     df = silver.sort_values(["date", "match_id"]).reset_index(drop=True)
     if df["match_id"].duplicated().any():
         raise ValueError("Duplicate match_id in silver input")
@@ -33,8 +35,21 @@ def build_features(silver: pd.DataFrame, warmup_seasons: list[str]) -> tuple[pd.
 
     long = team_history.long_format(df)
     long = team_history.add_rest_days(long)
+    if extra is None:
+        extra = pd.DataFrame({"team_id": pd.Series(dtype="string"), "date": pd.Series(dtype="datetime64[ns]"),
+                              "season": pd.Series(dtype="string")})
+    long = team_history.add_full_rest(long, extra, covered_seasons or [])
     long = team_history.add_form(long)
     df = team_history.attach_team_features(df, long)
+    # Full-coverage rest exists only for EPL and La Liga clubs: other UCL clubs'
+    # domestic fixtures are not in any source we use.
+    league = df[df["competition"].isin(["EPL", "LALIGA"])]
+    members = set(zip(league["season"], league["home_team_id"]))
+    for side in ("home", "away"):
+        ok = pd.Series([(s, t) in members for s, t in zip(df["season"], df[f"{side}_team_id"])], index=df.index)
+        df.loc[~ok, f"{side}_rest_days_all"] = np.nan
+    df["rest_difference_all_capped"] = df["home_rest_days_all"].clip(upper=team_history.REST_CAP_DAYS) - df[
+        "away_rest_days_all"].clip(upper=team_history.REST_CAP_DAYS)
     df["form_difference"] = df["home_form"] - df["away_form"]
 
     # Elo home-advantage term chosen on warm-up seasons only.
@@ -86,6 +101,11 @@ def validate_gold(gold: pd.DataFrame, n_expected: int, full: pd.DataFrame, n_sam
             got = getattr(r, f"{side}_rest_days")
             if not (np.isnan(expected_rest) and pd.isna(got)) and expected_rest != got:
                 errors.append(f"rest mismatch {r.match_id} {side}: {got} vs {expected_rest}")
+    # Adding fixtures can only shorten rest, never lengthen it.
+    for side in ("home", "away"):
+        both = gold[[f"{side}_rest_days", f"{side}_rest_days_all"]].dropna()
+        if (both[f"{side}_rest_days_all"] > both[f"{side}_rest_days"]).any():
+            errors.append(f"{side}_rest_days_all exceeds {side}_rest_days")
     return errors
 
 
@@ -96,7 +116,11 @@ def main() -> None:
     warm = read_silver(interim / "matches_warmup.csv")
     full = pd.concat([warm, analysis], ignore_index=True)
 
-    df, params = build_features(full, cfg["project"]["warmup_seasons"])
+    extra, coverage = other_fixtures.build(analysis, cfg["project"]["seasons"])
+    covered = coverage.loc[coverage["covered"], "season"].tolist()
+    df, params = build_features(full, cfg["project"]["warmup_seasons"], extra, covered)
+    params["rest_all_covered_seasons"] = covered
+    params["extra_fixture_dates"] = int(len(extra))
     gold = df[df["season"].isin(cfg["project"]["seasons"])].sort_values(["date", "match_id"]).reset_index(drop=True)
     gold = gold[GOLD_COLUMNS]
 

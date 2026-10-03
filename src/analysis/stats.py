@@ -349,6 +349,38 @@ def factor_model(d: pd.DataFrame, reg: Registry) -> tuple[pd.DataFrame, pd.DataF
     return coef, vif
 
 
+def rest_full_coverage(d: pd.DataFrame, reg: Registry) -> pd.DataFrame:
+    """Q9 re-check with rest days that also count cup and Europa fixtures.
+
+    Only 2020/21 to 2024/25 have every fixture, and only for EPL and La Liga
+    clubs. Both rest measures are fitted on that same sample so the two odds
+    ratios are directly comparable. Supporting evidence, not in the Holm
+    family (the primary rest test was fixed before this data was added).
+    """
+    k = known_crowd(d).dropna(subset=["rest_difference_capped", "rest_difference_all_capped", "form_difference"]).copy()
+    k = k[k["competition"] != "UCL"].copy()
+    k["competition"] = k["competition"].cat.remove_unused_categories()
+    for col, name in (("sd100", "z_strength"), ("log_travel", "z_log_travel"), ("form_difference", "z_form"),
+                      ("rest_difference_capped", "z_rest_league_ucl"), ("rest_difference_all_capped", "z_rest_all")):
+        k[name] = (k[col] - k[col].mean()) / k[col].std(ddof=0)
+    out = []
+    for term, label in (("z_rest_league_ucl", "league and UCL fixtures only"),
+                        ("z_rest_all", "all fixtures incl. cups and Europa")):
+        rhs = f"z_strength + z_log_travel + {term} + z_form + C(crowd, Treatment('normal')) + C(competition)"
+        logit = _cluster_fit(f"home_win ~ {rhs}", k, "logit")
+        ols = _cluster_fit(f"goal_difference ~ {rhs}", k)
+        out += [_coef_table(logit, f"logit_home_win_rest_check_{term}"), _coef_table(ols, f"ols_goal_difference_rest_check_{term}")]
+        lo, hi = logit.conf_int().loc[term]
+        sd_days = k[{"z_rest_league_ucl": "rest_difference_capped", "z_rest_all": "rest_difference_all_capped"}[term]].std(ddof=0)
+        reg.add(f"M7c_{term}", "Q9", f"Odds of a home win unrelated to rest difference ({label}), 2020/21-2024/25 domestic",
+                "logistic regression, standardised predictors, club-clustered SE",
+                "EPL + La Liga 2020/21-2024/25, known crowd, both rest measures known", logit.nobs, "z",
+                logit.tvalues[term], logit.pvalues[term], np.exp(logit.params[term]), np.exp(lo), np.exp(hi),
+                "odds ratio per 1 SD", np.exp(logit.params[term]),
+                note=f"1 SD = {sd_days:.2f} days; goal-difference OLS coef {ols.params[term]:+.3f} (p = {ols.pvalues[term]:.3f})")
+    return pd.concat(out)
+
+
 def travel_within_scope(d: pd.DataFrame, reg: Registry) -> None:
     """Travel effect separately for domestic and UCL matches (normal crowds)."""
     k = d[d["crowd_status"] == "normal"].copy()
@@ -434,6 +466,7 @@ def run(g: pd.DataFrame | None = None) -> dict[str, pd.DataFrame]:
     coefs.append(outcome_models(d, reg))
     factor_coef, vif = factor_model(d, reg)
     coefs.append(factor_coef)
+    coefs.append(rest_full_coverage(d, reg))
     travel_within_scope(d, reg)
     coefs.append(trend_model(d, reg))
     clubs = club_shrinkage(g, reg)

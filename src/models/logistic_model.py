@@ -7,6 +7,16 @@ Model A: pre-match home-win model
     2023/24, then refit on train + validation and score 2024/25 to 2025/26
     once. The test seasons are not touched before that final step.
 
+Model A3: three-way pre-match model
+    Same features, split and protocol as Model A, but predicts home win,
+    draw or away win (multinomial logistic regression), so a draw is no
+    longer lumped in with an away win. Scored with the ranked probability
+    score, which respects the order away < draw < home.
+
+Rest check: Model A refitted on 2020/21 to 2024/25 domestic matches, the
+    only seasons where rest days can count cup and Europa fixtures, once with
+    the dataset-only rest measure and once with the full one.
+
 Model B: explanatory home-advantage model
     Relates the result to in-match statistics (shots, corners, fouls, cards)
     in EPL and La Liga. Those happen during the match, so this model
@@ -64,13 +74,13 @@ def split(g: pd.DataFrame) -> dict[str, pd.DataFrame]:
     return parts
 
 
-def make_pipeline(C: float) -> Pipeline:
+def make_pipeline(C: float, numeric_cols: list[str] | None = None) -> Pipeline:
     # Missing rest days (first match of a season) and form (fewer than 5 prior
     # matches) are imputed with the training median AND flagged with an
     # indicator column, so the model sees that the value was absent.
     numeric = Pipeline([("impute", SimpleImputer(strategy="median", add_indicator=True)), ("scale", StandardScaler())])
     pre = ColumnTransformer([
-        ("num", numeric, NUMERIC),
+        ("num", numeric, numeric_cols or NUMERIC),
         # Reference levels: normal crowd and the Premier League.
         ("cat", OneHotEncoder(categories=[CROWD_LEVELS, COMP_LEVELS], drop="first", handle_unknown="ignore",
                               sparse_output=False), CATEGORICAL),
@@ -164,6 +174,94 @@ def model_a(g: pd.DataFrame) -> dict:
     }
 
 
+CLASSES = ["A", "D", "H"]  # ordered away < draw < home
+
+
+def rps(y: np.ndarray, P: np.ndarray) -> float:
+    """Mean ranked probability score for ordered outcomes (lower is better)."""
+    Y = np.zeros_like(P)
+    Y[np.arange(len(y)), y] = 1.0
+    cum = np.cumsum(P - Y, axis=1)[:, :-1]
+    return float(np.mean(np.sum(cum ** 2, axis=1) / (P.shape[1] - 1)))
+
+
+def metrics3(y: np.ndarray, P: np.ndarray) -> dict:
+    Y = np.eye(3)[y]
+    pred = P.argmax(axis=1)
+    return {"n": int(len(y)), "accuracy": accuracy_score(y, pred), "log_loss": log_loss(y, P, labels=[0, 1, 2]),
+            "rps": rps(y, P), "brier": float(np.mean(np.sum((P - Y) ** 2, axis=1))),
+            **{f"share_predicted_{c}": float(np.mean(pred == i)) for i, c in enumerate(CLASSES)},
+            **{f"mean_p_{c}": float(P[:, i].mean()) for i, c in enumerate(CLASSES)},
+            **{f"observed_{c}": float(np.mean(y == i)) for i, c in enumerate(CLASSES)}}
+
+
+def model_a3(g: pd.DataFrame) -> dict:
+    """Three-way (H/D/A) version of Model A, same features and protocol."""
+    parts = split(g)
+    tr, va, te = parts["train"], parts["valid"], parts["test"]
+    X = NUMERIC + CATEGORICAL + BINARY
+    enc = {c: i for i, c in enumerate(CLASSES)}
+    y = {k: v["result"].map(enc).to_numpy() for k, v in parts.items()}
+
+    tuning = []
+    for C in C_GRID:
+        P = make_pipeline(C).fit(tr[X], y["train"]).predict_proba(va[X])
+        tuning.append({"C": C, "valid_log_loss": log_loss(y["valid"], P, labels=[0, 1, 2]), "valid_rps": rps(y["valid"], P)})
+    tuning = pd.DataFrame(tuning)
+    best_C = float(tuning.loc[tuning["valid_rps"].idxmin(), "C"])
+
+    trv = pd.concat([tr, va])
+    y_trv = np.concatenate([y["train"], y["valid"]])
+    final = make_pipeline(best_C).fit(trv[X], y_trv)
+    P_te = final.predict_proba(te[X])
+    elo = Pipeline([("scale", StandardScaler()), ("clf", LogisticRegression(max_iter=1000))])
+    P_elo = elo.fit(trv[["strength_difference"]], y_trv).predict_proba(te[["strength_difference"]])
+    P_base = np.tile(np.bincount(y_trv, minlength=3) / len(y_trv), (len(te), 1))
+    test_metrics = pd.DataFrame([{"model": name, **metrics3(y["test"], P)} for name, P in (
+        ("Model A3 (home / draw / away)", P_te), ("Elo difference only", P_elo),
+        ("Base rates (training shares)", P_base))])
+
+    # Calibration per outcome: quintiles of that outcome's predicted probability.
+    cal = []
+    for i, c in enumerate(CLASSES):
+        t = pd.DataFrame({"p": P_te[:, i], "y": (y["test"] == i).astype(float)})
+        t["bin"] = pd.qcut(t["p"], 5, labels=False, duplicates="drop")
+        agg = t.groupby("bin").agg(mean_predicted=("p", "mean"), observed=("y", "mean"), n=("y", "size")).reset_index()
+        cal.append(agg.assign(outcome=c))
+    coef = pd.DataFrame(final.named_steps["clf"].coef_.T, columns=[f"coef_{c}" for c in CLASSES])
+    coef.insert(0, "feature", feature_names(final))
+    return {"a3_tuning": tuning, "a3_best_C": best_C, "a3_test_metrics": test_metrics,
+            "a3_calibration": pd.concat(cal, ignore_index=True), "a3_coefficients": coef,
+            "a3_test_predictions": pd.DataFrame({"match_id": te["match_id"].to_numpy(), "result": te["result"].to_numpy(),
+                                                 **{f"p_{c}": P_te[:, i] for i, c in enumerate(CLASSES)}})}
+
+
+REST_SEASONS = {"train": ["2020/21", "2021/22", "2022/23"], "valid": ["2023/24"], "test": ["2024/25"]}
+
+
+def rest_check(g: pd.DataFrame, C: float) -> pd.DataFrame:
+    """Does complete rest data improve Model A? Same window, three rest options.
+
+    EPL and La Liga 2020/21-2024/25 only (the seasons where every fixture is
+    known). Fitted on 2020/21-2023/24 with Model A's C and scored on 2024/25.
+    Matches where either full rest value is missing (first match of a season)
+    are dropped, so all three variants use exactly the same rows.
+    """
+    d = g[g["competition"].isin(["EPL", "LALIGA"])].dropna(subset=["home_rest_days_all", "away_rest_days_all"])
+    fit = d[d["season"].isin(REST_SEASONS["train"] + REST_SEASONS["valid"])]
+    te = d[d["season"].isin(REST_SEASONS["test"])]
+    base = [c for c in NUMERIC if "rest" not in c]
+    rows = []
+    for name, cols in (("no rest", base),
+                       ("rest: league and UCL only", base + ["home_rest_days", "away_rest_days"]),
+                       ("rest: all fixtures", base + ["home_rest_days_all", "away_rest_days_all"])):
+        X = cols + CATEGORICAL + BINARY
+        p = make_pipeline(C, cols).fit(fit[X], fit["home_win"]).predict_proba(te[X])[:, 1]
+        rows.append({"variant": name, "n_fit": len(fit), "n_test": len(te), "roc_auc": roc_auc_score(te["home_win"], p),
+                     "log_loss": log_loss(te["home_win"], p), "brier": brier_score_loss(te["home_win"], p)})
+    return pd.DataFrame(rows)
+
+
 def model_a_inference(g: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Unpenalised logit on the training seasons for interpretable inference.
 
@@ -239,9 +337,11 @@ def model_b(g: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 def run() -> dict:
     g = load()
     a = model_a(g)
+    a3 = model_a3(g)
+    rest = rest_check(g, a["best_C"])
     inf_coef, vif = model_a_inference(g)
     b_coef, b_summary = model_b(g)
-    return {**a, "inference_coefficients": inf_coef, "vif": vif, "model_b_coefficients": b_coef,
+    return {**a, **a3, "rest_check": rest, "inference_coefficients": inf_coef, "vif": vif, "model_b_coefficients": b_coef,
             "model_b_summary": b_summary}
 
 
@@ -251,11 +351,13 @@ def main() -> None:
     out = run()
     OUT.mkdir(parents=True, exist_ok=True)
     for key in ("test_predictions", "tuning", "test_metrics", "valid_metrics", "calibration", "by_competition", "sklearn_coefficients",
-                "inference_coefficients", "vif", "model_b_coefficients", "model_b_summary"):
+                "inference_coefficients", "vif", "model_b_coefficients", "model_b_summary",
+                "a3_tuning", "a3_test_metrics", "a3_calibration", "a3_coefficients", "a3_test_predictions", "rest_check"):
         out[key].to_csv(OUT / f"ml_model_{key}.csv", index=False, float_format="%.6g")
     (OUT / "ml_model_a_choices.json").write_text(json.dumps(
         {"best_C": out["best_C"], "best_threshold": out["best_threshold"], "train_seasons": TRAIN,
-         "valid_seasons": VALID, "test_seasons": TEST, "train_base_rate": out["train_base_rate"]}, indent=2) + "\n")
+         "valid_seasons": VALID, "test_seasons": TEST, "train_base_rate": out["train_base_rate"],
+         "a3_best_C": out["a3_best_C"]}, indent=2) + "\n")
     for f in plots.make_model_figures(out):
         print("wrote", f)
     with pd.option_context("display.width", 200):
@@ -265,6 +367,10 @@ def main() -> None:
         print(out["inference_coefficients"].round(4).to_string())
         print(out["vif"].round(2))
         print(out["model_b_summary"].round(4).to_string())
+        print(out["a3_tuning"].round(4))
+        print(out["a3_test_metrics"].round(4).T.to_string())
+        print(out["a3_calibration"].round(3).to_string())
+        print(out["rest_check"].round(4).to_string())
 
 
 if __name__ == "__main__":

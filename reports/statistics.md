@@ -64,7 +64,7 @@ noise alone.
 | 6 | Did the COVID effect differ by competition? | **No significant difference** (joint p = 0.66). The drop is significant within the Premier League (−0.24 goals) and La Liga (−0.18). The Champions League has only 83 closed-doors home matches, which is too few to say. |
 | 7 | Which clubs get the largest home advantage? | **None stands apart.** Club differences are not statistically significant (Cochran's Q p = 0.14, I² = 21%). After shrinkage, every club's interval includes the mean. |
 | 8 | Does away travel increase home advantage? | **Weak evidence, domestic only.** Odds ratio 1.07 per SD of log distance (p = 0.014), but this does not survive the multiple-testing correction (Holm p = 0.096). In domestic matches, doubling the away trip goes with +0.03 home goals (p = 0.001); there is no effect in the Champions League. |
-| 9 | Does a rest advantage help? | **No evidence** once strength is controlled (OR 0.97 per SD, p = 0.14, Holm 0.54). Rest is approximate. |
+| 9 | Does a rest advantage help? | **No evidence** once strength is controlled (OR 0.97 per SD, p = 0.14, Holm 0.54). Rebuilding rest with cup and Europa fixtures (2020/21 to 2024/25) gives the same answer (OR 0.98, p = 0.58). |
 | 10 | Is attendance associated with home success? | **Not testable directly**, because no per-match attendance source is available. Crowd status is the proxy used in Q3. |
 | 12 | Which factors matter most? | **Team strength dominates** (OR 2.30 per SD). Closed doors (OR 0.77) is the only other large factor. Travel is small, and form adds nothing beyond Elo. |
 
@@ -261,7 +261,29 @@ In the matching goal-difference model, its coefficient is small and
 banded pattern. That instability points to confounding rather than a rest
 effect. The likely cause is that the rest measure misses cup and Europa
 League matches, so a club's "rest" partly reflects which competitions it
-plays in. The data do not support a rest advantage either way.
+plays in.
+
+**Re-check with complete fixtures (M7c).** For 2020/21 to 2024/25,
+openfootball publishes every FA Cup, EFL Cup, Copa del Rey, Europa League
+and Conference League fixture. Adding those dates shortens the rest of 16%
+of league matches. The factor model was refitted on EPL and La Liga matches
+from those seasons with each rest measure, on the same 3,652 matches:
+
+| Rest measure | Odds ratio per 1 SD (95% CI) | p | Goal-difference coefficient per SD |
+|---|---|---|---|
+| League and UCL fixtures only | 0.98 (0.91 to 1.05) | 0.51 | −0.039 (p = 0.13) |
+| All fixtures, including cups and Europa | 0.98 (0.90 to 1.06) | 0.58 | −0.015 (p = 0.59) |
+
+With complete fixtures the odd negative goal-difference sign shrinks toward
+zero, as expected if it came from the missing matches. Neither measure
+shows a rest effect once strength is controlled.
+- **Unadjusted,** home sides with more rest win *less* often (32% with 3+
+  extra days against 45% when level). That is confounding: strong clubs play
+  in Europe and the cups, so they rest less and also win more.
+- These are supporting tests, outside the Holm family, because the primary
+  rest test was fixed before this data was added.
+
+The data do not support a rest advantage either way.
 
 ## Limitations
 
@@ -272,6 +294,9 @@ plays in. The data do not support a rest advantage either way.
   substitutions, travel conditions and team selection. The season-fixed-
   effects check shows the effect cannot be fully separated from the 2020/21
   season.
+- **Complete rest days exist only for 2020/21 to 2024/25** and EPL and La
+  Liga clubs. One-off matches (Community Shield, Supercopa, UEFA Super Cup,
+  Club World Cup) and European qualifiers are still missing.
 - **The Champions League has no match statistics** in our sources, so Q4
   and Q5 cover EPL and La Liga only, and its closed-doors sample is small.
 - **Elo** is fitted with a home-advantage term of 60 points throughout,

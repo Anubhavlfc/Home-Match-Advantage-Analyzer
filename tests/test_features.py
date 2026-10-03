@@ -108,3 +108,22 @@ def test_elo_is_pre_match():
     assert elo["home_elo"].iloc[1] > team_history.ELO_INIT > elo["away_elo"].iloc[1]
     # Zero-sum update.
     assert elo["home_elo"].iloc[1] + elo["away_elo"].iloc[1] == pytest.approx(2 * team_history.ELO_INIT)
+
+
+def test_full_rest_counts_extra_fixtures_only_in_covered_seasons():
+    rows = [("2021-08-01", "a", "b", 1, 0), ("2021-08-08", "b", "a", 1, 0), ("2016-08-01", "a", "b", 1, 0),
+            ("2016-08-08", "b", "a", 1, 0)]
+    df = _matches(rows)
+    df.loc[:1, "season"] = "2021/22"
+    df.loc[2:, "season"] = "2016/17"
+    extra = pd.DataFrame({"team_id": ["a", "a"], "date": pd.to_datetime(["2021-08-05", "2016-08-05"]),
+                          "season": ["2021/22", "2016/17"]})
+    long = team_history.add_full_rest(team_history.add_rest_days(team_history.long_format(df)), extra, ["2021/22"])
+    long = team_history.add_form(long)
+    out = team_history.attach_team_features(df, long).set_index("date")
+    # Covered season: a's cup match on the 5th cuts its rest from 7 to 3 days; b is unchanged.
+    assert out.loc["2021-08-08", "away_rest_days"] == 7 and out.loc["2021-08-08", "away_rest_days_all"] == 3
+    assert out.loc["2021-08-08", "home_rest_days_all"] == 7
+    # Uncovered season: full rest stays missing rather than half-counted.
+    assert pd.isna(out.loc["2016-08-08", "away_rest_days_all"])
+    assert (out["rest_difference_all_capped"].dropna() == 4).all()

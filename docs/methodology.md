@@ -95,7 +95,7 @@ top-flight suspensions) to 2021-07-31, `post_covid` after.
 | Feature | Definition |
 |---|---|
 | Travel distance | Haversine km from the away club's home ground on the match date to the actual venue. `home_travel_distance_km` is the same for the home club. |
-| Rest days | Days since the team's previous match in the dataset. NA for its first match of a season. Approximate: domestic cups and the Europa League are not in the data, so rest is overstated for clubs that played them. `rest_difference_capped` caps each side at 14 days. |
+| Rest days | Days since the team's previous match in the dataset. NA for its first match of a season. Approximate: domestic cups and the Europa League are not in the data, so rest is overstated for clubs that played them. `rest_difference_capped` caps each side at 14 days. `*_rest_days_all` also counts FA Cup, EFL Cup, Copa del Rey, Europa and Conference League dates; it is filled only for EPL and La Liga clubs in 2020/21 to 2024/25, where all of those are available, and missing elsewhere. |
 | Form | Sum of points (and win share, goals, goal difference) over the team's previous 5 matches in any competition here. NA with fewer than 5 prior matches. Venue-specific form uses the previous 5 non-neutral home (or away) matches. |
 | Strength | Elo before kick-off. K = 20 with a goal-difference multiplier (1, 1.5, then (11 + gd) / 8). Home advantage in the expectation is 60 points, chosen by Brier score on the warm-up seasons only and not applied at neutral venues. New clubs start at 1500; a club promoted into a league starts at the mean of that league's three lowest ratings. `strength_reliable` = 1 when both clubs have 20 or more prior matches. |
 

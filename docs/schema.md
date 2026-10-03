@@ -82,6 +82,9 @@ One row = one match. Generated from `src/schema.py` by `python -m src.schema`; d
 | `away_rest_days` | Float64 | gold | Days since away team's previous match in the dataset; NA for its first match of a season |
 | `rest_difference` | Float64 | gold | home_rest_days - away_rest_days |
 | `rest_difference_capped` | Float64 | gold | Rest difference with each side capped at 14 days |
+| `home_rest_days_all` | Float64 | gold | Days since the home team's previous match in any covered competition (adds FA Cup, EFL Cup, Copa del Rey, Europa and Conference League). EPL and La Liga clubs in 2020/21 to 2024/25 only; NA elsewhere and for a first match of the season |
+| `away_rest_days_all` | Float64 | gold | As `home_rest_days_all`, for the away team |
+| `rest_difference_all_capped` | Float64 | gold | `home_rest_days_all` minus `away_rest_days_all`, each capped at 14 days |
 | `home_form` | Float64 | gold | Home team points from its previous 5 matches, any competition (NA with < 5 prior) |
 | `away_form` | Float64 | gold | Away team points from its previous 5 matches, any competition |
 | `form_difference` | Float64 | gold | home_form - away_form |

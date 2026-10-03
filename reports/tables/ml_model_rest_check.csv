@@ -1,0 +1,4 @@
+variant,n_fit,n_test,roc_auc,log_loss,brier
+no rest,2957,740,0.725789,0.604234,0.208702
+rest: league and UCL only,2957,740,0.725186,0.604567,0.208885
+rest: all fixtures,2957,740,0.726184,0.603897,0.208536
