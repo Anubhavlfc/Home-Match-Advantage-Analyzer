@@ -663,6 +663,6 @@ def fig_cluster_pca(out: dict, names: dict[str, list[str]]) -> Path:
 
 
 def make_cluster_figures(out: dict) -> list[Path]:
-    names = {"main": ["Strong home sides", "Modest home sides"],
-             "gap_only": ["Larger home-away gap", "Smaller home-away gap"]}
-    return [fig_cluster_selection(out), fig_cluster_pca(out, names)]
+    from src.models.clustering import CLUSTER_NAMES
+
+    return [fig_cluster_selection(out), fig_cluster_pca(out, CLUSTER_NAMES)]

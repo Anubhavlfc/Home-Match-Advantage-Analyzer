@@ -40,6 +40,10 @@ FEATURES = [
     "home_goals_conceded_per_game", "home_vs_away_win_difference", "home_vs_away_points_difference",
     "home_vs_away_goal_difference", "home_advantage_index",
 ]
+# Names given after inspecting the centroids of the current run (reports/ml.md);
+# cluster ids are ordered by mean home-advantage index. Re-check if data change.
+CLUSTER_NAMES = {"main": ["Strong home sides", "Modest home sides"],
+                 "gap_only": ["Larger home-away gap", "Smaller home-away gap"]}
 GAP_FEATURES = ["home_vs_away_win_difference", "home_vs_away_points_difference", "home_vs_away_goal_difference",
                 "home_advantage_index"]
 

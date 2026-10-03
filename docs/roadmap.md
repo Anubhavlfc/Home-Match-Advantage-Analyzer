@@ -42,5 +42,6 @@ Each phase ends with validated outputs before the next starts.
 - Follow-ups: Model A3 (home / draw / away, multinomial, scored with the ranked probability score) and complete rest days for 2020/21-2024/25 from openfootball cup and Europa files (`src/data/other_fixtures.py`), checked in the stats (M7c) and in a Model A rest check.
 - Write-up in `reports/ml.md`.
 
-## Phase 7: Presentation
-Streamlit + Plotly dashboard, final figures, README findings.
+## Phase 7: Presentation (done)
+- `dashboard/app.py`: Streamlit + Plotly dashboard with eight sections (overview, trend, COVID experiment, competitions, team explorer, travel and rest, clusters, models). Reads only committed tables; `src/visualization/dashboard_data.py` builds `dashboard/data/team_seasons.csv`.
+- README findings and `reports/final_report.md`, a slide-by-slide presentation story.
