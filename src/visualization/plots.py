@@ -60,8 +60,9 @@ def _save(fig, name: str) -> Path:
 
 def _title(fig, title: str, subtitle: str) -> None:
     h = fig.get_figheight()
-    fig.text(0.01, 1 + 0.42 / h, title, ha="left", va="bottom", fontsize=13, fontweight="bold", color=INK)
-    fig.text(0.01, 1 + 0.12 / h, subtitle, ha="left", va="bottom", fontsize=9.5, color=INK_2)
+    base = fig.subplotpars.top + 0.38 / h  # clears panel titles above the axes
+    fig.text(0.01, base + 0.3 / h, title, ha="left", va="bottom", fontsize=13, fontweight="bold", color=INK)
+    fig.text(0.01, base, subtitle, ha="left", va="bottom", fontsize=9.5, color=INK_2)
 
 
 def _dot_ci(ax, y, x, lo, hi, color, size=60, label=None):
@@ -366,4 +367,101 @@ def make_eda_figures(tables: dict[str, pd.DataFrame]) -> list[Path]:
         fig_e_teams(tables["e_teams"]),
         fig_f_competition(tables["f_competition"]),
         fig_g_travel_rest(tables["g_travel"], tables["g_rest"]),
+    ]
+
+
+# ---------------------------------------------------------------------------
+# Phase 5: statistical results
+# ---------------------------------------------------------------------------
+def fig_stats_crowd_by_competition(effects: pd.DataFrame) -> Path:
+    fig, ax = plt.subplots(figsize=(8.5, 3.8))
+    comps = ["EPL", "LALIGA", "UCL"]
+    for gi, comp in enumerate(comps):
+        r = effects[effects["competition"] == comp].iloc[0]
+        for ci, (key, crowd) in enumerate((("normal", "normal"), ("closed", "behind_closed_doors"))):
+            y = gi * 3 + ci
+            n = r[f"n_{key}"]
+            _dot_ci(ax, y, r[f"{key}_effect"], r[f"{key}_lo"], r[f"{key}_hi"], CROWD_COLORS[crowd],
+                    label=CROWD_LABELS[crowd] if gi == 0 else None)
+            ax.text(r[f"{key}_hi"], y, f"  {r[f'{key}_effect']:+.2f}  (n={int(n):,})", va="center", fontsize=8,
+                    color=INK_2)
+        ax.text(ax.get_xlim()[0], gi * 3 + 1.75, "", fontsize=1)
+    _zero_line(ax)
+    ax.set_yticks([0.5, 3.5, 6.5], [COMP_LABELS[c] for c in comps])
+    ax.invert_yaxis()
+    ax.grid(axis="y", visible=False)
+    x0, x1 = ax.get_xlim()
+    ax.set_xlim(x0, x1 + (x1 - x0) * 0.3)
+    ax.set_xlabel("Home goal-difference advantage between equally rated teams (goals per match)")
+    ax.legend(loc="upper left", bbox_to_anchor=(0, -0.2), ncol=2)
+    _title(fig, "Home advantage fell behind closed doors in both leagues",
+           "Estimates from one model with club-clustered 95% intervals. The difference between competitions "
+           "is not statistically significant (p = 0.66).")
+    return _save(fig, "stats_crowd_by_competition")
+
+
+def fig_stats_factors(coef: pd.DataFrame) -> Path:
+    c = coef[coef["model"] == "logit_home_win_factors"].set_index("term")
+    rows = [
+        ("z_strength", "Strength difference (+1 SD)"),
+        ("z_form", "Form difference (+1 SD)"),
+        ("z_log_travel", "Away travel, log km (+1 SD)"),
+        ("z_rest", "Rest difference (+1 SD)"),
+        ("C(crowd, Treatment('normal'))[T.restricted]", "Restricted crowd (vs normal)"),
+        ("C(crowd, Treatment('normal'))[T.behind_closed_doors]", "Behind closed doors (vs normal)"),
+        ("C(competition)[T.LALIGA]", "La Liga (vs Premier League)"),
+        ("C(competition)[T.UCL]", "Champions League (vs Premier League)"),
+    ]
+    fig, ax = plt.subplots(figsize=(8.5, 4.0))
+    for i, (term, label) in enumerate(rows):
+        r = c.loc[term]
+        color = COMP_COLORS["EPL"] if r["or_ci_lo"] > 1 or r["or_ci_hi"] < 1 else MUTED
+        _dot_ci(ax, i, r["odds_ratio"], r["or_ci_lo"], r["or_ci_hi"], color, size=50)
+        ax.text(max(r["or_ci_hi"], 1.0), i, f"  {r['odds_ratio']:.2f}", va="center", fontsize=8.5, color=INK_2)
+    ax.axvline(1.0, color=AXIS, linewidth=1.2)
+    ax.set_xscale("log")
+    ax.set_xticks([0.5, 0.75, 1, 1.5, 2], ["0.5", "0.75", "1", "1.5", "2"])
+    ax.minorticks_off()
+    ax.set_yticks(range(len(rows)), [r[1] for r in rows])
+    ax.invert_yaxis()
+    ax.grid(axis="y", visible=False)
+    ax.set_xlabel("Odds ratio for a home win (log scale)")
+    _title(fig, "Strength dominates; closed doors cut the odds of a home win by about a fifth",
+           "Logistic regression with club-clustered 95% intervals. Blue = interval excludes 1. "
+           "Associations, not causal effects.")
+    return _save(fig, "stats_factors")
+
+
+def fig_stats_clubs(clubs: pd.DataFrame) -> Path:
+    d = clubs.sort_values("shrunk_gap", ascending=True).reset_index(drop=True)
+    fig, ax = plt.subplots(figsize=(8.5, 8.5))
+    for i, r in enumerate(d.itertuples()):
+        ax.plot([r.adj_gap, r.shrunk_gap], [i, i], color=GRID, linewidth=1.5, zorder=1)
+        ax.scatter(r.adj_gap, i, s=28, facecolor=SURFACE, edgecolor=MUTED, linewidth=1.5, zorder=2,
+                   label="Raw estimate" if i == 0 else None)
+        ax.hlines(i, r.shrunk_lo, r.shrunk_hi, color=COMP_COLORS[r.competition], linewidth=2, alpha=0.6, zorder=2)
+        ax.scatter(r.shrunk_gap, i, s=40, color=COMP_COLORS[r.competition], edgecolor=SURFACE, linewidth=1.5,
+                   zorder=3)
+    mu = float(np.average(d["shrunk_gap"]))
+    ax.axvline(mu, color=MUTED, linewidth=1, linestyle=(0, (3, 3)))
+    ax.set_yticks(range(len(d)), d["team"], fontsize=8.5)
+    ax.grid(axis="y", visible=False)
+    _zero_line(ax)
+    handles = [plt.Line2D([], [], marker="o", linestyle="", markerfacecolor=SURFACE, markeredgecolor=MUTED,
+                          label="Raw estimate")]
+    handles += [plt.Line2D([], [], marker="o", linestyle="", color=COMP_COLORS[c], label=f"Shrunk estimate, {COMP_LABELS[c]}")
+                for c in ["EPL", "LALIGA"]]
+    ax.legend(handles=handles, loc="upper left", bbox_to_anchor=(0, -0.07), ncol=3)
+    ax.set_xlabel("Home excess minus away excess (Elo-adjusted)")
+    ax.set_ylim(-0.8, len(d) - 0.2)
+    _title(fig, "After shrinkage, no club's home advantage stands apart",
+           "Random-effects estimates with 95% intervals; hollow dots are the raw values. Dashed line = mean.")
+    return _save(fig, "stats_clubs")
+
+
+def make_stats_figures(out: dict[str, pd.DataFrame]) -> list[Path]:
+    return [
+        fig_stats_crowd_by_competition(out["interaction_effects"]),
+        fig_stats_factors(out["coefficients"]),
+        fig_stats_clubs(out["clubs_shrunk"]),
     ]

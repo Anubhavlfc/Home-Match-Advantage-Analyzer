@@ -107,6 +107,9 @@ python -m src.features.build
 # Exploratory analysis -> reports/tables, reports/figures (write-up: reports/eda.md)
 python -m src.analysis.eda
 
+# Statistical tests and models -> reports/tables/stats_*.csv (write-up: reports/statistics.md)
+python -m src.analysis.stats
+
 # Or one competition-season (EPL, LALIGA, UCL)
 python -m src.pipeline --competition UCL --season 2020/21
 
