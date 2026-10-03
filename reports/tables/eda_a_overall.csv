@@ -1,0 +1,4 @@
+competition,matches,home_win_pct,home_win_pct_lo,home_win_pct_hi,draw_pct,draw_pct_lo,draw_pct_hi,away_win_pct,away_win_pct_lo,away_win_pct_hi,home_goals_pm,away_goals_pm,home_points_pm,away_points_pm,goal_diff_pm,goal_diff_pm_lo,goal_diff_pm_hi,points_share,home_excess,home_excess_lo,home_excess_hi,mean_strength_difference
+EPL,3800.0,44.6316,43.0572,46.2168,23.2368,21.9214,24.6063,32.1316,30.6655,33.6337,1.5553,1.2797,1.5713,1.1963,0.2755,0.215,0.3361,0.5677,0.0627,0.0501,0.0754,0.0499
+LALIGA,3800.0,45.5,43.922,47.087,26.2105,24.8368,27.6323,28.2895,26.8799,29.7429,1.4855,1.1329,1.6271,1.1108,0.3526,0.2993,0.406,0.5943,0.0863,0.0739,0.0987,-0.4391
+UCL,1339.0,46.9754,44.3146,49.6534,20.0896,18.0305,22.3199,32.935,30.4697,35.498,1.7595,1.3719,1.6102,1.1889,0.3876,0.2706,0.5046,,0.0694,0.0482,0.0905,0.7725

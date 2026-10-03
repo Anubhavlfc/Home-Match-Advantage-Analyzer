@@ -1,0 +1,369 @@
+"""Static figures for the EDA report (``reports/figures/``).
+
+One figure per question. Colours follow fixed roles so a reader learns them
+once: competitions use three categorical hues, crowd conditions use one blue
+ramp from dark (full crowd) to light (empty), and results use a blue/grey/red
+diverging set (home win / draw / away win). Every series is also labelled
+directly, so nothing depends on colour alone.
+"""
+from __future__ import annotations
+
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402
+import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
+
+from src.config import REPO_ROOT  # noqa: E402
+
+FIG_DIR = REPO_ROOT / "reports" / "figures"
+
+SURFACE = "#fcfcfb"
+INK = "#0b0b0b"
+INK_2 = "#52514e"
+MUTED = "#898781"
+GRID = "#e1e0d9"
+AXIS = "#c3c2b7"
+
+COMP_COLORS = {"EPL": "#2a78d6", "LALIGA": "#eb6834", "UCL": "#1baf7a"}
+COMP_LABELS = {"EPL": "Premier League", "LALIGA": "La Liga", "UCL": "Champions League", "ALL": "All competitions"}
+CROWD_COLORS = {"normal": "#184f95", "restricted": "#3987e5", "behind_closed_doors": "#86b6ef"}
+CROWD_LABELS = {"normal": "Normal crowd", "restricted": "Restricted", "behind_closed_doors": "Behind closed doors"}
+RESULT_COLORS = {"H": "#2a78d6", "D": "#bdbcb6", "A": "#e34948"}
+COVID_SHADE = "#f0efec"
+METRIC_LABELS = {
+    "goals": "Goals", "points": "Points", "shots": "Shots", "shots_on_target": "Shots on target",
+    "corners": "Corners", "fouls": "Fouls", "yellow_cards": "Yellow cards", "red_cards": "Red cards",
+}
+
+plt.rcParams.update({
+    "figure.facecolor": SURFACE, "axes.facecolor": SURFACE, "savefig.facecolor": SURFACE,
+    "font.family": "sans-serif", "font.size": 10, "text.color": INK,
+    "axes.edgecolor": AXIS, "axes.labelcolor": INK_2, "axes.titlesize": 11, "axes.titleweight": "bold",
+    "axes.titlecolor": INK, "axes.titlelocation": "left", "axes.spines.top": False, "axes.spines.right": False,
+    "axes.grid": True, "grid.color": GRID, "grid.linewidth": 0.8,
+    "xtick.color": MUTED, "ytick.color": MUTED, "xtick.labelcolor": INK_2, "ytick.labelcolor": INK_2,
+    "legend.frameon": False, "legend.fontsize": 9, "lines.linewidth": 2,
+})
+
+
+def _save(fig, name: str) -> Path:
+    FIG_DIR.mkdir(parents=True, exist_ok=True)
+    path = FIG_DIR / f"{name}.png"
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    return path
+
+
+def _title(fig, title: str, subtitle: str) -> None:
+    h = fig.get_figheight()
+    fig.text(0.01, 1 + 0.42 / h, title, ha="left", va="bottom", fontsize=13, fontweight="bold", color=INK)
+    fig.text(0.01, 1 + 0.12 / h, subtitle, ha="left", va="bottom", fontsize=9.5, color=INK_2)
+
+
+def _dot_ci(ax, y, x, lo, hi, color, size=60, label=None):
+    ax.hlines(y, lo, hi, color=color, linewidth=2, alpha=0.6, zorder=2)
+    ax.scatter(x, y, s=size, color=color, edgecolor=SURFACE, linewidth=2, zorder=3, label=label)
+
+
+def _zero_line(ax, axis="x", value=0.0):
+    (ax.axvline if axis == "x" else ax.axhline)(value, color=AXIS, linewidth=1.2, zorder=1)
+
+
+# ---------------------------------------------------------------------------
+# A. Does home advantage exist?
+# ---------------------------------------------------------------------------
+def fig_a_results(t: pd.DataFrame) -> Path:
+    fig, ax = plt.subplots(figsize=(8.5, 3.2))
+    comps = ["EPL", "LALIGA", "UCL"][::-1]
+    for i, comp in enumerate(comps):
+        r = t[t["competition"] == comp].iloc[0]
+        left = 0.0
+        for code, col, name in (("H", "home_win_pct", "Home win"), ("D", "draw_pct", "Draw"), ("A", "away_win_pct", "Away win")):
+            w = r[col]
+            ax.barh(i, w - 0.3, left=left + 0.15, height=0.62, color=RESULT_COLORS[code],
+                    label=name if i == 0 else None)
+            ax.text(left + w / 2, i, f"{w:.1f}%", ha="center", va="center", fontsize=9.5,
+                    color="#ffffff" if code != "D" else INK, fontweight="bold")
+            left += w
+        ax.text(101, i, f"n = {int(r['matches']):,}", va="center", fontsize=8.5, color=MUTED)
+    ax.set_yticks(range(len(comps)), [COMP_LABELS[c] for c in comps])
+    ax.set_xlim(0, 112)
+    ax.set_xticks([0, 25, 50, 75, 100], ["0%", "25%", "50%", "75%", "100%"])
+    ax.grid(axis="y", visible=False)
+    ax.legend(ncol=3, loc="upper left", bbox_to_anchor=(0, -0.12))
+    _title(fig, "Home teams win more often than away teams in all three competitions",
+           "Share of results, 2016/17 to 2025/26. Neutral-venue matches excluded.")
+    return _save(fig, "eda_a_results")
+
+
+def fig_a_home_away(t: pd.DataFrame) -> Path:
+    metrics = ["points", "goals", "shots", "shots_on_target", "corners"]
+    fig, axes = plt.subplots(1, len(metrics), figsize=(13, 3.0), sharey=True)
+    comps = ["EPL", "LALIGA", "UCL"]
+    for ax, m in zip(axes, metrics):
+        for i, comp in enumerate(comps):
+            r = t[(t["competition"] == comp) & (t["metric"] == m)]
+            if r.empty:
+                ax.text(0.5, i, "no data", va="center", ha="center", fontsize=8.5, color=MUTED,
+                        transform=ax.get_yaxis_transform())
+                continue
+            r = r.iloc[0]
+            _dot_ci(ax, i, r["diff_pm"], r["diff_lo"], r["diff_hi"], COMP_COLORS[comp])
+            ax.text(r["diff_hi"], i + 0.28, f"+{r['diff_pm']:.2f}", ha="right", fontsize=8.5, color=INK_2)
+        _zero_line(ax)
+        ax.set_title(METRIC_LABELS[m], fontsize=10)
+        ax.set_ylim(-0.6, 2.6)
+        lim = max(abs(np.nanmin(t.loc[t.metric == m, "diff_lo"])), abs(np.nanmax(t.loc[t.metric == m, "diff_hi"])))
+        ax.set_xlim(-0.15 * lim, lim * 1.15)
+        ax.grid(axis="y", visible=False)
+    axes[0].set_yticks(range(3), [COMP_LABELS[c] for c in comps])
+    axes[0].invert_yaxis()
+    _title(fig, "Home teams out-score, out-shoot and out-point their visitors",
+           "Home minus away, per match, with 95% intervals. The UCL source has no match statistics.")
+    return _save(fig, "eda_a_home_away")
+
+
+# ---------------------------------------------------------------------------
+# B. Has home advantage changed over time?
+# ---------------------------------------------------------------------------
+def _shade_covid(ax, seasons):
+    i0, i1 = seasons.index("2019/20"), seasons.index("2020/21")
+    ax.axvspan(i0 - 0.45, i1 + 0.45, color=COVID_SHADE, zorder=0)
+
+
+def fig_b_trend(t: pd.DataFrame) -> Path:
+    seasons = sorted(t["season"].unique())
+    fig, axes = plt.subplots(1, 2, figsize=(13, 4.2))
+    panels = [("home_win_pct", "Home win %", "{:.0f}%"), ("home_excess", "Strength-adjusted home excess", "{:+.2f}")]
+    for ax, (col, ttl, fmt) in zip(axes, panels):
+        _shade_covid(ax, seasons)
+        for comp in ["EPL", "LALIGA", "UCL"]:
+            d = t[t["competition"] == comp].set_index("season").reindex(seasons)
+            x = np.arange(len(seasons))
+            ax.plot(x, d[col], color=COMP_COLORS[comp], marker="o", markersize=6,
+                    markeredgecolor=SURFACE, markeredgewidth=1.5, label=COMP_LABELS[comp], zorder=3)
+            ax.text(x[-1] + 0.2, d[col].iloc[-1], COMP_LABELS[comp], va="center", fontsize=8.5, color=INK_2)
+        ax.set_xticks(range(len(seasons)), [s[2:] for s in seasons], rotation=0, fontsize=8.5)
+        ax.set_xlim(-0.5, len(seasons) + 1.6)
+        ax.set_title(ttl)
+        ax.grid(axis="x", visible=False)
+        if col == "home_excess":
+            _zero_line(ax, "y")
+            ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:+.2f}"))
+        else:
+            ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:.0f}%"))
+        ax.text(seasons.index("2019/20") + 0.5, ax.get_ylim()[1], "COVID seasons", ha="center", va="top",
+                fontsize=8.5, color=MUTED)
+    axes[0].legend(loc="upper left", bbox_to_anchor=(0, -0.1), ncol=3)
+    _title(fig, "Home advantage dipped in the empty-stadium season and recovered afterwards",
+           "Per season, neutral venues excluded. Home excess = home score (win 1, draw 0.5) minus the "
+           "score expected from pre-match Elo with no home term.")
+    return _save(fig, "eda_b_trend")
+
+
+# ---------------------------------------------------------------------------
+# C. What happened when crowds disappeared?
+# ---------------------------------------------------------------------------
+def fig_c_crowd(t: pd.DataFrame, window: pd.DataFrame) -> Path:
+    fig, axes = plt.subplots(1, 3, figsize=(13, 3.6), sharey=True)
+    groups = [("All matches, 2016/17 to 2025/26", t[t["competition"] == "ALL"])]
+    groups.append(("EPL and La Liga, 2019/20 to 2021/22 only", window))
+    crowds = ["normal", "restricted", "behind_closed_doors"]
+    panels = [("home_win_pct", "Home win %", lambda v: f"{v:.1f}%"),
+              ("goal_diff_pm", "Home goal difference per match", lambda v: f"{v:+.2f}"),
+              ("home_excess", "Strength-adjusted home excess", lambda v: f"{v:+.3f}")]
+    for ax, (col, ttl, fmt) in zip(axes, panels):
+        for gi, (glabel, d) in enumerate(groups):
+            for ci, crowd in enumerate(crowds):
+                r = d[d["crowd_status"] == crowd]
+                if r.empty:
+                    continue
+                r = r.iloc[0]
+                y = gi * 4 + ci
+                lo, hi = (r[f"{col}_lo"], r[f"{col}_hi"])
+                _dot_ci(ax, y, r[col], lo, hi, CROWD_COLORS[crowd],
+                        label=f"{CROWD_LABELS[crowd]}" if (gi == 0 and col == "home_win_pct") else None)
+                ax.text(hi, y, f"  {fmt(r[col])}  (n={int(r['matches']):,})", va="center", fontsize=8, color=INK_2)
+        if col != "home_win_pct":
+            _zero_line(ax)
+        ax.set_title(ttl, fontsize=10)
+        ax.grid(axis="y", visible=False)
+        x0, x1 = ax.get_xlim()
+        ax.set_xlim(x0, x1 + (x1 - x0) * 0.45)
+    axes[0].set_yticks([1, 5], [g[0].replace(", ", "\n") for g in groups], fontsize=9)
+    axes[0].invert_yaxis()
+    axes[0].legend(loc="upper left", bbox_to_anchor=(0, -0.08), ncol=3)
+    _title(fig, "Home advantage was smaller in matches behind closed doors",
+           "Mean with 95% interval. Neutral venues and matches with unknown crowd status excluded.")
+    return _save(fig, "eda_c_crowd")
+
+
+def fig_c_by_competition(t: pd.DataFrame) -> Path:
+    fig, ax = plt.subplots(figsize=(8.5, 4.2))
+    crowds = ["normal", "restricted", "behind_closed_doors"]
+    comps = ["EPL", "LALIGA", "UCL"]
+    for gi, comp in enumerate(comps):
+        for ci, crowd in enumerate(crowds):
+            r = t[(t["competition"] == comp) & (t["crowd_status"] == crowd)]
+            if r.empty:
+                continue
+            r = r.iloc[0]
+            y = gi * 4 + ci
+            _dot_ci(ax, y, r["home_excess"], r["home_excess_lo"], r["home_excess_hi"], CROWD_COLORS[crowd],
+                    label=CROWD_LABELS[crowd] if gi == 0 else None)
+            ax.text(r["home_excess_hi"], y, f"  {r['home_excess']:+.3f}  (n={int(r['matches']):,})", va="center",
+                    fontsize=8, color=INK_2)
+    _zero_line(ax)
+    ax.set_yticks([1, 5, 9], [COMP_LABELS[c] for c in comps])
+    ax.invert_yaxis()
+    ax.grid(axis="y", visible=False)
+    x0, x1 = ax.get_xlim()
+    ax.set_xlim(x0, x1 + (x1 - x0) * 0.3)
+    ax.legend(loc="upper left", bbox_to_anchor=(0, -0.08), ncol=3)
+    _title(fig, "The empty-stadium drop is clearest in the Premier League",
+           "Strength-adjusted home excess by crowd condition, with 95% intervals. Small samples have wide intervals.")
+    return _save(fig, "eda_c_by_competition")
+
+
+def _stat_panels(t: pd.DataFrame, metrics: list[str], name: str, title: str, subtitle: str) -> Path:
+    d = t[t["competition"] == "ALL"]
+    crowds = ["normal", "restricted", "behind_closed_doors"]
+    fig, axes = plt.subplots(1, len(metrics), figsize=(4.3 * len(metrics), 2.9), sharey=True)
+    for ax, m in zip(axes, metrics):
+        for ci, crowd in enumerate(crowds):
+            r = d[(d["metric"] == m) & (d["crowd_status"] == crowd)]
+            if r.empty:
+                continue
+            r = r.iloc[0]
+            _dot_ci(ax, ci, r["diff_pm"], r["diff_lo"], r["diff_hi"], CROWD_COLORS[crowd],
+                    label=CROWD_LABELS[crowd] if m == metrics[0] else None)
+            ax.text(r["diff_hi"], ci, f"  {r['diff_pm']:+.2f}", va="center", fontsize=8.5, color=INK_2)
+        _zero_line(ax)
+        ax.set_title(METRIC_LABELS[m], fontsize=10)
+        ax.grid(axis="y", visible=False)
+        x0, x1 = ax.get_xlim()
+        ax.set_xlim(min(x0, -0.05 * (x1 - x0)), x1 + (x1 - x0) * 0.3)
+    axes[0].set_yticks(range(3), [CROWD_LABELS[c] for c in crowds])
+    axes[0].invert_yaxis()
+    _title(fig, title, subtitle)
+    return _save(fig, name)
+
+
+def fig_c_performance(t: pd.DataFrame) -> Path:
+    return _stat_panels(t, ["shots", "shots_on_target", "corners"], "eda_c_performance",
+                        "Home teams' edge in shots and corners narrowed without crowds",
+                        "Home minus away per match, EPL and La Liga, with 95% intervals.")
+
+
+def fig_d_referee(t: pd.DataFrame) -> Path:
+    return _stat_panels(t, ["fouls", "yellow_cards", "red_cards"], "eda_d_referee",
+                        "The away side's extra fouls and yellow cards disappeared in empty stadiums",
+                        "Home minus away per match, EPL and La Liga, with 95% intervals. Negative = away side "
+                        "committed or received more. Penalties are not available.")
+
+
+# ---------------------------------------------------------------------------
+# E. Which teams have the strongest home advantage?
+# ---------------------------------------------------------------------------
+def fig_e_teams(t: pd.DataFrame, n: int = 10) -> Path:
+    top, bottom = t.head(n), t.tail(n)
+    fig, axes = plt.subplots(1, 2, figsize=(13, 4.6), sharex=True, gridspec_kw={"wspace": 0.55})
+    mean = t["adj_gap"].mean()
+    for ax, d, ttl in ((axes[0], top, f"Largest home advantage (top {n})"),
+                       (axes[1], bottom.iloc[::-1], f"Smallest home advantage (bottom {n})")):
+        for i, r in enumerate(d.itertuples()):
+            _dot_ci(ax, i, r.adj_gap, r.adj_gap_lo, r.adj_gap_hi, COMP_COLORS[r.competition], size=50)
+        ax.set_yticks(range(len(d)), [f"{r.team} ({int(r.home_matches)})" for r in d.itertuples()], fontsize=9)
+        ax.invert_yaxis()
+        _zero_line(ax)
+        ax.axvline(mean, color=MUTED, linewidth=1, linestyle=(0, (3, 3)))
+        ax.set_title(ttl, fontsize=10)
+        ax.grid(axis="y", visible=False)
+    handles = [plt.Line2D([], [], marker="o", linestyle="", color=COMP_COLORS[c], markersize=7, label=COMP_LABELS[c])
+               for c in ["EPL", "LALIGA"]]
+    axes[0].legend(handles=handles, loc="upper left", bbox_to_anchor=(0, -0.06), ncol=2)
+    _title(fig, "Club home advantage varies, but most intervals overlap the league average",
+           f"Home excess minus away excess (Elo-adjusted), league matches with normal crowds, "
+           f"clubs with at least {int(t['home_matches'].min())} home games (count in brackets). 95% intervals. "
+           f"Dashed line = average of all {len(t)} clubs ({mean:+.2f}).")
+    return _save(fig, "eda_e_teams")
+
+
+# ---------------------------------------------------------------------------
+# F. Which competition depends most on home advantage?
+# ---------------------------------------------------------------------------
+def fig_f_competition(t: pd.DataFrame) -> Path:
+    fig, ax = plt.subplots(figsize=(8.5, 3.6))
+    colors = {"Premier League": COMP_COLORS["EPL"], "La Liga": COMP_COLORS["LALIGA"]}
+    for i, r in enumerate(t.itertuples()):
+        c = colors.get(r.segment, COMP_COLORS["UCL"])
+        size = 70 if r.segment in ("Premier League", "La Liga", "Champions League") else 45
+        _dot_ci(ax, i, r.home_excess, r.home_excess_lo, r.home_excess_hi, c, size=size)
+        ax.text(r.home_excess_hi, i, f"  {r.home_excess:+.3f}  (n={int(r.matches):,})", va="center",
+                fontsize=8.5, color=INK_2)
+    labels = [s if not s.startswith("UCL ") else "    " + s.replace("UCL ", "").capitalize() for s in t["segment"]]
+    ax.set_yticks(range(len(t)), labels)
+    ax.invert_yaxis()
+    _zero_line(ax)
+    ax.grid(axis="y", visible=False)
+    x0, x1 = ax.get_xlim()
+    ax.set_xlim(min(x0, -0.01), x1 + (x1 - x0) * 0.35)
+    _title(fig, "La Liga shows the largest strength-adjusted home advantage",
+           "Home excess with 95% intervals, neutral venues excluded. Indented rows split the Champions League.")
+    return _save(fig, "eda_f_competition")
+
+
+# ---------------------------------------------------------------------------
+# Supplementary: travel and rest
+# ---------------------------------------------------------------------------
+def fig_g_travel_rest(travel: pd.DataFrame, rest: pd.DataFrame) -> Path:
+    fig, axes = plt.subplots(1, 2, figsize=(13, 3.8), sharey=True)
+    ax = axes[0]
+    scope_color = {"Domestic": MUTED, "UCL": COMP_COLORS["UCL"]}
+    bands = list(travel["travel_band"].cat.categories) if hasattr(travel["travel_band"], "cat") else list(
+        dict.fromkeys(travel["travel_band"]))
+    for k, scope in enumerate(["Domestic", "UCL"]):
+        d = travel[(travel["scope"] == scope) & (travel["matches"] >= 30)]
+        for r in d.itertuples():
+            x = bands.index(r.travel_band) + (k - 0.5) * 0.25
+            ax.vlines(x, r.home_excess_lo, r.home_excess_hi, color=scope_color[scope], linewidth=2, alpha=0.6)
+            ax.scatter(x, r.home_excess, s=55, color=scope_color[scope], edgecolor=SURFACE, linewidth=2, zorder=3,
+                       label=f"{scope} matches" if r.Index == d.index[0] else None)
+    ax.set_xticks(range(len(bands)), bands, fontsize=8.5)
+    ax.set_xlabel("Away team travel distance (km)")
+    ax.set_title("By away-team travel distance (normal crowds)", fontsize=10)
+    ax.legend(loc="upper left")
+    ax = axes[1]
+    for i, r in enumerate(rest.itertuples()):
+        ax.vlines(i, r.home_excess_lo, r.home_excess_hi, color=COMP_COLORS["EPL"], linewidth=2, alpha=0.6)
+        ax.scatter(i, r.home_excess, s=55, color=COMP_COLORS["EPL"], edgecolor=SURFACE, linewidth=2, zorder=3)
+        ax.text(i, r.home_excess_hi, f"n={int(r.matches):,}", ha="center", va="bottom", fontsize=8, color=MUTED)
+    ax.set_xticks(range(len(rest)), [str(b) for b in rest["rest_band"]], fontsize=8.5)
+    ax.set_xlabel("Rest difference (approximate, capped at 14 days)")
+    ax.set_title("By rest difference (all crowds)", fontsize=10)
+    for a in axes:
+        _zero_line(a, "y")
+        a.grid(axis="x", visible=False)
+        a.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:+.2f}"))
+    _title(fig, "Longer trips and extra home rest go with a slightly larger home excess",
+           "Strength-adjusted home excess with 95% intervals; bands under 30 matches omitted. Descriptive only: the domestic distance bands mix leagues (La Liga trips are longer).")
+    return _save(fig, "eda_g_travel_rest")
+
+
+def make_eda_figures(tables: dict[str, pd.DataFrame]) -> list[Path]:
+    return [
+        fig_a_results(tables["a_overall"]),
+        fig_a_home_away(tables["a_home_away"]),
+        fig_b_trend(tables["b_trend"]),
+        fig_c_crowd(tables["c_crowd"], tables["c_crowd_window"]),
+        fig_c_by_competition(tables["c_crowd"]),
+        fig_c_performance(tables["c_performance"]),
+        fig_d_referee(tables["d_referee"]),
+        fig_e_teams(tables["e_teams"]),
+        fig_f_competition(tables["f_competition"]),
+        fig_g_travel_rest(tables["g_travel"], tables["g_rest"]),
+    ]

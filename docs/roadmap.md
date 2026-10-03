@@ -26,8 +26,10 @@ Each phase ends with validated outputs before the next starts.
 - Gold table `data/processed/matches_gold.csv` (8,972 rows), validated for row count, uniqueness and leakage. UCL stage variables (`stage`, `stage_type`, `knockout_match`, `leg`, `ucl_format`) come from silver.
 - Stadium capacity was skipped: without attendance it has no use.
 
-## Phase 4: EDA
-Questions A to F, one figure per question.
+## Phase 4: EDA (done)
+- `src/analysis/eda.py` builds summary tables for questions A to F with 95% intervals (`reports/tables/eda_*.csv`); `src/visualization/plots.py` draws one figure per question (`reports/figures/eda_*.png`).
+- Strength-adjusted home excess (actual score minus Elo expectation with no home term) reported next to raw rates.
+- Findings written up in `reports/eda.md`; `notebooks/04_eda.ipynb` is a thin interactive companion.
 
 ## Phase 5: Statistical analysis
 Proportion tests, chi-square, confidence intervals, effect sizes, strength-controlled regressions, COVID interaction model.
