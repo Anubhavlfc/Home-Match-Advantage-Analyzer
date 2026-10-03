@@ -1,32 +1,36 @@
-competition,season,stage,home_team,away_team,stadium,city,country,neutral_venue,reason,source
-UCL,2016/17,final,*,*,Millennium Stadium,Cardiff,Wales,1,final,https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final
-UCL,2017/18,final,*,*,NSC Olimpiyskiy,Kyiv,Ukraine,1,final,https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final
-UCL,2018/19,final,*,*,Metropolitano Stadium,Madrid,Spain,1,final,https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final
-UCL,2019/20,final,*,*,Estádio da Luz,Lisbon,Portugal,1,final (Lisbon final tournament),https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final
-UCL,2020/21,final,*,*,Estádio do Dragão,Porto,Portugal,1,final,https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final
-UCL,2021/22,final,*,*,Stade de France,Saint-Denis,France,1,final,https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final
-UCL,2022/23,final,*,*,Atatürk Olympic Stadium,Istanbul,Turkey,1,final,https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final
-UCL,2023/24,final,*,*,Wembley Stadium,London,England,1,final,https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final
-UCL,2024/25,final,*,*,Allianz Arena,Munich,Germany,1,final,https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final
-UCL,2025/26,final,*,*,Puskás Aréna,Budapest,Hungary,1,final,https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final
-UCL,2019/20,quarter_final,Atalanta,Paris Saint-Germain,Estádio da Luz,Lisbon,Portugal,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
-UCL,2019/20,quarter_final,RB Leipzig,Atlético Madrid,Estádio José Alvalade,Lisbon,Portugal,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
-UCL,2019/20,quarter_final,Barcelona,Bayern Munich,Estádio da Luz,Lisbon,Portugal,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
-UCL,2019/20,quarter_final,Manchester City,Lyon,Estádio José Alvalade,Lisbon,Portugal,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
-UCL,2019/20,semi_final,RB Leipzig,Paris Saint-Germain,Estádio da Luz,Lisbon,Portugal,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
-UCL,2019/20,semi_final,Lyon,Bayern Munich,Estádio José Alvalade,Lisbon,Portugal,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
-UCL,2020/21,round_of_16,RB Leipzig,Liverpool,Puskás Aréna,Budapest,Hungary,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
-UCL,2020/21,round_of_16,Liverpool,RB Leipzig,Puskás Aréna,Budapest,Hungary,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
-UCL,2020/21,round_of_16,Borussia Mönchengladbach,Manchester City,Puskás Aréna,Budapest,Hungary,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
-UCL,2020/21,round_of_16,Manchester City,Borussia Mönchengladbach,Puskás Aréna,Budapest,Hungary,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
-UCL,2020/21,round_of_16,Atlético Madrid,Chelsea,Arena Națională,Bucharest,Romania,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
-UCL,2020/21,quarter_final,Porto,Chelsea,Ramón Sánchez Pizjuán,Seville,Spain,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
-UCL,2020/21,quarter_final,Chelsea,Porto,Ramón Sánchez Pizjuán,Seville,Spain,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
-UCL,2022/23,*,Shakhtar Donetsk,*,Stadion Wojska Polskiego,Warsaw,Poland,1,home club displaced abroad by war in Ukraine,https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
-UCL,2023/24,*,Shakhtar Donetsk,*,Volksparkstadion,Hamburg,Germany,1,home club displaced abroad by war in Ukraine,https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
-UCL,2024/25,*,Shakhtar Donetsk,*,Veltins-Arena,Gelsenkirchen,Germany,1,home club displaced abroad by war in Ukraine,https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
-UCL,2017/18,*,Shakhtar Donetsk,*,Metalist Stadium,Kharkiv,Ukraine,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
-UCL,2018/19,*,Shakhtar Donetsk,*,Metalist Stadium,Kharkiv,Ukraine,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
-UCL,2019/20,*,Shakhtar Donetsk,*,Metalist Stadium,Kharkiv,Ukraine,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
-UCL,2020/21,*,Shakhtar Donetsk,*,NSC Olimpiyskiy,Kyiv,Ukraine,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
-UCL,2021/22,*,Shakhtar Donetsk,*,NSC Olimpiyskiy,Kyiv,Ukraine,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+competition,season,stage,home_team,away_team,stadium,city,country,latitude,longitude,neutral_venue,reason,source
+UCL,2014/15,final,*,*,Olympiastadion Berlin,Berlin,Germany,52.5147,13.2395,1,final,https://en.wikipedia.org/wiki/2015_UEFA_Champions_League_final
+UCL,2014/15,*,Shakhtar Donetsk,*,Arena Lviv,Lviv,Ukraine,49.7753,24.0278,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2015/16,final,*,*,San Siro,Milan,Italy,45.4781,9.124,1,final,https://en.wikipedia.org/wiki/2016_UEFA_Champions_League_final
+UCL,2015/16,*,Shakhtar Donetsk,*,Arena Lviv,Lviv,Ukraine,49.7753,24.0278,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2016/17,final,*,*,Millennium Stadium,Cardiff,Wales,51.4782,-3.1826,1,final,https://en.wikipedia.org/wiki/2017_UEFA_Champions_League_final
+UCL,2017/18,final,*,*,NSC Olimpiyskiy,Kyiv,Ukraine,50.4334,30.5216,1,final,https://en.wikipedia.org/wiki/2018_UEFA_Champions_League_final
+UCL,2017/18,*,Shakhtar Donetsk,*,Metalist Stadium,Kharkiv,Ukraine,49.9806,36.2618,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2018/19,final,*,*,Metropolitano Stadium,Madrid,Spain,40.4362,-3.5995,1,final,https://en.wikipedia.org/wiki/2019_UEFA_Champions_League_final
+UCL,2018/19,*,Shakhtar Donetsk,*,Metalist Stadium,Kharkiv,Ukraine,49.9806,36.2618,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2019/20,final,*,*,Estádio da Luz,Lisbon,Portugal,38.7527,-9.1847,1,final (Lisbon final tournament),https://en.wikipedia.org/wiki/2020_UEFA_Champions_League_final
+UCL,2019/20,quarter_final,Atalanta,Paris Saint-Germain,Estádio da Luz,Lisbon,Portugal,38.7527,-9.1847,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+UCL,2019/20,quarter_final,RB Leipzig,Atlético Madrid,Estádio José Alvalade,Lisbon,Portugal,38.7612,-9.1609,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+UCL,2019/20,quarter_final,Barcelona,Bayern Munich,Estádio da Luz,Lisbon,Portugal,38.7527,-9.1847,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+UCL,2019/20,quarter_final,Manchester City,Lyon,Estádio José Alvalade,Lisbon,Portugal,38.7612,-9.1609,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+UCL,2019/20,semi_final,RB Leipzig,Paris Saint-Germain,Estádio da Luz,Lisbon,Portugal,38.7527,-9.1847,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+UCL,2019/20,semi_final,Lyon,Bayern Munich,Estádio José Alvalade,Lisbon,Portugal,38.7612,-9.1609,1,COVID single-venue final tournament,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+UCL,2019/20,*,Shakhtar Donetsk,*,Metalist Stadium,Kharkiv,Ukraine,49.9806,36.2618,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2020/21,final,*,*,Estádio do Dragão,Porto,Portugal,41.1618,-8.5839,1,final,https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final
+UCL,2020/21,round_of_16,RB Leipzig,Liverpool,Puskás Aréna,Budapest,Hungary,47.5031,19.0978,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
+UCL,2020/21,round_of_16,Liverpool,RB Leipzig,Puskás Aréna,Budapest,Hungary,47.5031,19.0978,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
+UCL,2020/21,round_of_16,Borussia Mönchengladbach,Manchester City,Puskás Aréna,Budapest,Hungary,47.5031,19.0978,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
+UCL,2020/21,round_of_16,Manchester City,Borussia Mönchengladbach,Puskás Aréna,Budapest,Hungary,47.5031,19.0978,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
+UCL,2020/21,round_of_16,Atlético Madrid,Chelsea,Arena Națională,Bucharest,Romania,44.4372,26.1525,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
+UCL,2020/21,quarter_final,Porto,Chelsea,Ramón Sánchez Pizjuán,Seville,Spain,37.384,-5.9705,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
+UCL,2020/21,quarter_final,Chelsea,Porto,Ramón Sánchez Pizjuán,Seville,Spain,37.384,-5.9705,1,relocated (COVID travel restrictions),https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
+UCL,2020/21,*,Shakhtar Donetsk,*,NSC Olimpiyskiy,Kyiv,Ukraine,50.4334,30.5216,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2021/22,final,*,*,Stade de France,Saint-Denis,France,48.9245,2.3602,1,final,https://en.wikipedia.org/wiki/2022_UEFA_Champions_League_final
+UCL,2021/22,*,Shakhtar Donetsk,*,NSC Olimpiyskiy,Kyiv,Ukraine,50.4334,30.5216,0,home club displaced within Ukraine since 2014 (not neutral: same country),https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2022/23,final,*,*,Atatürk Olympic Stadium,Istanbul,Turkey,41.0742,28.7656,1,final,https://en.wikipedia.org/wiki/2023_UEFA_Champions_League_final
+UCL,2022/23,*,Shakhtar Donetsk,*,Stadion Wojska Polskiego,Warsaw,Poland,52.2205,21.0405,1,home club displaced abroad by war in Ukraine,https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2023/24,final,*,*,Wembley Stadium,London,England,51.556,-0.2796,1,final,https://en.wikipedia.org/wiki/2024_UEFA_Champions_League_final
+UCL,2023/24,*,Shakhtar Donetsk,*,Volksparkstadion,Hamburg,Germany,53.5872,9.8986,1,home club displaced abroad by war in Ukraine,https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2024/25,final,*,*,Allianz Arena,Munich,Germany,48.2188,11.6247,1,final,https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final
+UCL,2024/25,*,Shakhtar Donetsk,*,Veltins-Arena,Gelsenkirchen,Germany,51.5546,7.0679,1,home club displaced abroad by war in Ukraine,https://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk
+UCL,2025/26,final,*,*,Puskás Aréna,Budapest,Hungary,47.5031,19.0978,1,final,https://en.wikipedia.org/wiki/2026_UEFA_Champions_League_final

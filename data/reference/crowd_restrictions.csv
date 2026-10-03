@@ -1,0 +1,53 @@
+priority,competition,host_country,home_team_id,date_from,date_to,crowd_status,confidence,note,source
+0,*,*,*,2014-07-01,2020-03-07,normal,high,before COVID-19 restrictions,
+0,*,*,*,2020-03-08,2022-06-30,unknown,low,pandemic period: status comes from the more specific rules below,
+0,*,*,*,2022-07-01,2026-08-31,normal,high,after COVID-19 restrictions,
+1,UCL,Poland,legia-warsaw,2016-11-02,2016-11-02,behind_closed_doors,high,UEFA sanction: Legia v Real Madrid played without spectators,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League_group_stage
+1,EPL,*,*,2020-03-08,2020-03-12,normal,high,last EPL matches before the suspension had full crowds,https://en.wikipedia.org/wiki/Impact_of_the_COVID-19_pandemic_on_association_football
+1,LALIGA,*,*,2020-03-08,2020-03-09,normal,high,last La Liga weekend before the suspension had full crowds,https://en.wikipedia.org/wiki/Impact_of_the_COVID-19_pandemic_on_association_football
+1,LALIGA,*,eibar,2020-03-10,2020-03-10,behind_closed_doors,medium,Eibar v Real Sociedad played behind closed doors before the suspension,https://en.wikipedia.org/wiki/2019%E2%80%9320_La_Liga
+1,UCL,Spain,valencia,2020-03-10,2020-03-10,behind_closed_doors,high,Valencia v Atalanta played behind closed doors,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+1,UCL,France,paris-saint-germain,2020-03-11,2020-03-11,behind_closed_doors,high,PSG v Dortmund played behind closed doors,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+1,UCL,Germany,rb-leipzig,2020-03-10,2020-03-10,normal,high,RB Leipzig v Tottenham played with a full crowd,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+1,UCL,England,liverpool,2020-03-11,2020-03-11,normal,high,Liverpool v Atletico Madrid played with a full crowd,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+1,EPL,*,*,2020-06-17,2021-05-17,behind_closed_doors,high,EPL restart and 2020/21 without spectators (exceptions below),https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,arsenal,2020-12-02,2020-12-15,restricted,high,London in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,chelsea,2020-12-02,2020-12-15,restricted,high,London in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,crystal-palace,2020-12-02,2020-12-15,restricted,high,London in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,fulham,2020-12-02,2020-12-15,restricted,high,London in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,tottenham-hotspur,2020-12-02,2020-12-15,restricted,high,London in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,west-ham-united,2020-12-02,2020-12-15,restricted,high,London in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,liverpool,2020-12-02,2020-12-30,restricted,medium,Liverpool City Region in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,everton,2020-12-02,2020-12-30,restricted,medium,Liverpool City Region in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,southampton,2020-12-02,2020-12-25,restricted,medium,Hampshire in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+2,EPL,*,brighton-hove-albion,2020-12-02,2020-12-19,restricted,medium,Brighton in Tier 2: up to 2000 fans,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+1,EPL,*,*,2021-05-18,2021-05-23,restricted,high,final two rounds: up to 10000 fans or 25% of capacity,https://en.wikipedia.org/wiki/2020%E2%80%9321_Premier_League
+1,EPL,*,*,2021-07-01,2022-06-30,normal,high,full crowds returned for 2021/22,https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League
+1,LALIGA,*,*,2020-06-11,2021-05-14,behind_closed_doors,high,La Liga restart and 2020/21 without spectators; last two rounds left unknown (regional exceptions),https://en.wikipedia.org/wiki/2020%E2%80%9321_La_Liga
+1,LALIGA,*,*,2021-08-13,2021-09-30,restricted,high,2021/22 opened with capacity caps (40% then 60%),https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga
+1,LALIGA,*,*,2021-10-01,2022-06-30,normal,medium,full capacity allowed from October 2021 (some regional caps in winter),https://en.wikipedia.org/wiki/2021%E2%80%9322_La_Liga
+1,UCL,*,*,2020-08-01,2020-08-31,behind_closed_doors,high,August 2020 matches including the Lisbon tournament were played without spectators,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League_knockout_phase
+1,UCL,England,*,2020-10-20,2020-12-09,behind_closed_doors,high,England: no spectators,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_group_stage
+1,UCL,Spain,*,2020-10-20,2020-12-09,behind_closed_doors,high,Spain: no spectators,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_group_stage
+1,UCL,Portugal,*,2020-10-20,2020-12-09,behind_closed_doors,medium,Portugal: no spectators,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_group_stage
+1,UCL,Germany,*,2020-11-02,2020-12-09,behind_closed_doors,high,Germany: no spectators from the November 2020 partial lockdown,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_group_stage
+1,UCL,Italy,*,2020-10-26,2020-12-09,behind_closed_doors,high,Italy: no spectators from the 24 October 2020 decree,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_group_stage
+1,UCL,France,*,2020-10-30,2020-12-09,behind_closed_doors,high,France: no spectators from the October 2020 lockdown,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_group_stage
+1,UCL,Russia,*,2020-10-20,2020-12-09,restricted,medium,Russia: partial capacity allowed,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_group_stage
+1,UCL,*,*,2021-02-01,2021-05-28,behind_closed_doors,medium,2020/21 knockout rounds were played without spectators,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League_knockout_phase
+1,UCL,*,*,2021-05-29,2021-05-29,restricted,high,2021 final in Porto with a limited crowd,https://en.wikipedia.org/wiki/2021_UEFA_Champions_League_final
+1,UCL,England,*,2021-09-01,2022-06-30,normal,high,England: full crowds in 2021/22,
+1,UCL,Spain,*,2021-09-01,2021-09-30,restricted,high,Spain: capacity caps until October 2021,
+1,UCL,Spain,*,2021-10-01,2022-06-30,normal,medium,Spain: full capacity from October 2021,
+1,UCL,Italy,*,2021-09-01,2022-03-31,restricted,high,Italy: capacity caps (50-75%) through winter 2021/22,
+1,UCL,Germany,*,2021-09-01,2022-03-19,restricted,high,Germany: capacity caps through winter 2021/22,
+2,UCL,Germany,bayern-munich,2021-12-08,2021-12-08,behind_closed_doors,high,Bayern v Barcelona: Bavaria barred spectators,
+2,UCL,Germany,rb-leipzig,2021-12-07,2021-12-07,behind_closed_doors,high,RB Leipzig v Manchester City: Saxony barred spectators,
+1,UCL,Germany,*,2022-03-20,2022-06-30,normal,medium,Germany: caps lifted from spring 2022,
+1,UCL,Netherlands,*,2021-09-01,2021-11-12,normal,medium,Netherlands: full crowds with a COVID pass,
+1,UCL,Netherlands,*,2021-11-13,2022-01-25,behind_closed_doors,high,Netherlands: no spectators,
+1,UCL,Netherlands,*,2022-01-26,2022-06-30,restricted,medium,Netherlands: crowds returning with caps,
+1,UCL,Austria,*,2021-11-22,2021-12-12,behind_closed_doors,medium,Austria: national lockdown,
+1,UCL,France,*,2021-09-01,2021-12-31,normal,medium,France: full crowds with a health pass,
+1,UCL,Portugal,*,2021-10-01,2022-06-30,normal,medium,Portugal: full capacity from October 2021,
+1,UCL,*,*,2022-05-28,2022-05-28,normal,high,2022 final in Saint-Denis with a full crowd,

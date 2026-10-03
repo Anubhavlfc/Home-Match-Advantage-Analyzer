@@ -117,6 +117,16 @@ def run_all(refresh: bool = False) -> pd.DataFrame:
     _report("ALL", "2016/17", combined, checks)
     path = load.write_combined(combined)
     log.info("Combined table: %d matches -> %s", len(combined), path.relative_to(REPO_ROOT))
+
+    # Warm-up seasons feed Elo and rolling form only (see config.yaml).
+    warm = []
+    for season in load_config()["project"].get("warmup_seasons", []):
+        for comp in ("EPL", "LALIGA"):
+            warm.append(run_domestic_season(comp, season, refresh=refresh))
+        warm.append(run_ucl_season(season, refresh=refresh))
+    if warm:
+        wpath = load.write_combined(pd.concat(warm, ignore_index=True), name="matches_warmup.csv")
+        log.info("Warm-up table: %d matches -> %s", sum(len(w) for w in warm), wpath.relative_to(REPO_ROOT))
     return combined
 
 

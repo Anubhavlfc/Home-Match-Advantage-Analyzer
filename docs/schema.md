@@ -69,18 +69,38 @@ One row = one match. Generated from `src/schema.py` by `python -m src.schema`; d
 | `away_possession` | Float64 | silver | Away possession share 0-100 |
 | `referee` | string | silver | Referee name as published by the source |
 | `source` | string | silver | Source id(s) the row was built from |
-| `crowd_status` | string | gold | normal / restricted / behind_closed_doors / unknown |
-| `covid_period` | Int64 | gold | 1 for matches in the COVID disruption window |
+| `crowd_status` | string | gold | normal / restricted / behind_closed_doors / unknown, from crowd_restrictions.csv |
+| `crowd_status_confidence` | string | gold | high / medium / low confidence in crowd_status |
+| `crowd_rule` | string | gold | Note of the crowd rule that set crowd_status |
+| `covid_period` | Int64 | gold | 1 for matches from 2020-03-12 to 2021-07-31 |
 | `covid_phase` | string | gold | pre_covid / covid / post_covid |
+| `venue_latitude` | Float64 | gold | Latitude of the stadium the match was played at |
+| `venue_longitude` | Float64 | gold | Longitude of the stadium the match was played at |
 | `travel_distance_km` | Float64 | gold | Haversine km from away club's home ground to actual venue |
-| `home_rest_days` | Float64 | gold | Days since home team's previous match in the dataset (approximate) |
-| `away_rest_days` | Float64 | gold | Days since away team's previous match in the dataset (approximate) |
+| `home_travel_distance_km` | Float64 | gold | Haversine km from home club's ground to actual venue (non-zero for neutral/relocated games) |
+| `home_rest_days` | Float64 | gold | Days since home team's previous match in the dataset; NA for its first match of a season |
+| `away_rest_days` | Float64 | gold | Days since away team's previous match in the dataset; NA for its first match of a season |
 | `rest_difference` | Float64 | gold | home_rest_days - away_rest_days |
-| `home_form` | Float64 | gold | Home team points from previous 5 matches (shifted, pre-kickoff) |
-| `away_form` | Float64 | gold | Away team points from previous 5 matches (shifted, pre-kickoff) |
-| `home_strength` | Float64 | gold | Pre-match home strength rating (e.g. Elo before kickoff) |
-| `away_strength` | Float64 | gold | Pre-match away strength rating |
+| `rest_difference_capped` | Float64 | gold | Rest difference with each side capped at 14 days |
+| `home_form` | Float64 | gold | Home team points from its previous 5 matches, any competition (NA with < 5 prior) |
+| `away_form` | Float64 | gold | Away team points from its previous 5 matches, any competition |
+| `form_difference` | Float64 | gold | home_form - away_form |
+| `home_last5_win_pct` | Float64 | gold | Home team win share over previous 5 matches |
+| `away_last5_win_pct` | Float64 | gold | Away team win share over previous 5 matches |
+| `home_last5_goal_difference` | Float64 | gold | Home team goal difference over previous 5 matches |
+| `away_last5_goal_difference` | Float64 | gold | Away team goal difference over previous 5 matches |
+| `home_last5_goals_scored` | Float64 | gold | Home team goals scored over previous 5 matches |
+| `away_last5_goals_scored` | Float64 | gold | Away team goals scored over previous 5 matches |
+| `home_last5_goals_conceded` | Float64 | gold | Home team goals conceded over previous 5 matches |
+| `away_last5_goals_conceded` | Float64 | gold | Away team goals conceded over previous 5 matches |
+| `home_last5_home_points` | Float64 | gold | Home team points from its previous 5 non-neutral home matches |
+| `away_last5_away_points` | Float64 | gold | Away team points from its previous 5 non-neutral away matches |
+| `home_matches_before` | Int64 | gold | Home team's matches in the dataset before this one (warm-up included) |
+| `away_matches_before` | Int64 | gold | Away team's matches in the dataset before this one |
+| `home_strength` | Float64 | gold | Home team Elo rating before kick-off |
+| `away_strength` | Float64 | gold | Away team Elo rating before kick-off |
 | `strength_difference` | Float64 | gold | home_strength - away_strength |
+| `strength_reliable` | Int64 | gold | 1 when both teams have at least 20 prior matches in the dataset |
 
 ## Data layers
 
