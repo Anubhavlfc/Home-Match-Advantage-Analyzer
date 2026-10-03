@@ -84,7 +84,7 @@ logically certain. Nothing is estimated.
 
 ## Venue exceptions (`data/reference/venue_exceptions.csv`)
 
-33 matches are not at the listed home team's usual ground:
+49 matches are not at the listed home team's usual ground, 33 of them at a neutral venue:
 
 | Case | Matches | `neutral_venue` |
 |---|---|---|
