@@ -101,6 +101,9 @@ pip install -r requirements.txt
 # Extract, clean and validate everything -> data/interim/matches_all.csv
 python -m src.pipeline --all
 
+# Build engineered features -> data/processed/matches_gold.csv
+python -m src.features.build
+
 # Or one competition-season (EPL, LALIGA, UCL)
 python -m src.pipeline --competition UCL --season 2020/21
 
@@ -115,11 +118,11 @@ learning, then presentation. Details: [`docs/roadmap.md`](docs/roadmap.md).
 
 ## Limitations (known so far)
 
-- Attendance is not yet available from an integrated source.
+- Attendance is not available from an integrated source; `crowd_status` comes from a hand-compiled, confidence-rated table of COVID-era restrictions.
 - Champions League match statistics (shots, cards, fouls) are not available from the free sources checked.
 - Penalties and possession are not available for any competition and are out of scope.
 - Domestic match statistics currently come from a mirror of football-data.co.uk; scores and tables are independently verified, shots and cards are not.
-- Rest days will be approximate because domestic cups and other European competitions are not in the dataset.
+- Rest days are approximate because domestic cups and other European competitions are not in the dataset.
 
 ## Methodological rules
 

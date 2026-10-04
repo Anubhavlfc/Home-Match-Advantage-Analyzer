@@ -1,4 +1,4 @@
-# Methodology decisions (proposed)
+# Methodology decisions
 
 These are definitions to be agreed before the analysis phases. They describe
 how numbers will be computed, not what the results are.
@@ -52,10 +52,10 @@ interpretable.
 `crowd_status` (normal / restricted / behind_closed_doors / unknown) is the
 primary variable. `covid_period` is kept as a coarse secondary indicator.
 
-### How `crowd_status` will be assigned without match attendance
+### How `crowd_status` is assigned without match attendance
 
 No free, stable source of per-match attendance was found (see
-`docs/data_sources.md`). Instead of a season dummy, Phase 3 builds
+`docs/data_sources.md`). Instead of a season dummy, Phase 3 built
 `data/reference/crowd_restrictions.csv`: dated, cited rules per competition
 and country (and per club where rules differed by region), for example:
 
@@ -75,11 +75,40 @@ that crowd status comes from documented restrictions rather than counted
 attendance. If an attendance source is added later, it replaces these rules
 for the matches it covers.
 
+The rules were compiled by hand from public reporting of government and
+league restrictions, because the reference sites that would allow automated
+checks (Wikipedia, Wikidata) are blocked from the build environment. Each
+rule carries `confidence` (high / medium / low), copied into
+`crowd_status_confidence`. Every rule matching a match is applied in
+ascending `priority`, so a club-specific rule beats a country rule, which
+beats the default. The pandemic window (2020-03-08 to 2022-06-30) defaults to
+`unknown`. Result for the analysis seasons: 7,735 normal, 1,006 behind closed
+doors, 143 restricted, 88 unknown (68 of them UCL games in smaller host
+countries, 20 La Liga games in May 2021). Analyses of crowd effects should
+report results with and without low-confidence rows.
+
+`covid_phase` is a calendar indicator: `covid` from 2020-03-12 (the first
+top-flight suspensions) to 2021-07-31, `post_covid` after.
+
+## Feature definitions
+
+| Feature | Definition |
+|---|---|
+| Travel distance | Haversine km from the away club's home ground on the match date to the actual venue. `home_travel_distance_km` is the same for the home club. |
+| Rest days | Days since the team's previous match in the dataset. NA for its first match of a season. Approximate: domestic cups and the Europa League are not in the data, so rest is overstated for clubs that played them. `rest_difference_capped` caps each side at 14 days. |
+| Form | Sum of points (and win share, goals, goal difference) over the team's previous 5 matches in any competition here. NA with fewer than 5 prior matches. Venue-specific form uses the previous 5 non-neutral home (or away) matches. |
+| Strength | Elo before kick-off. K = 20 with a goal-difference multiplier (1, 1.5, then (11 + gd) / 8). Home advantage in the expectation is 60 points, chosen by Brier score on the warm-up seasons only and not applied at neutral venues. New clubs start at 1500; a club promoted into a league starts at the mean of that league's three lowest ratings. `strength_reliable` = 1 when both clubs have 20 or more prior matches. |
+
+Elo includes a home-advantage term, so `strength_difference` is the gap in
+team quality alone; it does not already contain the effect being studied.
+
 ## Leakage rules
 
 All form and strength features are computed from matches strictly before the
 current match date (`groupby(team).shift(1)` before rolling). Elo ratings are
-recorded before the match updates them. Model evaluation uses a time-based
+recorded before the match updates them. The gold build recomputes form and
+rest for a random sample of 300 matches directly from earlier-dated rows and
+fails if any value differs. Model evaluation uses a time-based
 split: train 2016/17 to 2022/23, validate 2023/24, test 2024/25 to 2025/26.
 
 ## Reference

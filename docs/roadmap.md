@@ -17,8 +17,14 @@ Each phase ends with validated outputs before the next starts.
 - Combined silver table `data/interim/matches_all.csv` (8,972 matches), validated after stacking.
 - Decisions on gaps: penalties and possession dropped from scope; referee-level analysis EPL only; crowd status from documented restrictions instead of attendance (see `docs/methodology.md`).
 
-## Phase 3: Feature engineering
-Reference tables (stadiums with coordinates and capacity, crowd restrictions), then `crowd_status`, `covid_period`, `neutral_venue`, travel distance, approximate rest days, shifted rolling form, pre-match Elo strength, UCL stage variables. Output: gold table in `data/processed/`.
+## Phase 3: Feature engineering (done)
+- 2014/15 and 2015/16 added as warm-up seasons (1,770 matches) so Elo, form and rest have history on the 2016/17 opening day. They never enter the gold table.
+- `data/reference/stadiums.csv`: home ground and coordinates for every club, with dated rows for temporary moves (Tottenham at Wembley, Real Madrid at the Di Stéfano, Barcelona at Montjuïc, Levante at La Nucía, Everton's move, and UCL-only venues).
+- `data/reference/crowd_restrictions.csv`: dated crowd rules giving `crowd_status` and its confidence; `covid_phase` and `covid_period`.
+- Travel distance (Haversine, away club's ground to actual venue; also the home club's distance, non-zero for neutral and relocated games).
+- Approximate rest days, last-5 form (points, win share, goals, goal difference, plus venue-specific form), pre-match Elo strength with a reliability flag.
+- Gold table `data/processed/matches_gold.csv` (8,972 rows), validated for row count, uniqueness and leakage. UCL stage variables (`stage`, `stage_type`, `knockout_match`, `leg`, `ucl_format`) come from silver.
+- Stadium capacity was skipped: without attendance it has no use.
 
 ## Phase 4: EDA
 Questions A to F, one figure per question.

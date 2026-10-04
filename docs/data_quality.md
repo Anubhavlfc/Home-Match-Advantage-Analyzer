@@ -97,15 +97,33 @@ logically certain. Nothing is estimated.
 Each row must match at least one match or the pipeline fails, so a typo cannot
 silently leave a final marked as a home game.
 
-## Still to handle (Phase 3)
+## Gold table (Phase 3)
 
-- **Usual home grounds** (stadium, coordinates, capacity) for all 143 clubs,
-  including temporary moves to verify and date precisely: Tottenham at Wembley
-  (UCL 2016/17 home games, then all home games until spring 2019), Real Madrid
-  at the Alfredo Di Stéfano (2019/20 restart and 2020/21), and Barcelona at
-  Montjuïc (from 2023/24 until the return to Camp Nou).
-- **Crowd status** per match (see `docs/methodology.md`).
+`python -m src.features.build` writes `data/processed/matches_gold.csv`
+(8,972 rows, same as silver) and a summary JSON. The build fails on any of:
+
+- a club without a home ground on a match date, or two equally specific rows;
+- a match not covered by any crowd rule;
+- a row-count change or duplicate `match_id`;
+- a non-neutral match far from the home ground without a venue note;
+- any form or rest value in a 300-match sample that differs from a direct
+  recomputation from earlier-dated rows.
+
+Feature missingness is by design: rest days 3.5% (first match of a season),
+form 2% (clubs with fewer than 5 prior matches, mostly UCL newcomers),
+venue-specific form 4%. Elo, travel and crowd status are complete. Two runs
+produce byte-identical files.
+
+Stadium coordinates (`stadiums.csv`) were compiled by hand to about 100 m
+precision; they feed only distances, where that error is negligible. The
+Shakhtar row is Kyiv, used only as a travel origin since its games are placed
+by venue exceptions.
+
+## Still open
+
 - **Rest days** are approximate because domestic cups and other European
   competitions are not in the dataset.
+- **Crowd status** for 88 matches is `unknown`, and some rules are medium or
+  low confidence.
 - **Away-goals rule** decided UCL ties until 2020/21; it matters only if
   tie-level outcomes are analysed.

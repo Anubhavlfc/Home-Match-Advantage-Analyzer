@@ -21,8 +21,8 @@ def write_silver(df: pd.DataFrame, competition: str, season: str) -> Path:
     return path
 
 
-def write_combined(df: pd.DataFrame) -> Path:
-    path = repo_path("interim") / "matches_all.csv"
+def write_combined(df: pd.DataFrame, name: str = "matches_all.csv") -> Path:
+    path = repo_path("interim") / name
     df.to_csv(path, index=False, date_format="%Y-%m-%d")
     return path
 

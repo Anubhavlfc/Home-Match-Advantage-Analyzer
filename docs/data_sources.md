@@ -15,9 +15,9 @@ Date of this review: **2026-10-02**.
 | Independent score cross-check (domestic) | openfootball `football.json` | Verified EPL 2016/17: 380/380 scores identical to football-data. |
 | Champions League results, stages | openfootball `champions-league` | Verified all 10 seasons. 125 matches per season to 2023/24 (119 in 2019/20), 189 from 2024/25 (league phase). No venues, no match stats. |
 | Attendance (all competitions) | Not yet secured | See section 4. This is the main data gap. |
-| Stadium coordinates and capacity | Wikidata (SPARQL, CC0) + manual reference table | Not yet built (Phase 3). |
+| Stadium coordinates and capacity | Manual reference table `data/reference/stadiums.csv` | Built (Phase 3). Coordinates only; capacity skipped. Wikidata is blocked from the build environment. |
 | Neutral / relocated UCL venues | Curated reference table with citations (`venue_exceptions.csv`) | Built: 49 matches, 33 of them neutral (finals, Lisbon 2020, 2020/21 relocations, displaced Shakhtar home games). |
-| COVID crowd restrictions | Match-level attendance where available; otherwise documented league/government rules | Not yet built (Phase 3). |
+| COVID crowd restrictions | Documented league/government rules, `data/reference/crowd_restrictions.csv` | Built (Phase 3), confidence-rated; `unknown` where unclear. |
 
 ## 2. Source details
 
@@ -74,8 +74,8 @@ Date of this review: **2026-10-02**.
 | Penalties awarded | N | N | N | out of scope (decided in Phase 2) |
 | Possession | N | N | N | out of scope (decided in Phase 2) |
 | Attendance | ? | ? | ? | see section 4 |
-| Venue (actual stadium) | derived* | derived* | derived* | *home club's ground (Phase 3) + exceptions table |
-| Stadium capacity, coordinates | planned | planned | planned | Wikidata + manual |
+| Venue (actual stadium) | derived* | derived* | derived* | *home club's ground from `stadiums.csv` + exceptions table |
+| Stadium coordinates | yes | yes | yes | manual `stadiums.csv`; capacity not collected |
 | Rest days | approx. | approx. | approx. | derived from integrated fixtures only |
 | Form, strength (Elo) | derived | derived | derived | from results |
 

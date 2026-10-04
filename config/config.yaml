@@ -16,6 +16,13 @@ project:
     - "2024/25"
     - "2025/26"
 
+  # Extra seasons used ONLY to warm up Elo ratings and rolling form, so that
+  # 2016/17 features are not computed from a cold start. They are never part
+  # of the analytical dataset.
+  warmup_seasons:
+    - "2014/15"
+    - "2015/16"
+
 paths:
   raw: data/raw
   interim: data/interim
