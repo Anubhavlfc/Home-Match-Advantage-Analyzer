@@ -1,0 +1,71 @@
+# Central configuration for the Home-Field Advantage Analyzer pipeline.
+# Paths are relative to the repository root.
+
+project:
+  name: home-field-advantage-analyzer
+  # Completed seasons only. 2026/27 is in progress and deliberately excluded.
+  seasons:
+    - "2016/17"
+    - "2017/18"
+    - "2018/19"
+    - "2019/20"
+    - "2020/21"
+    - "2021/22"
+    - "2022/23"
+    - "2023/24"
+    - "2024/25"
+    - "2025/26"
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  reference: data/reference
+  data_quality_reports: reports/data_quality
+  manifest: data/raw/_manifest.jsonl
+
+competitions:
+  EPL:
+    name: English Premier League
+    competition_type: domestic_league
+    country: England
+    n_teams: 20
+    football_data_division: E0
+    datahub_slug: premier-league
+    openfootball_json_code: en.1
+  LALIGA:
+    name: Spanish La Liga
+    competition_type: domestic_league
+    country: Spain
+    n_teams: 20
+    football_data_division: SP1
+    datahub_slug: la-liga
+    openfootball_json_code: es.1
+  UCL:
+    name: UEFA Champions League
+    competition_type: continental_cup
+    country: null
+    n_teams: null  # 32 through 2023/24, 36 from 2024/25 (league phase)
+    openfootball_cl_repo: champions-league
+
+sources:
+  # Primary source for domestic leagues: match results + match statistics.
+  football_data_co_uk:
+    url_template: "https://www.football-data.co.uk/mmz4281/{season_code}/{division}.csv"
+  # Mirror of football-data.co.uk (Datahub "football-datasets"). Column subset
+  # (no betting odds). Used only when the primary host is unreachable; the
+  # manifest records which URL was actually used.
+  datahub_football_datasets:
+    url_template: "https://raw.githubusercontent.com/datasets/football-datasets/main/datasets/{slug}/season-{season_code}.csv"
+  # Independent, public-domain results source used to cross-check scores and
+  # (later) as the Champions League backbone.
+  openfootball_json:
+    url_template: "https://raw.githubusercontent.com/openfootball/football.json/master/{season_dash}/{code}.json"
+  openfootball_cl_txt:
+    url_template: "https://raw.githubusercontent.com/openfootball/champions-league/master/{season_dash}/cl.txt"
+
+http:
+  timeout_seconds: 30
+  retries: 3
+  backoff_seconds: 2
+  user_agent: "home-field-advantage-analyzer/0.1 (academic research project)"

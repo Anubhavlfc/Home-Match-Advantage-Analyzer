@@ -1,0 +1,40 @@
+alias,canonical_name,team_id,country,alias_source
+Arsenal,Arsenal,arsenal,England,canonical
+Arsenal FC,Arsenal,arsenal,England,openfootball
+Bournemouth,Bournemouth,bournemouth,England,canonical
+AFC Bournemouth,Bournemouth,bournemouth,England,openfootball
+Burnley,Burnley,burnley,England,canonical
+Burnley FC,Burnley,burnley,England,openfootball
+Chelsea,Chelsea,chelsea,England,canonical
+Chelsea FC,Chelsea,chelsea,England,openfootball
+Crystal Palace,Crystal Palace,crystal-palace,England,canonical
+Everton,Everton,everton,England,canonical
+Everton FC,Everton,everton,England,openfootball
+Hull City,Hull City,hull-city,England,canonical
+Hull,Hull City,hull-city,England,football_data_co_uk
+Leicester City,Leicester City,leicester-city,England,canonical
+Leicester,Leicester City,leicester-city,England,football_data_co_uk
+Liverpool,Liverpool,liverpool,England,canonical
+Liverpool FC,Liverpool,liverpool,England,openfootball
+Manchester City,Manchester City,manchester-city,England,canonical
+Man City,Manchester City,manchester-city,England,football_data_co_uk
+Manchester United,Manchester United,manchester-united,England,canonical
+Man United,Manchester United,manchester-united,England,football_data_co_uk
+Middlesbrough,Middlesbrough,middlesbrough,England,canonical
+Middlesbrough FC,Middlesbrough,middlesbrough,England,openfootball
+Southampton,Southampton,southampton,England,canonical
+Southampton FC,Southampton,southampton,England,openfootball
+Stoke City,Stoke City,stoke-city,England,canonical
+Stoke,Stoke City,stoke-city,England,football_data_co_uk
+Sunderland,Sunderland,sunderland,England,canonical
+Sunderland AFC,Sunderland,sunderland,England,openfootball
+Swansea City,Swansea City,swansea-city,Wales,canonical
+Swansea,Swansea City,swansea-city,Wales,football_data_co_uk
+Tottenham Hotspur,Tottenham Hotspur,tottenham-hotspur,England,canonical
+Tottenham,Tottenham Hotspur,tottenham-hotspur,England,football_data_co_uk
+Watford,Watford,watford,England,canonical
+Watford FC,Watford,watford,England,openfootball
+West Bromwich Albion,West Bromwich Albion,west-bromwich-albion,England,canonical
+West Brom,West Bromwich Albion,west-bromwich-albion,England,football_data_co_uk
+West Ham United,West Ham United,west-ham-united,England,canonical
+West Ham,West Ham United,west-ham-united,England,football_data_co_uk

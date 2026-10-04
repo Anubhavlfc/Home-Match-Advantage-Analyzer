@@ -22,8 +22,6 @@ data/interim/**
 data/processed/**
 !data/processed/.gitkeep
 
-# Generated reports
-reports/data_quality/*.csv
 
 # OS / editor
 .DS_Store
