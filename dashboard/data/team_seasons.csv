@@ -1,0 +1,1776 @@
+team_id,team,competition,season,venue,crowd_status,matches,wins,draws,points,goals_for,goals_against,excess_sum
+ac-milan,AC Milan,UCL,2021/22,away,normal,3,1,0,3,3,4,0.157101
+ac-milan,AC Milan,UCL,2021/22,home,restricted,3,0,1,1,3,5,-0.282833
+ac-milan,AC Milan,UCL,2022/23,away,normal,6,1,3,6,6,6,-0.0550957
+ac-milan,AC Milan,UCL,2022/23,home,normal,6,4,0,12,9,5,1.46933
+ac-milan,AC Milan,UCL,2023/24,away,normal,3,1,1,4,2,4,0.380069
+ac-milan,AC Milan,UCL,2023/24,home,normal,3,1,1,4,3,4,0.434828
+ac-milan,AC Milan,UCL,2024/25,away,normal,5,2,0,6,7,7,-0.661989
+ac-milan,AC Milan,UCL,2024/25,home,normal,5,3,1,10,8,6,0.737593
+aek-athens,AEK Athens,UCL,2018/19,away,normal,3,0,0,0,0,6,-1.21716
+aek-athens,AEK Athens,UCL,2018/19,home,normal,3,0,0,0,2,7,-1.19222
+apoel,APOEL,UCL,2017/18,away,normal,3,0,1,1,1,7,-0.125296
+apoel,APOEL,UCL,2017/18,home,normal,3,0,1,1,1,10,-0.138265
+ajax,Ajax,UCL,2018/19,away,normal,6,4,2,14,11,4,2.67661
+ajax,Ajax,UCL,2018/19,home,normal,6,2,2,8,11,9,0.730353
+ajax,Ajax,UCL,2019/20,away,normal,3,2,1,7,9,4,0.890642
+ajax,Ajax,UCL,2019/20,home,normal,3,1,0,3,3,2,-0.636994
+ajax,Ajax,UCL,2020/21,away,behind_closed_doors,2,0,1,1,2,3,-0.337161
+ajax,Ajax,UCL,2020/21,away,unknown,1,1,0,3,2,1,0.342881
+ajax,Ajax,UCL,2020/21,home,unknown,3,1,0,3,3,3,-0.502664
+ajax,Ajax,UCL,2021/22,away,normal,1,0,1,1,2,2,-0.230472
+ajax,Ajax,UCL,2021/22,away,restricted,1,1,0,3,3,1,0.447949
+ajax,Ajax,UCL,2021/22,away,unknown,2,2,0,6,7,2,0.637879
+ajax,Ajax,UCL,2021/22,home,behind_closed_doors,1,1,0,3,4,2,0.32635
+ajax,Ajax,UCL,2021/22,home,normal,2,2,0,6,6,0,0.866446
+ajax,Ajax,UCL,2021/22,home,restricted,1,0,0,0,0,1,-0.723157
+ajax,Ajax,UCL,2022/23,away,normal,3,1,0,3,6,7,-0.517281
+ajax,Ajax,UCL,2022/23,home,normal,3,1,0,3,5,9,-0.542965
+ajax,Ajax,UCL,2025/26,away,normal,4,2,0,6,7,12,-0.0961216
+ajax,Ajax,UCL,2025/26,home,normal,4,0,0,0,1,9,-2.1989
+alaves,Alavés,LALIGA,2016/17,away,normal,19,7,5,26,22,22,2.02123
+alaves,Alavés,LALIGA,2016/17,home,normal,19,7,8,29,19,21,3.8267
+alaves,Alavés,LALIGA,2017/18,away,normal,19,6,1,19,19,27,-1.77676
+alaves,Alavés,LALIGA,2017/18,home,normal,19,9,1,28,21,23,1.61947
+alaves,Alavés,LALIGA,2018/19,away,normal,19,6,3,21,20,31,-1.90194
+alaves,Alavés,LALIGA,2018/19,home,normal,19,7,8,29,19,19,1.75521
+alaves,Alavés,LALIGA,2019/20,away,behind_closed_doors,6,1,0,3,3,14,-1.35385
+alaves,Alavés,LALIGA,2019/20,away,normal,13,2,3,9,11,26,-2.26402
+alaves,Alavés,LALIGA,2019/20,home,behind_closed_doors,5,1,1,4,2,8,-0.373915
+alaves,Alavés,LALIGA,2019/20,home,normal,14,6,5,23,18,11,2.30565
+alaves,Alavés,LALIGA,2020/21,away,behind_closed_doors,18,3,5,14,15,31,-1.32107
+alaves,Alavés,LALIGA,2020/21,away,unknown,1,0,0,0,0,1,-0.205324
+alaves,Alavés,LALIGA,2020/21,home,behind_closed_doors,18,5,6,21,17,23,1.77916
+alaves,Alavés,LALIGA,2020/21,home,unknown,1,1,0,3,4,2,0.571886
+alaves,Alavés,LALIGA,2021/22,away,normal,17,1,3,6,14,40,-3.01178
+alaves,Alavés,LALIGA,2021/22,away,restricted,2,0,0,0,0,4,-0.855739
+alaves,Alavés,LALIGA,2021/22,home,normal,15,6,4,22,15,14,2.742
+alaves,Alavés,LALIGA,2021/22,home,restricted,4,1,0,3,2,7,-0.20399
+alaves,Alavés,LALIGA,2023/24,away,normal,19,3,6,15,13,27,-0.311249
+alaves,Alavés,LALIGA,2023/24,home,normal,19,9,4,31,23,19,4.5292
+alaves,Alavés,LALIGA,2024/25,away,normal,19,4,6,18,24,31,-0.626792
+alaves,Alavés,LALIGA,2024/25,home,normal,19,6,6,24,14,17,1.73495
+alaves,Alavés,LALIGA,2025/26,away,normal,19,4,4,16,19,31,-1.60041
+alaves,Alavés,LALIGA,2025/26,home,normal,19,7,6,27,25,25,2.18713
+almeria,Almería,LALIGA,2022/23,away,normal,19,1,5,8,20,43,-3.63216
+almeria,Almería,LALIGA,2022/23,home,normal,19,10,3,33,29,22,4.247
+almeria,Almería,LALIGA,2023/24,away,normal,19,2,4,10,21,39,-1.51891
+almeria,Almería,LALIGA,2023/24,home,normal,19,1,8,11,22,36,-0.698359
+anderlecht,Anderlecht,UCL,2017/18,away,normal,3,1,0,3,1,8,0.0987969
+anderlecht,Anderlecht,UCL,2017/18,home,normal,3,0,0,0,1,9,-0.948395
+antwerp,Antwerp,UCL,2023/24,away,normal,2,0,0,0,0,7,-0.54388
+antwerp,Antwerp,UCL,2023/24,home,normal,3,1,0,3,6,9,-0.0934125
+arsenal,Arsenal,EPL,2016/17,away,normal,19,9,3,30,38,28,-2.61115
+arsenal,Arsenal,EPL,2016/17,home,normal,19,14,3,45,39,16,2.16914
+arsenal,Arsenal,EPL,2017/18,away,normal,19,4,4,16,20,31,-6.48569
+arsenal,Arsenal,EPL,2017/18,home,normal,19,15,2,47,54,20,3.5923
+arsenal,Arsenal,EPL,2018/19,away,normal,19,7,4,25,31,35,-3.67854
+arsenal,Arsenal,EPL,2018/19,home,normal,19,14,3,45,42,16,2.83901
+arsenal,Arsenal,EPL,2019/20,away,behind_closed_doors,6,2,0,6,6,8,-1.55311
+arsenal,Arsenal,EPL,2019/20,away,normal,13,2,8,14,14,16,-1.9836
+arsenal,Arsenal,EPL,2019/20,home,behind_closed_doors,4,3,1,10,10,4,1.22249
+arsenal,Arsenal,EPL,2019/20,home,normal,15,7,5,26,26,20,0.272605
+arsenal,Arsenal,EPL,2020/21,away,behind_closed_doors,16,9,3,30,27,13,1.19847
+arsenal,Arsenal,EPL,2020/21,away,restricted,3,1,0,3,4,5,-0.591385
+arsenal,Arsenal,EPL,2020/21,home,behind_closed_doors,17,7,4,25,22,20,-0.702925
+arsenal,Arsenal,EPL,2020/21,home,restricted,2,1,0,3,2,1,-0.327283
+arsenal,Arsenal,EPL,2021/22,away,normal,19,9,1,28,26,31,-2.20941
+arsenal,Arsenal,EPL,2021/22,home,normal,19,13,2,41,35,17,2.08505
+arsenal,Arsenal,EPL,2022/23,away,normal,19,12,3,39,35,18,0.0467576
+arsenal,Arsenal,EPL,2022/23,home,normal,19,14,3,45,53,25,1.85665
+arsenal,Arsenal,EPL,2023/24,away,normal,19,13,3,42,43,13,0.192262
+arsenal,Arsenal,EPL,2023/24,home,normal,19,15,2,47,48,16,1.87541
+arsenal,Arsenal,EPL,2024/25,away,normal,19,9,8,35,34,17,-1.98151
+arsenal,Arsenal,EPL,2024/25,home,normal,19,11,6,39,35,17,-1.13406
+arsenal,Arsenal,EPL,2025/26,away,normal,19,11,5,38,30,16,-1.98428
+arsenal,Arsenal,EPL,2025/26,home,normal,19,15,2,47,41,11,0.514059
+arsenal,Arsenal,UCL,2016/17,away,normal,4,2,1,7,9,9,-0.130525
+arsenal,Arsenal,UCL,2016/17,home,normal,4,2,1,7,11,7,-0.017777
+arsenal,Arsenal,UCL,2023/24,away,normal,5,1,1,4,4,6,-1.65654
+arsenal,Arsenal,UCL,2023/24,home,normal,5,4,1,13,15,2,1.31949
+arsenal,Arsenal,UCL,2024/25,away,normal,7,4,1,13,17,7,-0.161969
+arsenal,Arsenal,UCL,2024/25,home,normal,7,5,1,16,14,3,0.588572
+arsenal,Arsenal,UCL,2025/26,away,normal,7,5,2,17,14,3,0.667447
+arsenal,Arsenal,UCL,2025/26,home,normal,7,6,1,19,15,3,1.37525
+aston-villa,Aston Villa,EPL,2019/20,away,behind_closed_doors,4,0,3,3,3,5,0.529088
+aston-villa,Aston Villa,EPL,2019/20,away,normal,15,2,2,8,16,32,-1.23514
+aston-villa,Aston Villa,EPL,2019/20,home,behind_closed_doors,6,2,1,7,4,6,1.15415
+aston-villa,Aston Villa,EPL,2019/20,home,normal,13,5,2,17,18,24,2.47593
+aston-villa,Aston Villa,EPL,2020/21,away,behind_closed_doors,18,8,3,27,24,18,1.94559
+aston-villa,Aston Villa,EPL,2020/21,away,restricted,1,1,0,3,2,1,0.692586
+aston-villa,Aston Villa,EPL,2020/21,home,behind_closed_doors,18,6,4,22,27,26,0.654927
+aston-villa,Aston Villa,EPL,2020/21,home,restricted,1,1,0,3,2,1,0.790131
+aston-villa,Aston Villa,EPL,2021/22,away,normal,19,7,1,22,23,25,-1.063
+aston-villa,Aston Villa,EPL,2021/22,home,normal,19,6,5,23,29,29,0.209314
+aston-villa,Aston Villa,EPL,2022/23,away,normal,19,6,5,23,18,25,-0.61823
+aston-villa,Aston Villa,EPL,2022/23,home,normal,19,12,2,38,33,21,4.35385
+aston-villa,Aston Villa,EPL,2023/24,away,normal,19,8,4,28,28,33,-1.64442
+aston-villa,Aston Villa,EPL,2023/24,home,normal,19,12,4,40,48,28,2.31683
+aston-villa,Aston Villa,EPL,2024/25,away,normal,19,8,2,26,24,31,-2.60499
+aston-villa,Aston Villa,EPL,2024/25,home,normal,19,11,7,40,34,20,2.90386
+aston-villa,Aston Villa,EPL,2025/26,away,normal,19,7,6,27,24,27,-1.82724
+aston-villa,Aston Villa,EPL,2025/26,home,normal,19,12,2,38,32,22,1.16177
+aston-villa,Aston Villa,UCL,2024/25,away,normal,6,3,0,9,10,8,-0.362287
+aston-villa,Aston Villa,UCL,2024/25,home,normal,6,5,1,16,13,4,2.75564
+atalanta,Atalanta,UCL,2019/20,away,behind_closed_doors,1,1,0,3,4,3,0.530041
+atalanta,Atalanta,UCL,2019/20,away,normal,3,1,0,3,4,9,-0.22651
+atalanta,Atalanta,UCL,2019/20,home,normal,4,2,1,7,8,4,0.932262
+atalanta,Atalanta,UCL,2020/21,away,behind_closed_doors,2,1,0,3,3,3,0.505282
+atalanta,Atalanta,UCL,2020/21,away,unknown,2,2,0,6,5,0,1.01923
+atalanta,Atalanta,UCL,2020/21,home,behind_closed_doors,4,0,2,2,3,9,-0.624063
+atalanta,Atalanta,UCL,2021/22,away,normal,1,0,0,0,2,3,-0.41982
+atalanta,Atalanta,UCL,2021/22,away,restricted,1,0,1,1,2,2,-0.022866
+atalanta,Atalanta,UCL,2021/22,away,unknown,1,0,1,1,3,3,-0.136077
+atalanta,Atalanta,UCL,2021/22,home,restricted,3,1,1,4,5,5,-0.0635918
+atalanta,Atalanta,UCL,2024/25,away,normal,4,2,1,7,11,5,0.242297
+atalanta,Atalanta,UCL,2024/25,home,normal,5,1,2,5,8,6,-0.50495
+atalanta,Atalanta,UCL,2025/26,away,normal,6,2,0,6,5,11,-0.667224
+atalanta,Atalanta,UCL,2025/26,home,normal,6,3,1,10,11,12,0.6235
+athletic-club,Athletic Club,LALIGA,2016/17,away,normal,19,6,2,20,17,25,-4.32487
+athletic-club,Athletic Club,LALIGA,2016/17,home,normal,19,13,4,43,36,18,3.53512
+athletic-club,Athletic Club,LALIGA,2017/18,away,normal,19,4,5,17,22,33,-4.00608
+athletic-club,Athletic Club,LALIGA,2017/18,home,normal,19,6,8,26,19,16,-0.365981
+athletic-club,Athletic Club,LALIGA,2018/19,away,normal,19,4,6,18,15,26,-1.87521
+athletic-club,Athletic Club,LALIGA,2018/19,home,normal,19,9,8,35,26,19,4.12711
+athletic-club,Athletic Club,LALIGA,2019/20,away,behind_closed_doors,5,2,1,7,6,8,0.0169012
+athletic-club,Athletic Club,LALIGA,2019/20,away,normal,14,2,7,13,14,16,-2.30405
+athletic-club,Athletic Club,LALIGA,2019/20,home,behind_closed_doors,6,2,1,7,6,7,-0.466436
+athletic-club,Athletic Club,LALIGA,2019/20,home,normal,13,7,3,24,15,7,1.36392
+athletic-club,Athletic Club,LALIGA,2020/21,away,behind_closed_doors,18,3,7,16,17,21,-1.94957
+athletic-club,Athletic Club,LALIGA,2020/21,away,unknown,1,0,0,0,0,2,-0.660225
+athletic-club,Athletic Club,LALIGA,2020/21,home,behind_closed_doors,18,8,6,30,29,18,1.76838
+athletic-club,Athletic Club,LALIGA,2020/21,home,unknown,1,0,0,0,0,1,-0.210347
+athletic-club,Athletic Club,LALIGA,2021/22,away,normal,15,3,6,15,12,17,-1.93176
+athletic-club,Athletic Club,LALIGA,2021/22,away,restricted,4,1,3,6,2,1,0.640484
+athletic-club,Athletic Club,LALIGA,2021/22,home,normal,16,9,3,30,25,15,2.14499
+athletic-club,Athletic Club,LALIGA,2021/22,home,restricted,3,1,1,4,4,3,-0.000662377
+athletic-club,Athletic Club,LALIGA,2022/23,away,normal,19,6,6,24,25,28,-1.43981
+athletic-club,Athletic Club,LALIGA,2022/23,home,normal,19,8,3,27,22,15,-0.92995
+athletic-club,Athletic Club,LALIGA,2023/24,away,normal,19,7,5,26,19,19,-1.60562
+athletic-club,Athletic Club,LALIGA,2023/24,home,normal,19,12,6,42,42,18,4.07067
+athletic-club,Athletic Club,LALIGA,2024/25,away,normal,19,8,7,31,22,16,-0.671111
+athletic-club,Athletic Club,LALIGA,2024/25,home,normal,19,11,6,39,32,13,1.99304
+athletic-club,Athletic Club,LALIGA,2025/26,away,normal,19,4,3,15,21,37,-5.39005
+athletic-club,Athletic Club,LALIGA,2025/26,home,normal,19,9,3,30,22,21,-0.224369
+athletic-club,Athletic Club,UCL,2025/26,away,normal,4,1,1,4,4,8,-0.228001
+athletic-club,Athletic Club,UCL,2025/26,home,normal,4,1,1,4,5,6,0.0108019
+atletico-madrid,Atlético Madrid,LALIGA,2016/17,away,normal,19,9,7,34,30,13,-2.33852
+atletico-madrid,Atlético Madrid,LALIGA,2016/17,home,normal,19,14,2,44,40,14,0.467675
+atletico-madrid,Atlético Madrid,LALIGA,2017/18,away,normal,19,11,4,37,28,14,-1.77803
+atletico-madrid,Atlético Madrid,LALIGA,2017/18,home,normal,19,12,6,42,30,8,0.446582
+atletico-madrid,Atlético Madrid,LALIGA,2018/19,away,normal,19,7,7,28,23,19,-3.23791
+atletico-madrid,Atlético Madrid,LALIGA,2018/19,home,normal,19,15,3,48,32,10,2.47991
+atletico-madrid,Atlético Madrid,LALIGA,2019/20,away,behind_closed_doors,6,3,3,12,12,4,0.439503
+atletico-madrid,Atlético Madrid,LALIGA,2019/20,away,normal,13,3,7,16,11,12,-3.0205
+atletico-madrid,Atlético Madrid,LALIGA,2019/20,home,behind_closed_doors,5,4,1,13,8,2,0.534315
+atletico-madrid,Atlético Madrid,LALIGA,2019/20,home,normal,14,8,5,29,20,9,0.912365
+atletico-madrid,Atlético Madrid,LALIGA,2020/21,away,behind_closed_doors,18,10,5,35,24,13,-0.909689
+atletico-madrid,Atlético Madrid,LALIGA,2020/21,away,unknown,1,1,0,3,2,1,0.134378
+atletico-madrid,Atlético Madrid,LALIGA,2020/21,home,behind_closed_doors,18,14,3,45,39,10,2.09094
+atletico-madrid,Atlético Madrid,LALIGA,2020/21,home,unknown,1,1,0,3,2,1,0.21381
+atletico-madrid,Atlético Madrid,LALIGA,2021/22,away,normal,15,6,3,21,26,23,-2.79594
+atletico-madrid,Atlético Madrid,LALIGA,2021/22,away,restricted,4,3,0,9,6,4,-0.348038
+atletico-madrid,Atlético Madrid,LALIGA,2021/22,home,normal,16,11,3,36,30,14,1.17218
+atletico-madrid,Atlético Madrid,LALIGA,2021/22,home,restricted,3,1,2,5,3,2,-0.287255
+atletico-madrid,Atlético Madrid,LALIGA,2022/23,away,normal,19,10,5,35,29,18,-0.526414
+atletico-madrid,Atlético Madrid,LALIGA,2022/23,home,normal,19,13,3,42,41,15,1.4589
+atletico-madrid,Atlético Madrid,LALIGA,2023/24,away,normal,19,8,3,27,28,21,-4.36591
+atletico-madrid,Atlético Madrid,LALIGA,2023/24,home,normal,19,16,1,49,42,22,2.90641
+atletico-madrid,Atlético Madrid,LALIGA,2024/25,away,normal,19,8,6,30,26,15,-2.81545
+atletico-madrid,Atlético Madrid,LALIGA,2024/25,home,normal,19,14,4,46,42,15,2.34887
+atletico-madrid,Atlético Madrid,LALIGA,2025/26,away,normal,19,6,5,23,23,27,-5.58077
+atletico-madrid,Atlético Madrid,LALIGA,2025/26,home,normal,19,15,1,46,39,17,1.87316
+atletico-madrid,Atlético Madrid,UCL,2016/17,away,normal,6,3,1,10,7,7,-0.470776
+atletico-madrid,Atlético Madrid,UCL,2016/17,home,normal,6,5,1,16,8,2,1.5085
+atletico-madrid,Atlético Madrid,UCL,2017/18,away,normal,3,0,3,3,1,1,-0.572783
+atletico-madrid,Atlético Madrid,UCL,2017/18,home,normal,3,1,1,4,4,3,-0.494525
+atletico-madrid,Atlético Madrid,UCL,2018/19,away,normal,4,1,1,4,2,8,-1.18753
+atletico-madrid,Atlético Madrid,UCL,2018/19,home,normal,4,4,0,12,9,1,1.34871
+atletico-madrid,Atlético Madrid,UCL,2019/20,away,normal,4,1,0,3,3,4,-1.05815
+atletico-madrid,Atlético Madrid,UCL,2019/20,home,normal,4,3,1,10,6,2,1.46347
+atletico-madrid,Atlético Madrid,UCL,2020/21,away,behind_closed_doors,1,0,0,0,0,2,-0.5685
+atletico-madrid,Atlético Madrid,UCL,2020/21,away,restricted,1,0,1,1,1,1,-0.287927
+atletico-madrid,Atlético Madrid,UCL,2020/21,away,unknown,2,1,0,3,2,4,0.0160941
+atletico-madrid,Atlético Madrid,UCL,2020/21,home,behind_closed_doors,3,1,2,5,4,3,0.258467
+atletico-madrid,Atlético Madrid,UCL,2021/22,away,normal,4,2,0,6,4,4,0.258054
+atletico-madrid,Atlético Madrid,UCL,2021/22,away,restricted,1,1,0,3,2,1,0.287687
+atletico-madrid,Atlético Madrid,UCL,2021/22,home,normal,4,0,2,2,3,5,-0.903548
+atletico-madrid,Atlético Madrid,UCL,2021/22,home,restricted,1,0,1,1,0,0,-0.077233
+atletico-madrid,Atlético Madrid,UCL,2022/23,away,normal,3,0,0,0,1,6,-1.90929
+atletico-madrid,Atlético Madrid,UCL,2022/23,home,normal,3,1,2,5,4,3,0.0883618
+atletico-madrid,Atlético Madrid,UCL,2023/24,away,normal,5,1,2,5,8,9,-1.2645
+atletico-madrid,Atlético Madrid,UCL,2023/24,home,normal,5,5,0,15,15,4,1.82773
+atletico-madrid,Atlético Madrid,UCL,2024/25,away,normal,5,3,0,9,13,8,0.138318
+atletico-madrid,Atlético Madrid,UCL,2024/25,home,normal,5,4,0,12,9,6,0.966556
+atletico-madrid,Atlético Madrid,UCL,2025/26,away,normal,8,2,2,8,13,17,-1.16076
+atletico-madrid,Atlético Madrid,UCL,2025/26,home,normal,8,5,1,16,22,11,0.858907
+barcelona,Barcelona,LALIGA,2016/17,away,normal,19,13,3,42,52,20,-1.39013
+barcelona,Barcelona,LALIGA,2016/17,home,normal,19,15,3,48,64,17,0.695826
+barcelona,Barcelona,LALIGA,2017/18,away,normal,19,12,6,42,46,18,-1.42406
+barcelona,Barcelona,LALIGA,2017/18,home,normal,19,16,3,51,53,11,1.18182
+barcelona,Barcelona,LALIGA,2018/19,away,normal,19,11,6,39,39,19,-2.4068
+barcelona,Barcelona,LALIGA,2018/19,home,normal,19,15,3,48,51,17,0.190766
+barcelona,Barcelona,LALIGA,2019/20,away,behind_closed_doors,6,4,2,14,16,3,-0.0731975
+barcelona,Barcelona,LALIGA,2019/20,away,normal,13,5,3,18,18,19,-4.35354
+barcelona,Barcelona,LALIGA,2019/20,home,behind_closed_doors,5,3,1,10,7,4,-0.653404
+barcelona,Barcelona,LALIGA,2019/20,home,normal,14,13,1,40,45,12,1.80103
+barcelona,Barcelona,LALIGA,2020/21,away,behind_closed_doors,18,12,2,38,40,18,-1.39571
+barcelona,Barcelona,LALIGA,2020/21,away,unknown,1,1,0,3,1,0,0.117006
+barcelona,Barcelona,LALIGA,2020/21,home,behind_closed_doors,18,11,5,38,43,18,-1.03579
+barcelona,Barcelona,LALIGA,2020/21,home,unknown,1,0,0,0,1,2,-0.808941
+barcelona,Barcelona,LALIGA,2021/22,away,normal,17,9,6,33,30,18,-0.222396
+barcelona,Barcelona,LALIGA,2021/22,away,restricted,2,0,2,2,1,1,-0.689641
+barcelona,Barcelona,LALIGA,2021/22,home,normal,15,9,1,28,27,15,-1.43183
+barcelona,Barcelona,LALIGA,2021/22,home,restricted,4,3,1,10,10,4,0.20441
+barcelona,Barcelona,LALIGA,2022/23,away,normal,19,13,1,40,33,16,-1.48962
+barcelona,Barcelona,LALIGA,2022/23,home,normal,19,15,3,48,37,4,1.57907
+barcelona,Barcelona,LALIGA,2023/24,away,normal,19,11,6,39,36,23,-0.33907
+barcelona,Barcelona,LALIGA,2023/24,home,normal,19,15,1,46,43,21,0.84961
+barcelona,Barcelona,LALIGA,2024/25,away,normal,19,14,3,45,50,19,0.353508
+barcelona,Barcelona,LALIGA,2024/25,home,normal,19,14,1,43,52,20,-1.07121
+barcelona,Barcelona,LALIGA,2025/26,away,normal,19,12,1,37,38,26,-3.30372
+barcelona,Barcelona,LALIGA,2025/26,home,normal,19,19,0,57,57,10,3.11245
+barcelona,Barcelona,UCL,2016/17,away,normal,5,2,0,6,5,11,-1.80326
+barcelona,Barcelona,UCL,2016/17,home,normal,5,4,1,13,21,1,0.835202
+barcelona,Barcelona,UCL,2017/18,away,normal,5,1,3,6,2,4,-1.56178
+barcelona,Barcelona,UCL,2017/18,home,normal,5,5,0,15,15,2,0.998195
+barcelona,Barcelona,UCL,2018/19,away,normal,6,3,2,11,8,8,-0.427728
+barcelona,Barcelona,UCL,2018/19,home,normal,6,5,1,16,18,2,1.03893
+barcelona,Barcelona,UCL,2019/20,away,normal,4,2,2,8,5,3,-0.18414
+barcelona,Barcelona,UCL,2019/20,home,behind_closed_doors,1,1,0,3,3,1,0.288987
+barcelona,Barcelona,UCL,2019/20,home,normal,3,2,1,7,5,2,0.0924781
+barcelona,Barcelona,UCL,2020/21,away,behind_closed_doors,2,1,1,4,3,1,0.52863
+barcelona,Barcelona,UCL,2020/21,away,unknown,2,2,0,6,7,0,0.405545
+barcelona,Barcelona,UCL,2020/21,home,behind_closed_doors,4,2,0,6,8,9,-0.596306
+barcelona,Barcelona,UCL,2021/22,away,behind_closed_doors,1,0,0,0,0,3,-0.19993
+barcelona,Barcelona,UCL,2021/22,away,unknown,2,1,0,3,1,3,-0.498995
+barcelona,Barcelona,UCL,2021/22,home,normal,2,1,1,4,1,0,0.0477296
+barcelona,Barcelona,UCL,2021/22,home,restricted,1,0,0,0,0,3,-0.324329
+barcelona,Barcelona,UCL,2022/23,away,normal,3,1,0,3,4,5,-0.768925
+barcelona,Barcelona,UCL,2022/23,home,normal,3,1,1,4,8,7,-0.182095
+barcelona,Barcelona,UCL,2023/24,away,normal,4,2,1,7,7,6,0.0979394
+barcelona,Barcelona,UCL,2023/24,home,normal,5,4,0,12,13,7,0.81726
+barcelona,Barcelona,UCL,2024/25,away,normal,7,4,0,12,19,17,-1.0049
+barcelona,Barcelona,UCL,2024/25,home,normal,7,5,2,17,24,7,1.4436
+barcelona,Barcelona,UCL,2025/26,away,normal,6,3,2,11,12,11,-0.549863
+barcelona,Barcelona,UCL,2025/26,home,normal,6,4,0,12,20,9,-0.497899
+basel,Basel,UCL,2016/17,away,normal,3,0,1,1,0,5,-0.610033
+basel,Basel,UCL,2016/17,home,normal,3,0,1,1,3,7,-0.53239
+basel,Basel,UCL,2017/18,away,normal,4,3,0,9,6,4,1.55501
+basel,Basel,UCL,2017/18,home,normal,4,2,0,6,7,6,0.620456
+bayer-leverkusen,Bayer Leverkusen,UCL,2016/17,away,normal,4,1,3,6,3,2,0.744072
+bayer-leverkusen,Bayer Leverkusen,UCL,2016/17,home,normal,4,1,2,5,7,6,0.276259
+bayer-leverkusen,Bayer Leverkusen,UCL,2019/20,away,normal,3,1,0,3,2,4,-0.224313
+bayer-leverkusen,Bayer Leverkusen,UCL,2019/20,home,normal,3,1,0,3,3,5,-0.214208
+bayer-leverkusen,Bayer Leverkusen,UCL,2022/23,away,normal,3,0,1,1,2,5,-0.953583
+bayer-leverkusen,Bayer Leverkusen,UCL,2022/23,home,normal,3,1,1,4,2,3,0.180765
+bayer-leverkusen,Bayer Leverkusen,UCL,2024/25,away,normal,5,1,1,4,6,10,-0.375963
+bayer-leverkusen,Bayer Leverkusen,UCL,2024/25,home,normal,5,4,0,12,9,2,1.76209
+bayer-leverkusen,Bayer Leverkusen,UCL,2025/26,away,normal,6,3,1,10,7,6,0.607467
+bayer-leverkusen,Bayer Leverkusen,UCL,2025/26,home,normal,6,1,4,7,9,11,0.393969
+bayern-munich,Bayern Munich,UCL,2016/17,away,normal,5,3,0,9,11,7,0.263125
+bayern-munich,Bayern Munich,UCL,2016/17,home,normal,5,4,0,12,16,4,1.33916
+bayern-munich,Bayern Munich,UCL,2017/18,away,normal,6,4,1,13,11,9,0.36416
+bayern-munich,Bayern Munich,UCL,2017/18,home,normal,6,4,1,13,15,3,0.439741
+bayern-munich,Bayern Munich,UCL,2018/19,away,normal,4,2,2,8,7,3,0.0665717
+bayern-munich,Bayern Munich,UCL,2018/19,home,normal,4,2,1,7,9,5,-0.476083
+bayern-munich,Bayern Munich,UCL,2019/20,away,normal,4,4,0,12,19,4,0.891659
+bayern-munich,Bayern Munich,UCL,2019/20,home,behind_closed_doors,1,1,0,3,4,1,0.232667
+bayern-munich,Bayern Munich,UCL,2019/20,home,normal,3,3,0,9,8,1,0.627799
+bayern-munich,Bayern Munich,UCL,2020/21,away,behind_closed_doors,3,2,1,7,6,2,0.301133
+bayern-munich,Bayern Munich,UCL,2020/21,away,restricted,1,1,0,3,2,1,0.0934622
+bayern-munich,Bayern Munich,UCL,2020/21,away,unknown,1,1,0,3,6,2,0.137693
+bayern-munich,Bayern Munich,UCL,2020/21,home,behind_closed_doors,4,3,0,9,9,5,-0.303094
+bayern-munich,Bayern Munich,UCL,2020/21,home,unknown,1,1,0,3,4,0,0.271004
+bayern-munich,Bayern Munich,UCL,2021/22,away,normal,2,1,0,3,4,1,-0.747988
+bayern-munich,Bayern Munich,UCL,2021/22,away,restricted,1,1,0,3,3,0,0.324329
+bayern-munich,Bayern Munich,UCL,2021/22,away,unknown,2,1,1,4,3,2,-0.287695
+bayern-munich,Bayern Munich,UCL,2021/22,home,behind_closed_doors,1,1,0,3,3,0,0.19993
+bayern-munich,Bayern Munich,UCL,2021/22,home,normal,1,0,1,1,1,1,-0.325526
+bayern-munich,Bayern Munich,UCL,2021/22,home,restricted,3,3,0,9,17,3,0.328302
+bayern-munich,Bayern Munich,UCL,2022/23,away,normal,5,4,0,12,10,5,0.225573
+bayern-munich,Bayern Munich,UCL,2022/23,home,normal,5,4,1,13,12,1,0.785045
+bayern-munich,Bayern Munich,UCL,2023/24,away,normal,6,3,1,10,9,7,-1.37707
+bayern-munich,Bayern Munich,UCL,2023/24,home,normal,6,4,2,14,12,6,0.124956
+bayern-munich,Bayern Munich,UCL,2024/25,away,normal,6,2,1,7,7,11,-2.20957
+bayern-munich,Bayern Munich,UCL,2024/25,home,normal,7,5,1,16,19,6,-0.208799
+bayern-munich,Bayern Munich,UCL,2025/26,away,normal,7,5,0,15,22,13,0.22102
+bayern-munich,Bayern Munich,UCL,2025/26,home,normal,7,6,1,19,21,7,1.16014
+benfica,Benfica,UCL,2016/17,away,normal,4,1,1,4,7,11,-0.425699
+benfica,Benfica,UCL,2016/17,home,normal,4,2,1,7,4,3,0.528273
+benfica,Benfica,UCL,2017/18,away,normal,3,0,0,0,0,9,-1.35499
+benfica,Benfica,UCL,2017/18,home,normal,3,0,0,0,1,5,-1.30621
+benfica,Benfica,UCL,2018/19,away,normal,3,1,0,3,4,8,0.0185257
+benfica,Benfica,UCL,2018/19,home,normal,3,1,1,4,2,3,0.469336
+benfica,Benfica,UCL,2019/20,away,normal,3,0,1,1,4,8,-0.616864
+benfica,Benfica,UCL,2019/20,home,normal,3,2,0,6,6,3,0.858279
+benfica,Benfica,UCL,2021/22,away,normal,2,0,2,2,3,3,0.572482
+benfica,Benfica,UCL,2021/22,away,restricted,2,1,0,3,3,5,0.628863
+benfica,Benfica,UCL,2021/22,away,unknown,1,0,1,1,0,0,0.0629847
+benfica,Benfica,UCL,2021/22,home,normal,4,1,1,4,5,9,0.464403
+benfica,Benfica,UCL,2021/22,home,unknown,1,1,0,3,3,0,0.7985
+benfica,Benfica,UCL,2022/23,away,normal,5,3,2,11,14,6,1.82669
+benfica,Benfica,UCL,2022/23,home,normal,5,3,1,10,12,7,1.26628
+benfica,Benfica,UCL,2023/24,away,normal,3,1,0,3,4,5,-0.373228
+benfica,Benfica,UCL,2023/24,home,normal,3,0,1,1,3,6,-0.883492
+benfica,Benfica,UCL,2024/25,away,normal,6,4,0,12,9,7,1.21752
+benfica,Benfica,UCL,2024/25,home,normal,6,1,2,5,12,12,-0.968594
+benfica,Benfica,UCL,2025/26,away,normal,5,1,0,3,3,8,-1.06847
+benfica,Benfica,UCL,2025/26,home,normal,5,2,0,6,8,7,-0.0139334
+besiktas,Beşiktaş,UCL,2016/17,away,normal,3,1,1,4,4,9,0.0268713
+besiktas,Beşiktaş,UCL,2016/17,home,normal,3,0,3,3,5,5,0.0350987
+besiktas,Beşiktaş,UCL,2017/18,away,normal,4,3,0,9,7,8,1.31371
+besiktas,Beşiktaş,UCL,2017/18,home,normal,4,1,2,5,5,5,0.25387
+besiktas,Beşiktaş,UCL,2021/22,away,normal,2,0,0,0,0,6,-0.858967
+besiktas,Beşiktaş,UCL,2021/22,away,restricted,1,0,0,0,0,5,-0.36206
+besiktas,Beşiktaş,UCL,2021/22,home,unknown,3,0,0,0,3,8,-1.21925
+bod-glimt,Bodø/Glimt,UCL,2025/26,away,normal,6,2,2,8,9,12,0.583943
+bod-glimt,Bodø/Glimt,UCL,2025/26,home,normal,6,3,1,10,13,8,1.22546
+bologna,Bologna,UCL,2024/25,away,normal,4,0,2,2,1,5,-0.348696
+bologna,Bologna,UCL,2024/25,home,normal,4,1,1,4,3,4,-0.239927
+borussia-dortmund,Borussia Dortmund,UCL,2016/17,away,normal,5,2,1,7,11,7,0.113704
+borussia-dortmund,Borussia Dortmund,UCL,2016/17,home,normal,5,3,1,10,17,9,0.97545
+borussia-dortmund,Borussia Dortmund,UCL,2017/18,away,normal,3,0,1,1,4,7,-0.633657
+borussia-dortmund,Borussia Dortmund,UCL,2017/18,home,normal,3,0,1,1,3,6,-0.583972
+borussia-dortmund,Borussia Dortmund,UCL,2018/19,away,normal,4,2,0,6,3,5,0.0131596
+borussia-dortmund,Borussia Dortmund,UCL,2018/19,home,normal,4,2,1,7,7,1,0.599716
+borussia-dortmund,Borussia Dortmund,UCL,2019/20,away,behind_closed_doors,1,0,0,0,0,2,-0.336426
+borussia-dortmund,Borussia Dortmund,UCL,2019/20,away,normal,3,1,0,3,3,5,-0.402819
+borussia-dortmund,Borussia Dortmund,UCL,2019/20,home,normal,4,3,1,10,7,4,1.83157
+borussia-dortmund,Borussia Dortmund,UCL,2020/21,away,behind_closed_doors,2,1,0,3,4,4,0.325719
+borussia-dortmund,Borussia Dortmund,UCL,2020/21,away,restricted,1,1,0,3,2,1,0.312709
+borussia-dortmund,Borussia Dortmund,UCL,2020/21,away,unknown,2,1,0,3,4,3,-0.261096
+borussia-dortmund,Borussia Dortmund,UCL,2020/21,home,behind_closed_doors,4,1,2,5,7,5,-0.0369373
+borussia-dortmund,Borussia Dortmund,UCL,2020/21,home,unknown,1,1,0,3,2,0,0.400465
+borussia-dortmund,Borussia Dortmund,UCL,2021/22,away,normal,2,0,0,0,1,7,-1.08565
+borussia-dortmund,Borussia Dortmund,UCL,2021/22,away,unknown,1,1,0,3,2,1,0.404202
+borussia-dortmund,Borussia Dortmund,UCL,2021/22,home,restricted,3,2,0,6,7,3,0.24287
+borussia-dortmund,Borussia Dortmund,UCL,2022/23,away,normal,4,1,1,4,6,6,-0.478017
+borussia-dortmund,Borussia Dortmund,UCL,2022/23,home,normal,4,2,2,8,5,1,1.09428
+borussia-dortmund,Borussia Dortmund,UCL,2023/24,away,normal,6,3,1,10,7,6,0.570646
+borussia-dortmund,Borussia Dortmund,UCL,2023/24,home,normal,6,4,2,14,10,3,2.06229
+borussia-dortmund,Borussia Dortmund,UCL,2024/25,away,normal,7,4,0,12,14,12,-0.308406
+borussia-dortmund,Borussia Dortmund,UCL,2024/25,home,normal,7,4,2,14,17,7,0.615095
+borussia-dortmund,Borussia Dortmund,UCL,2025/26,away,normal,5,1,1,4,10,16,-1.71172
+borussia-dortmund,Borussia Dortmund,UCL,2025/26,home,normal,5,3,1,10,12,5,0.366866
+borussia-monchengladbach,Borussia Mönchengladbach,UCL,2016/17,away,normal,3,1,0,3,2,8,0.0609972
+borussia-monchengladbach,Borussia Mönchengladbach,UCL,2016/17,home,normal,3,0,2,2,3,4,0.0453373
+borussia-monchengladbach,Borussia Mönchengladbach,UCL,2020/21,away,behind_closed_doors,1,0,0,0,0,2,-0.32496
+borussia-monchengladbach,Borussia Mönchengladbach,UCL,2020/21,away,unknown,2,1,1,4,8,2,0.553614
+borussia-monchengladbach,Borussia Mönchengladbach,UCL,2020/21,home,behind_closed_doors,2,1,0,3,6,3,-0.106379
+borussia-monchengladbach,Borussia Mönchengladbach,UCL,2020/21,home,unknown,1,0,1,1,2,2,0.25711
+bournemouth,Bournemouth,EPL,2016/17,away,normal,19,3,6,15,20,38,-1.04453
+bournemouth,Bournemouth,EPL,2016/17,home,normal,19,9,4,31,35,29,3.8643
+bournemouth,Bournemouth,EPL,2017/18,away,normal,19,4,6,18,19,31,-0.524203
+bournemouth,Bournemouth,EPL,2017/18,home,normal,19,7,5,26,26,30,1.68821
+bournemouth,Bournemouth,EPL,2018/19,away,normal,19,5,1,16,26,45,-3.18726
+bournemouth,Bournemouth,EPL,2018/19,home,normal,19,8,5,29,30,25,1.96082
+bournemouth,Bournemouth,EPL,2019/20,away,behind_closed_doors,4,1,0,3,6,9,0.172902
+bournemouth,Bournemouth,EPL,2019/20,away,normal,15,3,1,10,12,26,-2.95763
+bournemouth,Bournemouth,EPL,2019/20,home,behind_closed_doors,5,1,1,4,5,9,-0.0186209
+bournemouth,Bournemouth,EPL,2019/20,home,normal,14,4,5,17,17,21,0.821944
+bournemouth,Bournemouth,EPL,2022/23,away,normal,19,5,2,17,17,43,-0.412806
+bournemouth,Bournemouth,EPL,2022/23,home,normal,19,6,4,22,20,28,1.4861
+bournemouth,Bournemouth,EPL,2023/24,away,normal,19,6,3,21,27,39,0.318992
+bournemouth,Bournemouth,EPL,2023/24,home,normal,19,7,6,27,27,28,2.59085
+bournemouth,Bournemouth,EPL,2024/25,away,normal,19,7,7,28,35,30,1.24935
+bournemouth,Bournemouth,EPL,2024/25,home,normal,19,8,4,28,23,16,0.801439
+bournemouth,Bournemouth,EPL,2025/26,away,normal,19,6,8,26,29,34,0.413096
+bournemouth,Bournemouth,EPL,2025/26,home,normal,19,7,10,31,29,20,2.63957
+braga,Braga,UCL,2023/24,away,normal,3,1,0,3,3,7,0.0131626
+braga,Braga,UCL,2023/24,home,normal,3,0,1,1,3,5,-0.517541
+brentford,Brentford,EPL,2021/22,away,normal,19,6,4,22,26,35,2.32633
+brentford,Brentford,EPL,2021/22,home,normal,19,7,3,24,22,21,2.97956
+brentford,Brentford,EPL,2022/23,away,normal,19,5,7,22,23,28,-0.359547
+brentford,Brentford,EPL,2022/23,home,normal,19,10,7,37,35,18,5.20667
+brentford,Brentford,EPL,2023/24,away,normal,19,5,2,17,27,31,-3.15334
+brentford,Brentford,EPL,2023/24,home,normal,19,5,7,22,29,34,-1.09166
+brentford,Brentford,EPL,2024/25,away,normal,19,7,4,25,26,22,0.541071
+brentford,Brentford,EPL,2024/25,home,normal,19,9,4,31,40,35,2.21414
+brentford,Brentford,EPL,2025/26,away,normal,19,6,3,21,22,31,-1.93647
+brentford,Brentford,EPL,2025/26,home,normal,19,8,8,32,33,21,2.50066
+brest,Brest,UCL,2024/25,away,normal,4,2,0,6,6,11,0.481123
+brest,Brest,UCL,2024/25,home,normal,5,2,1,7,4,8,0.55278
+brighton-hove-albion,Brighton & Hove Albion,EPL,2017/18,away,normal,19,2,5,11,10,29,-1.36676
+brighton-hove-albion,Brighton & Hove Albion,EPL,2017/18,home,normal,19,7,8,29,24,25,5.32911
+brighton-hove-albion,Brighton & Hove Albion,EPL,2018/19,away,normal,19,3,4,13,16,32,-2.17096
+brighton-hove-albion,Brighton & Hove Albion,EPL,2018/19,home,normal,19,6,5,23,19,28,1.58732
+brighton-hove-albion,Brighton & Hove Albion,EPL,2019/20,away,behind_closed_doors,4,2,2,8,4,2,1.38403
+brighton-hove-albion,Brighton & Hove Albion,EPL,2019/20,away,normal,15,2,5,11,15,25,-0.28283
+brighton-hove-albion,Brighton & Hove Albion,EPL,2019/20,home,behind_closed_doors,5,1,1,4,3,12,0.397477
+brighton-hove-albion,Brighton & Hove Albion,EPL,2019/20,home,normal,14,4,6,18,17,15,1.50458
+brighton-hove-albion,Brighton & Hove Albion,EPL,2020/21,away,behind_closed_doors,18,5,5,20,18,22,0.301476
+brighton-hove-albion,Brighton & Hove Albion,EPL,2020/21,away,restricted,1,0,0,0,0,2,-0.302776
+brighton-hove-albion,Brighton & Hove Albion,EPL,2020/21,home,behind_closed_doors,17,3,9,18,18,18,0.68133
+brighton-hove-albion,Brighton & Hove Albion,EPL,2020/21,home,restricted,2,1,0,3,4,4,0.544128
+brighton-hove-albion,Brighton & Hove Albion,EPL,2021/22,away,normal,19,7,8,29,23,21,2.72187
+brighton-hove-albion,Brighton & Hove Albion,EPL,2021/22,home,normal,19,5,7,22,19,23,0.201801
+brighton-hove-albion,Brighton & Hove Albion,EPL,2022/23,away,normal,19,8,4,28,35,32,-0.431019
+brighton-hove-albion,Brighton & Hove Albion,EPL,2022/23,home,normal,19,10,4,34,37,21,1.74315
+brighton-hove-albion,Brighton & Hove Albion,EPL,2023/24,away,normal,19,4,6,18,25,35,-3.57992
+brighton-hove-albion,Brighton & Hove Albion,EPL,2023/24,home,normal,19,8,6,30,30,27,0.623992
+brighton-hove-albion,Brighton & Hove Albion,EPL,2024/25,away,normal,19,8,5,29,36,33,1.06659
+brighton-hove-albion,Brighton & Hove Albion,EPL,2024/25,home,normal,19,8,8,32,30,26,2.52553
+brighton-hove-albion,Brighton & Hove Albion,EPL,2025/26,away,normal,19,5,5,20,22,26,-2.44318
+brighton-hove-albion,Brighton & Hove Albion,EPL,2025/26,home,normal,19,9,6,33,30,20,1.80585
+burnley,Burnley,EPL,2016/17,away,normal,19,1,4,7,13,35,-4.25016
+burnley,Burnley,EPL,2016/17,home,normal,19,10,3,33,26,20,4.63353
+burnley,Burnley,EPL,2017/18,away,normal,19,7,7,28,20,22,1.91664
+burnley,Burnley,EPL,2017/18,home,normal,19,7,5,26,16,17,1.16706
+burnley,Burnley,EPL,2018/19,away,normal,19,4,5,17,21,36,-1.42591
+burnley,Burnley,EPL,2018/19,home,normal,19,7,2,23,24,32,0.431123
+burnley,Burnley,EPL,2019/20,away,behind_closed_doors,5,3,1,10,5,6,1.38957
+burnley,Burnley,EPL,2019/20,away,normal,14,4,4,16,14,21,-0.426973
+burnley,Burnley,EPL,2019/20,home,behind_closed_doors,4,1,2,5,4,4,-0.23775
+burnley,Burnley,EPL,2019/20,home,normal,15,7,2,23,20,19,2.15778
+burnley,Burnley,EPL,2020/21,away,behind_closed_doors,17,5,3,18,18,27,-1.1015
+burnley,Burnley,EPL,2020/21,away,restricted,2,1,0,3,1,1,-0.050762
+burnley,Burnley,EPL,2020/21,home,behind_closed_doors,18,4,6,18,14,24,-1.18965
+burnley,Burnley,EPL,2020/21,home,restricted,1,0,0,0,0,3,-0.187
+burnley,Burnley,EPL,2021/22,away,normal,19,2,8,14,16,28,-1.13312
+burnley,Burnley,EPL,2021/22,home,normal,19,5,6,21,18,25,0.877231
+burnley,Burnley,EPL,2023/24,away,normal,19,3,5,14,22,35,-0.270697
+burnley,Burnley,EPL,2023/24,home,normal,19,2,4,10,19,43,-1.77528
+burnley,Burnley,EPL,2025/26,away,normal,19,2,3,9,20,46,-1.04845
+burnley,Burnley,EPL,2025/26,home,normal,19,2,7,13,18,29,0.972947
+cska-moscow,CSKA Moscow,UCL,2016/17,away,normal,3,0,1,1,3,8,-0.552376
+cska-moscow,CSKA Moscow,UCL,2016/17,home,normal,3,0,2,2,2,3,-0.0247743
+cska-moscow,CSKA Moscow,UCL,2017/18,away,normal,3,2,0,6,5,4,1.00876
+cska-moscow,CSKA Moscow,UCL,2017/18,home,normal,3,1,0,3,3,6,-0.124562
+cska-moscow,CSKA Moscow,UCL,2018/19,away,normal,3,1,1,4,5,5,0.559917
+cska-moscow,CSKA Moscow,UCL,2018/19,home,normal,3,1,0,3,3,4,0.0610997
+cardiff-city,Cardiff City,EPL,2018/19,away,normal,19,4,2,14,13,31,-0.234417
+cardiff-city,Cardiff City,EPL,2018/19,home,normal,19,6,2,20,21,38,1.70132
+celta-vigo,Celta Vigo,LALIGA,2016/17,away,normal,19,4,4,16,23,37,-3.83025
+celta-vigo,Celta Vigo,LALIGA,2016/17,home,normal,19,9,2,29,30,32,0.421638
+celta-vigo,Celta Vigo,LALIGA,2017/18,away,normal,19,5,2,17,25,37,-2.71917
+celta-vigo,Celta Vigo,LALIGA,2017/18,home,normal,19,8,8,32,34,23,3.26308
+celta-vigo,Celta Vigo,LALIGA,2018/19,away,normal,19,2,6,12,22,37,-3.3395
+celta-vigo,Celta Vigo,LALIGA,2018/19,home,normal,19,8,5,29,31,25,1.82939
+celta-vigo,Celta Vigo,LALIGA,2019/20,away,behind_closed_doors,5,1,2,5,3,7,-0.800765
+celta-vigo,Celta Vigo,LALIGA,2019/20,away,normal,14,1,6,9,12,22,-0.986981
+celta-vigo,Celta Vigo,LALIGA,2019/20,home,behind_closed_doors,6,1,3,6,12,8,0.287444
+celta-vigo,Celta Vigo,LALIGA,2019/20,home,normal,13,4,5,17,10,12,0.823507
+celta-vigo,Celta Vigo,LALIGA,2020/21,away,behind_closed_doors,18,4,8,20,23,26,0.0956856
+celta-vigo,Celta Vigo,LALIGA,2020/21,away,unknown,1,1,0,3,2,1,0.808941
+celta-vigo,Celta Vigo,LALIGA,2020/21,home,behind_closed_doors,18,9,3,30,28,27,2.87418
+celta-vigo,Celta Vigo,LALIGA,2020/21,home,unknown,1,0,0,0,2,3,-0.497697
+celta-vigo,Celta Vigo,LALIGA,2021/22,away,normal,16,4,5,17,13,15,-1.61522
+celta-vigo,Celta Vigo,LALIGA,2021/22,away,restricted,3,1,1,4,4,5,0.193797
+celta-vigo,Celta Vigo,LALIGA,2021/22,home,normal,15,6,4,22,23,18,0.474081
+celta-vigo,Celta Vigo,LALIGA,2021/22,home,restricted,4,1,0,3,3,5,-1.03977
+celta-vigo,Celta Vigo,LALIGA,2022/23,away,normal,19,4,4,16,17,32,-2.68188
+celta-vigo,Celta Vigo,LALIGA,2022/23,home,normal,19,7,6,27,26,21,1.37901
+celta-vigo,Celta Vigo,LALIGA,2023/24,away,normal,19,4,5,17,25,34,-1.30801
+celta-vigo,Celta Vigo,LALIGA,2023/24,home,normal,19,6,6,24,21,23,1.37999
+celta-vigo,Celta Vigo,LALIGA,2024/25,away,normal,19,5,4,19,27,36,-1.88941
+celta-vigo,Celta Vigo,LALIGA,2024/25,home,normal,19,11,3,36,32,21,4.31755
+celta-vigo,Celta Vigo,LALIGA,2025/26,away,normal,19,8,7,31,24,20,1.70088
+celta-vigo,Celta Vigo,LALIGA,2025/26,home,normal,19,6,5,23,29,28,-1.27206
+celtic,Celtic,UCL,2016/17,away,normal,3,0,2,2,2,9,0.092325
+celtic,Celtic,UCL,2016/17,home,normal,3,0,1,1,3,7,-0.443877
+celtic,Celtic,UCL,2017/18,away,normal,3,1,0,3,4,10,0.0546716
+celtic,Celtic,UCL,2017/18,home,normal,3,0,0,0,1,8,-1.06244
+celtic,Celtic,UCL,2022/23,away,normal,2,0,0,0,2,8,-0.500798
+celtic,Celtic,UCL,2022/23,home,normal,3,0,1,1,1,6,-0.419691
+celtic,Celtic,UCL,2023/24,away,normal,3,0,0,0,0,10,-0.982985
+celtic,Celtic,UCL,2023/24,home,normal,3,1,1,4,5,5,0.572767
+celtic,Celtic,UCL,2024/25,away,normal,5,0,3,3,4,12,-0.00461254
+celtic,Celtic,UCL,2024/25,home,normal,5,3,1,10,11,5,1.68338
+chelsea,Chelsea,EPL,2016/17,away,normal,19,13,3,42,30,16,1.3891
+chelsea,Chelsea,EPL,2016/17,home,normal,19,17,0,51,55,17,3.59979
+chelsea,Chelsea,EPL,2017/18,away,normal,19,10,3,33,32,22,-2.51559
+chelsea,Chelsea,EPL,2017/18,home,normal,19,11,4,37,30,16,-1.07016
+chelsea,Chelsea,EPL,2018/19,away,normal,19,9,3,30,24,27,-2.70221
+chelsea,Chelsea,EPL,2018/19,home,normal,19,12,6,42,39,12,1.77192
+chelsea,Chelsea,EPL,2019/20,away,behind_closed_doors,5,2,0,6,10,14,-1.18505
+chelsea,Chelsea,EPL,2019/20,away,normal,14,7,3,24,29,24,-0.716357
+chelsea,Chelsea,EPL,2019/20,home,behind_closed_doors,4,4,0,12,8,1,1.61173
+chelsea,Chelsea,EPL,2019/20,home,normal,15,7,3,24,22,15,-1.57191
+chelsea,Chelsea,EPL,2020/21,away,behind_closed_doors,17,10,4,34,26,15,0.791746
+chelsea,Chelsea,EPL,2020/21,away,restricted,2,0,0,0,1,3,-1.53595
+chelsea,Chelsea,EPL,2020/21,home,behind_closed_doors,17,7,6,27,26,16,-1.10397
+chelsea,Chelsea,EPL,2020/21,home,restricted,2,2,0,6,5,2,0.476007
+chelsea,Chelsea,EPL,2021/22,away,normal,19,12,4,40,39,11,-0.44361
+chelsea,Chelsea,EPL,2021/22,home,normal,19,9,7,34,37,22,-2.00631
+chelsea,Chelsea,EPL,2022/23,away,normal,19,5,4,19,18,28,-5.09035
+chelsea,Chelsea,EPL,2022/23,home,normal,19,6,7,25,20,19,-2.49646
+chelsea,Chelsea,EPL,2023/24,away,normal,19,7,5,26,33,37,-0.379367
+chelsea,Chelsea,EPL,2023/24,home,normal,19,11,4,37,44,26,3.04254
+chelsea,Chelsea,EPL,2024/25,away,normal,19,8,4,28,29,25,-1.63896
+chelsea,Chelsea,EPL,2024/25,home,normal,19,12,5,41,35,18,2.66209
+chelsea,Chelsea,EPL,2025/26,away,normal,19,7,5,26,32,27,-2.26964
+chelsea,Chelsea,EPL,2025/26,home,normal,19,7,5,26,26,25,-1.95843
+chelsea,Chelsea,UCL,2017/18,away,normal,4,2,0,6,6,7,-0.352803
+chelsea,Chelsea,UCL,2017/18,home,normal,4,1,3,6,11,5,0.136094
+chelsea,Chelsea,UCL,2019/20,away,behind_closed_doors,1,0,0,0,1,4,-0.232667
+chelsea,Chelsea,UCL,2019/20,away,normal,3,2,1,7,5,3,0.751661
+chelsea,Chelsea,UCL,2019/20,home,normal,4,1,1,4,6,9,-0.53409
+chelsea,Chelsea,UCL,2020/21,away,behind_closed_doors,3,2,1,7,7,2,0.905028
+chelsea,Chelsea,UCL,2020/21,away,restricted,1,1,0,3,4,0,0.401295
+chelsea,Chelsea,UCL,2020/21,home,behind_closed_doors,5,3,2,11,8,1,1.35119
+chelsea,Chelsea,UCL,2021/22,away,normal,1,1,0,3,3,1,0.602847
+chelsea,Chelsea,UCL,2021/22,away,restricted,1,0,0,0,0,1,-0.429242
+chelsea,Chelsea,UCL,2021/22,away,unknown,3,2,1,7,6,4,0.0158107
+chelsea,Chelsea,UCL,2021/22,home,normal,5,4,0,12,12,3,0.707456
+chelsea,Chelsea,UCL,2022/23,away,normal,5,2,0,6,4,5,-0.891092
+chelsea,Chelsea,UCL,2022/23,home,normal,5,3,1,10,8,4,0.742331
+chelsea,Chelsea,UCL,2025/26,away,normal,5,1,1,4,9,14,-0.8421
+chelsea,Chelsea,UCL,2025/26,home,normal,5,4,0,12,10,4,1.65279
+club-brugge,Club Brugge,UCL,2016/17,away,normal,3,0,0,0,1,7,-1.16146
+club-brugge,Club Brugge,UCL,2016/17,home,normal,3,0,0,0,1,7,-1.15085
+club-brugge,Club Brugge,UCL,2018/19,away,normal,3,1,1,4,5,3,0.537195
+club-brugge,Club Brugge,UCL,2018/19,home,normal,3,0,2,2,1,2,-0.012938
+club-brugge,Club Brugge,UCL,2019/20,away,normal,3,0,2,2,3,4,-0.0330344
+club-brugge,Club Brugge,UCL,2019/20,home,normal,3,0,1,1,1,8,-0.508218
+club-brugge,Club Brugge,UCL,2020/21,away,behind_closed_doors,2,0,1,1,2,5,-0.178964
+club-brugge,Club Brugge,UCL,2020/21,away,restricted,1,1,0,3,2,1,0.589684
+club-brugge,Club Brugge,UCL,2020/21,home,unknown,3,1,1,4,4,4,0.310305
+club-brugge,Club Brugge,UCL,2021/22,away,normal,2,0,0,0,2,8,-0.307046
+club-brugge,Club Brugge,UCL,2021/22,away,restricted,1,1,0,3,2,1,0.631668
+club-brugge,Club Brugge,UCL,2021/22,home,unknown,3,0,1,1,2,11,-0.20259
+club-brugge,Club Brugge,UCL,2022/23,away,normal,4,1,2,5,5,5,0.584196
+club-brugge,Club Brugge,UCL,2022/23,home,normal,4,2,0,6,3,6,0.617318
+club-brugge,Club Brugge,UCL,2024/25,away,normal,6,2,1,7,7,11,0.145454
+club-brugge,Club Brugge,UCL,2024/25,home,normal,6,3,1,10,6,8,1.51956
+club-brugge,Club Brugge,UCL,2025/26,away,normal,5,1,0,3,6,14,-0.821939
+club-brugge,Club Brugge,UCL,2025/26,home,normal,5,2,2,8,13,10,1.30887
+copenhagen,Copenhagen,UCL,2016/17,away,normal,3,1,1,4,3,2,0.107848
+copenhagen,Copenhagen,UCL,2016/17,home,normal,3,1,2,5,4,0,0.687308
+copenhagen,Copenhagen,UCL,2022/23,away,normal,3,0,0,0,0,11,-1.06701
+copenhagen,Copenhagen,UCL,2022/23,home,normal,3,0,3,3,1,1,0.553873
+copenhagen,Copenhagen,UCL,2023/24,away,normal,4,0,2,2,3,6,-0.320219
+copenhagen,Copenhagen,UCL,2023/24,home,normal,4,2,0,6,7,8,0.702701
+copenhagen,Copenhagen,UCL,2025/26,away,normal,4,1,0,3,4,12,-0.51415
+copenhagen,Copenhagen,UCL,2025/26,home,normal,4,1,2,5,8,9,0.45914
+crystal-palace,Crystal Palace,EPL,2016/17,away,normal,19,6,3,21,26,38,0.491411
+crystal-palace,Crystal Palace,EPL,2016/17,home,normal,19,6,2,20,24,25,-0.483496
+crystal-palace,Crystal Palace,EPL,2017/18,away,normal,19,4,6,18,16,28,-0.369402
+crystal-palace,Crystal Palace,EPL,2017/18,home,normal,19,7,5,26,29,27,2.43344
+crystal-palace,Crystal Palace,EPL,2018/19,away,normal,19,9,2,29,32,30,1.70375
+crystal-palace,Crystal Palace,EPL,2018/19,home,normal,19,5,5,20,19,23,-1.2681
+crystal-palace,Crystal Palace,EPL,2019/20,away,behind_closed_doors,5,1,0,3,2,11,-1.23269
+crystal-palace,Crystal Palace,EPL,2019/20,away,normal,14,4,5,17,14,19,-0.456883
+crystal-palace,Crystal Palace,EPL,2019/20,home,behind_closed_doors,4,0,1,1,3,7,-0.908251
+crystal-palace,Crystal Palace,EPL,2019/20,home,normal,15,6,4,22,12,13,0.310564
+crystal-palace,Crystal Palace,EPL,2020/21,away,behind_closed_doors,18,6,3,21,21,32,-0.414048
+crystal-palace,Crystal Palace,EPL,2020/21,away,restricted,1,0,0,0,0,2,-0.14951
+crystal-palace,Crystal Palace,EPL,2020/21,home,behind_closed_doors,17,6,4,22,18,28,0.845195
+crystal-palace,Crystal Palace,EPL,2020/21,home,restricted,2,0,1,1,2,4,-0.0161938
+crystal-palace,Crystal Palace,EPL,2021/22,away,normal,19,4,7,19,23,29,-0.685346
+crystal-palace,Crystal Palace,EPL,2021/22,home,normal,19,7,8,29,27,17,2.76774
+crystal-palace,Crystal Palace,EPL,2022/23,away,normal,19,4,5,17,19,26,-2.03203
+crystal-palace,Crystal Palace,EPL,2022/23,home,normal,19,7,7,28,21,23,1.77015
+crystal-palace,Crystal Palace,EPL,2023/24,away,normal,19,5,6,21,20,32,-0.0704423
+crystal-palace,Crystal Palace,EPL,2023/24,home,normal,19,8,4,28,37,26,1.51345
+crystal-palace,Crystal Palace,EPL,2024/25,away,normal,19,7,7,28,27,25,0.852043
+crystal-palace,Crystal Palace,EPL,2024/25,home,normal,19,6,7,25,24,26,0.377156
+crystal-palace,Crystal Palace,EPL,2025/26,away,normal,19,7,3,24,22,28,-1.32859
+crystal-palace,Crystal Palace,EPL,2025/26,home,normal,19,4,9,21,19,23,-1.24547
+cadiz,Cádiz,LALIGA,2020/21,away,behind_closed_doors,18,6,5,23,17,26,2.76137
+cadiz,Cádiz,LALIGA,2020/21,away,unknown,1,0,1,1,2,2,0.0824219
+cadiz,Cádiz,LALIGA,2020/21,home,behind_closed_doors,18,5,5,20,16,27,2.08799
+cadiz,Cádiz,LALIGA,2020/21,home,unknown,1,0,0,0,1,3,-0.537204
+cadiz,Cádiz,LALIGA,2021/22,away,normal,16,4,5,17,12,22,1.06343
+cadiz,Cádiz,LALIGA,2021/22,away,restricted,3,1,1,4,4,5,0.41996
+cadiz,Cádiz,LALIGA,2021/22,home,normal,15,3,7,16,16,18,1.75164
+cadiz,Cádiz,LALIGA,2021/22,home,restricted,4,0,2,2,3,6,-0.212794
+cadiz,Cádiz,LALIGA,2022/23,away,normal,19,3,6,15,11,30,-1.24612
+cadiz,Cádiz,LALIGA,2022/23,home,normal,19,7,6,27,19,23,2.71652
+cadiz,Cádiz,LALIGA,2023/24,away,normal,19,1,6,9,10,36,-3.39738
+cadiz,Cádiz,LALIGA,2023/24,home,normal,19,5,9,24,16,19,2.48326
+deportivo-la-coruna,Deportivo La Coruña,LALIGA,2016/17,away,normal,19,1,7,10,16,38,-3.15273
+deportivo-la-coruna,Deportivo La Coruña,LALIGA,2016/17,home,normal,19,7,5,26,27,23,1.88718
+deportivo-la-coruna,Deportivo La Coruña,LALIGA,2017/18,away,normal,19,2,5,11,16,43,-1.72388
+deportivo-la-coruna,Deportivo La Coruña,LALIGA,2017/18,home,normal,19,4,6,18,22,33,0.517551
+dinamo-zagreb,Dinamo Zagreb,UCL,2016/17,away,normal,3,0,0,0,0,9,-1.03242
+dinamo-zagreb,Dinamo Zagreb,UCL,2016/17,home,normal,3,0,0,0,0,6,-1.08479
+dinamo-zagreb,Dinamo Zagreb,UCL,2019/20,away,normal,3,0,1,1,2,6,-0.39717
+dinamo-zagreb,Dinamo Zagreb,UCL,2019/20,home,normal,3,1,1,4,8,7,0.639955
+dinamo-zagreb,Dinamo Zagreb,UCL,2022/23,away,normal,3,0,0,0,2,6,-0.923245
+dinamo-zagreb,Dinamo Zagreb,UCL,2022/23,home,normal,3,1,1,4,2,5,0.576842
+dinamo-zagreb,Dinamo Zagreb,UCL,2024/25,away,normal,4,2,0,6,8,13,0.981211
+dinamo-zagreb,Dinamo Zagreb,UCL,2024/25,home,normal,4,1,2,5,4,6,0.623435
+dynamo-kyiv,Dynamo Kyiv,UCL,2016/17,away,normal,3,0,2,2,1,2,-0.454317
+dynamo-kyiv,Dynamo Kyiv,UCL,2016/17,home,normal,3,1,0,3,7,4,-0.537201
+dynamo-kyiv,Dynamo Kyiv,UCL,2020/21,away,behind_closed_doors,2,0,0,0,1,5,-0.431059
+dynamo-kyiv,Dynamo Kyiv,UCL,2020/21,away,unknown,1,0,1,1,2,2,-0.0106478
+dynamo-kyiv,Dynamo Kyiv,UCL,2020/21,home,unknown,3,1,0,3,1,6,0.0238458
+dynamo-kyiv,Dynamo Kyiv,UCL,2021/22,away,normal,2,0,0,0,0,3,-0.766369
+dynamo-kyiv,Dynamo Kyiv,UCL,2021/22,away,restricted,1,0,0,0,0,5,-0.107655
+dynamo-kyiv,Dynamo Kyiv,UCL,2021/22,home,unknown,3,0,1,1,1,3,-0.456834
+eibar,Eibar,LALIGA,2016/17,away,normal,19,5,6,21,27,30,-0.435429
+eibar,Eibar,LALIGA,2016/17,home,normal,19,10,3,33,29,21,3.10253
+eibar,Eibar,LALIGA,2017/18,away,normal,19,6,5,23,18,31,-0.170608
+eibar,Eibar,LALIGA,2017/18,home,normal,19,8,4,28,26,19,1.09745
+eibar,Eibar,LALIGA,2018/19,away,normal,19,2,8,14,15,29,-3.00546
+eibar,Eibar,LALIGA,2018/19,home,normal,19,9,6,33,31,21,2.88711
+eibar,Eibar,LALIGA,2019/20,away,behind_closed_doors,6,2,1,7,6,10,0.144319
+eibar,Eibar,LALIGA,2019/20,away,normal,13,1,5,8,8,21,-2.7741
+eibar,Eibar,LALIGA,2019/20,home,behind_closed_doors,6,2,2,8,7,7,0.119932
+eibar,Eibar,LALIGA,2019/20,home,normal,13,6,1,19,18,18,0.983515
+eibar,Eibar,LALIGA,2020/21,away,behind_closed_doors,18,4,5,17,16,27,-0.828276
+eibar,Eibar,LALIGA,2020/21,away,unknown,1,0,0,0,1,4,-0.399912
+eibar,Eibar,LALIGA,2020/21,home,behind_closed_doors,18,2,7,13,12,20,-1.8756
+eibar,Eibar,LALIGA,2020/21,home,unknown,1,0,0,0,0,1,-0.117006
+eintracht-frankfurt,Eintracht Frankfurt,UCL,2022/23,away,normal,4,2,0,6,5,7,0.399387
+eintracht-frankfurt,Eintracht Frankfurt,UCL,2022/23,home,normal,4,1,1,4,2,6,-0.108417
+eintracht-frankfurt,Eintracht Frankfurt,UCL,2025/26,away,normal,4,0,1,1,4,10,-0.776008
+eintracht-frankfurt,Eintracht Frankfurt,UCL,2025/26,home,normal,4,1,0,3,6,11,-0.68523
+elche,Elche,LALIGA,2020/21,away,behind_closed_doors,18,2,4,10,13,31,-3.21826
+elche,Elche,LALIGA,2020/21,away,unknown,1,1,0,3,3,1,0.537204
+elche,Elche,LALIGA,2020/21,home,behind_closed_doors,18,4,8,20,16,23,0.506055
+elche,Elche,LALIGA,2020/21,home,unknown,1,1,0,3,2,0,0.660225
+elche,Elche,LALIGA,2021/22,away,normal,15,3,3,12,14,25,-1.49838
+elche,Elche,LALIGA,2021/22,away,restricted,4,1,0,3,2,6,-0.20479
+elche,Elche,LALIGA,2021/22,home,normal,16,7,3,24,22,19,2.32581
+elche,Elche,LALIGA,2021/22,home,restricted,3,0,3,3,2,2,0.435592
+elche,Elche,LALIGA,2022/23,away,normal,19,2,4,10,12,38,-1.84662
+elche,Elche,LALIGA,2022/23,home,normal,19,3,6,15,18,29,0.0269192
+elche,Elche,LALIGA,2025/26,away,normal,19,1,5,8,19,38,-3.4147
+elche,Elche,LALIGA,2025/26,home,normal,19,9,8,35,30,19,6.15298
+espanyol,Espanyol,LALIGA,2016/17,away,normal,19,7,6,27,21,26,1.0108
+espanyol,Espanyol,LALIGA,2016/17,home,normal,19,8,5,29,28,24,1.93633
+espanyol,Espanyol,LALIGA,2017/18,away,normal,19,4,7,19,16,26,-1.25018
+espanyol,Espanyol,LALIGA,2017/18,home,normal,19,8,6,30,20,16,1.86272
+espanyol,Espanyol,LALIGA,2018/19,away,normal,19,3,8,17,20,28,-2.06726
+espanyol,Espanyol,LALIGA,2018/19,home,normal,19,11,3,36,28,22,3.51434
+espanyol,Espanyol,LALIGA,2019/20,away,behind_closed_doors,5,0,1,1,1,5,-0.958305
+espanyol,Espanyol,LALIGA,2019/20,away,normal,14,3,3,12,11,22,-1.86071
+espanyol,Espanyol,LALIGA,2019/20,home,behind_closed_doors,6,1,1,4,3,7,-0.850077
+espanyol,Espanyol,LALIGA,2019/20,home,normal,13,1,5,8,12,24,-2.08143
+espanyol,Espanyol,LALIGA,2021/22,away,normal,15,1,4,7,13,29,-2.8192
+espanyol,Espanyol,LALIGA,2021/22,away,restricted,4,0,2,2,2,5,-0.31325
+espanyol,Espanyol,LALIGA,2021/22,home,normal,16,8,5,29,23,17,4.36478
+espanyol,Espanyol,LALIGA,2021/22,home,restricted,3,1,1,4,2,2,0.628366
+espanyol,Espanyol,LALIGA,2022/23,away,normal,19,4,6,18,25,34,0.0396429
+espanyol,Espanyol,LALIGA,2022/23,home,normal,19,4,7,19,27,35,0.777704
+espanyol,Espanyol,LALIGA,2024/25,away,normal,19,3,3,12,17,31,-2.3673
+espanyol,Espanyol,LALIGA,2024/25,home,normal,19,8,6,30,23,20,4.27316
+espanyol,Espanyol,LALIGA,2025/26,away,normal,19,5,5,20,22,31,-1.05595
+espanyol,Espanyol,LALIGA,2025/26,home,normal,19,7,5,26,21,24,1.37876
+everton,Everton,EPL,2016/17,away,normal,19,4,6,18,20,28,-3.19839
+everton,Everton,EPL,2016/17,home,normal,19,13,4,43,42,16,4.954
+everton,Everton,EPL,2017/18,away,normal,19,3,6,15,16,36,-3.96502
+everton,Everton,EPL,2017/18,home,normal,19,10,4,34,28,22,2.52903
+everton,Everton,EPL,2018/19,away,normal,19,5,5,20,24,25,-2.16551
+everton,Everton,EPL,2018/19,home,normal,19,10,4,34,30,21,2.55711
+everton,Everton,EPL,2019/20,away,behind_closed_doors,4,2,0,6,2,4,-0.255687
+everton,Everton,EPL,2019/20,away,normal,15,3,3,12,18,31,-2.78347
+everton,Everton,EPL,2019/20,home,behind_closed_doors,5,1,3,6,5,6,-0.0361319
+everton,Everton,EPL,2019/20,home,normal,14,7,4,25,19,15,2.00377
+everton,Everton,EPL,2020/21,away,behind_closed_doors,18,11,4,37,23,15,3.61918
+everton,Everton,EPL,2020/21,away,restricted,1,0,0,0,0,5,-0.144458
+everton,Everton,EPL,2020/21,home,behind_closed_doors,16,3,4,13,20,27,-3.73165
+everton,Everton,EPL,2020/21,home,restricted,3,3,0,9,4,1,1.71037
+everton,Everton,EPL,2021/22,away,normal,19,2,4,10,16,41,-4.39993
+everton,Everton,EPL,2021/22,home,normal,19,9,2,29,27,25,1.96207
+everton,Everton,EPL,2022/23,away,normal,19,2,9,15,18,30,-0.384055
+everton,Everton,EPL,2022/23,home,normal,19,6,3,21,16,27,0.741511
+everton,Everton,EPL,2023/24,away,normal,19,5,5,20,18,33,-0.0618221
+everton,Everton,EPL,2023/24,home,normal,19,8,4,28,22,18,2.18611
+everton,Everton,EPL,2024/25,away,normal,19,6,6,24,16,21,1.35771
+everton,Everton,EPL,2024/25,home,normal,19,5,9,24,26,23,1.30351
+everton,Everton,EPL,2025/26,away,normal,19,7,5,26,21,23,0.497801
+everton,Everton,EPL,2025/26,home,normal,19,6,5,23,26,27,-0.615961
+ferencvaros,Ferencváros,UCL,2020/21,away,behind_closed_doors,2,0,0,0,2,7,-0.421961
+ferencvaros,Ferencváros,UCL,2020/21,away,unknown,1,0,0,0,0,1,-0.4813
+ferencvaros,Ferencváros,UCL,2020/21,home,unknown,3,0,1,1,3,9,-0.404699
+feyenoord,Feyenoord,UCL,2017/18,away,normal,3,0,0,0,2,7,-1.08051
+feyenoord,Feyenoord,UCL,2017/18,home,normal,3,1,0,3,3,7,-0.156763
+feyenoord,Feyenoord,UCL,2023/24,away,normal,3,0,0,0,3,6,-1.31528
+feyenoord,Feyenoord,UCL,2023/24,home,normal,3,2,0,6,6,4,0.784357
+feyenoord,Feyenoord,UCL,2024/25,away,normal,6,2,2,8,12,15,1.06759
+feyenoord,Feyenoord,UCL,2024/25,home,normal,6,3,0,9,9,11,0.775182
+fulham,Fulham,EPL,2018/19,away,normal,19,1,2,5,12,45,-2.78359
+fulham,Fulham,EPL,2018/19,home,normal,19,6,3,21,22,36,3.00454
+fulham,Fulham,EPL,2020/21,away,behind_closed_doors,18,3,8,17,17,24,2.20453
+fulham,Fulham,EPL,2020/21,away,restricted,1,0,1,1,1,1,0.385235
+fulham,Fulham,EPL,2020/21,home,behind_closed_doors,17,2,3,9,8,25,-0.861971
+fulham,Fulham,EPL,2020/21,home,restricted,2,0,1,1,1,3,0.111452
+fulham,Fulham,EPL,2022/23,away,normal,19,7,2,23,24,24,1.58365
+fulham,Fulham,EPL,2022/23,home,normal,19,8,5,29,31,29,3.89299
+fulham,Fulham,EPL,2023/24,away,normal,19,4,6,18,24,37,-0.979038
+fulham,Fulham,EPL,2023/24,home,normal,19,9,2,29,31,24,2.06577
+fulham,Fulham,EPL,2024/25,away,normal,19,8,4,28,27,24,1.2401
+fulham,Fulham,EPL,2024/25,home,normal,19,7,5,26,27,30,0.590893
+fulham,Fulham,EPL,2025/26,away,normal,19,4,5,17,17,31,-2.16959
+fulham,Fulham,EPL,2025/26,home,normal,19,11,2,35,30,20,3.27353
+galatasaray,Galatasaray,UCL,2018/19,away,normal,3,0,0,0,0,5,-1.19561
+galatasaray,Galatasaray,UCL,2018/19,home,normal,3,1,1,4,5,3,0.459303
+galatasaray,Galatasaray,UCL,2019/20,away,normal,3,0,1,1,0,11,-0.302976
+galatasaray,Galatasaray,UCL,2019/20,home,normal,3,0,1,1,1,3,-0.337428
+galatasaray,Galatasaray,UCL,2023/24,away,normal,3,1,0,3,4,5,0.308797
+galatasaray,Galatasaray,UCL,2023/24,home,normal,3,0,2,2,6,8,0.315452
+galatasaray,Galatasaray,UCL,2025/26,away,normal,6,1,0,3,4,15,-0.885314
+galatasaray,Galatasaray,UCL,2025/26,home,normal,6,4,1,13,11,5,2.93624
+genk,Genk,UCL,2019/20,away,normal,3,0,0,0,3,12,-0.955401
+genk,Genk,UCL,2019/20,home,normal,3,0,1,1,2,8,-0.476888
+getafe,Getafe,LALIGA,2017/18,away,normal,19,6,6,24,16,20,0.81805
+getafe,Getafe,LALIGA,2017/18,home,normal,19,9,4,31,26,13,3.06425
+getafe,Getafe,LALIGA,2018/19,away,normal,19,4,11,23,20,22,-0.440932
+getafe,Getafe,LALIGA,2018/19,home,normal,19,11,3,36,28,13,2.46677
+getafe,Getafe,LALIGA,2019/20,away,behind_closed_doors,6,0,3,3,2,5,-2.21526
+getafe,Getafe,LALIGA,2019/20,away,normal,13,6,3,21,16,12,0.133549
+getafe,Getafe,LALIGA,2019/20,home,behind_closed_doors,5,1,2,5,4,7,-0.762954
+getafe,Getafe,LALIGA,2019/20,home,normal,14,7,4,25,21,13,0.640428
+getafe,Getafe,LALIGA,2020/21,away,behind_closed_doors,18,3,4,13,13,30,-3.42831
+getafe,Getafe,LALIGA,2020/21,away,unknown,1,0,1,1,0,0,-0.0194183
+getafe,Getafe,LALIGA,2020/21,home,behind_closed_doors,18,5,6,21,13,12,-0.577813
+getafe,Getafe,LALIGA,2020/21,home,unknown,1,1,0,3,2,1,0.517406
+getafe,Getafe,LALIGA,2021/22,away,normal,15,1,8,11,11,18,-1.22611
+getafe,Getafe,LALIGA,2021/22,away,restricted,4,0,0,0,1,8,-1.42809
+getafe,Getafe,LALIGA,2021/22,home,normal,16,7,7,28,20,11,3.88133
+getafe,Getafe,LALIGA,2021/22,home,restricted,3,0,0,0,1,4,-0.905029
+getafe,Getafe,LALIGA,2022/23,away,normal,19,3,6,15,13,25,-2.07117
+getafe,Getafe,LALIGA,2022/23,home,normal,19,7,6,27,21,20,2.33377
+getafe,Getafe,LALIGA,2023/24,away,normal,19,2,8,14,22,32,-2.77964
+getafe,Getafe,LALIGA,2023/24,home,normal,19,8,5,29,20,22,2.09174
+getafe,Getafe,LALIGA,2024/25,away,normal,19,7,2,23,19,20,0.230755
+getafe,Getafe,LALIGA,2024/25,home,normal,19,4,7,19,15,19,-0.14753
+getafe,Getafe,LALIGA,2025/26,away,normal,19,7,3,24,14,22,0.620386
+getafe,Getafe,LALIGA,2025/26,home,normal,19,8,3,27,18,16,1.45713
+girona,Girona,LALIGA,2017/18,away,normal,19,6,6,24,24,37,2.47032
+girona,Girona,LALIGA,2017/18,home,normal,19,8,3,27,26,22,2.98596
+girona,Girona,LALIGA,2018/19,away,normal,19,6,4,22,20,25,0.625881
+girona,Girona,LALIGA,2018/19,home,normal,19,3,6,15,17,28,-1.45945
+girona,Girona,LALIGA,2022/23,away,normal,19,3,7,16,23,29,-1.17745
+girona,Girona,LALIGA,2022/23,home,normal,19,10,3,33,35,26,3.90884
+girona,Girona,LALIGA,2023/24,away,normal,19,10,4,34,32,26,0.849354
+girona,Girona,LALIGA,2023/24,home,normal,19,15,2,47,53,20,4.22654
+girona,Girona,LALIGA,2024/25,away,normal,19,4,5,17,17,30,-4.01328
+girona,Girona,LALIGA,2024/25,home,normal,19,7,3,24,27,30,-1.52051
+girona,Girona,LALIGA,2025/26,away,normal,19,3,8,17,18,28,-0.365731
+girona,Girona,LALIGA,2025/26,home,normal,19,6,6,24,21,27,1.59421
+girona,Girona,UCL,2024/25,away,normal,4,0,0,0,0,7,-1.88961
+girona,Girona,UCL,2024/25,home,normal,4,1,0,3,5,6,-0.593804
+granada,Granada,LALIGA,2016/17,away,normal,19,0,4,4,13,50,-4.42193
+granada,Granada,LALIGA,2016/17,home,normal,19,4,4,16,17,32,-0.315846
+granada,Granada,LALIGA,2019/20,away,behind_closed_doors,5,3,2,11,9,5,1.56055
+granada,Granada,LALIGA,2019/20,away,normal,14,3,3,12,17,24,0.37042
+granada,Granada,LALIGA,2019/20,home,behind_closed_doors,6,2,1,7,10,8,0.440251
+granada,Granada,LALIGA,2019/20,home,normal,13,8,2,26,16,8,4.14305
+granada,Granada,LALIGA,2020/21,away,behind_closed_doors,18,4,3,15,20,36,-2.33659
+granada,Granada,LALIGA,2020/21,away,unknown,1,0,0,0,2,4,-0.571886
+granada,Granada,LALIGA,2020/21,home,behind_closed_doors,18,9,3,30,25,25,2.25525
+granada,Granada,LALIGA,2020/21,home,unknown,1,0,1,1,0,0,0.0194183
+granada,Granada,LALIGA,2021/22,away,normal,15,3,5,14,21,26,-0.633624
+granada,Granada,LALIGA,2021/22,away,restricted,4,0,2,2,1,6,-0.400565
+granada,Granada,LALIGA,2021/22,home,normal,16,5,6,21,18,23,1.597
+granada,Granada,LALIGA,2021/22,home,restricted,3,0,1,1,4,6,-0.555773
+granada,Granada,LALIGA,2023/24,away,normal,19,0,3,3,14,47,-4.42087
+granada,Granada,LALIGA,2023/24,home,normal,19,4,6,18,24,32,1.2683
+hoffenheim,Hoffenheim,UCL,2018/19,away,normal,3,0,2,2,5,6,-0.126391
+hoffenheim,Hoffenheim,UCL,2018/19,home,normal,3,0,1,1,6,8,-0.677746
+huddersfield-town,Huddersfield Town,EPL,2017/18,away,normal,19,3,5,14,12,33,-0.0536267
+huddersfield-town,Huddersfield Town,EPL,2017/18,home,normal,19,6,5,23,16,25,3.05601
+huddersfield-town,Huddersfield Town,EPL,2018/19,away,normal,19,1,4,7,12,45,-2.03372
+huddersfield-town,Huddersfield Town,EPL,2018/19,home,normal,19,2,3,9,10,31,-1.7048
+huesca,Huesca,LALIGA,2018/19,away,normal,19,2,6,12,19,35,0.273422
+huesca,Huesca,LALIGA,2018/19,home,normal,19,5,6,21,24,30,3.45343
+huesca,Huesca,LALIGA,2020/21,away,behind_closed_doors,18,2,6,12,17,31,-0.662592
+huesca,Huesca,LALIGA,2020/21,away,unknown,1,0,0,0,0,1,-0.325718
+huesca,Huesca,LALIGA,2020/21,home,behind_closed_doors,18,5,6,21,17,21,2.0523
+huesca,Huesca,LALIGA,2020/21,home,unknown,1,0,1,1,0,0,0.131132
+hull-city,Hull City,EPL,2016/17,away,normal,19,1,3,6,9,45,-4.11107
+hull-city,Hull City,EPL,2016/17,home,normal,19,8,4,28,28,35,3.45777
+inter-milan,Inter Milan,UCL,2018/19,away,normal,3,1,0,3,2,4,0.03271
+inter-milan,Inter Milan,UCL,2018/19,home,normal,3,1,2,5,4,3,1.05176
+inter-milan,Inter Milan,UCL,2019/20,away,normal,3,1,0,3,6,6,-0.194272
+inter-milan,Inter Milan,UCL,2019/20,home,normal,3,1,1,4,4,3,0.354011
+inter-milan,Inter Milan,UCL,2020/21,away,behind_closed_doors,2,1,0,3,5,5,0.254627
+inter-milan,Inter Milan,UCL,2020/21,away,unknown,1,0,1,1,0,0,-0.0394932
+inter-milan,Inter Milan,UCL,2020/21,home,behind_closed_doors,2,0,1,1,0,2,-0.364851
+inter-milan,Inter Milan,UCL,2020/21,home,unknown,1,0,1,1,2,2,-0.0537582
+inter-milan,Inter Milan,UCL,2021/22,away,normal,2,1,0,3,1,2,0.566871
+inter-milan,Inter Milan,UCL,2021/22,away,unknown,2,1,1,4,3,1,0.413849
+inter-milan,Inter Milan,UCL,2021/22,home,restricted,4,2,0,6,5,4,0.438494
+inter-milan,Inter Milan,UCL,2022/23,away,normal,6,3,2,11,9,5,1.28756
+inter-milan,Inter Milan,UCL,2022/23,home,normal,6,4,1,13,10,5,1.68213
+inter-milan,Inter Milan,UCL,2023/24,away,normal,4,1,2,5,6,6,-0.490805
+inter-milan,Inter Milan,UCL,2023/24,home,normal,4,3,1,10,4,1,1.20448
+inter-milan,Inter Milan,UCL,2024/25,away,normal,7,4,2,14,9,5,1.06488
+inter-milan,Inter Milan,UCL,2024/25,home,normal,7,6,1,19,17,6,2.28806
+inter-milan,Inter Milan,UCL,2025/26,away,normal,5,3,0,9,10,5,-0.31343
+inter-milan,Inter Milan,UCL,2025/26,home,normal,5,2,0,6,7,7,-1.34223
+ipswich-town,Ipswich Town,EPL,2024/25,away,normal,19,3,6,15,22,38,2.23191
+ipswich-town,Ipswich Town,EPL,2024/25,home,normal,19,1,4,7,14,44,-0.767015
+juventus,Juventus,UCL,2016/17,away,normal,6,5,1,16,12,1,1.98283
+juventus,Juventus,UCL,2016/17,home,normal,6,4,2,14,9,2,1.30023
+juventus,Juventus,UCL,2017/18,away,normal,5,3,1,10,8,6,0.871727
+juventus,Juventus,UCL,2017/18,home,normal,5,2,2,8,6,6,0.401414
+juventus,Juventus,UCL,2018/19,away,normal,5,2,1,7,5,5,-0.912486
+juventus,Juventus,UCL,2018/19,home,normal,5,3,0,9,9,4,-0.322902
+juventus,Juventus,UCL,2019/20,away,normal,4,2,1,7,6,4,-0.360348
+juventus,Juventus,UCL,2019/20,home,behind_closed_doors,1,1,0,3,2,1,0.259561
+juventus,Juventus,UCL,2019/20,home,normal,3,3,0,9,6,1,0.886247
+juventus,Juventus,UCL,2020/21,away,behind_closed_doors,2,1,0,3,4,2,-0.16522
+juventus,Juventus,UCL,2020/21,away,unknown,2,2,0,6,6,1,0.467256
+juventus,Juventus,UCL,2020/21,home,behind_closed_doors,4,3,0,9,7,4,0.268488
+juventus,Juventus,UCL,2021/22,away,normal,2,0,1,1,1,5,-0.776878
+juventus,Juventus,UCL,2021/22,away,unknown,2,2,0,6,4,0,0.278757
+juventus,Juventus,UCL,2021/22,home,restricted,4,3,0,9,6,5,-0.0224831
+juventus,Juventus,UCL,2022/23,away,normal,3,0,0,0,4,8,-1.9283
+juventus,Juventus,UCL,2022/23,home,normal,3,1,0,3,5,5,-0.898026
+juventus,Juventus,UCL,2024/25,away,normal,5,1,3,6,5,6,-0.807128
+juventus,Juventus,UCL,2024/25,home,normal,5,3,0,9,7,5,-0.0941639
+juventus,Juventus,UCL,2025/26,away,normal,5,1,2,5,7,10,-1.06994
+juventus,Juventus,UCL,2025/26,home,normal,5,3,2,11,12,5,0.940864
+kairat-almaty,Kairat Almaty,UCL,2025/26,away,normal,4,0,0,0,6,12,-1.27211
+kairat-almaty,Kairat Almaty,UCL,2025/26,home,normal,4,0,1,1,1,10,-1.21776
+krasnodar,Krasnodar,UCL,2020/21,away,behind_closed_doors,2,0,1,1,3,4,-0.127897
+krasnodar,Krasnodar,UCL,2020/21,away,unknown,1,0,1,1,1,1,0
+krasnodar,Krasnodar,UCL,2020/21,home,restricted,3,1,0,3,2,6,-0.228619
+las-palmas,Las Palmas,LALIGA,2016/17,away,normal,19,1,3,6,20,49,-5.95353
+las-palmas,Las Palmas,LALIGA,2016/17,home,normal,19,9,6,33,33,25,3.84623
+las-palmas,Las Palmas,LALIGA,2017/18,away,normal,19,1,5,8,9,36,-1.93442
+las-palmas,Las Palmas,LALIGA,2017/18,home,normal,19,4,2,14,15,38,-0.507112
+las-palmas,Las Palmas,LALIGA,2023/24,away,normal,19,4,4,16,13,27,-0.0347082
+las-palmas,Las Palmas,LALIGA,2023/24,home,normal,19,6,6,24,20,20,3.14015
+las-palmas,Las Palmas,LALIGA,2024/25,away,normal,19,4,3,15,19,32,-0.3997
+las-palmas,Las Palmas,LALIGA,2024/25,home,normal,19,4,5,17,21,29,0.292836
+lazio,Lazio,UCL,2020/21,away,behind_closed_doors,2,0,1,1,2,3,-0.0460763
+lazio,Lazio,UCL,2020/21,away,restricted,1,0,1,1,1,1,-0.0573116
+lazio,Lazio,UCL,2020/21,away,unknown,1,0,1,1,1,1,-0.0949656
+lazio,Lazio,UCL,2020/21,home,behind_closed_doors,3,1,1,4,6,7,0.175746
+lazio,Lazio,UCL,2020/21,home,unknown,1,1,0,3,3,1,0.600226
+lazio,Lazio,UCL,2023/24,away,normal,4,1,0,3,3,9,-0.669322
+lazio,Lazio,UCL,2023/24,home,normal,4,3,1,10,5,1,1.83867
+leeds-united,Leeds United,EPL,2020/21,away,behind_closed_doors,17,9,0,27,31,30,3.72441
+leeds-united,Leeds United,EPL,2020/21,away,restricted,2,1,0,3,3,3,0.349287
+leeds-united,Leeds United,EPL,2020/21,home,behind_closed_doors,18,7,5,26,25,20,4.05287
+leeds-united,Leeds United,EPL,2020/21,home,restricted,1,1,0,3,3,1,0.308518
+leeds-united,Leeds United,EPL,2021/22,away,normal,19,5,5,20,23,41,-0.367568
+leeds-united,Leeds United,EPL,2021/22,home,normal,19,4,6,18,19,38,-0.990364
+leeds-united,Leeds United,EPL,2022/23,away,normal,19,2,3,9,22,41,-3.50927
+leeds-united,Leeds United,EPL,2022/23,home,normal,19,5,7,22,26,37,1.32173
+leeds-united,Leeds United,EPL,2025/26,away,normal,19,2,9,15,20,35,0.246218
+leeds-united,Leeds United,EPL,2025/26,home,normal,19,9,5,32,29,21,5.27721
+leganes,Leganés,LALIGA,2016/17,away,normal,19,3,5,14,14,32,-0.29487
+leganes,Leganés,LALIGA,2016/17,home,normal,19,5,6,21,22,23,1.97129
+leganes,Leganés,LALIGA,2017/18,away,normal,19,3,3,12,15,32,-2.6939
+leganes,Leganés,LALIGA,2017/18,home,normal,19,9,4,31,19,19,3.93427
+leganes,Leganés,LALIGA,2018/19,away,normal,19,4,4,16,18,27,-1.17783
+leganes,Leganés,LALIGA,2018/19,home,normal,19,7,8,29,19,16,3.56207
+leganes,Leganés,LALIGA,2019/20,away,behind_closed_doors,6,2,2,8,5,5,0.573389
+leganes,Leganés,LALIGA,2019/20,away,normal,13,1,5,8,8,20,-1.14093
+leganes,Leganés,LALIGA,2019/20,home,behind_closed_doors,5,1,2,5,4,7,0.282812
+leganes,Leganés,LALIGA,2019/20,home,normal,14,4,3,15,13,19,0.0482546
+leganes,Leganés,LALIGA,2024/25,away,normal,19,2,9,15,16,29,-0.95728
+leganes,Leganés,LALIGA,2024/25,home,normal,19,7,4,25,23,27,1.47332
+legia-warsaw,Legia Warsaw,UCL,2016/17,away,normal,3,0,0,0,5,15,-0.976095
+legia-warsaw,Legia Warsaw,UCL,2016/17,home,behind_closed_doors,1,0,1,1,3,3,0.369131
+legia-warsaw,Legia Warsaw,UCL,2016/17,home,normal,2,1,0,3,1,6,0.0683552
+leicester-city,Leicester City,EPL,2016/17,away,normal,19,2,4,10,17,38,-7.28589
+leicester-city,Leicester City,EPL,2016/17,home,normal,19,10,4,34,31,25,1.18371
+leicester-city,Leicester City,EPL,2017/18,away,normal,19,5,5,20,31,38,-2.18154
+leicester-city,Leicester City,EPL,2017/18,home,normal,19,7,6,27,25,22,0.22805
+leicester-city,Leicester City,EPL,2018/19,away,normal,19,7,4,25,27,28,-0.149966
+leicester-city,Leicester City,EPL,2018/19,home,normal,19,8,3,27,24,20,0.0558014
+leicester-city,Leicester City,EPL,2019/20,away,behind_closed_doors,5,0,2,2,4,11,-1.99526
+leicester-city,Leicester City,EPL,2019/20,away,normal,14,7,2,23,28,13,-0.290439
+leicester-city,Leicester City,EPL,2019/20,home,behind_closed_doors,4,2,1,7,5,2,0.167601
+leicester-city,Leicester City,EPL,2019/20,home,normal,15,9,3,30,30,15,1.85108
+leicester-city,Leicester City,EPL,2020/21,away,behind_closed_doors,18,11,5,38,33,18,3.02229
+leicester-city,Leicester City,EPL,2020/21,away,restricted,1,0,0,0,1,2,-0.358345
+leicester-city,Leicester City,EPL,2020/21,home,behind_closed_doors,18,9,1,28,32,26,-1.41381
+leicester-city,Leicester City,EPL,2020/21,home,restricted,1,0,0,0,2,4,-0.510216
+leicester-city,Leicester City,EPL,2021/22,away,normal,19,4,6,18,28,36,-3.08784
+leicester-city,Leicester City,EPL,2021/22,home,normal,19,10,4,34,34,23,1.86692
+leicester-city,Leicester City,EPL,2022/23,away,normal,19,4,3,15,28,41,-2.98837
+leicester-city,Leicester City,EPL,2022/23,home,normal,19,5,4,19,23,27,-1.74427
+leicester-city,Leicester City,EPL,2024/25,away,normal,19,2,4,10,18,46,-1.98418
+leicester-city,Leicester City,EPL,2024/25,home,normal,19,4,3,15,15,34,-0.924622
+leicester-city,Leicester City,UCL,2016/17,away,normal,5,1,1,4,4,8,-0.861563
+leicester-city,Leicester City,UCL,2016/17,home,normal,5,4,1,13,7,2,2.05542
+lens,Lens,UCL,2023/24,away,normal,3,0,1,1,1,8,-0.851824
+lens,Lens,UCL,2023/24,home,normal,3,2,1,7,5,3,1.09918
+levante,Levante,LALIGA,2017/18,away,normal,19,4,7,19,19,30,0.980847
+levante,Levante,LALIGA,2017/18,home,normal,19,7,6,27,25,28,3.25614
+levante,Levante,LALIGA,2018/19,away,normal,19,5,4,19,25,32,-1.06991
+levante,Levante,LALIGA,2018/19,home,normal,19,6,7,25,34,34,1.34295
+levante,Levante,LALIGA,2019/20,away,behind_closed_doors,5,2,2,8,7,6,0.30733
+levante,Levante,LALIGA,2019/20,away,normal,14,3,0,9,13,28,-2.91545
+levante,Levante,LALIGA,2019/20,home,behind_closed_doors,6,2,2,8,8,7,0.691981
+levante,Levante,LALIGA,2019/20,home,normal,13,7,3,24,19,12,2.15658
+levante,Levante,LALIGA,2020/21,away,behind_closed_doors,18,4,5,17,18,25,-1.72727
+levante,Levante,LALIGA,2020/21,away,unknown,1,0,0,0,1,2,-0.517406
+levante,Levante,LALIGA,2020/21,home,behind_closed_doors,18,5,8,23,25,28,0.901648
+levante,Levante,LALIGA,2020/21,home,unknown,1,0,1,1,2,2,-0.0824219
+levante,Levante,LALIGA,2021/22,away,normal,15,3,2,11,21,40,-1.08551
+levante,Levante,LALIGA,2021/22,away,restricted,4,0,2,2,2,6,-0.567223
+levante,Levante,LALIGA,2021/22,home,normal,16,5,5,20,24,24,1.98379
+levante,Levante,LALIGA,2021/22,home,restricted,3,0,2,2,4,6,-0.137752
+levante,Levante,LALIGA,2025/26,away,normal,19,4,4,16,21,33,-1.40533
+levante,Levante,LALIGA,2025/26,home,normal,19,7,5,26,26,28,2.40311
+lille,Lille,UCL,2019/20,away,normal,3,0,0,0,2,9,-1.09562
+lille,Lille,UCL,2019/20,home,normal,3,0,1,1,2,5,-0.558729
+lille,Lille,UCL,2021/22,away,normal,2,1,0,3,2,3,0.495456
+lille,Lille,UCL,2021/22,away,restricted,1,1,0,3,3,1,0.595659
+lille,Lille,UCL,2021/22,away,unknown,1,0,0,0,1,2,-0.420521
+lille,Lille,UCL,2021/22,home,normal,3,1,2,5,1,0,0.962446
+lille,Lille,UCL,2021/22,home,unknown,1,0,0,0,1,2,-0.211113
+lille,Lille,UCL,2024/25,away,normal,5,2,1,7,7,7,0.635631
+lille,Lille,UCL,2024/25,home,normal,5,3,1,10,12,6,1.60042
+liverpool,Liverpool,EPL,2016/17,away,normal,19,10,5,35,33,24,0.0875376
+liverpool,Liverpool,EPL,2016/17,home,normal,19,12,5,41,45,18,2.43558
+liverpool,Liverpool,EPL,2017/18,away,normal,19,9,5,32,39,28,-2.40191
+liverpool,Liverpool,EPL,2017/18,home,normal,19,12,7,43,45,10,1.90722
+liverpool,Liverpool,EPL,2018/19,away,normal,19,13,5,44,34,12,0.480733
+liverpool,Liverpool,EPL,2018/19,home,normal,19,17,2,53,55,10,2.75322
+liverpool,Liverpool,EPL,2019/20,away,behind_closed_doors,5,2,1,7,7,8,-1.622
+liverpool,Liverpool,EPL,2019/20,away,normal,14,12,1,37,26,9,-0.050155
+liverpool,Liverpool,EPL,2019/20,home,behind_closed_doors,4,3,1,10,12,4,0.00488551
+liverpool,Liverpool,EPL,2019/20,home,normal,15,15,0,45,40,12,1.92149
+liverpool,Liverpool,EPL,2020/21,away,behind_closed_doors,17,9,5,32,35,21,-1.73409
+liverpool,Liverpool,EPL,2020/21,away,restricted,2,1,1,4,4,1,-0.263841
+liverpool,Liverpool,EPL,2020/21,home,behind_closed_doors,15,7,2,23,20,18,-3.85145
+liverpool,Liverpool,EPL,2020/21,home,restricted,4,3,1,10,9,2,0.204733
+liverpool,Liverpool,EPL,2021/22,away,normal,19,13,4,43,45,17,-0.456332
+liverpool,Liverpool,EPL,2021/22,home,normal,19,15,4,49,49,9,1.37889
+liverpool,Liverpool,EPL,2022/23,away,normal,19,6,5,23,29,30,-6.49902
+liverpool,Liverpool,EPL,2022/23,home,normal,19,13,5,44,46,17,0.945647
+liverpool,Liverpool,EPL,2023/24,away,normal,19,9,7,34,37,24,-2.04874
+liverpool,Liverpool,EPL,2023/24,home,normal,19,15,3,48,49,17,1.71754
+liverpool,Liverpool,EPL,2024/25,away,normal,19,11,5,38,44,25,-1.9447
+liverpool,Liverpool,EPL,2024/25,home,normal,19,14,4,46,42,16,0.541428
+liverpool,Liverpool,EPL,2025/26,away,normal,19,7,3,24,29,33,-5.00785
+liverpool,Liverpool,EPL,2025/26,home,normal,19,10,6,36,34,20,-0.854597
+liverpool,Liverpool,UCL,2017/18,away,normal,6,3,2,11,20,9,0.0756121
+liverpool,Liverpool,UCL,2017/18,home,normal,6,4,2,14,20,4,1.07776
+liverpool,Liverpool,UCL,2018/19,away,normal,6,2,0,6,8,10,-1.87662
+liverpool,Liverpool,UCL,2018/19,home,normal,6,5,1,16,14,2,1.68198
+liverpool,Liverpool,UCL,2019/20,away,normal,4,2,0,6,6,4,-1.39925
+liverpool,Liverpool,UCL,2019/20,home,normal,4,3,1,10,8,5,0.174249
+liverpool,Liverpool,UCL,2020/21,away,behind_closed_doors,2,1,0,3,6,3,-0.24689
+liverpool,Liverpool,UCL,2020/21,away,unknown,2,1,1,4,2,1,-0.0951494
+liverpool,Liverpool,UCL,2020/21,home,behind_closed_doors,4,2,1,7,3,2,-0.30153
+liverpool,Liverpool,UCL,2021/22,away,normal,3,3,0,9,9,5,0.795586
+liverpool,Liverpool,UCL,2021/22,away,restricted,2,2,0,6,4,1,0.389545
+liverpool,Liverpool,UCL,2021/22,away,unknown,1,1,0,3,5,1,0.381552
+liverpool,Liverpool,UCL,2021/22,home,normal,6,4,1,13,12,6,0.00386699
+liverpool,Liverpool,UCL,2022/23,away,normal,4,2,0,6,11,6,-0.637127
+liverpool,Liverpool,UCL,2022/23,home,normal,4,3,0,9,8,6,0.505672
+liverpool,Liverpool,UCL,2024/25,away,normal,5,4,0,12,8,4,0.339774
+liverpool,Liverpool,UCL,2024/25,home,normal,5,4,0,12,10,2,0.538777
+liverpool,Liverpool,UCL,2025/26,away,normal,6,3,0,9,9,5,-0.857352
+liverpool,Liverpool,UCL,2025/26,home,normal,6,4,0,12,15,8,0.460425
+lokomotiv-moscow,Lokomotiv Moscow,UCL,2018/19,away,normal,3,0,0,0,1,8,-1.37063
+lokomotiv-moscow,Lokomotiv Moscow,UCL,2018/19,home,normal,3,1,0,3,3,4,-0.37369
+lokomotiv-moscow,Lokomotiv Moscow,UCL,2019/20,away,normal,3,1,0,3,3,5,0.17223
+lokomotiv-moscow,Lokomotiv Moscow,UCL,2019/20,home,normal,3,0,0,0,1,6,-0.846896
+lokomotiv-moscow,Lokomotiv Moscow,UCL,2020/21,away,behind_closed_doors,2,0,1,1,0,2,0.207095
+lokomotiv-moscow,Lokomotiv Moscow,UCL,2020/21,away,unknown,1,0,1,1,2,2,0.128986
+lokomotiv-moscow,Lokomotiv Moscow,UCL,2020/21,home,restricted,3,0,1,1,3,6,-0.220176
+ludogorets-razgrad,Ludogorets Razgrad,UCL,2016/17,away,normal,3,0,2,2,3,9,0.0320659
+ludogorets-razgrad,Ludogorets Razgrad,UCL,2016/17,home,normal,3,0,1,1,3,6,-0.52616
+luton-town,Luton Town,EPL,2023/24,away,normal,19,2,4,10,24,48,-0.377086
+luton-town,Luton Town,EPL,2023/24,home,normal,19,4,4,16,28,37,1.67037
+lyon,Lyon,UCL,2016/17,away,normal,3,1,1,4,2,2,0.118607
+lyon,Lyon,UCL,2016/17,home,normal,3,1,1,4,3,1,0.208412
+lyon,Lyon,UCL,2018/19,away,normal,4,1,2,5,7,10,0.668444
+lyon,Lyon,UCL,2018/19,home,normal,4,0,4,4,6,6,0.677953
+lyon,Lyon,UCL,2019/20,away,behind_closed_doors,1,0,0,0,1,2,-0.259561
+lyon,Lyon,UCL,2019/20,away,normal,3,1,0,3,3,4,-0.687736
+lyon,Lyon,UCL,2019/20,home,normal,4,2,2,8,7,4,1.1644
+maccabi-haifa,Maccabi Haifa,UCL,2022/23,away,normal,3,0,0,0,3,12,-0.927184
+maccabi-haifa,Maccabi Haifa,UCL,2022/23,home,normal,3,1,0,3,4,9,0.179319
+mallorca,Mallorca,LALIGA,2019/20,away,behind_closed_doors,6,0,1,1,3,13,-0.820081
+mallorca,Mallorca,LALIGA,2019/20,away,normal,13,1,2,5,12,30,-1.74532
+mallorca,Mallorca,LALIGA,2019/20,home,behind_closed_doors,5,2,1,7,9,8,1.012
+mallorca,Mallorca,LALIGA,2019/20,home,normal,14,6,2,20,16,14,3.65574
+mallorca,Mallorca,LALIGA,2021/22,away,normal,16,2,3,9,14,30,-1.67714
+mallorca,Mallorca,LALIGA,2021/22,away,restricted,3,1,0,3,2,8,0.130374
+mallorca,Mallorca,LALIGA,2021/22,home,normal,15,6,4,22,16,21,3.03905
+mallorca,Mallorca,LALIGA,2021/22,home,restricted,4,1,2,5,4,4,0.57343
+mallorca,Mallorca,LALIGA,2022/23,away,normal,19,4,3,15,15,31,-1.58096
+mallorca,Mallorca,LALIGA,2022/23,home,normal,19,10,5,35,22,12,5.11273
+mallorca,Mallorca,LALIGA,2023/24,away,normal,19,2,8,14,16,28,-1.96812
+mallorca,Mallorca,LALIGA,2023/24,home,normal,19,6,8,26,17,16,2.19432
+mallorca,Mallorca,LALIGA,2024/25,away,normal,19,6,3,21,15,23,-0.902589
+mallorca,Mallorca,LALIGA,2024/25,home,normal,19,7,6,27,20,21,1.56355
+mallorca,Mallorca,LALIGA,2025/26,away,normal,19,2,3,9,16,36,-4.23984
+mallorca,Mallorca,LALIGA,2025/26,home,normal,19,9,6,33,31,21,4.07685
+malmo-ff,Malmö FF,UCL,2021/22,away,normal,1,0,0,0,0,4,-0.144174
+malmo-ff,Malmö FF,UCL,2021/22,away,restricted,1,0,0,0,0,1,-0.110056
+malmo-ff,Malmö FF,UCL,2021/22,away,unknown,1,0,0,0,0,4,-0.443257
+malmo-ff,Malmö FF,UCL,2021/22,home,unknown,3,0,1,1,1,5,-0.165304
+manchester-city,Manchester City,EPL,2016/17,away,normal,19,12,2,38,43,22,-0.286019
+manchester-city,Manchester City,EPL,2016/17,home,normal,19,11,7,40,37,17,1.68021
+manchester-city,Manchester City,EPL,2017/18,away,normal,19,16,2,50,45,13,1.85903
+manchester-city,Manchester City,EPL,2017/18,home,normal,19,16,2,50,61,14,1.77862
+manchester-city,Manchester City,EPL,2018/19,away,normal,19,14,2,44,38,11,-1.11451
+manchester-city,Manchester City,EPL,2018/19,home,normal,19,18,0,54,57,12,2.15304
+manchester-city,Manchester City,EPL,2019/20,away,behind_closed_doors,4,2,0,6,10,3,-1.42503
+manchester-city,Manchester City,EPL,2019/20,away,normal,15,9,1,28,35,19,-3.0048
+manchester-city,Manchester City,EPL,2019/20,home,behind_closed_doors,6,6,0,18,24,1,1.28183
+manchester-city,Manchester City,EPL,2019/20,home,normal,13,9,2,29,33,12,-1.15835
+manchester-city,Manchester City,EPL,2020/21,away,behind_closed_doors,17,13,3,42,37,12,0.509677
+manchester-city,Manchester City,EPL,2020/21,away,restricted,2,1,0,3,3,3,-0.681748
+manchester-city,Manchester City,EPL,2020/21,home,behind_closed_doors,18,12,2,38,38,17,-1.82336
+manchester-city,Manchester City,EPL,2020/21,home,restricted,1,1,0,3,5,0,0.144458
+manchester-city,Manchester City,EPL,2021/22,away,normal,19,14,4,46,41,11,0.038503
+manchester-city,Manchester City,EPL,2021/22,home,normal,19,15,2,47,58,15,0.0210984
+manchester-city,Manchester City,EPL,2022/23,away,normal,19,11,4,37,34,16,-3.18936
+manchester-city,Manchester City,EPL,2022/23,home,normal,19,17,1,52,60,17,0.933312
+manchester-city,Manchester City,EPL,2023/24,away,normal,19,14,2,44,45,18,-1.74083
+manchester-city,Manchester City,EPL,2023/24,home,normal,19,14,5,47,51,16,-0.172923
+manchester-city,Manchester City,EPL,2024/25,away,normal,19,8,5,29,29,21,-4.58
+manchester-city,Manchester City,EPL,2024/25,home,normal,19,13,3,42,43,23,-0.121535
+manchester-city,Manchester City,EPL,2025/26,away,normal,19,9,6,33,32,21,-1.89018
+manchester-city,Manchester City,EPL,2025/26,home,normal,19,14,3,45,45,14,1.34899
+manchester-city,Manchester City,UCL,2016/17,away,normal,4,0,2,2,5,11,-1.44166
+manchester-city,Manchester City,UCL,2016/17,home,normal,4,3,1,10,13,5,1.11699
+manchester-city,Manchester City,UCL,2017/18,away,normal,5,3,0,9,13,7,-0.822417
+manchester-city,Manchester City,UCL,2017/18,home,normal,5,3,0,9,7,5,-0.831136
+manchester-city,Manchester City,UCL,2018/19,away,normal,5,3,1,10,10,6,-0.51585
+manchester-city,Manchester City,UCL,2018/19,home,normal,5,4,0,12,20,6,-0.0426553
+manchester-city,Manchester City,UCL,2019/20,away,normal,4,3,1,10,10,3,0.242934
+manchester-city,Manchester City,UCL,2019/20,home,behind_closed_doors,1,1,0,3,2,1,0.408924
+manchester-city,Manchester City,UCL,2019/20,home,normal,3,2,1,7,8,2,-0.133855
+manchester-city,Manchester City,UCL,2020/21,away,behind_closed_doors,3,2,1,7,4,2,0.484912
+manchester-city,Manchester City,UCL,2020/21,away,unknown,2,2,0,6,4,0,0.359549
+manchester-city,Manchester City,UCL,2020/21,home,behind_closed_doors,5,5,0,15,13,2,1.24762
+manchester-city,Manchester City,UCL,2021/22,away,behind_closed_doors,1,0,0,0,1,2,-0.805538
+manchester-city,Manchester City,UCL,2021/22,away,normal,4,1,1,4,6,4,-1.25208
+manchester-city,Manchester City,UCL,2021/22,away,unknown,1,1,0,3,5,1,0.143465
+manchester-city,Manchester City,UCL,2021/22,home,normal,6,5,1,16,17,8,1.1832
+manchester-city,Manchester City,UCL,2022/23,away,normal,6,1,5,8,7,3,-0.843869
+manchester-city,Manchester City,UCL,2022/23,home,normal,6,6,0,18,24,2,1.67472
+manchester-city,Manchester City,UCL,2023/24,away,normal,5,4,1,13,15,8,0.430025
+manchester-city,Manchester City,UCL,2023/24,home,normal,5,4,1,13,13,5,0.421373
+manchester-city,Manchester City,UCL,2024/25,away,normal,5,1,0,3,8,13,-2.33132
+manchester-city,Manchester City,UCL,2024/25,home,normal,5,2,2,8,13,7,-0.717407
+manchester-city,Manchester City,UCL,2025/26,away,normal,5,2,1,7,7,9,-0.667935
+manchester-city,Manchester City,UCL,2025/26,home,normal,5,3,0,9,9,5,-0.00103698
+manchester-united,Manchester United,EPL,2016/17,away,normal,19,10,5,35,28,17,-0.0911042
+manchester-united,Manchester United,EPL,2016/17,home,normal,19,8,10,34,26,12,0.926895
+manchester-united,Manchester United,EPL,2017/18,away,normal,19,10,4,34,30,19,-1.71228
+manchester-united,Manchester United,EPL,2017/18,home,normal,19,15,2,47,38,9,2.23329
+manchester-united,Manchester United,EPL,2018/19,away,normal,19,9,3,30,32,29,-2.88396
+manchester-united,Manchester United,EPL,2018/19,home,normal,19,10,6,36,33,25,-0.37269
+manchester-united,Manchester United,EPL,2019/20,away,behind_closed_doors,5,4,1,13,11,1,0.967442
+manchester-united,Manchester United,EPL,2019/20,away,normal,14,4,4,16,15,18,-2.40507
+manchester-united,Manchester United,EPL,2019/20,home,behind_closed_doors,4,2,2,8,11,5,-0.0294927
+manchester-united,Manchester United,EPL,2019/20,home,normal,15,8,5,29,29,12,1.93262
+manchester-united,Manchester United,EPL,2020/21,away,behind_closed_doors,17,10,7,37,30,14,2.0089
+manchester-united,Manchester United,EPL,2020/21,away,restricted,2,2,0,6,5,2,0.563098
+manchester-united,Manchester United,EPL,2020/21,home,behind_closed_doors,18,9,3,30,37,27,-1.94096
+manchester-united,Manchester United,EPL,2020/21,home,restricted,1,0,1,1,1,1,-0.385235
+manchester-united,Manchester United,EPL,2021/22,away,normal,19,6,5,23,25,35,-4.03394
+manchester-united,Manchester United,EPL,2021/22,home,normal,19,10,5,35,32,22,0.0683682
+manchester-united,Manchester United,EPL,2022/23,away,normal,19,8,3,27,22,33,-2.16843
+manchester-united,Manchester United,EPL,2022/23,home,normal,19,15,3,48,36,10,4.98709
+manchester-united,Manchester United,EPL,2023/24,away,normal,19,8,3,27,26,30,-1.60709
+manchester-united,Manchester United,EPL,2023/24,home,normal,19,10,3,33,31,28,0.640418
+manchester-united,Manchester United,EPL,2024/25,away,normal,19,4,6,18,21,26,-2.01177
+manchester-united,Manchester United,EPL,2024/25,home,normal,19,7,3,24,23,28,-0.948603
+manchester-united,Manchester United,EPL,2025/26,away,normal,19,7,8,29,30,26,1.67142
+manchester-united,Manchester United,EPL,2025/26,home,normal,19,13,3,42,39,24,5.0544
+manchester-united,Manchester United,UCL,2017/18,away,normal,4,2,1,7,5,2,-0.559399
+manchester-united,Manchester United,UCL,2017/18,home,normal,4,3,0,9,8,3,-0.0962696
+manchester-united,Manchester United,UCL,2018/19,away,normal,5,3,0,9,9,7,0.546962
+manchester-united,Manchester United,UCL,2018/19,home,normal,5,1,1,4,1,4,-1.01156
+manchester-united,Manchester United,UCL,2020/21,away,behind_closed_doors,1,0,0,0,2,3,-0.585499
+manchester-united,Manchester United,UCL,2020/21,away,unknown,2,1,0,3,3,3,-0.00101905
+manchester-united,Manchester United,UCL,2020/21,home,behind_closed_doors,3,2,0,6,10,4,0.382803
+manchester-united,Manchester United,UCL,2021/22,away,normal,2,1,1,4,3,1,0.414029
+manchester-united,Manchester United,UCL,2021/22,away,restricted,1,0,1,1,2,2,-0.0992586
+manchester-united,Manchester United,UCL,2021/22,away,unknown,1,0,0,0,1,2,-0.733746
+manchester-united,Manchester United,UCL,2021/22,home,normal,4,2,1,7,6,5,0.110626
+manchester-united,Manchester United,UCL,2023/24,away,normal,3,0,1,1,9,11,-0.948825
+manchester-united,Manchester United,UCL,2023/24,home,normal,3,1,0,3,3,4,-0.411398
+maribor,Maribor,UCL,2017/18,away,normal,3,0,1,1,1,7,-0.476423
+maribor,Maribor,UCL,2017/18,home,normal,3,0,2,2,2,9,-0.0321544
+marseille,Marseille,UCL,2020/21,away,behind_closed_doors,2,0,0,0,0,6,-0.527598
+marseille,Marseille,UCL,2020/21,away,unknown,1,0,0,0,0,1,-0.583681
+marseille,Marseille,UCL,2020/21,home,behind_closed_doors,2,1,0,3,2,3,0.138869
+marseille,Marseille,UCL,2020/21,home,unknown,1,0,0,0,0,3,-0.199654
+marseille,Marseille,UCL,2022/23,away,normal,3,1,0,3,3,4,-0.169859
+marseille,Marseille,UCL,2022/23,home,normal,3,1,0,3,5,4,-0.135395
+marseille,Marseille,UCL,2025/26,away,normal,4,1,0,3,5,9,-0.589947
+marseille,Marseille,UCL,2025/26,home,normal,4,2,0,6,6,5,0.657523
+middlesbrough,Middlesbrough,EPL,2016/17,away,normal,19,1,7,10,10,30,-1.18302
+middlesbrough,Middlesbrough,EPL,2016/17,home,normal,19,4,6,18,17,23,1.24364
+midtjylland,Midtjylland,UCL,2020/21,away,behind_closed_doors,2,0,1,1,1,3,-0.00502135
+midtjylland,Midtjylland,UCL,2020/21,away,unknown,1,0,0,0,1,3,-0.321183
+midtjylland,Midtjylland,UCL,2020/21,home,unknown,3,0,1,1,2,7,-0.443115
+monaco,Monaco,UCL,2016/17,away,normal,6,2,1,7,10,14,-0.141622
+monaco,Monaco,UCL,2016/17,home,normal,6,4,1,13,12,6,1.78173
+monaco,Monaco,UCL,2017/18,away,normal,3,0,2,2,4,7,-0.47018
+monaco,Monaco,UCL,2017/18,home,normal,3,0,0,0,2,9,-1.58587
+monaco,Monaco,UCL,2018/19,away,normal,3,0,1,1,1,6,-0.706548
+monaco,Monaco,UCL,2018/19,home,normal,3,0,0,0,1,8,-1.19472
+monaco,Monaco,UCL,2024/25,away,normal,5,1,2,5,6,11,0.235704
+monaco,Monaco,UCL,2024/25,home,normal,5,3,0,9,10,6,1.22528
+monaco,Monaco,UCL,2025/26,away,normal,5,1,2,5,7,14,0.307082
+monaco,Monaco,UCL,2025/26,home,normal,5,1,3,6,5,5,0.886195
+malaga,Málaga,LALIGA,2016/17,away,normal,19,2,8,14,17,30,-2.91655
+malaga,Málaga,LALIGA,2016/17,home,normal,19,10,2,32,32,25,2.35318
+malaga,Málaga,LALIGA,2017/18,away,normal,19,1,2,5,10,34,-4.93364
+malaga,Málaga,LALIGA,2017/18,home,normal,19,4,3,15,14,27,-1.37383
+napoli,Napoli,UCL,2016/17,away,normal,4,2,1,7,6,6,0.888288
+napoli,Napoli,UCL,2016/17,home,normal,4,1,1,4,7,8,-0.24602
+napoli,Napoli,UCL,2017/18,away,normal,3,0,0,0,3,6,-1.37506
+napoli,Napoli,UCL,2017/18,home,normal,3,2,0,6,8,5,0.764286
+napoli,Napoli,UCL,2018/19,away,normal,3,0,2,2,2,3,-0.0816147
+napoli,Napoli,UCL,2018/19,home,normal,3,2,1,7,5,2,1.42785
+napoli,Napoli,UCL,2019/20,away,behind_closed_doors,1,0,0,0,1,3,-0.288987
+napoli,Napoli,UCL,2019/20,away,normal,3,1,2,5,4,3,0.648704
+napoli,Napoli,UCL,2019/20,home,normal,4,2,2,8,8,2,1.3202
+napoli,Napoli,UCL,2022/23,away,normal,5,3,0,9,11,4,0.0900024
+napoli,Napoli,UCL,2022/23,home,normal,5,4,1,13,15,4,1.57086
+napoli,Napoli,UCL,2023/24,away,normal,4,2,0,6,6,8,-0.272505
+napoli,Napoli,UCL,2023/24,home,normal,4,1,2,5,6,5,-0.35731
+napoli,Napoli,UCL,2025/26,away,normal,4,0,1,1,3,11,-1.87197
+napoli,Napoli,UCL,2025/26,home,normal,4,2,1,7,6,4,0.0617896
+newcastle-united,Newcastle United,EPL,2017/18,away,normal,19,4,4,16,18,30,-1.19401
+newcastle-united,Newcastle United,EPL,2017/18,home,normal,19,8,4,28,21,17,2.58963
+newcastle-united,Newcastle United,EPL,2018/19,away,normal,19,4,8,20,18,23,0.0570154
+newcastle-united,Newcastle United,EPL,2018/19,home,normal,19,8,1,25,24,25,0.545332
+newcastle-united,Newcastle United,EPL,2019/20,away,behind_closed_doors,4,1,1,4,5,8,-0.428004
+newcastle-united,Newcastle United,EPL,2019/20,away,normal,15,4,2,14,13,29,-1.54486
+newcastle-united,Newcastle United,EPL,2019/20,home,behind_closed_doors,5,1,2,5,8,9,-0.265453
+newcastle-united,Newcastle United,EPL,2019/20,home,normal,14,5,6,21,12,12,1.81093
+newcastle-united,Newcastle United,EPL,2020/21,away,behind_closed_doors,18,5,4,19,18,29,0.0491891
+newcastle-united,Newcastle United,EPL,2020/21,away,restricted,1,1,0,3,2,0,0.339388
+newcastle-united,Newcastle United,EPL,2020/21,home,behind_closed_doors,18,5,5,20,25,33,0.617276
+newcastle-united,Newcastle United,EPL,2020/21,home,restricted,1,1,0,3,1,0,0.336683
+newcastle-united,Newcastle United,EPL,2021/22,away,normal,19,5,4,19,18,35,-0.553277
+newcastle-united,Newcastle United,EPL,2021/22,home,normal,19,8,6,30,26,27,3.68909
+newcastle-united,Newcastle United,EPL,2022/23,away,normal,19,8,8,32,32,19,0.822725
+newcastle-united,Newcastle United,EPL,2022/23,home,normal,19,11,6,39,36,14,2.78947
+newcastle-united,Newcastle United,EPL,2023/24,away,normal,19,6,2,20,36,40,-4.54748
+newcastle-united,Newcastle United,EPL,2023/24,home,normal,19,12,4,40,49,22,2.62373
+newcastle-united,Newcastle United,EPL,2024/25,away,normal,19,8,4,28,28,27,-1.44831
+newcastle-united,Newcastle United,EPL,2024/25,home,normal,19,12,2,38,40,20,2.2857
+newcastle-united,Newcastle United,EPL,2025/26,away,normal,19,4,5,17,17,25,-4.55281
+newcastle-united,Newcastle United,EPL,2025/26,home,normal,19,10,2,32,36,30,0.343405
+newcastle-united,Newcastle United,UCL,2023/24,away,normal,3,0,2,2,1,3,-0.455014
+newcastle-united,Newcastle United,UCL,2023/24,home,normal,3,1,0,3,5,4,-0.430987
+newcastle-united,Newcastle United,UCL,2025/26,away,normal,6,2,2,8,16,13,0.106462
+newcastle-united,Newcastle United,UCL,2025/26,home,normal,6,4,1,13,13,5,1.69658
+norwich-city,Norwich City,EPL,2019/20,away,behind_closed_doors,4,0,0,0,1,12,-0.716047
+norwich-city,Norwich City,EPL,2019/20,away,normal,15,1,3,6,6,26,-2.04995
+norwich-city,Norwich City,EPL,2019/20,home,behind_closed_doors,5,0,0,0,0,11,-1.51625
+norwich-city,Norwich City,EPL,2019/20,home,normal,14,4,3,15,19,26,1.73048
+norwich-city,Norwich City,EPL,2021/22,away,normal,19,2,4,10,11,41,0.0429232
+norwich-city,Norwich City,EPL,2021/22,home,normal,19,3,3,12,12,43,0.656948
+nottingham-forest,Nottingham Forest,EPL,2022/23,away,normal,19,1,5,8,11,44,-1.28613
+nottingham-forest,Nottingham Forest,EPL,2022/23,home,normal,19,8,6,30,27,24,6.45033
+nottingham-forest,Nottingham Forest,EPL,2023/24,away,normal,19,4,4,16,22,37,-0.366354
+nottingham-forest,Nottingham Forest,EPL,2023/24,home,normal,19,5,5,20,27,30,1.32947
+nottingham-forest,Nottingham Forest,EPL,2024/25,away,normal,19,10,3,33,32,30,3.00737
+nottingham-forest,Nottingham Forest,EPL,2024/25,home,normal,19,9,5,32,26,16,2.6678
+nottingham-forest,Nottingham Forest,EPL,2025/26,away,normal,19,7,3,24,28,28,0.330512
+nottingham-forest,Nottingham Forest,EPL,2025/26,home,normal,19,4,8,20,20,23,-0.534305
+olympiacos,Olympiacos,UCL,2017/18,away,normal,3,0,0,0,2,8,-0.853814
+olympiacos,Olympiacos,UCL,2017/18,home,normal,3,0,1,1,2,5,-0.353975
+olympiacos,Olympiacos,UCL,2019/20,away,normal,3,0,0,0,3,9,-0.910211
+olympiacos,Olympiacos,UCL,2019/20,home,normal,3,1,1,4,5,5,0.6086
+olympiacos,Olympiacos,UCL,2020/21,away,behind_closed_doors,3,0,0,0,1,7,-0.941858
+olympiacos,Olympiacos,UCL,2020/21,home,unknown,3,1,0,3,1,3,0.164668
+olympiacos,Olympiacos,UCL,2025/26,away,normal,5,2,1,7,4,9,1.1398
+olympiacos,Olympiacos,UCL,2025/26,home,normal,5,1,2,5,6,7,0.520829
+osasuna,Osasuna,LALIGA,2016/17,away,normal,19,2,3,9,17,55,-1.41619
+osasuna,Osasuna,LALIGA,2016/17,home,normal,19,2,7,13,23,39,0.146195
+osasuna,Osasuna,LALIGA,2019/20,away,behind_closed_doors,6,3,1,10,6,7,1.56483
+osasuna,Osasuna,LALIGA,2019/20,away,normal,13,3,5,14,14,18,1.11952
+osasuna,Osasuna,LALIGA,2019/20,home,behind_closed_doors,5,2,2,8,6,9,0.949292
+osasuna,Osasuna,LALIGA,2019/20,home,normal,14,5,5,20,20,20,3.33752
+osasuna,Osasuna,LALIGA,2020/21,away,behind_closed_doors,18,4,6,18,15,23,-0.308236
+osasuna,Osasuna,LALIGA,2020/21,away,unknown,1,0,0,0,1,2,-0.21381
+osasuna,Osasuna,LALIGA,2020/21,home,behind_closed_doors,18,7,5,26,21,22,2.10423
+osasuna,Osasuna,LALIGA,2020/21,home,unknown,1,0,0,0,0,1,-0.362592
+osasuna,Osasuna,LALIGA,2021/22,away,normal,16,4,4,16,12,21,-0.567066
+osasuna,Osasuna,LALIGA,2021/22,away,restricted,3,3,0,9,8,4,1.23165
+osasuna,Osasuna,LALIGA,2021/22,home,normal,15,5,5,20,15,19,0.792681
+osasuna,Osasuna,LALIGA,2021/22,home,restricted,4,0,2,2,2,7,-0.900977
+osasuna,Osasuna,LALIGA,2022/23,away,normal,19,4,7,19,13,21,-0.940525
+osasuna,Osasuna,LALIGA,2022/23,home,normal,19,11,1,34,24,21,3.1202
+osasuna,Osasuna,LALIGA,2023/24,away,normal,19,6,4,22,26,30,-0.485539
+osasuna,Osasuna,LALIGA,2023/24,home,normal,19,6,5,23,19,26,0.0909918
+osasuna,Osasuna,LALIGA,2024/25,away,normal,19,2,10,16,15,29,-1.60543
+osasuna,Osasuna,LALIGA,2024/25,home,normal,19,10,6,36,33,23,4.33094
+osasuna,Osasuna,LALIGA,2025/26,away,normal,19,2,4,10,13,26,-5.29195
+osasuna,Osasuna,LALIGA,2025/26,home,normal,19,9,5,32,31,24,2.11315
+psv-eindhoven,PSV Eindhoven,UCL,2016/17,away,normal,3,0,1,1,3,8,-0.595548
+psv-eindhoven,PSV Eindhoven,UCL,2016/17,home,normal,3,0,1,1,1,3,-0.549007
+psv-eindhoven,PSV Eindhoven,UCL,2018/19,away,normal,3,0,1,1,2,7,-0.306415
+psv-eindhoven,PSV Eindhoven,UCL,2018/19,home,normal,3,0,1,1,4,6,-0.332303
+psv-eindhoven,PSV Eindhoven,UCL,2023/24,away,normal,4,1,1,4,4,9,-0.0488032
+psv-eindhoven,PSV Eindhoven,UCL,2023/24,home,normal,4,1,3,6,5,4,0.988569
+psv-eindhoven,PSV Eindhoven,UCL,2024/25,away,normal,6,1,2,5,8,11,-0.212905
+psv-eindhoven,PSV Eindhoven,UCL,2024/25,home,normal,6,4,1,13,15,13,2.31492
+psv-eindhoven,PSV Eindhoven,UCL,2025/26,away,normal,4,1,2,5,6,6,0.074238
+psv-eindhoven,PSV Eindhoven,UCL,2025/26,home,normal,4,1,0,3,10,10,-0.425076
+pafos,Pafos,UCL,2025/26,away,normal,4,0,2,2,0,3,-0.811392
+pafos,Pafos,UCL,2025/26,home,normal,4,2,1,7,8,8,0.866232
+paris-saint-germain,Paris Saint-Germain,UCL,2016/17,away,normal,4,2,1,7,8,10,0.415771
+paris-saint-germain,Paris Saint-Germain,UCL,2016/17,home,normal,4,2,2,8,10,3,0.880565
+paris-saint-germain,Paris Saint-Germain,UCL,2017/18,away,normal,4,2,0,6,11,6,-0.309845
+paris-saint-germain,Paris Saint-Germain,UCL,2017/18,home,normal,4,3,0,9,16,3,0.688806
+paris-saint-germain,Paris Saint-Germain,UCL,2018/19,away,normal,4,2,1,7,9,5,0.187635
+paris-saint-germain,Paris Saint-Germain,UCL,2018/19,home,normal,4,2,1,7,11,7,0.153917
+paris-saint-germain,Paris Saint-Germain,UCL,2019/20,away,normal,4,2,1,7,9,4,-0.410171
+paris-saint-germain,Paris Saint-Germain,UCL,2019/20,home,behind_closed_doors,1,1,0,3,2,0,0.336426
+paris-saint-germain,Paris Saint-Germain,UCL,2019/20,home,normal,3,3,0,9,9,0,0.749541
+paris-saint-germain,Paris Saint-Germain,UCL,2020/21,away,behind_closed_doors,5,3,0,9,11,8,0.47066
+paris-saint-germain,Paris Saint-Germain,UCL,2020/21,away,unknown,1,1,0,3,2,0,0.231538
+paris-saint-germain,Paris Saint-Germain,UCL,2020/21,home,behind_closed_doors,5,2,1,7,8,5,-0.304341
+paris-saint-germain,Paris Saint-Germain,UCL,2020/21,home,unknown,1,0,0,0,1,2,-0.66895
+paris-saint-germain,Paris Saint-Germain,UCL,2021/22,away,normal,2,0,0,0,2,5,-0.919681
+paris-saint-germain,Paris Saint-Germain,UCL,2021/22,away,restricted,1,0,1,1,2,2,-0.269995
+paris-saint-germain,Paris Saint-Germain,UCL,2021/22,away,unknown,1,0,1,1,1,1,-0.331979
+paris-saint-germain,Paris Saint-Germain,UCL,2021/22,home,normal,3,3,0,9,9,3,0.996115
+paris-saint-germain,Paris Saint-Germain,UCL,2021/22,home,unknown,1,1,0,3,1,0,0.52143
+paris-saint-germain,Paris Saint-Germain,UCL,2022/23,away,normal,4,2,1,7,6,5,0.018689
+paris-saint-germain,Paris Saint-Germain,UCL,2022/23,home,normal,4,2,1,7,10,5,0.106798
+paris-saint-germain,Paris Saint-Germain,UCL,2023/24,away,normal,6,2,1,7,9,10,-1.41027
+paris-saint-germain,Paris Saint-Germain,UCL,2023/24,home,normal,6,3,1,10,10,5,-0.395525
+paris-saint-germain,Paris Saint-Germain,UCL,2024/25,away,normal,8,5,0,15,14,7,0.422293
+paris-saint-germain,Paris Saint-Germain,UCL,2024/25,home,normal,8,5,1,16,19,8,0.573594
+paris-saint-germain,Paris Saint-Germain,UCL,2025/26,away,normal,8,5,2,17,19,8,0.417714
+paris-saint-germain,Paris Saint-Germain,UCL,2025/26,home,normal,8,5,2,17,25,14,0.559134
+porto,Porto,UCL,2016/17,away,normal,4,1,1,4,2,3,-0.500319
+porto,Porto,UCL,2016/17,home,normal,4,2,1,7,7,3,0.345055
+porto,Porto,UCL,2017/18,away,normal,4,1,2,5,6,4,0.101798
+porto,Porto,UCL,2017/18,home,normal,4,2,0,6,9,11,-0.0841874
+porto,Porto,UCL,2018/19,away,normal,5,2,1,7,8,8,-0.318436
+porto,Porto,UCL,2018/19,home,normal,5,4,0,12,11,7,1.26113
+porto,Porto,UCL,2020/21,away,behind_closed_doors,3,1,0,3,4,5,-0.337726
+porto,Porto,UCL,2020/21,away,unknown,1,1,0,3,2,0,0.259119
+porto,Porto,UCL,2020/21,home,behind_closed_doors,4,3,1,10,7,1,1.52302
+porto,Porto,UCL,2021/22,away,normal,1,0,0,0,0,2,-0.304602
+porto,Porto,UCL,2021/22,away,restricted,2,0,2,2,1,1,-0.0999502
+porto,Porto,UCL,2021/22,home,normal,2,1,0,3,2,3,-0.131051
+porto,Porto,UCL,2021/22,home,unknown,1,0,0,0,1,5,-0.381552
+porto,Porto,UCL,2022/23,away,normal,4,2,0,6,8,3,-0.130807
+porto,Porto,UCL,2022/23,home,normal,4,2,1,7,4,5,0.307001
+porto,Porto,UCL,2023/24,away,normal,3,1,0,3,5,4,-0.461707
+porto,Porto,UCL,2023/24,home,normal,4,3,0,9,8,4,0.880171
+qarabag,Qarabağ,UCL,2017/18,away,normal,3,0,1,1,1,8,-0.403344
+qarabag,Qarabağ,UCL,2017/18,home,normal,3,0,1,1,1,6,-0.477173
+qarabag,Qarabağ,UCL,2025/26,away,normal,5,1,0,3,6,16,-0.714574
+qarabag,Qarabağ,UCL,2025/26,home,normal,5,2,1,7,10,14,0.37773
+rb-leipzig,RB Leipzig,UCL,2017/18,away,normal,3,1,0,3,5,6,-0.358542
+rb-leipzig,RB Leipzig,UCL,2017/18,home,normal,3,1,1,4,5,5,0.21185
+rb-leipzig,RB Leipzig,UCL,2019/20,away,normal,4,3,1,10,7,3,1.55107
+rb-leipzig,RB Leipzig,UCL,2019/20,home,normal,4,2,1,7,7,5,0.461871
+rb-leipzig,RB Leipzig,UCL,2020/21,away,behind_closed_doors,2,0,0,0,0,6,-0.751848
+rb-leipzig,RB Leipzig,UCL,2020/21,away,unknown,1,1,0,3,4,3,0.400327
+rb-leipzig,RB Leipzig,UCL,2020/21,home,behind_closed_doors,2,2,0,6,5,3,1.30286
+rb-leipzig,RB Leipzig,UCL,2020/21,home,unknown,1,1,0,3,2,0,0.429947
+rb-leipzig,RB Leipzig,UCL,2021/22,away,normal,2,0,0,0,5,9,-0.445679
+rb-leipzig,RB Leipzig,UCL,2021/22,away,unknown,1,1,0,3,5,0,0.391104
+rb-leipzig,RB Leipzig,UCL,2021/22,home,behind_closed_doors,1,1,0,3,2,1,0.805538
+rb-leipzig,RB Leipzig,UCL,2021/22,home,restricted,2,0,1,1,3,4,-0.361674
+rb-leipzig,RB Leipzig,UCL,2022/23,away,normal,3,1,0,3,2,9,-0.0831933
+rb-leipzig,RB Leipzig,UCL,2022/23,home,normal,4,2,1,7,8,8,0.779882
+rb-leipzig,RB Leipzig,UCL,2023/24,away,normal,4,2,1,7,8,6,0.661619
+rb-leipzig,RB Leipzig,UCL,2023/24,home,normal,4,2,0,6,6,6,0.155272
+rb-leipzig,RB Leipzig,UCL,2024/25,away,normal,4,0,0,0,2,7,-2.13099
+rb-leipzig,RB Leipzig,UCL,2024/25,home,normal,4,1,0,3,6,8,-0.705491
+rangers,Rangers,UCL,2022/23,away,normal,3,0,0,0,0,9,-0.729473
+rangers,Rangers,UCL,2022/23,home,normal,3,0,0,0,2,13,-0.829888
+rayo-vallecano,Rayo Vallecano,LALIGA,2018/19,away,normal,19,3,2,11,16,38,-2.92398
+rayo-vallecano,Rayo Vallecano,LALIGA,2018/19,home,normal,19,5,6,21,25,32,1.18028
+rayo-vallecano,Rayo Vallecano,LALIGA,2021/22,away,normal,15,2,3,9,10,22,-2.78552
+rayo-vallecano,Rayo Vallecano,LALIGA,2021/22,away,restricted,4,1,1,4,3,6,0.253859
+rayo-vallecano,Rayo Vallecano,LALIGA,2021/22,home,normal,16,5,5,20,16,21,1.42152
+rayo-vallecano,Rayo Vallecano,LALIGA,2021/22,home,restricted,3,3,0,9,10,1,1.54351
+rayo-vallecano,Rayo Vallecano,LALIGA,2022/23,away,normal,19,4,5,17,17,31,-1.29266
+rayo-vallecano,Rayo Vallecano,LALIGA,2022/23,home,normal,19,9,5,32,28,22,3.83023
+rayo-vallecano,Rayo Vallecano,LALIGA,2023/24,away,normal,19,4,6,18,11,22,-0.444265
+rayo-vallecano,Rayo Vallecano,LALIGA,2023/24,home,normal,19,4,8,20,18,26,0.0622409
+rayo-vallecano,Rayo Vallecano,LALIGA,2024/25,away,normal,19,7,5,26,17,19,1.93265
+rayo-vallecano,Rayo Vallecano,LALIGA,2024/25,home,normal,19,6,8,26,24,26,2.0049
+rayo-vallecano,Rayo Vallecano,LALIGA,2025/26,away,normal,19,5,4,19,17,29,-1.43911
+rayo-vallecano,Rayo Vallecano,LALIGA,2025/26,home,normal,19,7,10,31,24,15,3.26336
+real-betis,Real Betis,LALIGA,2016/17,away,normal,19,4,2,14,19,40,-2.67692
+real-betis,Real Betis,LALIGA,2016/17,home,normal,19,6,7,25,22,24,2.1515
+real-betis,Real Betis,LALIGA,2017/18,away,normal,19,8,2,26,25,30,0.937962
+real-betis,Real Betis,LALIGA,2017/18,home,normal,19,10,4,34,35,31,3.85263
+real-betis,Real Betis,LALIGA,2018/19,away,normal,19,6,3,21,19,26,-1.85106
+real-betis,Real Betis,LALIGA,2018/19,home,normal,19,8,5,29,25,26,1.54089
+real-betis,Real Betis,LALIGA,2019/20,away,behind_closed_doors,6,0,1,1,3,11,-2.13918
+real-betis,Real Betis,LALIGA,2019/20,away,normal,13,1,6,9,11,22,-2.32043
+real-betis,Real Betis,LALIGA,2019/20,home,behind_closed_doors,5,2,1,7,7,6,-0.194136
+real-betis,Real Betis,LALIGA,2019/20,home,normal,14,7,3,24,27,21,2.55419
+real-betis,Real Betis,LALIGA,2020/21,away,behind_closed_doors,18,6,5,23,20,27,0.4871
+real-betis,Real Betis,LALIGA,2020/21,away,unknown,1,1,0,3,3,2,0.497697
+real-betis,Real Betis,LALIGA,2020/21,home,behind_closed_doors,18,9,5,32,26,21,3.5548
+real-betis,Real Betis,LALIGA,2020/21,home,unknown,1,1,0,3,1,0,0.325718
+real-betis,Real Betis,LALIGA,2021/22,away,normal,16,7,5,26,22,15,0.536241
+real-betis,Real Betis,LALIGA,2021/22,away,restricted,3,2,1,7,6,3,0.525038
+real-betis,Real Betis,LALIGA,2021/22,home,normal,15,9,0,27,29,18,0.342772
+real-betis,Real Betis,LALIGA,2021/22,home,restricted,4,1,2,5,5,4,-0.329878
+real-betis,Real Betis,LALIGA,2022/23,away,normal,19,8,4,28,20,23,-1.46173
+real-betis,Real Betis,LALIGA,2022/23,home,normal,19,9,5,32,26,18,0.075711
+real-betis,Real Betis,LALIGA,2023/24,away,normal,19,5,8,23,21,26,-1.87037
+real-betis,Real Betis,LALIGA,2023/24,home,normal,19,9,7,34,27,19,1.63133
+real-betis,Real Betis,LALIGA,2024/25,away,normal,19,7,5,26,25,29,-0.934831
+real-betis,Real Betis,LALIGA,2024/25,home,normal,19,9,7,34,32,21,2.09488
+real-betis,Real Betis,LALIGA,2025/26,away,normal,19,5,9,24,25,29,-1.71833
+real-betis,Real Betis,LALIGA,2025/26,home,normal,19,10,6,36,34,19,1.96194
+real-madrid,Real Madrid,LALIGA,2016/17,away,normal,19,15,2,47,58,21,-0.175844
+real-madrid,Real Madrid,LALIGA,2016/17,home,normal,19,14,4,46,48,20,-0.136994
+real-madrid,Real Madrid,LALIGA,2017/18,away,normal,19,10,6,36,40,24,-2.95908
+real-madrid,Real Madrid,LALIGA,2017/18,home,normal,19,12,4,40,54,20,-1.94585
+real-madrid,Real Madrid,LALIGA,2018/19,away,normal,19,8,4,28,31,31,-4.5537
+real-madrid,Real Madrid,LALIGA,2018/19,home,normal,19,13,1,40,32,15,-1.12348
+real-madrid,Real Madrid,LALIGA,2019/20,away,behind_closed_doors,5,4,1,13,8,4,0.487396
+real-madrid,Real Madrid,LALIGA,2019/20,away,normal,14,7,4,25,22,10,-0.68702
+real-madrid,Real Madrid,LALIGA,2019/20,home,behind_closed_doors,6,6,0,18,13,2,1.2848
+real-madrid,Real Madrid,LALIGA,2019/20,home,normal,13,9,4,31,27,9,1.5934
+real-madrid,Real Madrid,LALIGA,2020/21,away,behind_closed_doors,18,11,6,39,33,15,0.085289
+real-madrid,Real Madrid,LALIGA,2020/21,away,unknown,1,1,0,3,1,0,0.210347
+real-madrid,Real Madrid,LALIGA,2020/21,home,behind_closed_doors,18,12,3,39,31,12,-0.418144
+real-madrid,Real Madrid,LALIGA,2020/21,home,unknown,1,1,0,3,2,1,0.273399
+real-madrid,Real Madrid,LALIGA,2021/22,away,normal,15,10,2,32,26,13,-1.20147
+real-madrid,Real Madrid,LALIGA,2021/22,away,restricted,4,3,1,10,10,5,0.158009
+real-madrid,Real Madrid,LALIGA,2021/22,home,normal,16,11,4,37,33,10,-0.126753
+real-madrid,Real Madrid,LALIGA,2021/22,home,restricted,3,2,1,7,11,3,0.010211
+real-madrid,Real Madrid,LALIGA,2022/23,away,normal,19,11,1,34,31,20,-4.19267
+real-madrid,Real Madrid,LALIGA,2022/23,home,normal,19,13,5,44,44,16,-0.390043
+real-madrid,Real Madrid,LALIGA,2023/24,away,normal,19,13,5,44,39,17,-0.316727
+real-madrid,Real Madrid,LALIGA,2023/24,home,normal,19,16,3,51,48,9,1.57374
+real-madrid,Real Madrid,LALIGA,2024/25,away,normal,19,10,5,35,33,19,-3.42402
+real-madrid,Real Madrid,LALIGA,2024/25,home,normal,19,16,1,49,45,19,0.645376
+real-madrid,Real Madrid,LALIGA,2025/26,away,normal,19,11,4,37,32,19,-2.50181
+real-madrid,Real Madrid,LALIGA,2025/26,home,normal,19,16,1,49,45,16,0.961887
+real-madrid,Real Madrid,UCL,2016/17,away,behind_closed_doors,1,0,1,1,3,3,-0.369131
+real-madrid,Real Madrid,UCL,2016/17,away,normal,5,3,1,10,10,7,-0.283052
+real-madrid,Real Madrid,UCL,2016/17,home,normal,6,4,1,13,16,7,-0.118846
+real-madrid,Real Madrid,UCL,2017/18,away,normal,6,5,0,15,17,6,0.904867
+real-madrid,Real Madrid,UCL,2017/18,home,normal,6,3,2,11,13,9,-0.188724
+real-madrid,Real Madrid,UCL,2018/19,away,normal,4,3,0,9,9,2,-0.0440096
+real-madrid,Real Madrid,UCL,2018/19,home,normal,4,2,0,6,6,8,-1.14304
+real-madrid,Real Madrid,UCL,2019/20,away,behind_closed_doors,1,0,0,0,1,2,-0.408924
+real-madrid,Real Madrid,UCL,2019/20,away,normal,3,2,0,6,4,4,0.0550448
+real-madrid,Real Madrid,UCL,2019/20,home,normal,4,1,2,5,11,6,-0.27617
+real-madrid,Real Madrid,UCL,2020/21,away,behind_closed_doors,4,2,1,7,3,2,-0.0745903
+real-madrid,Real Madrid,UCL,2020/21,away,unknown,2,0,1,1,2,4,-1.01801
+real-madrid,Real Madrid,UCL,2020/21,home,behind_closed_doors,6,4,1,13,14,8,0.471661
+real-madrid,Real Madrid,UCL,2021/22,away,normal,2,1,0,3,6,5,-0.00508593
+real-madrid,Real Madrid,UCL,2021/22,away,restricted,1,1,0,3,1,0,0.23349
+real-madrid,Real Madrid,UCL,2021/22,away,unknown,3,2,0,6,8,1,-0.104344
+real-madrid,Real Madrid,UCL,2021/22,home,normal,5,4,0,12,10,6,0.895575
+real-madrid,Real Madrid,UCL,2021/22,home,restricted,1,0,0,0,1,2,-0.787349
+real-madrid,Real Madrid,UCL,2022/23,away,normal,5,3,0,9,12,9,-0.316565
+real-madrid,Real Madrid,UCL,2022/23,home,normal,6,5,1,16,13,3,1.30154
+real-madrid,Real Madrid,UCL,2023/24,away,normal,6,4,2,14,12,8,1.24457
+real-madrid,Real Madrid,UCL,2023/24,home,normal,6,4,2,14,14,7,1.20956
+real-madrid,Real Madrid,UCL,2024/25,away,normal,7,3,0,9,9,11,-1.6648
+real-madrid,Real Madrid,UCL,2024/25,home,normal,7,5,0,15,20,11,0.0938945
+real-madrid,Real Madrid,UCL,2025/26,away,normal,7,4,0,12,17,13,-0.702546
+real-madrid,Real Madrid,UCL,2025/26,home,normal,7,5,0,15,16,7,0.48849
+real-oviedo,Real Oviedo,LALIGA,2025/26,away,normal,19,2,4,10,17,42,-0.640638
+real-oviedo,Real Oviedo,LALIGA,2025/26,home,normal,19,4,7,19,9,18,2.8475
+real-sociedad,Real Sociedad,LALIGA,2016/17,away,normal,19,9,2,29,29,29,-0.266611
+real-sociedad,Real Sociedad,LALIGA,2016/17,home,normal,19,10,5,35,30,24,2.16163
+real-sociedad,Real Sociedad,LALIGA,2017/18,away,normal,19,4,4,16,19,30,-4.09227
+real-sociedad,Real Sociedad,LALIGA,2017/18,home,normal,19,10,3,33,47,29,1.67758
+real-sociedad,Real Sociedad,LALIGA,2018/19,away,normal,19,6,5,23,22,26,-1.29158
+real-sociedad,Real Sociedad,LALIGA,2018/19,home,normal,19,7,6,27,23,20,0.473381
+real-sociedad,Real Sociedad,LALIGA,2019/20,away,behind_closed_doors,6,2,2,8,7,8,0.0547863
+real-sociedad,Real Sociedad,LALIGA,2019/20,away,normal,13,5,2,17,16,20,-1.25166
+real-sociedad,Real Sociedad,LALIGA,2019/20,home,behind_closed_doors,6,1,2,5,6,8,-1.22275
+real-sociedad,Real Sociedad,LALIGA,2019/20,home,normal,13,8,2,26,27,12,1.93255
+real-sociedad,Real Sociedad,LALIGA,2020/21,away,behind_closed_doors,18,7,5,26,24,17,-1.02544
+real-sociedad,Real Sociedad,LALIGA,2020/21,away,unknown,1,1,0,3,1,0,0.362592
+real-sociedad,Real Sociedad,LALIGA,2020/21,home,behind_closed_doors,18,8,6,30,30,20,0.839751
+real-sociedad,Real Sociedad,LALIGA,2020/21,home,unknown,1,1,0,3,4,1,0.267944
+real-sociedad,Real Sociedad,LALIGA,2021/22,away,normal,16,5,6,21,17,22,-1.50728
+real-sociedad,Real Sociedad,LALIGA,2021/22,away,restricted,3,2,0,6,7,6,0.251271
+real-sociedad,Real Sociedad,LALIGA,2021/22,home,normal,15,7,4,25,13,9,0.347286
+real-sociedad,Real Sociedad,LALIGA,2021/22,home,restricted,4,3,1,10,3,0,0.951568
+real-sociedad,Real Sociedad,LALIGA,2022/23,away,normal,19,10,3,33,25,19,-0.0267392
+real-sociedad,Real Sociedad,LALIGA,2022/23,home,normal,19,11,5,38,26,16,2.03378
+real-sociedad,Real Sociedad,LALIGA,2023/24,away,normal,19,8,6,30,25,19,-1.53617
+real-sociedad,Real Sociedad,LALIGA,2023/24,home,normal,19,8,6,30,26,20,-1.6883
+real-sociedad,Real Sociedad,LALIGA,2024/25,away,normal,19,5,4,19,15,26,-3.37394
+real-sociedad,Real Sociedad,LALIGA,2024/25,home,normal,19,8,3,27,20,20,-0.875079
+real-sociedad,Real Sociedad,LALIGA,2025/26,away,normal,19,3,8,17,22,30,-2.26539
+real-sociedad,Real Sociedad,LALIGA,2025/26,home,normal,19,8,5,29,37,31,1.69456
+real-sociedad,Real Sociedad,UCL,2023/24,away,normal,4,2,1,7,3,2,0.537713
+real-sociedad,Real Sociedad,UCL,2023/24,home,normal,4,1,2,5,5,4,0.0626679
+real-valladolid,Real Valladolid,LALIGA,2018/19,away,normal,19,5,6,21,16,25,2.93187
+real-valladolid,Real Valladolid,LALIGA,2018/19,home,normal,19,5,5,20,16,26,2.26912
+real-valladolid,Real Valladolid,LALIGA,2019/20,away,behind_closed_doors,5,1,1,4,5,8,-0.196661
+real-valladolid,Real Valladolid,LALIGA,2019/20,away,normal,14,3,4,13,9,20,-0.0360232
+real-valladolid,Real Valladolid,LALIGA,2019/20,home,behind_closed_doors,6,2,3,9,4,2,1.32973
+real-valladolid,Real Valladolid,LALIGA,2019/20,home,normal,13,3,7,16,14,13,1.68786
+real-valladolid,Real Valladolid,LALIGA,2020/21,away,behind_closed_doors,18,2,9,15,14,23,-0.0739794
+real-valladolid,Real Valladolid,LALIGA,2020/21,away,unknown,1,0,0,0,1,4,-0.267944
+real-valladolid,Real Valladolid,LALIGA,2020/21,home,behind_closed_doors,18,3,7,16,18,28,-0.485305
+real-valladolid,Real Valladolid,LALIGA,2020/21,home,unknown,1,0,0,0,1,2,-0.134378
+real-valladolid,Real Valladolid,LALIGA,2022/23,away,normal,19,3,3,12,12,38,-1.96926
+real-valladolid,Real Valladolid,LALIGA,2022/23,home,normal,19,8,4,28,21,25,3.77778
+real-valladolid,Real Valladolid,LALIGA,2024/25,away,normal,19,1,0,3,15,58,-4.31797
+real-valladolid,Real Valladolid,LALIGA,2024/25,home,normal,19,3,4,13,11,32,-0.310118
+red-bull-salzburg,Red Bull Salzburg,UCL,2019/20,away,normal,3,1,1,4,8,6,0.406343
+red-bull-salzburg,Red Bull Salzburg,UCL,2019/20,home,normal,3,1,0,3,8,7,-0.0695051
+red-bull-salzburg,Red Bull Salzburg,UCL,2020/21,away,behind_closed_doors,2,0,0,0,3,6,-0.451472
+red-bull-salzburg,Red Bull Salzburg,UCL,2020/21,away,restricted,1,1,0,3,3,1,0.414641
+red-bull-salzburg,Red Bull Salzburg,UCL,2020/21,home,unknown,3,0,1,1,4,10,-0.553776
+red-bull-salzburg,Red Bull Salzburg,UCL,2021/22,away,normal,1,0,0,0,0,1,-0.580881
+red-bull-salzburg,Red Bull Salzburg,UCL,2021/22,away,restricted,3,0,1,1,3,10,-0.441879
+red-bull-salzburg,Red Bull Salzburg,UCL,2021/22,home,behind_closed_doors,1,1,0,3,1,0,0.65439
+red-bull-salzburg,Red Bull Salzburg,UCL,2021/22,home,unknown,3,2,1,7,6,3,1.36455
+red-bull-salzburg,Red Bull Salzburg,UCL,2022/23,away,normal,3,0,2,2,2,6,-0.565008
+red-bull-salzburg,Red Bull Salzburg,UCL,2022/23,home,normal,3,1,1,4,3,3,-0.0400549
+red-bull-salzburg,Red Bull Salzburg,UCL,2023/24,away,normal,3,1,1,4,3,2,0.452052
+red-bull-salzburg,Red Bull Salzburg,UCL,2023/24,home,normal,3,0,0,0,1,6,-1.17348
+red-bull-salzburg,Red Bull Salzburg,UCL,2024/25,away,normal,4,1,0,3,4,14,-0.446879
+red-bull-salzburg,Red Bull Salzburg,UCL,2024/25,home,normal,4,0,0,0,1,13,-1.46353
+red-star-belgrade,Red Star Belgrade,UCL,2018/19,away,normal,3,0,0,0,2,13,-0.959913
+red-star-belgrade,Red Star Belgrade,UCL,2018/19,home,normal,3,1,1,4,3,4,0.545123
+red-star-belgrade,Red Star Belgrade,UCL,2019/20,away,normal,3,0,0,0,0,9,-1.11445
+red-star-belgrade,Red Star Belgrade,UCL,2019/20,home,normal,3,1,0,3,3,11,-0.0444585
+red-star-belgrade,Red Star Belgrade,UCL,2023/24,away,normal,3,0,0,0,2,8,-0.846117
+red-star-belgrade,Red Star Belgrade,UCL,2023/24,home,normal,3,0,1,1,5,7,-0.347516
+red-star-belgrade,Red Star Belgrade,UCL,2024/25,away,normal,4,1,0,3,3,11,-0.409484
+red-star-belgrade,Red Star Belgrade,UCL,2024/25,home,normal,4,1,0,3,10,11,-0.0890408
+rennes,Rennes,UCL,2020/21,away,behind_closed_doors,2,0,0,0,0,4,-0.721153
+rennes,Rennes,UCL,2020/21,away,restricted,1,0,0,0,0,1,-0.508202
+rennes,Rennes,UCL,2020/21,home,behind_closed_doors,2,0,0,0,2,5,-0.64892
+rennes,Rennes,UCL,2020/21,home,unknown,1,0,1,1,1,1,0
+roma,Roma,UCL,2017/18,away,normal,6,1,1,4,9,17,-0.304535
+roma,Roma,UCL,2017/18,home,normal,6,5,1,16,12,2,3.71048
+roma,Roma,UCL,2018/19,away,normal,4,1,0,3,4,8,-0.955048
+roma,Roma,UCL,2018/19,home,normal,4,3,0,9,10,3,1.02154
+rostov,Rostov,UCL,2016/17,away,normal,3,0,1,1,1,7,-0.48491
+rostov,Rostov,UCL,2016/17,home,normal,3,1,1,4,5,5,0.594731
+schalke-04,Schalke 04,UCL,2018/19,away,normal,4,1,1,4,2,10,-0.184625
+schalke-04,Schalke 04,UCL,2018/19,home,normal,4,2,1,7,6,4,0.746384
+sevilla,Sevilla,LALIGA,2016/17,away,normal,19,7,5,26,30,33,-1.97512
+sevilla,Sevilla,LALIGA,2016/17,home,normal,19,14,4,46,39,16,4.50556
+sevilla,Sevilla,LALIGA,2017/18,away,normal,19,6,2,20,18,36,-3.98466
+sevilla,Sevilla,LALIGA,2017/18,home,normal,19,11,5,38,31,22,2.84571
+sevilla,Sevilla,LALIGA,2018/19,away,normal,19,5,5,20,23,27,-3.7467
+sevilla,Sevilla,LALIGA,2018/19,home,normal,19,12,3,39,39,20,2.9685
+sevilla,Sevilla,LALIGA,2019/20,away,behind_closed_doors,5,2,3,9,8,4,0.19279
+sevilla,Sevilla,LALIGA,2019/20,away,normal,14,7,3,24,20,16,0.344076
+sevilla,Sevilla,LALIGA,2019/20,home,behind_closed_doors,6,4,2,14,7,1,1.17264
+sevilla,Sevilla,LALIGA,2019/20,home,normal,13,6,5,23,19,13,0.598647
+sevilla,Sevilla,LALIGA,2020/21,away,behind_closed_doors,18,10,4,34,26,18,-0.333008
+sevilla,Sevilla,LALIGA,2020/21,away,unknown,1,0,0,0,0,4,-0.651259
+sevilla,Sevilla,LALIGA,2020/21,home,behind_closed_doors,18,13,1,40,26,11,1.28874
+sevilla,Sevilla,LALIGA,2020/21,home,unknown,1,1,0,3,1,0,0.205324
+sevilla,Sevilla,LALIGA,2021/22,away,normal,16,5,8,23,15,12,-1.97861
+sevilla,Sevilla,LALIGA,2021/22,away,restricted,3,1,2,5,2,1,-0.177052
+sevilla,Sevilla,LALIGA,2021/22,home,normal,16,9,6,33,28,16,1.09997
+sevilla,Sevilla,LALIGA,2021/22,home,restricted,3,3,0,9,8,1,0.661576
+sevilla,Sevilla,LALIGA,2022/23,away,normal,19,6,5,23,23,29,-2.28034
+sevilla,Sevilla,LALIGA,2022/23,home,normal,19,7,5,26,24,25,-1.42658
+sevilla,Sevilla,LALIGA,2023/24,away,normal,19,4,6,18,21,27,-1.74214
+sevilla,Sevilla,LALIGA,2023/24,home,normal,19,6,5,23,27,27,-0.660192
+sevilla,Sevilla,LALIGA,2024/25,away,normal,19,4,5,17,25,32,-1.65128
+sevilla,Sevilla,LALIGA,2024/25,home,normal,19,6,6,24,17,23,0.747517
+sevilla,Sevilla,LALIGA,2025/26,away,normal,19,5,3,18,22,35,-0.909357
+sevilla,Sevilla,LALIGA,2025/26,home,normal,19,7,4,25,24,25,1.32165
+sevilla,Sevilla,UCL,2016/17,away,normal,4,1,2,5,1,2,-0.239341
+sevilla,Sevilla,UCL,2016/17,home,normal,4,3,0,9,8,4,0.693753
+sevilla,Sevilla,UCL,2017/18,away,normal,5,1,3,6,6,9,0.330405
+sevilla,Sevilla,UCL,2017/18,home,normal,5,2,2,8,9,6,0.936779
+sevilla,Sevilla,UCL,2020/21,away,behind_closed_doors,3,1,2,5,5,3,0.301708
+sevilla,Sevilla,UCL,2020/21,away,restricted,1,1,0,3,2,1,0.335527
+sevilla,Sevilla,UCL,2020/21,home,behind_closed_doors,4,2,0,6,6,9,-0.290433
+sevilla,Sevilla,UCL,2021/22,away,behind_closed_doors,1,0,0,0,0,1,-0.65439
+sevilla,Sevilla,UCL,2021/22,away,normal,1,0,1,1,0,0,-0.230699
+sevilla,Sevilla,UCL,2021/22,away,restricted,1,0,1,1,1,1,-0.0984288
+sevilla,Sevilla,UCL,2021/22,home,normal,2,1,0,3,3,2,-0.315343
+sevilla,Sevilla,UCL,2021/22,home,restricted,1,0,1,1,1,1,-0.163188
+sevilla,Sevilla,UCL,2022/23,away,normal,3,0,2,2,2,4,-0.0921526
+sevilla,Sevilla,UCL,2022/23,home,normal,3,1,0,3,4,8,-0.140537
+sevilla,Sevilla,UCL,2023/24,away,normal,3,0,1,1,3,6,-0.658173
+sevilla,Sevilla,UCL,2023/24,home,normal,3,0,1,1,4,6,-0.660679
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2017/18,away,normal,4,1,0,3,2,7,-0.723687
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2017/18,home,normal,4,4,0,12,9,4,2.37277
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2018/19,away,normal,3,1,1,4,5,10,0.367158
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2018/19,home,normal,3,0,2,2,3,6,-0.165197
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2019/20,away,normal,3,1,2,5,6,5,0.713667
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2019/20,home,normal,3,0,1,1,2,8,-0.804124
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2020/21,away,behind_closed_doors,3,1,1,4,3,6,0.399026
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2020/21,home,unknown,3,1,1,4,2,6,0.300538
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2021/22,away,normal,1,0,0,0,1,2,-0.185343
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2021/22,away,restricted,1,0,0,0,0,2,-0.376539
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2021/22,away,unknown,1,0,0,0,0,2,-0.483025
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2021/22,home,unknown,3,0,2,2,1,6,-0.0959252
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2022/23,away,normal,3,1,1,4,6,4,0.430822
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2023/24,away,normal,3,1,0,3,7,9,0.011683
+shakhtar-donetsk,Shakhtar Donetsk,UCL,2024/25,away,normal,4,0,1,1,3,7,-0.894534
+sheffield-united,Sheffield United,EPL,2019/20,away,behind_closed_doors,6,0,2,2,2,12,-1.62055
+sheffield-united,Sheffield United,EPL,2019/20,away,normal,13,4,7,19,13,12,3.80741
+sheffield-united,Sheffield United,EPL,2019/20,home,behind_closed_doors,4,3,0,9,7,2,1.63415
+sheffield-united,Sheffield United,EPL,2019/20,home,normal,15,7,3,24,17,13,3.26405
+sheffield-united,Sheffield United,EPL,2020/21,away,behind_closed_doors,17,2,1,7,8,32,-2.47621
+sheffield-united,Sheffield United,EPL,2020/21,away,restricted,2,0,0,0,0,4,-0.603387
+sheffield-united,Sheffield United,EPL,2020/21,home,behind_closed_doors,18,4,1,13,11,27,-1.27375
+sheffield-united,Sheffield United,EPL,2020/21,home,restricted,1,1,0,3,1,0,0.680822
+sheffield-united,Sheffield United,EPL,2023/24,away,normal,19,1,3,6,16,47,-1.72304
+sheffield-united,Sheffield United,EPL,2023/24,home,normal,19,2,4,10,19,57,-0.337465
+sheriff-tiraspol,Sheriff Tiraspol,UCL,2021/22,away,restricted,2,1,0,3,3,4,0.274688
+sheriff-tiraspol,Sheriff Tiraspol,UCL,2021/22,away,unknown,1,0,1,1,1,1,-0.05262
+sheriff-tiraspol,Sheriff Tiraspol,UCL,2021/22,home,unknown,3,1,0,3,3,6,-0.199365
+slavia-prague,Slavia Prague,UCL,2019/20,away,normal,3,0,2,2,2,3,-0.0127916
+slavia-prague,Slavia Prague,UCL,2019/20,home,normal,3,0,0,0,2,7,-1.02638
+slavia-prague,Slavia Prague,UCL,2025/26,away,normal,4,0,1,1,1,10,-0.919957
+slavia-prague,Slavia Prague,UCL,2025/26,home,normal,4,0,2,2,4,9,-0.157188
+slovan-bratislava,Slovan Bratislava,UCL,2024/25,away,normal,4,0,0,0,3,13,-1.36385
+slovan-bratislava,Slovan Bratislava,UCL,2024/25,home,normal,4,0,0,0,4,14,-1.44057
+southampton,Southampton,EPL,2016/17,away,normal,19,6,4,22,24,27,-2.38218
+southampton,Southampton,EPL,2016/17,home,normal,19,6,6,24,17,21,-1.53927
+southampton,Southampton,EPL,2017/18,away,normal,19,3,8,17,17,30,-1.09604
+southampton,Southampton,EPL,2017/18,home,normal,19,4,7,19,20,26,-0.665317
+southampton,Southampton,EPL,2018/19,away,normal,19,4,4,16,18,35,-1.54193
+southampton,Southampton,EPL,2018/19,home,normal,19,5,8,23,27,30,1.35455
+southampton,Southampton,EPL,2019/20,away,behind_closed_doors,5,3,2,11,11,4,1.49772
+southampton,Southampton,EPL,2019/20,away,normal,14,6,2,20,19,21,1.9172
+southampton,Southampton,EPL,2019/20,home,behind_closed_doors,4,2,1,7,5,4,0.856143
+southampton,Southampton,EPL,2019/20,home,normal,15,4,2,14,16,31,-1.03323
+southampton,Southampton,EPL,2020/21,away,behind_closed_doors,17,3,4,13,17,39,-3.19445
+southampton,Southampton,EPL,2020/21,away,restricted,2,1,0,3,2,4,0.0236752
+southampton,Southampton,EPL,2020/21,home,behind_closed_doors,16,7,3,24,25,22,1.06396
+southampton,Southampton,EPL,2020/21,home,restricted,3,1,0,3,3,3,-0.428015
+southampton,Southampton,EPL,2021/22,away,normal,19,3,6,15,20,43,-1.51437
+southampton,Southampton,EPL,2021/22,home,normal,19,6,7,25,23,24,1.80305
+southampton,Southampton,EPL,2022/23,away,normal,19,4,2,14,17,36,-0.7895
+southampton,Southampton,EPL,2022/23,home,normal,19,2,5,11,19,37,-1.33391
+southampton,Southampton,EPL,2024/25,away,normal,19,1,3,6,13,39,-1.30631
+southampton,Southampton,EPL,2024/25,home,normal,19,1,3,6,13,47,-1.19769
+sparta-prague,Sparta Prague,UCL,2024/25,away,normal,4,0,1,1,3,12,-1.04955
+sparta-prague,Sparta Prague,UCL,2024/25,home,normal,4,1,0,3,4,9,-0.561382
+spartak-moscow,Spartak Moscow,UCL,2017/18,away,normal,3,0,1,1,2,10,-0.799273
+spartak-moscow,Spartak Moscow,UCL,2017/18,home,normal,3,1,2,5,7,3,0.666996
+sporting-cp,Sporting CP,UCL,2016/17,away,normal,3,0,0,0,1,4,-1.12245
+sporting-cp,Sporting CP,UCL,2016/17,home,normal,3,1,0,3,4,4,-0.126165
+sporting-cp,Sporting CP,UCL,2017/18,away,normal,3,1,0,3,4,6,0.116481
+sporting-cp,Sporting CP,UCL,2017/18,home,normal,3,1,1,4,4,3,0.600713
+sporting-cp,Sporting CP,UCL,2021/22,away,behind_closed_doors,1,0,0,0,2,4,-0.32635
+sporting-cp,Sporting CP,UCL,2021/22,away,normal,1,0,1,1,0,0,0.34642
+sporting-cp,Sporting CP,UCL,2021/22,away,restricted,1,0,0,0,0,1,-0.328759
+sporting-cp,Sporting CP,UCL,2021/22,away,unknown,1,1,0,3,4,1,0.547776
+sporting-cp,Sporting CP,UCL,2021/22,home,normal,3,2,0,6,7,6,0.91797
+sporting-cp,Sporting CP,UCL,2021/22,home,unknown,1,0,0,0,1,5,-0.370611
+sporting-cp,Sporting CP,UCL,2022/23,away,normal,3,1,1,4,5,5,-0.0517291
+sporting-cp,Sporting CP,UCL,2022/23,home,normal,3,1,0,3,3,4,-0.488349
+sporting-cp,Sporting CP,UCL,2024/25,away,normal,5,1,2,5,5,5,-0.503409
+sporting-cp,Sporting CP,UCL,2024/25,home,normal,5,2,1,7,8,10,0.64937
+sporting-cp,Sporting CP,UCL,2025/26,away,normal,6,1,2,5,6,11,-0.249891
+sporting-cp,Sporting CP,UCL,2025/26,home,normal,6,5,0,15,14,4,2.45154
+sporting-gijon,Sporting Gijón,LALIGA,2016/17,away,normal,19,2,6,12,16,34,-1.39826
+sporting-gijon,Sporting Gijón,LALIGA,2016/17,home,normal,19,5,4,19,26,38,0.48483
+stoke-city,Stoke City,EPL,2016/17,away,normal,19,4,5,17,17,32,-1.93489
+stoke-city,Stoke City,EPL,2016/17,home,normal,19,7,6,27,24,24,1.52865
+stoke-city,Stoke City,EPL,2017/18,away,normal,19,2,7,13,15,38,-1.7014
+stoke-city,Stoke City,EPL,2017/18,home,normal,19,5,5,20,20,30,0.106147
+sturm-graz,Sturm Graz,UCL,2024/25,away,normal,4,0,0,0,3,11,-1.49863
+sturm-graz,Sturm Graz,UCL,2024/25,home,normal,4,2,0,6,2,3,0.230505
+sunderland,Sunderland,EPL,2016/17,away,normal,19,3,1,10,13,35,-3.1212
+sunderland,Sunderland,EPL,2016/17,home,normal,19,3,5,14,16,34,-1.06654
+sunderland,Sunderland,EPL,2025/26,away,normal,19,5,6,21,17,28,1.45957
+sunderland,Sunderland,EPL,2025/26,home,normal,19,9,6,33,25,20,5.45921
+swansea-city,Swansea City,EPL,2016/17,away,normal,19,4,2,14,18,36,-2.45632
+swansea-city,Swansea City,EPL,2016/17,home,normal,19,8,3,27,27,34,2.05066
+swansea-city,Swansea City,EPL,2017/18,away,normal,19,2,6,12,11,32,-2.22889
+swansea-city,Swansea City,EPL,2017/18,home,normal,19,6,3,21,17,24,0.0862436
+tottenham-hotspur,Tottenham Hotspur,EPL,2016/17,away,normal,19,9,6,33,39,17,-1.3668
+tottenham-hotspur,Tottenham Hotspur,EPL,2016/17,home,normal,19,17,2,53,47,9,5.01818
+tottenham-hotspur,Tottenham Hotspur,EPL,2017/18,away,normal,19,10,4,34,34,20,-2.69831
+tottenham-hotspur,Tottenham Hotspur,EPL,2017/18,home,normal,19,13,4,43,40,16,0.1548
+tottenham-hotspur,Tottenham Hotspur,EPL,2018/19,away,normal,19,11,0,33,33,23,-3.40851
+tottenham-hotspur,Tottenham Hotspur,EPL,2018/19,home,normal,19,12,2,38,34,16,-1.42061
+tottenham-hotspur,Tottenham Hotspur,EPL,2019/20,away,behind_closed_doors,4,1,2,5,5,5,-0.839508
+tottenham-hotspur,Tottenham Hotspur,EPL,2019/20,away,normal,15,3,6,15,20,25,-3.36257
+tottenham-hotspur,Tottenham Hotspur,EPL,2019/20,home,behind_closed_doors,5,4,1,13,9,2,1.86832
+tottenham-hotspur,Tottenham Hotspur,EPL,2019/20,home,normal,14,8,2,26,27,15,-0.244325
+tottenham-hotspur,Tottenham Hotspur,EPL,2020/21,away,behind_closed_doors,16,7,4,25,27,20,-1.17364
+tottenham-hotspur,Tottenham Hotspur,EPL,2020/21,away,restricted,3,1,1,4,6,5,-0.0630505
+tottenham-hotspur,Tottenham Hotspur,EPL,2020/21,home,behind_closed_doors,17,9,3,30,32,18,-0.423424
+tottenham-hotspur,Tottenham Hotspur,EPL,2020/21,home,restricted,2,1,0,3,3,2,-0.324522
+tottenham-hotspur,Tottenham Hotspur,EPL,2021/22,away,normal,19,9,4,31,31,21,-0.267805
+tottenham-hotspur,Tottenham Hotspur,EPL,2021/22,home,normal,19,13,1,40,38,19,2.34605
+tottenham-hotspur,Tottenham Hotspur,EPL,2022/23,away,normal,19,6,5,23,33,38,-3.50319
+tottenham-hotspur,Tottenham Hotspur,EPL,2022/23,home,normal,19,12,1,37,37,25,0.609881
+tottenham-hotspur,Tottenham Hotspur,EPL,2023/24,away,normal,19,7,6,27,36,34,-1.50669
+tottenham-hotspur,Tottenham Hotspur,EPL,2023/24,home,normal,19,13,0,39,38,27,1.73946
+tottenham-hotspur,Tottenham Hotspur,EPL,2024/25,away,normal,19,5,2,17,29,30,-4.06591
+tottenham-hotspur,Tottenham Hotspur,EPL,2024/25,home,normal,19,6,3,21,35,35,-2.63912
+tottenham-hotspur,Tottenham Hotspur,EPL,2025/26,away,normal,19,7,5,26,26,26,0.741102
+tottenham-hotspur,Tottenham Hotspur,EPL,2025/26,home,normal,19,3,6,15,22,31,-2.81452
+tottenham-hotspur,Tottenham Hotspur,UCL,2016/17,away,normal,3,1,1,4,2,2,-0.472553
+tottenham-hotspur,Tottenham Hotspur,UCL,2016/17,home,normal,3,1,0,3,4,4,-1.00449
+tottenham-hotspur,Tottenham Hotspur,UCL,2017/18,away,normal,4,2,2,8,8,4,0.462721
+tottenham-hotspur,Tottenham Hotspur,UCL,2017/18,home,normal,4,3,0,9,10,4,0.464048
+tottenham-hotspur,Tottenham Hotspur,UCL,2018/19,away,normal,6,2,2,8,11,11,-0.495499
+tottenham-hotspur,Tottenham Hotspur,UCL,2018/19,home,normal,6,4,0,12,9,6,0.469955
+tottenham-hotspur,Tottenham Hotspur,UCL,2019/20,away,normal,4,1,1,4,7,8,-0.688712
+tottenham-hotspur,Tottenham Hotspur,UCL,2019/20,home,normal,4,2,0,6,11,10,-0.269278
+tottenham-hotspur,Tottenham Hotspur,UCL,2022/23,away,normal,4,1,1,4,2,4,-1.06865
+tottenham-hotspur,Tottenham Hotspur,UCL,2022/23,home,normal,4,2,2,8,6,3,0.408122
+tottenham-hotspur,Tottenham Hotspur,UCL,2025/26,away,normal,5,1,2,5,9,12,-0.0030054
+tottenham-hotspur,Tottenham Hotspur,UCL,2025/26,home,normal,5,5,0,15,13,2,3.09393
+union-berlin,Union Berlin,UCL,2023/24,away,normal,3,0,2,2,2,3,0.0371646
+union-berlin,Union Berlin,UCL,2023/24,home,normal,3,0,0,0,4,7,-0.952677
+union-saint-gilloise,Union Saint-Gilloise,UCL,2025/26,away,normal,4,2,0,6,5,6,0.617548
+union-saint-gilloise,Union Saint-Gilloise,UCL,2025/26,home,normal,4,1,0,3,3,11,-0.533204
+valencia,Valencia,LALIGA,2016/17,away,normal,19,5,3,18,24,33,-1.9051
+valencia,Valencia,LALIGA,2016/17,home,normal,19,8,4,28,32,32,1.53649
+valencia,Valencia,LALIGA,2017/18,away,normal,19,9,4,31,29,22,0.0531425
+valencia,Valencia,LALIGA,2017/18,home,normal,19,13,3,42,36,16,3.76184
+valencia,Valencia,LALIGA,2018/19,away,normal,19,8,6,30,27,23,-0.187287
+valencia,Valencia,LALIGA,2018/19,home,normal,19,7,10,31,24,12,0.565275
+valencia,Valencia,LALIGA,2019/20,away,behind_closed_doors,6,0,1,1,2,10,-2.56877
+valencia,Valencia,LALIGA,2019/20,away,normal,13,3,3,12,15,27,-3.65538
+valencia,Valencia,LALIGA,2019/20,home,behind_closed_doors,5,3,1,10,6,4,0.327133
+valencia,Valencia,LALIGA,2019/20,home,normal,14,8,6,30,23,12,2.4396
+valencia,Valencia,LALIGA,2020/21,away,behind_closed_doors,18,2,5,11,16,30,-3.83931
+valencia,Valencia,LALIGA,2020/21,away,unknown,1,0,1,1,0,0,-0.131132
+valencia,Valencia,LALIGA,2020/21,home,behind_closed_doors,18,7,7,28,30,22,1.84904
+valencia,Valencia,LALIGA,2020/21,home,unknown,1,1,0,3,4,1,0.399912
+valencia,Valencia,LALIGA,2021/22,away,normal,16,4,6,18,16,24,-0.843657
+valencia,Valencia,LALIGA,2021/22,away,restricted,3,1,1,4,6,5,0.0627037
+valencia,Valencia,LALIGA,2021/22,home,normal,15,4,7,19,20,21,0.0690113
+valencia,Valencia,LALIGA,2021/22,home,restricted,4,2,1,7,6,3,0.629969
+valencia,Valencia,LALIGA,2022/23,away,normal,19,3,4,13,15,26,-3.78188
+valencia,Valencia,LALIGA,2022/23,home,normal,19,8,5,29,27,19,1.87696
+valencia,Valencia,LALIGA,2023/24,away,normal,19,5,4,19,20,31,-1.95394
+valencia,Valencia,LALIGA,2023/24,home,normal,19,8,6,30,20,14,1.83013
+valencia,Valencia,LALIGA,2024/25,away,normal,19,2,9,15,18,34,-1.71046
+valencia,Valencia,LALIGA,2024/25,home,normal,19,9,4,31,26,20,3.04838
+valencia,Valencia,LALIGA,2025/26,away,normal,19,5,4,19,19,32,-1.80345
+valencia,Valencia,LALIGA,2025/26,home,normal,19,8,6,30,27,23,2.41008
+valencia,Valencia,UCL,2018/19,away,normal,3,0,2,2,1,2,-0.237126
+valencia,Valencia,UCL,2018/19,home,normal,3,2,0,6,5,4,0.788061
+valencia,Valencia,UCL,2019/20,away,normal,4,2,1,7,4,5,0.348634
+valencia,Valencia,UCL,2019/20,home,behind_closed_doors,1,0,0,0,3,4,-0.530041
+valencia,Valencia,UCL,2019/20,home,normal,3,1,1,4,6,6,-0.00425886
+vfb-stuttgart,VfB Stuttgart,UCL,2024/25,away,normal,4,2,0,6,6,9,0.341928
+vfb-stuttgart,VfB Stuttgart,UCL,2024/25,home,normal,4,1,1,4,7,8,-0.250644
+vfl-wolfsburg,VfL Wolfsburg,UCL,2021/22,away,normal,2,0,1,1,0,2,-0.565088
+vfl-wolfsburg,VfL Wolfsburg,UCL,2021/22,away,unknown,1,0,0,0,1,3,-0.561993
+vfl-wolfsburg,VfL Wolfsburg,UCL,2021/22,home,restricted,3,1,1,4,4,5,-0.0185162
+viktoria-plzen,Viktoria Plzeň,UCL,2018/19,away,normal,3,1,0,3,3,8,-0.174493
+viktoria-plzen,Viktoria Plzeň,UCL,2018/19,home,normal,3,1,1,4,4,8,0.327219
+viktoria-plzen,Viktoria Plzeň,UCL,2022/23,away,normal,3,0,0,0,1,14,-0.666677
+viktoria-plzen,Viktoria Plzeň,UCL,2022/23,home,normal,3,0,0,0,4,10,-0.69302
+villarreal,Villarreal,LALIGA,2016/17,away,normal,19,8,6,30,21,15,-0.226644
+villarreal,Villarreal,LALIGA,2016/17,home,normal,19,11,4,37,35,18,1.4904
+villarreal,Villarreal,LALIGA,2017/18,away,normal,19,7,4,25,22,28,-2.44009
+villarreal,Villarreal,LALIGA,2017/18,home,normal,19,11,3,36,35,22,1.45223
+villarreal,Villarreal,LALIGA,2018/19,away,normal,19,5,6,21,21,26,-1.97471
+villarreal,Villarreal,LALIGA,2018/19,home,normal,19,5,8,23,28,26,-0.803
+villarreal,Villarreal,LALIGA,2019/20,away,behind_closed_doors,5,4,0,12,8,3,1.43465
+villarreal,Villarreal,LALIGA,2019/20,away,normal,14,5,1,16,18,21,-2.06473
+villarreal,Villarreal,LALIGA,2019/20,home,behind_closed_doors,6,3,1,10,11,8,0.440975
+villarreal,Villarreal,LALIGA,2019/20,home,normal,13,6,4,22,26,17,0.516901
+villarreal,Villarreal,LALIGA,2020/21,away,behind_closed_doors,18,7,7,28,30,19,-0.656195
+villarreal,Villarreal,LALIGA,2020/21,away,unknown,1,0,0,0,1,2,-0.273399
+villarreal,Villarreal,LALIGA,2020/21,home,behind_closed_doors,18,7,6,27,25,23,-0.975767
+villarreal,Villarreal,LALIGA,2020/21,home,unknown,1,1,0,3,4,0,0.651259
+villarreal,Villarreal,LALIGA,2021/22,away,normal,15,6,1,19,21,17,-3.22163
+villarreal,Villarreal,LALIGA,2021/22,away,restricted,4,0,4,4,2,2,-0.0561195
+villarreal,Villarreal,LALIGA,2021/22,home,normal,17,9,5,32,36,17,1.03133
+villarreal,Villarreal,LALIGA,2021/22,home,restricted,2,1,1,4,4,1,0.108604
+villarreal,Villarreal,LALIGA,2022/23,away,normal,19,7,4,25,23,22,-3.42253
+villarreal,Villarreal,LALIGA,2022/23,home,normal,19,12,3,39,36,18,1.51234
+villarreal,Villarreal,LALIGA,2023/24,away,normal,19,7,6,27,29,33,-0.407644
+villarreal,Villarreal,LALIGA,2023/24,home,normal,19,7,5,26,36,32,-1.32487
+villarreal,Villarreal,LALIGA,2024/25,away,normal,19,11,3,36,28,24,1.24481
+villarreal,Villarreal,LALIGA,2024/25,home,normal,19,9,7,34,43,27,0.954298
+villarreal,Villarreal,LALIGA,2025/26,away,normal,19,7,5,26,24,27,-2.41814
+villarreal,Villarreal,LALIGA,2025/26,home,normal,19,15,1,46,48,19,3.70991
+villarreal,Villarreal,UCL,2021/22,away,normal,3,0,1,1,2,5,-0.298269
+villarreal,Villarreal,UCL,2021/22,away,restricted,2,2,0,6,6,2,1.28152
+villarreal,Villarreal,UCL,2021/22,away,unknown,1,1,0,3,4,1,0.426142
+villarreal,Villarreal,UCL,2021/22,home,normal,5,2,1,7,6,6,0.839563
+villarreal,Villarreal,UCL,2021/22,home,restricted,1,0,1,1,2,2,0.022866
+villarreal,Villarreal,UCL,2025/26,away,normal,4,0,0,0,0,9,-2.19207
+villarreal,Villarreal,UCL,2025/26,home,normal,4,0,1,1,5,9,-1.54566
+watford,Watford,EPL,2016/17,away,normal,19,3,3,12,15,39,-2.59576
+watford,Watford,EPL,2016/17,home,normal,19,8,4,28,25,29,2.51467
+watford,Watford,EPL,2017/18,away,normal,19,4,2,14,17,33,-2.19856
+watford,Watford,EPL,2017/18,home,normal,19,7,6,27,27,31,2.64314
+watford,Watford,EPL,2018/19,away,normal,19,6,5,23,26,31,0.214202
+watford,Watford,EPL,2018/19,home,normal,19,8,3,27,26,28,1.19295
+watford,Watford,EPL,2019/20,away,behind_closed_doors,4,0,0,0,3,10,-1.47178
+watford,Watford,EPL,2019/20,away,normal,15,2,4,10,11,27,-1.77669
+watford,Watford,EPL,2019/20,home,behind_closed_doors,5,2,1,7,6,10,0.513556
+watford,Watford,EPL,2019/20,home,normal,14,4,5,17,16,17,1.37557
+watford,Watford,EPL,2021/22,away,normal,19,4,3,15,17,31,-0.453701
+watford,Watford,EPL,2021/22,home,normal,19,2,2,8,17,46,-3.10282
+west-bromwich-albion,West Bromwich Albion,EPL,2016/17,away,normal,19,3,7,16,16,29,-1.65756
+west-bromwich-albion,West Bromwich Albion,EPL,2016/17,home,normal,19,9,2,29,27,22,1.39638
+west-bromwich-albion,West Bromwich Albion,EPL,2017/18,away,normal,19,3,4,13,10,27,-1.95729
+west-bromwich-albion,West Bromwich Albion,EPL,2017/18,home,normal,19,3,9,18,21,29,0.877444
+west-bromwich-albion,West Bromwich Albion,EPL,2020/21,away,behind_closed_doors,17,2,4,10,18,33,-1.08589
+west-bromwich-albion,West Bromwich Albion,EPL,2020/21,away,restricted,2,0,1,1,2,4,0.129205
+west-bromwich-albion,West Bromwich Albion,EPL,2020/21,home,behind_closed_doors,18,3,6,15,14,36,0.464454
+west-bromwich-albion,West Bromwich Albion,EPL,2020/21,home,restricted,1,0,0,0,1,3,-0.264458
+west-ham-united,West Ham United,EPL,2016/17,away,normal,19,5,5,20,28,33,-2.00171
+west-ham-united,West Ham United,EPL,2016/17,home,normal,19,7,4,25,19,31,0.0419243
+west-ham-united,West Ham United,EPL,2017/18,away,normal,19,3,6,15,24,42,-1.95601
+west-ham-united,West Ham United,EPL,2017/18,home,normal,19,7,6,27,24,26,2.1666
+west-ham-united,West Ham United,EPL,2018/19,away,normal,19,6,3,21,20,28,-1.40617
+west-ham-united,West Ham United,EPL,2018/19,home,normal,19,9,4,31,32,27,2.23396
+west-ham-united,West Ham United,EPL,2019/20,away,behind_closed_doors,4,1,2,5,7,5,0.330391
+west-ham-united,West Ham United,EPL,2019/20,away,normal,15,3,3,12,12,24,-2.2872
+west-ham-united,West Ham United,EPL,2019/20,home,behind_closed_doors,5,2,1,7,7,7,0.309159
+west-ham-united,West Ham United,EPL,2019/20,home,normal,14,4,3,15,23,26,-0.396347
+west-ham-united,West Ham United,EPL,2020/21,away,behind_closed_doors,18,8,4,28,27,24,1.49011
+west-ham-united,West Ham United,EPL,2020/21,away,restricted,1,1,0,3,3,1,0.264458
+west-ham-united,West Ham United,EPL,2020/21,home,behind_closed_doors,17,9,4,31,28,19,2.24427
+west-ham-united,West Ham United,EPL,2020/21,home,restricted,2,1,0,3,4,3,0.0220361
+west-ham-united,West Ham United,EPL,2021/22,away,normal,19,7,3,24,27,25,-2.32495
+west-ham-united,West Ham United,EPL,2021/22,home,normal,19,9,5,32,33,26,0.554397
+west-ham-united,West Ham United,EPL,2022/23,away,normal,19,3,3,12,16,31,-4.01241
+west-ham-united,West Ham United,EPL,2022/23,home,normal,19,8,4,28,26,24,1.39973
+west-ham-united,West Ham United,EPL,2023/24,away,normal,19,7,2,23,29,46,-1.12418
+west-ham-united,West Ham United,EPL,2023/24,home,normal,19,7,8,29,31,28,1.88764
+west-ham-united,West Ham United,EPL,2024/25,away,normal,19,6,5,23,23,28,0.438166
+west-ham-united,West Ham United,EPL,2024/25,home,normal,19,5,5,20,23,34,-0.598779
+west-ham-united,West Ham United,EPL,2025/26,away,normal,19,4,5,17,19,35,-0.369645
+west-ham-united,West Ham United,EPL,2025/26,home,normal,19,6,4,22,27,30,1.55491
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2018/19,away,normal,19,6,5,23,19,25,1.74588
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2018/19,home,normal,19,10,4,34,28,21,5.30974
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2019/20,away,behind_closed_doors,5,2,1,7,4,4,-0.572988
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2019/20,away,normal,14,5,6,21,20,17,1.62559
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2019/20,home,behind_closed_doors,4,3,0,9,6,2,0.637021
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2019/20,home,normal,15,5,7,22,21,17,1.23518
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2020/21,away,behind_closed_doors,17,5,5,20,15,22,-1.63714
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2020/21,away,restricted,2,0,0,0,0,5,-0.644712
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2020/21,home,behind_closed_doors,18,7,4,25,20,23,-0.355947
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2020/21,home,restricted,1,0,0,0,1,2,-0.243419
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2021/22,away,normal,19,8,3,27,18,18,0.795588
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2021/22,home,normal,19,7,3,24,20,25,-0.2991
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2022/23,away,normal,19,2,5,11,12,38,-2.952
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2022/23,home,normal,19,9,3,30,19,20,2.85896
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2023/24,away,normal,19,5,4,19,24,35,-1.27954
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2023/24,home,normal,19,8,3,27,26,30,1.50254
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2024/25,away,normal,19,6,3,21,27,37,0.57361
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2024/25,home,normal,19,6,3,21,27,32,0.466603
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2025/26,away,normal,19,0,6,6,8,34,-2.51205
+wolverhampton-wanderers,Wolverhampton Wanderers,EPL,2025/26,home,normal,19,3,5,14,19,34,0.097049
+young-boys,Young Boys,UCL,2018/19,away,normal,3,0,0,0,1,7,-0.913006
+young-boys,Young Boys,UCL,2018/19,home,normal,3,1,1,4,3,5,0.616579
+young-boys,Young Boys,UCL,2021/22,away,normal,2,0,1,1,1,3,-0.208992
+young-boys,Young Boys,UCL,2021/22,away,restricted,1,0,0,0,0,1,-0.411571
+young-boys,Young Boys,UCL,2021/22,home,unknown,3,1,1,4,6,8,0.443681
+young-boys,Young Boys,UCL,2023/24,away,normal,3,0,1,1,3,7,-0.422371
+young-boys,Young Boys,UCL,2023/24,home,normal,3,1,0,3,4,6,0.0262433
+young-boys,Young Boys,UCL,2024/25,away,normal,3,0,0,0,1,11,-1.0144
+young-boys,Young Boys,UCL,2024/25,home,normal,4,0,0,0,1,11,-1.35784
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2019/20,away,normal,3,0,1,1,2,6,-1.19432
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2019/20,home,normal,3,2,0,6,5,3,0.373209
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2020/21,away,behind_closed_doors,1,0,0,0,1,3,-0.441269
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2020/21,away,unknown,2,0,0,0,0,5,-0.954934
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2020/21,home,restricted,3,0,1,1,3,5,-0.845081
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2021/22,away,normal,1,0,0,0,0,1,-0.195004
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2021/22,away,restricted,1,0,0,0,2,4,-0.145314
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2021/22,away,unknown,1,0,1,1,1,1,-0.0951043
+zenit-saint-petersburg,Zenit Saint Petersburg,UCL,2021/22,home,unknown,3,1,1,4,7,4,0.620211
+istanbul-basaksehir,İstanbul Başakşehir,UCL,2020/21,away,behind_closed_doors,2,0,0,0,2,9,-0.54096
+istanbul-basaksehir,İstanbul Başakşehir,UCL,2020/21,away,unknown,1,0,0,0,0,2,-0.429947
+istanbul-basaksehir,İstanbul Başakşehir,UCL,2020/21,home,unknown,3,1,0,3,5,7,0.0381042
