@@ -110,6 +110,10 @@ python -m src.analysis.eda
 # Statistical tests and models -> reports/tables/stats_*.csv (write-up: reports/statistics.md)
 python -m src.analysis.stats
 
+# Models -> reports/tables/ml_*.csv (write-up: reports/ml.md)
+python -m src.models.logistic_model
+python -m src.models.clustering
+
 # Or one competition-season (EPL, LALIGA, UCL)
 python -m src.pipeline --competition UCL --season 2020/21
 
@@ -128,7 +132,7 @@ learning, then presentation. Details: [`docs/roadmap.md`](docs/roadmap.md).
 - Champions League match statistics (shots, cards, fouls) are not available from the free sources checked.
 - Penalties and possession are not available for any competition and are out of scope.
 - Domestic match statistics currently come from a mirror of football-data.co.uk; scores and tables are independently verified, shots and cards are not.
-- Rest days are approximate because domestic cups and other European competitions are not in the dataset.
+- `home_rest_days`/`away_rest_days` count only league and UCL matches, so they are approximate. Complete rest days (`*_rest_days_all`, adding FA Cup, EFL Cup, Copa del Rey, Europa and Conference League dates) exist only for EPL and La Liga clubs in 2020/21 to 2024/25, the seasons openfootball fully covers.
 
 ## Methodological rules
 

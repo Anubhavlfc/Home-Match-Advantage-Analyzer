@@ -80,6 +80,38 @@ ols_goal_difference_factors,z_strength,0.795588,0.0263731,30.1666,6.49572e-200,0
 ols_goal_difference_factors,z_log_travel,0.0467593,0.0178179,2.62429,0.00868304,0.0118368,0.0816817,8253,,,
 ols_goal_difference_factors,z_rest,-0.051894,0.0177568,-2.92249,0.00347246,-0.0866966,-0.0170913,8253,,,
 ols_goal_difference_factors,z_form,0.0188519,0.0199764,0.943707,0.345319,-0.0203011,0.0580049,8253,,,
+logit_home_win_rest_check_z_rest_league_ucl,Intercept,-0.236745,0.0590024,-4.01247,6.00875e-05,-0.352388,-0.121103,3652,0.789192,0.703007,0.885943
+logit_home_win_rest_check_z_rest_league_ucl,"C(crowd, Treatment('normal'))[T.restricted]",-0.185606,0.245698,-0.755424,0.449994,-0.667165,0.295953,3652,0.830601,0.513161,1.34441
+logit_home_win_rest_check_z_rest_league_ucl,"C(crowd, Treatment('normal'))[T.behind_closed_doors]",-0.287543,0.0905919,-3.17405,0.00150328,-0.4651,-0.109986,3652,0.750104,0.628072,0.895846
+logit_home_win_rest_check_z_rest_league_ucl,C(competition)[T.LALIGA],0.0291703,0.073034,0.399408,0.689593,-0.113974,0.172314,3652,1.0296,0.892281,1.18805
+logit_home_win_rest_check_z_rest_league_ucl,z_strength,0.84154,0.0446831,18.8335,4.01324e-79,0.753962,0.929117,3652,2.31994,2.1254,2.53227
+logit_home_win_rest_check_z_rest_league_ucl,z_log_travel,0.0589896,0.0300002,1.96631,0.0492632,0.00019029,0.117789,3652,1.06076,1.00019,1.12501
+logit_home_win_rest_check_z_rest_league_ucl,z_rest_league_ucl,-0.0238447,0.0360644,-0.661171,0.508503,-0.0945297,0.0468402,3652,0.976437,0.909801,1.04795
+logit_home_win_rest_check_z_rest_league_ucl,z_form,0.0228445,0.0344064,0.66396,0.506716,-0.0445909,0.0902799,3652,1.02311,0.956389,1.09448
+ols_goal_difference_rest_check_z_rest_league_ucl,Intercept,0.267565,0.0579432,4.61771,3.88004e-06,0.153998,0.381131,3652,,,
+ols_goal_difference_rest_check_z_rest_league_ucl,"C(crowd, Treatment('normal'))[T.restricted]",0.00579605,0.160153,0.0361908,0.97113,-0.308098,0.31969,3652,,,
+ols_goal_difference_rest_check_z_rest_league_ucl,"C(crowd, Treatment('normal'))[T.behind_closed_doors]",-0.197928,0.0700261,-2.82649,0.00470609,-0.335177,-0.0606796,3652,,,
+ols_goal_difference_rest_check_z_rest_league_ucl,C(competition)[T.LALIGA],0.0760551,0.0660622,1.15127,0.249623,-0.0534243,0.205535,3652,,,
+ols_goal_difference_rest_check_z_rest_league_ucl,z_strength,0.794174,0.0374431,21.2101,7.70012e-100,0.720787,0.867561,3652,,,
+ols_goal_difference_rest_check_z_rest_league_ucl,z_log_travel,0.0432158,0.0243602,1.77404,0.0760571,-0.00452922,0.0909609,3652,,,
+ols_goal_difference_rest_check_z_rest_league_ucl,z_rest_league_ucl,-0.0393019,0.0261336,-1.50388,0.132611,-0.0905228,0.011919,3652,,,
+ols_goal_difference_rest_check_z_rest_league_ucl,z_form,-0.00214075,0.028447,-0.0752541,0.940013,-0.0578958,0.0536143,3652,,,
+logit_home_win_rest_check_z_rest_all,Intercept,-0.236811,0.0591482,-4.00368,6.23634e-05,-0.352739,-0.120882,3652,0.789141,0.702761,0.886138
+logit_home_win_rest_check_z_rest_all,"C(crowd, Treatment('normal'))[T.restricted]",-0.186114,0.244794,-0.760286,0.447083,-0.665901,0.293674,3652,0.830179,0.51381,1.34135
+logit_home_win_rest_check_z_rest_all,"C(crowd, Treatment('normal'))[T.behind_closed_doors]",-0.288423,0.0908687,-3.17406,0.00150322,-0.466522,-0.110323,3652,0.749445,0.62718,0.895544
+logit_home_win_rest_check_z_rest_all,C(competition)[T.LALIGA],0.029541,0.0734915,0.401965,0.68771,-0.1145,0.173582,3652,1.02998,0.891812,1.18956
+logit_home_win_rest_check_z_rest_all,z_strength,0.8393,0.0446458,18.7991,7.68345e-79,0.751795,0.926804,3652,2.31475,2.1208,2.52642
+logit_home_win_rest_check_z_rest_all,z_log_travel,0.0578204,0.030484,1.89674,0.057862,-0.00192726,0.117568,3652,1.05952,0.998075,1.12476
+logit_home_win_rest_check_z_rest_all,z_rest_all,-0.0229751,0.0417363,-0.550483,0.581988,-0.104777,0.0588265,3652,0.977287,0.900526,1.06059
+logit_home_win_rest_check_z_rest_all,z_form,0.0225705,0.0343426,0.657216,0.511042,-0.0447398,0.0898808,3652,1.02283,0.956246,1.09404
+ols_goal_difference_rest_check_z_rest_all,Intercept,0.267769,0.0579246,4.62271,3.78757e-06,0.154239,0.381299,3652,,,
+ols_goal_difference_rest_check_z_rest_all,"C(crowd, Treatment('normal'))[T.restricted]",0.00336221,0.159235,0.0211148,0.983154,-0.308732,0.315457,3652,,,
+ols_goal_difference_rest_check_z_rest_all,"C(crowd, Treatment('normal'))[T.behind_closed_doors]",-0.198379,0.070102,-2.82987,0.00465672,-0.335777,-0.060982,3652,,,
+ols_goal_difference_rest_check_z_rest_all,C(competition)[T.LALIGA],0.0759359,0.0661163,1.14852,0.250754,-0.0536497,0.205521,3652,,,
+ols_goal_difference_rest_check_z_rest_all,z_strength,0.798695,0.0392016,20.374,2.84265e-92,0.721861,0.875529,3652,,,
+ols_goal_difference_rest_check_z_rest_all,z_log_travel,0.0422488,0.0244966,1.72468,0.0845848,-0.0057636,0.0902611,3652,,,
+ols_goal_difference_rest_check_z_rest_all,z_rest_all,-0.0152503,0.0283728,-0.537496,0.590925,-0.07086,0.0403595,3652,,,
+ols_goal_difference_rest_check_z_rest_all,z_form,-0.00325278,0.0283162,-0.114873,0.908545,-0.0587515,0.0522459,3652,,,
 ols_home_excess_trend,Intercept,0.0767334,0.0103882,7.38661,1.5062e-13,0.056373,0.0970939,7717,,,
 ols_home_excess_trend,C(competition)[T.LALIGA],0.0219786,0.0112105,1.96054,0.0499329,6.43769e-06,0.0439508,7717,,,
 ols_home_excess_trend,C(competition)[T.UCL],0.00704165,0.0144308,0.487959,0.625579,-0.0212423,0.0353256,7717,,,

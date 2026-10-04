@@ -1,0 +1,10 @@
+feature,pc1,pc2
+home_win_pct,0.38787,-0.239132
+home_points_per_game,0.39124,-0.233711
+home_goal_difference_per_game,0.377258,-0.280777
+home_goals_per_game,0.33082,-0.337239
+home_goals_conceded_per_game,-0.362486,0.11173
+home_vs_away_win_difference,0.304984,0.366903
+home_vs_away_points_difference,0.265239,0.464812
+home_vs_away_goal_difference,0.311605,0.301739
+home_advantage_index,0.229918,0.491356

@@ -36,8 +36,11 @@ Each phase ends with validated outputs before the next starts.
 - Proportion and chi-square tests, strength-controlled OLS / logit / ordered logit with club-clustered errors, a season-fixed-effects robustness check, the crowd x competition interaction model, referee-outcome and match-statistic models, travel / rest / form, decade trend, and random-effects shrinkage of club home advantage.
 - Write-up in `reports/statistics.md`.
 
-## Phase 6: Machine learning
-Model A (pre-match logistic regression, time-based split), Model B (explanatory, in-match stats), K-Means team segmentation with elbow and silhouette selection.
+## Phase 6: Machine learning (done)
+- `src/models/logistic_model.py`: Model A (pre-match home win, train 2016/17-2022/23, tune on 2023/24, test once on 2024/25-2025/26; baselines; calibration; interpretable clustered-SE logit) and Model B (explanatory, in-match statistics, EPL and La Liga).
+- `src/models/clustering.py`: K-Means on 45 clubs, k chosen by elbow, silhouette and stability, with a gap-only sensitivity specification.
+- Follow-ups: Model A3 (home / draw / away, multinomial, scored with the ranked probability score) and complete rest days for 2020/21-2024/25 from openfootball cup and Europa files (`src/data/other_fixtures.py`), checked in the stats (M7c) and in a Model A rest check.
+- Write-up in `reports/ml.md`.
 
 ## Phase 7: Presentation
 Streamlit + Plotly dashboard, final figures, README findings.

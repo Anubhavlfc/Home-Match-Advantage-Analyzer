@@ -121,8 +121,12 @@ by venue exceptions.
 
 ## Still open
 
-- **Rest days** are approximate because domestic cups and other European
-  competitions are not in the dataset.
+- **Rest days** (`*_rest_days`) are approximate because domestic cups and
+  other European competitions are not in the dataset. Complete rest days
+  (`*_rest_days_all`) add those fixtures for EPL and La Liga clubs in
+  2020/21 to 2024/25, the only seasons where every one is published. They
+  are missing elsewhere, and still miss one-off matches (Community Shield,
+  Supercopa, UEFA Super Cup, Club World Cup) and European qualifiers.
 - **Crowd status** for 88 matches is `unknown`, and some rules are medium or
   low confidence.
 - **Away-goals rule** decided UCL ties until 2020/21; it matters only if

@@ -6,9 +6,15 @@ sorted by date, and use only matches strictly before the current one
 Matches from every competition in the dataset count, including the warm-up
 seasons, so a 2016/17 opening-day feature already has history behind it.
 
-Rest days are approximate: domestic cups, the Europa League and other
-competitions are not in the dataset, so a club that played one of those in
-between appears more rested than it was.
+Two rest measures exist:
+
+* ``rest_days`` counts only matches in the dataset (league and UCL), for
+  every season. Domestic cups and the Europa League are missing, so a club
+  that played one of those in between appears more rested than it was.
+* ``rest_days_all`` also counts FA Cup, EFL Cup, Copa del Rey, Europa League
+  and Conference League dates (``src.data.other_fixtures``). It is filled
+  only in seasons where all of those are available (2020/21 to 2024/25) and
+  left missing elsewhere.
 """
 from __future__ import annotations
 
@@ -45,6 +51,25 @@ def add_rest_days(long: pd.DataFrame) -> pd.DataFrame:
     # First match of a team's season follows the off-season: not comparable.
     rest[prev_season != long["season"]] = np.nan
     long["rest_days"] = rest
+    return long
+
+
+def add_full_rest(long: pd.DataFrame, extra: pd.DataFrame, covered_seasons: list[str]) -> pd.DataFrame:
+    """Rest days counting every known fixture, in fully covered seasons only."""
+    long = long.copy()
+    ours = long[["team_id", "date", "season"]].assign(row=np.arange(len(long)))
+    other = extra[["team_id", "date", "season"]].assign(row=-1)
+    # A club cannot play twice on one date: drop extra dates already in the dataset.
+    other = other.merge(ours[["team_id", "date"]], how="left", indicator=True)
+    other = other[other["_merge"] == "left_only"].drop(columns="_merge")
+    allm = pd.concat([ours, other], ignore_index=True).sort_values(["team_id", "date", "row"])
+    prev_date = allm.groupby("team_id")["date"].shift(1)
+    prev_season = allm.groupby("team_id")["season"].shift(1)
+    rest = (allm["date"] - prev_date).dt.days.astype(float)
+    rest[(prev_season != allm["season"]) | ~allm["season"].isin(covered_seasons)] = np.nan
+    allm["rest_days_all"] = rest
+    mine = allm[allm["row"] >= 0].set_index("row")["rest_days_all"]
+    long["rest_days_all"] = mine.reindex(np.arange(len(long))).to_numpy()
     return long
 
 
@@ -143,8 +168,9 @@ def fit_home_advantage(df: pd.DataFrame, grid=range(0, 151, 10)) -> float:
 
 def attach_team_features(df: pd.DataFrame, long: pd.DataFrame) -> pd.DataFrame:
     """Join per-team pre-match features back onto the match table."""
-    feats = ["rest_days", "last5_points", "last5_win_pct", "last5_goal_difference", "last5_goals_scored",
+    feats = ["rest_days", "rest_days_all", "last5_points", "last5_win_pct", "last5_goal_difference", "last5_goals_scored",
              "last5_goals_conceded", "last5_home_points", "last5_away_points", "matches_before"]
+    feats = [f for f in feats if f in long.columns]  # rest_days_all only when add_full_rest ran
     out = df.copy()
     for side, flag in (("home", 1), ("away", 0)):
         part = long[long["is_home"] == flag].set_index("match_id")[feats]
@@ -157,4 +183,7 @@ def attach_team_features(df: pd.DataFrame, long: pd.DataFrame) -> pd.DataFrame:
     out["rest_difference_capped"] = out["home_rest_days"].clip(upper=REST_CAP_DAYS) - out["away_rest_days"].clip(
         upper=REST_CAP_DAYS
     )
+    if "home_rest_days_all" in out:
+        out["rest_difference_all_capped"] = out["home_rest_days_all"].clip(upper=REST_CAP_DAYS) - out[
+            "away_rest_days_all"].clip(upper=REST_CAP_DAYS)
     return out

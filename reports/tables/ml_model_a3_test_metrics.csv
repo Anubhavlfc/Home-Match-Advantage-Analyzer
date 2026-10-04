@@ -1,0 +1,4 @@
+model,n,accuracy,log_loss,rps,brier,share_predicted_A,share_predicted_D,share_predicted_H,mean_p_A,mean_p_D,mean_p_H,observed_A,observed_D,observed_H
+Model A3 (home / draw / away),1898,0.532666,0.983144,0.203594,0.585238,0.309273,0.00263435,0.688093,0.299326,0.238787,0.461886,0.3098,0.235511,0.454689
+Elo difference only,1898,0.52529,0.985715,0.20413,0.586825,0.327187,0,0.672813,0.305183,0.242328,0.452489,0.3098,0.235511,0.454689
+Base rates (training shares),1898,0.454689,1.06202,0.230893,0.64186,0,0,1,0.306616,0.240882,0.452502,0.3098,0.235511,0.454689

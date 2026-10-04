@@ -1,0 +1,34 @@
+{
+  "min_matches": 57,
+  "main": {
+    "k": 2,
+    "features": [
+      "home_win_pct",
+      "home_points_per_game",
+      "home_goal_difference_per_game",
+      "home_goals_per_game",
+      "home_goals_conceded_per_game",
+      "home_vs_away_win_difference",
+      "home_vs_away_points_difference",
+      "home_vs_away_goal_difference",
+      "home_advantage_index"
+    ],
+    "pca_explained_variance": [
+      0.6078272141301819,
+      0.3072137399461376
+    ]
+  },
+  "gap_only": {
+    "k": 2,
+    "features": [
+      "home_vs_away_win_difference",
+      "home_vs_away_points_difference",
+      "home_vs_away_goal_difference",
+      "home_advantage_index"
+    ],
+    "pca_explained_variance": [
+      0.8826253115442235,
+      0.07780201694133475
+    ]
+  }
+}
