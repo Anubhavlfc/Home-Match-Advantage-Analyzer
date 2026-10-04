@@ -1,0 +1,11 @@
+name,passed,detail,severity
+row_count,True,"380 rows, expected 380",error
+unique_match_id,True,all unique,error
+no_duplicate_fixtures,True,none,error
+double_round_robin,True,20 teams; each with 19 home/19 away,error
+dates_in_season_window,True,2025-08-15 to 2026-05-24,error
+result_matches_goals,True,0 inconsistent,error
+logical_bounds,True,ok,error
+goals_exceed_shots_on_target,False,"2 matches: ['EPL_2526_20251202_fulham_manchester-city', 'EPL_2526_20260107_burnley_manchester-united']",warning
+scores_match_openfootball,True,380 matched; 0 missing from openfootball; 0 extra in openfootball; 0 score mismatches; 0 date differences (informational),error
+table_matches_published,True,all teams identical,error

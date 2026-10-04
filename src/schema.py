@@ -8,8 +8,7 @@ One row = one match. Columns are split by the layer that populates them:
 * ``gold``    - engineered features computed from silver data and reference
   tables (Phase 3): crowd, COVID period, travel, rest, form, strength.
 
-``docs/schema.md`` is the human-readable version of this table; keep the two
-in sync.
+``docs/schema.md`` is generated from this table: ``python -m src.schema``.
 """
 from __future__ import annotations
 
@@ -39,6 +38,7 @@ MATCH_SCHEMA: tuple[Column, ...] = (
     Column("knockout_match", "Int64", "silver", "1 if knockout match"),
     Column("two_legged_tie", "Int64", "silver", "1 if the match is one leg of a two-legged tie"),
     Column("leg", "Int64", "silver", "1 or 2 for two-legged ties, NA otherwise"),
+    Column("tie_id", "string", "silver", "<stage>:<team_id>|<team_id> linking both legs of a two-legged tie"),
     Column("home_team", "string", "silver", "Canonical home (first-listed) team name"),
     Column("away_team", "string", "silver", "Canonical away (second-listed) team name"),
     Column("home_team_id", "string", "silver", "Stable slug for the home team"),
@@ -51,11 +51,17 @@ MATCH_SCHEMA: tuple[Column, ...] = (
     Column("result", "string", "silver", "H / D / A derived from full-time goals"),
     Column("home_points", "Int64", "silver", "3/1/0 derived from result"),
     Column("away_points", "Int64", "silver", "3/1/0 derived from result"),
+    Column("extra_time", "Int64", "silver", "1 if the match went to extra time (UCL knockouts only)"),
+    Column("home_goals_aet", "Int64", "silver", "Home score after extra time, if played"),
+    Column("away_goals_aet", "Int64", "silver", "Away score after extra time, if played"),
+    Column("home_shootout", "Int64", "silver", "Home penalty shoot-out score, if played"),
+    Column("away_shootout", "Int64", "silver", "Away penalty shoot-out score, if played"),
     # --- venue and crowd (facts) -------------------------------------------
     Column("stadium", "string", "silver", "Stadium where the match was actually played"),
     Column("city", "string", "silver", "City of the venue"),
     Column("country", "string", "silver", "Country of the venue"),
     Column("neutral_venue", "Int64", "silver", "1 if neither team played at its own home ground"),
+    Column("venue_note", "string", "silver", "Why the venue differs from the home club's usual ground (finals, relocations)"),
     Column("attendance", "Int64", "silver", "Reported attendance; NA if not published by any integrated source"),
     Column("stadium_capacity", "Int64", "silver", "Venue capacity from reference table"),
     Column("attendance_pct", "Float64", "silver", "attendance / stadium_capacity"),
@@ -104,5 +110,51 @@ IN_MATCH_COLUMNS: frozenset[str] = frozenset(
     c.name
     for c in MATCH_SCHEMA
     if c.name.startswith(("home_", "away_"))
-    and any(k in c.name for k in ("shots", "corners", "fouls", "cards", "penalties", "possession", "goals"))
-) | {"result", "home_points", "away_points"}
+    and any(k in c.name for k in ("shots", "corners", "fouls", "cards", "penalties", "possession", "goals", "shootout"))
+) | {"result", "home_points", "away_points", "extra_time"}
+
+
+_DOC_HEAD = """# Match-level schema
+
+One row = one match. Generated from `src/schema.py` by `python -m src.schema`; do not edit by hand.
+
+* **silver** columns are source facts, standardised in Phase 2. When no source
+  provides a value the column is present and missing (`<NA>`), never estimated.
+* **gold** columns are engineered in Phase 3 from silver data and reference
+  tables. Every rolling or cumulative feature is shifted so it only uses
+  matches that finished before kick-off.
+* Match statistics (shots, cards, fouls, corners, penalties, possession,
+  goals) describe what happened *during* the match. They are listed in
+  `IN_MATCH_COLUMNS` and are excluded from the pre-match model (Model A).
+
+"""
+
+_DOC_TAIL = """
+
+## Data layers
+
+| Layer | Folder | Contents |
+|---|---|---|
+| Bronze | `data/raw/<source>/<competition>/` | Files exactly as downloaded, plus `_manifest.jsonl` (URL, SHA-256, size, UTC access time). Never edited. |
+| Silver | `data/interim/matches/`, `data/interim/matches_all.csv` | One standardised CSV per competition-season, written only after all hard validation checks pass, plus all seasons stacked (8,972 matches). |
+| Gold | `data/processed/` | Single analytical table across all competitions and seasons with gold features (Phase 3). |
+| Reference | `data/reference/` | Hand-curated, cited lookup tables: team aliases (143 clubs), published final tables, venue exceptions (finals, relocations), UCL final winners, stat overrides. Stadiums and crowd restrictions follow in Phase 3. |
+
+## Identifiers
+
+`match_id = <competition>_<season_code>_<yyyymmdd>_<home_team_id>_<away_team_id>`,
+for example `EPL_1617_20160814_arsenal_liverpool`. It is deterministic, so
+re-running the pipeline produces the same ids, and it stays unique for UCL
+two-legged ties because the two legs have different dates and home teams.
+"""
+
+
+def render_markdown() -> str:
+    rows = "\n".join(f"| `{c.name}` | {c.dtype} | {c.layer} | {c.description} |" for c in MATCH_SCHEMA)
+    return _DOC_HEAD + "| Column | Type | Layer | Description |\n|---|---|---|---|\n" + rows + _DOC_TAIL
+
+
+if __name__ == "__main__":
+    from src.config import REPO_ROOT
+
+    (REPO_ROOT / "docs" / "schema.md").write_text(render_markdown(), encoding="utf-8")

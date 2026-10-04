@@ -52,6 +52,29 @@ interpretable.
 `crowd_status` (normal / restricted / behind_closed_doors / unknown) is the
 primary variable. `covid_period` is kept as a coarse secondary indicator.
 
+### How `crowd_status` will be assigned without match attendance
+
+No free, stable source of per-match attendance was found (see
+`docs/data_sources.md`). Instead of a season dummy, Phase 3 builds
+`data/reference/crowd_restrictions.csv`: dated, cited rules per competition
+and country (and per club where rules differed by region), for example:
+
+| Example rule | Status |
+|---|---|
+| EPL and La Liga matches after the June 2020 restart, until fans returned | behind_closed_doors |
+| EPL December 2020 matches at clubs in areas allowed 2,000 fans | restricted |
+| EPL final rounds of May 2021 (up to 10,000 fans) | restricted |
+| La Liga start of 2021/22 with capacity caps | restricted |
+| UCL 2020/21 matches, by host-country rules (a few allowed partial crowds) | behind_closed_doors or restricted |
+| UCL 2021 final in Porto (limited crowd) | restricted |
+| UEFA-sanctioned closed-door matches (e.g. Legia Warsaw v Real Madrid, 2016) | behind_closed_doors |
+
+Where the evidence for a match is unclear, the status is `unknown`, not a
+guess. `attendance` and `attendance_pct` stay missing, and the analysis states
+that crowd status comes from documented restrictions rather than counted
+attendance. If an attendance source is added later, it replaces these rules
+for the matches it covers.
+
 ## Leakage rules
 
 All form and strength features are computed from matches strictly before the

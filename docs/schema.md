@@ -1,7 +1,6 @@
 # Match-level schema
 
-One row = one match. Generated from `src/schema.py` (the single source of
-truth); update both together.
+One row = one match. Generated from `src/schema.py` by `python -m src.schema`; do not edit by hand.
 
 * **silver** columns are source facts, standardised in Phase 2. When no source
   provides a value the column is present and missing (`<NA>`), never estimated.
@@ -27,6 +26,7 @@ truth); update both together.
 | `knockout_match` | Int64 | silver | 1 if knockout match |
 | `two_legged_tie` | Int64 | silver | 1 if the match is one leg of a two-legged tie |
 | `leg` | Int64 | silver | 1 or 2 for two-legged ties, NA otherwise |
+| `tie_id` | string | silver | <stage>:<team_id>|<team_id> linking both legs of a two-legged tie |
 | `home_team` | string | silver | Canonical home (first-listed) team name |
 | `away_team` | string | silver | Canonical away (second-listed) team name |
 | `home_team_id` | string | silver | Stable slug for the home team |
@@ -38,10 +38,16 @@ truth); update both together.
 | `result` | string | silver | H / D / A derived from full-time goals |
 | `home_points` | Int64 | silver | 3/1/0 derived from result |
 | `away_points` | Int64 | silver | 3/1/0 derived from result |
+| `extra_time` | Int64 | silver | 1 if the match went to extra time (UCL knockouts only) |
+| `home_goals_aet` | Int64 | silver | Home score after extra time, if played |
+| `away_goals_aet` | Int64 | silver | Away score after extra time, if played |
+| `home_shootout` | Int64 | silver | Home penalty shoot-out score, if played |
+| `away_shootout` | Int64 | silver | Away penalty shoot-out score, if played |
 | `stadium` | string | silver | Stadium where the match was actually played |
 | `city` | string | silver | City of the venue |
 | `country` | string | silver | Country of the venue |
 | `neutral_venue` | Int64 | silver | 1 if neither team played at its own home ground |
+| `venue_note` | string | silver | Why the venue differs from the home club's usual ground (finals, relocations) |
 | `attendance` | Int64 | silver | Reported attendance; NA if not published by any integrated source |
 | `stadium_capacity` | Int64 | silver | Venue capacity from reference table |
 | `attendance_pct` | Float64 | silver | attendance / stadium_capacity |
@@ -81,9 +87,9 @@ truth); update both together.
 | Layer | Folder | Contents |
 |---|---|---|
 | Bronze | `data/raw/<source>/<competition>/` | Files exactly as downloaded, plus `_manifest.jsonl` (URL, SHA-256, size, UTC access time). Never edited. |
-| Silver | `data/interim/matches/` | One standardised CSV per competition-season, written only after all hard validation checks pass. |
+| Silver | `data/interim/matches/`, `data/interim/matches_all.csv` | One standardised CSV per competition-season, written only after all hard validation checks pass, plus all seasons stacked (8,972 matches). |
 | Gold | `data/processed/` | Single analytical table across all competitions and seasons with gold features (Phase 3). |
-| Reference | `data/reference/` | Hand-curated, cited lookup tables: team aliases, published final tables, and later stadiums, neutral venues and crowd restrictions. |
+| Reference | `data/reference/` | Hand-curated, cited lookup tables: team aliases (143 clubs), published final tables, venue exceptions (finals, relocations), UCL final winners, stat overrides. Stadiums and crowd restrictions follow in Phase 3. |
 
 ## Identifiers
 

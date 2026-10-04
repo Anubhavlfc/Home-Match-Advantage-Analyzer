@@ -1,40 +1,325 @@
-alias,canonical_name,team_id,country,alias_source
-Arsenal,Arsenal,arsenal,England,canonical
-Arsenal FC,Arsenal,arsenal,England,openfootball
-Bournemouth,Bournemouth,bournemouth,England,canonical
-AFC Bournemouth,Bournemouth,bournemouth,England,openfootball
-Burnley,Burnley,burnley,England,canonical
-Burnley FC,Burnley,burnley,England,openfootball
-Chelsea,Chelsea,chelsea,England,canonical
-Chelsea FC,Chelsea,chelsea,England,openfootball
-Crystal Palace,Crystal Palace,crystal-palace,England,canonical
-Everton,Everton,everton,England,canonical
-Everton FC,Everton,everton,England,openfootball
-Hull City,Hull City,hull-city,England,canonical
-Hull,Hull City,hull-city,England,football_data_co_uk
-Leicester City,Leicester City,leicester-city,England,canonical
-Leicester,Leicester City,leicester-city,England,football_data_co_uk
-Liverpool,Liverpool,liverpool,England,canonical
-Liverpool FC,Liverpool,liverpool,England,openfootball
-Manchester City,Manchester City,manchester-city,England,canonical
-Man City,Manchester City,manchester-city,England,football_data_co_uk
-Manchester United,Manchester United,manchester-united,England,canonical
-Man United,Manchester United,manchester-united,England,football_data_co_uk
-Middlesbrough,Middlesbrough,middlesbrough,England,canonical
-Middlesbrough FC,Middlesbrough,middlesbrough,England,openfootball
-Southampton,Southampton,southampton,England,canonical
-Southampton FC,Southampton,southampton,England,openfootball
-Stoke City,Stoke City,stoke-city,England,canonical
-Stoke,Stoke City,stoke-city,England,football_data_co_uk
-Sunderland,Sunderland,sunderland,England,canonical
-Sunderland AFC,Sunderland,sunderland,England,openfootball
-Swansea City,Swansea City,swansea-city,Wales,canonical
-Swansea,Swansea City,swansea-city,Wales,football_data_co_uk
-Tottenham Hotspur,Tottenham Hotspur,tottenham-hotspur,England,canonical
-Tottenham,Tottenham Hotspur,tottenham-hotspur,England,football_data_co_uk
-Watford,Watford,watford,England,canonical
-Watford FC,Watford,watford,England,openfootball
-West Bromwich Albion,West Bromwich Albion,west-bromwich-albion,England,canonical
-West Brom,West Bromwich Albion,west-bromwich-albion,England,football_data_co_uk
-West Ham United,West Ham United,west-ham-united,England,canonical
-West Ham,West Ham United,west-ham-united,England,football_data_co_uk
+alias,canonical_name,team_id,country
+Arsenal,Arsenal,arsenal,England
+Arsenal FC,Arsenal,arsenal,England
+Aston Villa,Aston Villa,aston-villa,England
+Aston Villa FC,Aston Villa,aston-villa,England
+Bournemouth,Bournemouth,bournemouth,England
+AFC Bournemouth,Bournemouth,bournemouth,England
+Brentford,Brentford,brentford,England
+Brentford FC,Brentford,brentford,England
+Brighton & Hove Albion,Brighton & Hove Albion,brighton-hove-albion,England
+Brighton,Brighton & Hove Albion,brighton-hove-albion,England
+Brighton & Hove Albion FC,Brighton & Hove Albion,brighton-hove-albion,England
+Burnley,Burnley,burnley,England
+Burnley FC,Burnley,burnley,England
+Cardiff City,Cardiff City,cardiff-city,Wales
+Cardiff,Cardiff City,cardiff-city,Wales
+Cardiff City FC,Cardiff City,cardiff-city,Wales
+Chelsea,Chelsea,chelsea,England
+Chelsea FC,Chelsea,chelsea,England
+Crystal Palace,Crystal Palace,crystal-palace,England
+Crystal Palace FC,Crystal Palace,crystal-palace,England
+Everton,Everton,everton,England
+Everton FC,Everton,everton,England
+Fulham,Fulham,fulham,England
+Fulham FC,Fulham,fulham,England
+Huddersfield Town,Huddersfield Town,huddersfield-town,England
+Huddersfield,Huddersfield Town,huddersfield-town,England
+Huddersfield Town AFC,Huddersfield Town,huddersfield-town,England
+Hull City,Hull City,hull-city,England
+Hull,Hull City,hull-city,England
+Hull City AFC,Hull City,hull-city,England
+Ipswich Town,Ipswich Town,ipswich-town,England
+Ipswich,Ipswich Town,ipswich-town,England
+Ipswich Town FC,Ipswich Town,ipswich-town,England
+Leeds United,Leeds United,leeds-united,England
+Leeds,Leeds United,leeds-united,England
+Leeds United FC,Leeds United,leeds-united,England
+Leicester City,Leicester City,leicester-city,England
+Leicester,Leicester City,leicester-city,England
+Leicester City FC,Leicester City,leicester-city,England
+Liverpool,Liverpool,liverpool,England
+Liverpool FC,Liverpool,liverpool,England
+Luton Town,Luton Town,luton-town,England
+Luton,Luton Town,luton-town,England
+Luton Town FC,Luton Town,luton-town,England
+Manchester City,Manchester City,manchester-city,England
+Man City,Manchester City,manchester-city,England
+Manchester City FC,Manchester City,manchester-city,England
+Manchester United,Manchester United,manchester-united,England
+Man United,Manchester United,manchester-united,England
+Manchester United FC,Manchester United,manchester-united,England
+Middlesbrough,Middlesbrough,middlesbrough,England
+Middlesbrough FC,Middlesbrough,middlesbrough,England
+Newcastle United,Newcastle United,newcastle-united,England
+Newcastle,Newcastle United,newcastle-united,England
+Newcastle United FC,Newcastle United,newcastle-united,England
+Norwich City,Norwich City,norwich-city,England
+Norwich,Norwich City,norwich-city,England
+Norwich City FC,Norwich City,norwich-city,England
+Nottingham Forest,Nottingham Forest,nottingham-forest,England
+Nott'm Forest,Nottingham Forest,nottingham-forest,England
+Nottingham Forest FC,Nottingham Forest,nottingham-forest,England
+Sheffield United,Sheffield United,sheffield-united,England
+Sheffield United FC,Sheffield United,sheffield-united,England
+Southampton,Southampton,southampton,England
+Southampton FC,Southampton,southampton,England
+Stoke City,Stoke City,stoke-city,England
+Stoke,Stoke City,stoke-city,England
+Stoke City FC,Stoke City,stoke-city,England
+Sunderland,Sunderland,sunderland,England
+Sunderland AFC,Sunderland,sunderland,England
+Swansea City,Swansea City,swansea-city,Wales
+Swansea,Swansea City,swansea-city,Wales
+Swansea City AFC,Swansea City,swansea-city,Wales
+Tottenham Hotspur,Tottenham Hotspur,tottenham-hotspur,England
+Tottenham,Tottenham Hotspur,tottenham-hotspur,England
+Tottenham Hotspur FC,Tottenham Hotspur,tottenham-hotspur,England
+Watford,Watford,watford,England
+Watford FC,Watford,watford,England
+West Bromwich Albion,West Bromwich Albion,west-bromwich-albion,England
+West Brom,West Bromwich Albion,west-bromwich-albion,England
+West Bromwich Albion FC,West Bromwich Albion,west-bromwich-albion,England
+West Ham United,West Ham United,west-ham-united,England
+West Ham,West Ham United,west-ham-united,England
+West Ham United FC,West Ham United,west-ham-united,England
+Wolverhampton Wanderers,Wolverhampton Wanderers,wolverhampton-wanderers,England
+Wolves,Wolverhampton Wanderers,wolverhampton-wanderers,England
+Wolverhampton Wanderers FC,Wolverhampton Wanderers,wolverhampton-wanderers,England
+Alavés,Alavés,alaves,Spain
+Alaves,Alavés,alaves,Spain
+CD Alavés,Alavés,alaves,Spain
+Deportivo Alavés,Alavés,alaves,Spain
+Almería,Almería,almeria,Spain
+Almeria,Almería,almeria,Spain
+UD Almería,Almería,almeria,Spain
+Athletic Club,Athletic Club,athletic-club,Spain
+Ath Bilbao,Athletic Club,athletic-club,Spain
+Athletic Bilbao,Athletic Club,athletic-club,Spain
+Atlético Madrid,Atlético Madrid,atletico-madrid,Spain
+Ath Madrid,Atlético Madrid,atletico-madrid,Spain
+Club Atlético de Madrid,Atlético Madrid,atletico-madrid,Spain
+Atletico Madrid,Atlético Madrid,atletico-madrid,Spain
+Barcelona,Barcelona,barcelona,Spain
+FC Barcelona,Barcelona,barcelona,Spain
+Real Betis,Real Betis,real-betis,Spain
+Betis,Real Betis,real-betis,Spain
+Real Betis Balompié,Real Betis,real-betis,Spain
+Cádiz,Cádiz,cadiz,Spain
+Cadiz,Cádiz,cadiz,Spain
+Cádiz CF,Cádiz,cadiz,Spain
+Celta Vigo,Celta Vigo,celta-vigo,Spain
+Celta,Celta Vigo,celta-vigo,Spain
+RC Celta,Celta Vigo,celta-vigo,Spain
+RC Celta de Vigo,Celta Vigo,celta-vigo,Spain
+Eibar,Eibar,eibar,Spain
+SD Eibar,Eibar,eibar,Spain
+Elche,Elche,elche,Spain
+Elche CF,Elche,elche,Spain
+Espanyol,Espanyol,espanyol,Spain
+Espanol,Espanyol,espanyol,Spain
+Espanyol Barcelona,Espanyol,espanyol,Spain
+RCD Espanyol de Barcelona,Espanyol,espanyol,Spain
+Getafe,Getafe,getafe,Spain
+Getafe CF,Getafe,getafe,Spain
+Girona,Girona,girona,Spain
+Girona FC,Girona,girona,Spain
+Granada,Granada,granada,Spain
+Granada CF,Granada,granada,Spain
+Huesca,Huesca,huesca,Spain
+SD Huesca,Huesca,huesca,Spain
+Deportivo La Coruña,Deportivo La Coruña,deportivo-la-coruna,Spain
+La Coruna,Deportivo La Coruña,deportivo-la-coruna,Spain
+Las Palmas,Las Palmas,las-palmas,Spain
+UD Las Palmas,Las Palmas,las-palmas,Spain
+Leganés,Leganés,leganes,Spain
+Leganes,Leganés,leganes,Spain
+CD Leganés,Leganés,leganes,Spain
+Levante,Levante,levante,Spain
+Levante UD,Levante,levante,Spain
+Málaga,Málaga,malaga,Spain
+Malaga,Málaga,malaga,Spain
+Málaga CF,Málaga,malaga,Spain
+Mallorca,Mallorca,mallorca,Spain
+RCD Mallorca,Mallorca,mallorca,Spain
+Osasuna,Osasuna,osasuna,Spain
+CA Osasuna,Osasuna,osasuna,Spain
+Real Oviedo,Real Oviedo,real-oviedo,Spain
+Oviedo,Real Oviedo,real-oviedo,Spain
+Real Madrid,Real Madrid,real-madrid,Spain
+Real Madrid CF,Real Madrid,real-madrid,Spain
+Sevilla,Sevilla,sevilla,Spain
+Sevilla FC,Sevilla,sevilla,Spain
+Real Sociedad,Real Sociedad,real-sociedad,Spain
+Sociedad,Real Sociedad,real-sociedad,Spain
+Real Sociedad de Fútbol,Real Sociedad,real-sociedad,Spain
+Sporting Gijón,Sporting Gijón,sporting-gijon,Spain
+Sp Gijon,Sporting Gijón,sporting-gijon,Spain
+Valencia,Valencia,valencia,Spain
+Valencia CF,Valencia,valencia,Spain
+Real Valladolid,Real Valladolid,real-valladolid,Spain
+Valladolid,Real Valladolid,real-valladolid,Spain
+Real Valladolid CF,Real Valladolid,real-valladolid,Spain
+Rayo Vallecano,Rayo Vallecano,rayo-vallecano,Spain
+Vallecano,Rayo Vallecano,rayo-vallecano,Spain
+Rayo Vallecano de Madrid,Rayo Vallecano,rayo-vallecano,Spain
+Villarreal,Villarreal,villarreal,Spain
+Villarreal CF,Villarreal,villarreal,Spain
+Union Berlin,Union Berlin,union-berlin,Germany
+1. FC Union Berlin,Union Berlin,union-berlin,Germany
+Hoffenheim,Hoffenheim,hoffenheim,Germany
+1899 Hoffenheim,Hoffenheim,hoffenheim,Germany
+TSG 1899 Hoffenheim,Hoffenheim,hoffenheim,Germany
+AC Milan,AC Milan,ac-milan,Italy
+Sparta Prague,Sparta Prague,sparta-prague,Czechia
+AC Sparta Praha,Sparta Prague,sparta-prague,Czechia
+AEK Athens,AEK Athens,aek-athens,Greece
+AEK Athen,AEK Athens,aek-athens,Greece
+Ajax,Ajax,ajax,Netherlands
+AFC Ajax,Ajax,ajax,Netherlands
+APOEL,APOEL,apoel,Cyprus
+APOEL Nikosia,APOEL,apoel,Cyprus
+Monaco,Monaco,monaco,Monaco
+AS Monaco,Monaco,monaco,Monaco
+AS Monaco FC,Monaco,monaco,Monaco
+Roma,Roma,roma,Italy
+AS Roma,Roma,roma,Italy
+Atalanta,Atalanta,atalanta,Italy
+Atalanta BC,Atalanta,atalanta,Italy
+Young Boys,Young Boys,young-boys,Switzerland
+BSC Young Boys,Young Boys,young-boys,Switzerland
+Bayer Leverkusen,Bayer Leverkusen,bayer-leverkusen,Germany
+Bayer 04 Leverkusen,Bayer Leverkusen,bayer-leverkusen,Germany
+Bayern Munich,Bayern Munich,bayern-munich,Germany
+Bayern München,Bayern Munich,bayern-munich,Germany
+FC Bayern München,Bayern Munich,bayern-munich,Germany
+Beşiktaş,Beşiktaş,besiktas,Turkey
+Bologna,Bologna,bologna,Italy
+Bologna FC 1909,Bologna,bologna,Italy
+Borussia Mönchengladbach,Borussia Mönchengladbach,borussia-monchengladbach,Germany
+Bor. Mönchengladbach,Borussia Mönchengladbach,borussia-monchengladbach,Germany
+Borussia Dortmund,Borussia Dortmund,borussia-dortmund,Germany
+CSKA Moscow,CSKA Moscow,cska-moscow,Russia
+CSKA Moskva,CSKA Moscow,cska-moscow,Russia
+Celtic,Celtic,celtic,Scotland
+Celtic FC,Celtic,celtic,Scotland
+Club Brugge,Club Brugge,club-brugge,Belgium
+Club Brugge KV,Club Brugge,club-brugge,Belgium
+Red Star Belgrade,Red Star Belgrade,red-star-belgrade,Serbia
+Crvena Zvezda,Red Star Belgrade,red-star-belgrade,Serbia
+FK Crvena Zvezda,Red Star Belgrade,red-star-belgrade,Serbia
+Dynamo Kyiv,Dynamo Kyiv,dynamo-kyiv,Ukraine
+Dinamo Kiev,Dynamo Kyiv,dynamo-kyiv,Ukraine
+Dinamo Zagreb,Dinamo Zagreb,dinamo-zagreb,Croatia
+GNK Dinamo Zagreb,Dinamo Zagreb,dinamo-zagreb,Croatia
+Eintracht Frankfurt,Eintracht Frankfurt,eintracht-frankfurt,Germany
+Basel,Basel,basel,Switzerland
+FC Basel 1893,Basel,basel,Switzerland
+Inter Milan,Inter Milan,inter-milan,Italy
+FC Internazionale Milano,Inter Milan,inter-milan,Italy
+Inter,Inter Milan,inter-milan,Italy
+Copenhagen,Copenhagen,copenhagen,Denmark
+FC København,Copenhagen,copenhagen,Denmark
+Midtjylland,Midtjylland,midtjylland,Denmark
+FC Midtjylland,Midtjylland,midtjylland,Denmark
+Porto,Porto,porto,Portugal
+FC Porto,Porto,porto,Portugal
+Red Bull Salzburg,Red Bull Salzburg,red-bull-salzburg,Austria
+FC Red Bull Salzburg,Red Bull Salzburg,red-bull-salzburg,Austria
+RB Salzburg,Red Bull Salzburg,red-bull-salzburg,Austria
+Schalke 04,Schalke 04,schalke-04,Germany
+FC Schalke 04,Schalke 04,schalke-04,Germany
+Sheriff Tiraspol,Sheriff Tiraspol,sheriff-tiraspol,Moldova
+FC Sheriff,Sheriff Tiraspol,sheriff-tiraspol,Moldova
+Bodø/Glimt,Bodø/Glimt,bod-glimt,Norway
+FK Bodø/Glimt,Bodø/Glimt,bod-glimt,Norway
+Kairat Almaty,Kairat Almaty,kairat-almaty,Kazakhstan
+FK Kairat,Kairat Almaty,kairat-almaty,Kazakhstan
+Krasnodar,Krasnodar,krasnodar,Russia
+FK Krasnodar,Krasnodar,krasnodar,Russia
+Rostov,Rostov,rostov,Russia
+FK Rostov,Rostov,rostov,Russia
+Shakhtar Donetsk,Shakhtar Donetsk,shakhtar-donetsk,Ukraine
+FK Shakhtar Donetsk,Shakhtar Donetsk,shakhtar-donetsk,Ukraine
+Ferencváros,Ferencváros,ferencvaros,Hungary
+Ferencvárosi TC,Ferencváros,ferencvaros,Hungary
+Feyenoord,Feyenoord,feyenoord,Netherlands
+Feyenoord Rotterdam,Feyenoord,feyenoord,Netherlands
+Galatasaray,Galatasaray,galatasaray,Turkey
+Galatasaray SK,Galatasaray,galatasaray,Turkey
+Genk,Genk,genk,Belgium
+KRC Genk,Genk,genk,Belgium
+Lazio,Lazio,lazio,Italy
+Lazio Roma,Lazio,lazio,Italy
+SS Lazio,Lazio,lazio,Italy
+Legia Warsaw,Legia Warsaw,legia-warsaw,Poland
+Legia Warszawa,Legia Warsaw,legia-warsaw,Poland
+Lille,Lille,lille,France
+Lille OSC,Lille,lille,France
+Lokomotiv Moscow,Lokomotiv Moscow,lokomotiv-moscow,Russia
+Lokomotiv Moskva,Lokomotiv Moscow,lokomotiv-moscow,Russia
+Maccabi Haifa,Maccabi Haifa,maccabi-haifa,Israel
+Malmö FF,Malmö FF,malmo-ff,Sweden
+Maribor,Maribor,maribor,Slovenia
+NK Maribor,Maribor,maribor,Slovenia
+Olympiacos,Olympiacos,olympiacos,Greece
+Olympiakos Piraeus,Olympiacos,olympiacos,Greece
+PAE Olympiakos SFP,Olympiacos,olympiacos,Greece
+Lyon,Lyon,lyon,France
+Olympique Lyonnais,Lyon,lyon,France
+Marseille,Marseille,marseille,France
+Olympique Marseille,Marseille,marseille,France
+Olympique de Marseille,Marseille,marseille,France
+Ludogorets Razgrad,Ludogorets Razgrad,ludogorets-razgrad,Bulgaria
+PFC Ludogorets Razgrad,Ludogorets Razgrad,ludogorets-razgrad,Bulgaria
+PSV Eindhoven,PSV Eindhoven,psv-eindhoven,Netherlands
+PSV,PSV Eindhoven,psv-eindhoven,Netherlands
+Pafos,Pafos,pafos,Cyprus
+Paphos FC,Pafos,pafos,Cyprus
+Pafos FC,Pafos,pafos,Cyprus
+Paris Saint-Germain,Paris Saint-Germain,paris-saint-germain,France
+Paris Saint-Germain FC,Paris Saint-Germain,paris-saint-germain,France
+Qarabağ,Qarabağ,qarabag,Azerbaijan
+Qarabağ Ağdam FK,Qarabağ,qarabag,Azerbaijan
+Qarabağ FK,Qarabağ,qarabag,Azerbaijan
+RB Leipzig,RB Leipzig,rb-leipzig,Germany
+Anderlecht,Anderlecht,anderlecht,Belgium
+RSC Anderlecht,Anderlecht,anderlecht,Belgium
+Lens,Lens,lens,France
+Racing Club de Lens,Lens,lens,France
+Rangers,Rangers,rangers,Scotland
+Rangers FC,Rangers,rangers,Scotland
+Antwerp,Antwerp,antwerp,Belgium
+Royal Antwerp FC,Antwerp,antwerp,Belgium
+Union Saint-Gilloise,Union Saint-Gilloise,union-saint-gilloise,Belgium
+Royale Union Saint-Gilloise,Union Saint-Gilloise,union-saint-gilloise,Belgium
+Slavia Prague,Slavia Prague,slavia-prague,Czechia
+SK Slavia Praha,Slavia Prague,slavia-prague,Czechia
+Slavia Praha,Slavia Prague,slavia-prague,Czechia
+Sturm Graz,Sturm Graz,sturm-graz,Austria
+SK Sturm Graz,Sturm Graz,sturm-graz,Austria
+Benfica,Benfica,benfica,Portugal
+SL Benfica,Benfica,benfica,Portugal
+Sport Lisboa e Benfica,Benfica,benfica,Portugal
+Napoli,Napoli,napoli,Italy
+SSC Napoli,Napoli,napoli,Italy
+Spartak Moscow,Spartak Moscow,spartak-moscow,Russia
+Spartak Moskva,Spartak Moscow,spartak-moscow,Russia
+Sporting CP,Sporting CP,sporting-cp,Portugal
+Sporting Clube de Portugal,Sporting CP,sporting-cp,Portugal
+Braga,Braga,braga,Portugal
+Sporting Clube de Braga,Braga,braga,Portugal
+Brest,Brest,brest,France
+Stade Brestois 29,Brest,brest,France
+Rennes,Rennes,rennes,France
+Stade Rennais,Rennes,rennes,France
+VfB Stuttgart,VfB Stuttgart,vfb-stuttgart,Germany
+VfL Wolfsburg,VfL Wolfsburg,vfl-wolfsburg,Germany
+Viktoria Plzeň,Viktoria Plzeň,viktoria-plzen,Czechia
+Zenit Saint Petersburg,Zenit Saint Petersburg,zenit-saint-petersburg,Russia
+Zenit St. Petersburg,Zenit Saint Petersburg,zenit-saint-petersburg,Russia
+İstanbul Başakşehir,İstanbul Başakşehir,istanbul-basaksehir,Turkey
+Slovan Bratislava,Slovan Bratislava,slovan-bratislava,Slovakia
+ŠK Slovan Bratislava,Slovan Bratislava,slovan-bratislava,Slovakia
+Juventus,Juventus,juventus,Italy
+Juventus FC,Juventus,juventus,Italy

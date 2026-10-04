@@ -16,7 +16,7 @@ Date of this review: **2026-10-02**.
 | Champions League results, stages | openfootball `champions-league` | Verified all 10 seasons. 125 matches per season to 2023/24 (119 in 2019/20), 189 from 2024/25 (league phase). No venues, no match stats. |
 | Attendance (all competitions) | Not yet secured | See section 4. This is the main data gap. |
 | Stadium coordinates and capacity | Wikidata (SPARQL, CC0) + manual reference table | Not yet built (Phase 3). |
-| Neutral / relocated UCL venues | Curated reference table with citations | Not yet built (Phase 3). |
+| Neutral / relocated UCL venues | Curated reference table with citations (`venue_exceptions.csv`) | Built: 49 matches, 33 of them neutral (finals, Lisbon 2020, 2020/21 relocations, displaced Shakhtar home games). |
 | COVID crowd restrictions | Match-level attendance where available; otherwise documented league/government rules | Not yet built (Phase 3). |
 
 ## 2. Source details
@@ -65,24 +65,25 @@ Date of this review: **2026-10-02**.
 |---|---|---|---|---|
 | Date, teams, full-time score | Y | Y | Y | football-data / openfootball |
 | Half-time score | Y | Y | Y | football-data / openfootball |
-| Kick-off time | P (2019/20+) | P (2019/20+) | Y | football-data / openfootball |
+| Kick-off time | Y | Y | Y | openfootball (fills football-data gaps) |
 | Stage / round / leg | n/a | n/a | Y (derived) | openfootball |
+| Extra time, shoot-outs | n/a | n/a | Y | openfootball |
 | Shots, shots on target | Y | Y | N | football-data |
 | Corners, fouls, yellow, red cards | Y | Y | N | football-data |
 | Referee | Y | N | N | football-data |
-| Penalties awarded | N | N | N | none integrated (FBref/Transfermarkt ?) |
-| Possession | N | N | N | none integrated (FBref ?) |
+| Penalties awarded | N | N | N | out of scope (decided in Phase 2) |
+| Possession | N | N | N | out of scope (decided in Phase 2) |
 | Attendance | ? | ? | ? | see section 4 |
-| Venue (actual stadium) | derived* | derived* | N | *home club's ground + exceptions table |
+| Venue (actual stadium) | derived* | derived* | derived* | *home club's ground (Phase 3) + exceptions table |
 | Stadium capacity, coordinates | planned | planned | planned | Wikidata + manual |
 | Rest days | approx. | approx. | approx. | derived from integrated fixtures only |
 | Form, strength (Elo) | derived | derived | derived | from results |
 
 ## 4. Variables at risk across the full ten seasons
 
-1. **Attendance**. No integrated source yet. Without it, `crowd_status` can only be assigned from documented restriction rules (for example, EPL behind closed doors from the June 2020 restart, small crowds allowed in December 2020 and May 2021). That is a legitimate fallback but coarser than the match-level analysis the project wants. Securing attendance is the first decision for Phase 2.
+1. **Attendance**. No integrated source yet; the planned fallback is described in `docs/methodology.md`. Without it, `crowd_status` can only be assigned from documented restriction rules (for example, EPL behind closed doors from the June 2020 restart, small crowds allowed in December 2020 and May 2021). That is a legitimate fallback but coarser than the match-level analysis the project wants. Securing attendance is the first decision for Phase 2.
 2. **Champions League match statistics**. Shots, cards, fouls and corners are not available for UCL from any free, stable source checked. The referee and in-match mechanism analysis (Questions C and D) will therefore be EPL and La Liga only unless a source is added.
-3. **Penalties and possession**. Not available in the integrated sources for any competition.
-4. **Referee for La Liga**. Column present but empty, so referee-level analysis is EPL only.
+3. **Penalties and possession**. Not available in the integrated sources for any competition. Decision (Phase 2): dropped from scope rather than scraped, because neither is central to the research questions; the columns stay in the schema as missing.
+4. **Referee for La Liga**. Column present but empty. Decision: referee-*outcome* analysis (fouls, cards by side) still covers both leagues; analysis by individual referee is EPL only.
 5. **Rest days**. Domestic cups and other European competitions are not in the dataset, so rest days for clubs in the FA Cup, Copa del Rey, Europa League and so on are overestimated. Will be labelled as an approximation.
 6. **UCL venues**. openfootball has no venues, so neutral venues (finals, 2019/20 Lisbon tournament, 2020/21 relocated ties) need a hand-curated, cited reference table.

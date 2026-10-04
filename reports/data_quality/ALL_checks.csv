@@ -1,0 +1,4 @@
+name,passed,detail,severity
+row_count,True,"8972 rows, expected 8972",error
+unique_match_id,True,all unique,error
+schema_columns,True,56 columns,error

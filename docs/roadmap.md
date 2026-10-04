@@ -2,7 +2,7 @@
 
 Each phase ends with validated outputs before the next starts.
 
-## Phase 1: Foundation (done in this change)
+## Phase 1: Foundation (done)
 - Repository structure, `.gitignore`, `requirements.txt`, `config/config.yaml`
 - Source review and availability matrix (`docs/data_sources.md`)
 - Match schema (`src/schema.py`, `docs/schema.md`)
@@ -10,15 +10,15 @@ Each phase ends with validated outputs before the next starts.
 - Proposed index and period definitions (`docs/methodology.md`)
 - Working, validated ETL for EPL 2016/17
 
-## Phase 2: ETL for all competitions
-1. EPL 2017/18 to 2025/26: extend `team_aliases.csv` and `final_tables.csv`, run the same checks per season.
-2. La Liga 2016/17 to 2025/26: same pipeline, `SP1` files, openfootball `es.1` cross-check.
-3. Champions League: parser for openfootball `cl.txt` (stages, legs, 90-minute vs extra-time scores, shoot-outs, `ucl_format`); checks for 125 or 189 matches per season (119 in 2019/20) and group/league-phase completeness.
-4. Decide on the attendance source (section 4 of `docs/data_sources.md`).
-5. Combine into one silver table; validate row counts and duplicates after every merge.
+## Phase 2: ETL for all competitions (done)
+- EPL and La Liga, 2016/17 to 2025/26: 7,600 matches, every season reconciled with openfootball and the published final table.
+- Champions League: parser for openfootball `cl.txt` (stages, legs, 90-minute vs extra-time scores, shoot-outs, `ucl_format`), 1,372 matches, structural checks per season.
+- Venue exceptions for finals, the Lisbon 2020 tournament, 2020/21 relocations and displaced Shakhtar home games.
+- Combined silver table `data/interim/matches_all.csv` (8,972 matches), validated after stacking.
+- Decisions on gaps: penalties and possession dropped from scope; referee-level analysis EPL only; crowd status from documented restrictions instead of attendance (see `docs/methodology.md`).
 
 ## Phase 3: Feature engineering
-Reference tables (stadiums with coordinates and capacity, neutral/relocated venues, crowd restrictions), then `crowd_status`, `covid_period`, `neutral_venue`, travel distance, approximate rest days, shifted rolling form, pre-match Elo strength, UCL stage variables. Output: gold table in `data/processed/`.
+Reference tables (stadiums with coordinates and capacity, crowd restrictions), then `crowd_status`, `covid_period`, `neutral_venue`, travel distance, approximate rest days, shifted rolling form, pre-match Elo strength, UCL stage variables. Output: gold table in `data/processed/`.
 
 ## Phase 4: EDA
 Questions A to F, one figure per question.
