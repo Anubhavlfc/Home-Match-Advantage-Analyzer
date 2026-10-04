@@ -31,8 +31,10 @@ Each phase ends with validated outputs before the next starts.
 - Strength-adjusted home excess (actual score minus Elo expectation with no home term) reported next to raw rates.
 - Findings written up in `reports/eda.md`; `notebooks/04_eda.ipynb` is a thin interactive companion.
 
-## Phase 5: Statistical analysis
-Proportion tests, chi-square, confidence intervals, effect sizes, strength-controlled regressions, COVID interaction model.
+## Phase 5: Statistical analysis (done)
+- `src/analysis/stats.py`: one registry of tests (hypothesis, method, statistic, p, Holm-adjusted p for 14 pre-specified primary tests, CI, effect size) in `reports/tables/stats_tests.csv`, plus all model coefficients.
+- Proportion and chi-square tests, strength-controlled OLS / logit / ordered logit with club-clustered errors, a season-fixed-effects robustness check, the crowd x competition interaction model, referee-outcome and match-statistic models, travel / rest / form, decade trend, and random-effects shrinkage of club home advantage.
+- Write-up in `reports/statistics.md`.
 
 ## Phase 6: Machine learning
 Model A (pre-match logistic regression, time-based split), Model B (explanatory, in-match stats), K-Means team segmentation with elbow and silhouette selection.
