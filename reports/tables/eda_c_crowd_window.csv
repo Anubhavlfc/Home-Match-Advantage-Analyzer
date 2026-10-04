@@ -1,0 +1,4 @@
+crowd_status,matches,home_win_pct,home_win_pct_lo,home_win_pct_hi,draw_pct,draw_pct_lo,draw_pct_hi,away_win_pct,away_win_pct_lo,away_win_pct_hi,home_goals_pm,away_goals_pm,home_points_pm,away_points_pm,goal_diff_pm,goal_diff_pm_lo,goal_diff_pm_hi,points_share,home_excess,home_excess_lo,home_excess_hi,mean_strength_difference
+normal,1249.0,44.996,42.2565,47.7661,25.8607,23.509,28.3605,29.1433,26.6902,31.7244,1.4924,1.1705,1.6085,1.1329,0.3219,0.2223,0.4214,0.5867,0.0783,0.0563,0.1003,0.7274
+restricted,102.0,41.1765,32.1152,50.8782,26.4706,18.8764,35.7727,32.3529,24.0579,41.929,1.4216,1.0882,1.5,1.2353,0.3333,0.003,0.6637,0.5484,0.0374,-0.0354,0.1102,4.4441
+behind_closed_doors,909.0,39.824,36.6909,43.0428,25.8526,23.1122,28.7962,34.3234,31.3087,37.4701,1.352,1.22,1.4532,1.2882,0.132,0.0152,0.2488,0.5301,0.0281,0.002,0.0541,-0.0827

@@ -104,6 +104,9 @@ python -m src.pipeline --all
 # Build engineered features -> data/processed/matches_gold.csv
 python -m src.features.build
 
+# Exploratory analysis -> reports/tables, reports/figures (write-up: reports/eda.md)
+python -m src.analysis.eda
+
 # Or one competition-season (EPL, LALIGA, UCL)
 python -m src.pipeline --competition UCL --season 2020/21
 
