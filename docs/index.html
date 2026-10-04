@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Advantage Analyzer</title>
+<meta name="description" content="How much is playing at home worth in elite European football, and what happened when COVID-19 emptied the stadiums? A project walkthrough from data to model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fcfcfb;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --ink-3: #898781;
+    --rule: #e1e0d9;
+    --panel: #f3f2ee;
+    --accent: #2a78d6;
+    --away: #e34948;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 19px/1.65 "Source Serif 4", Georgia, serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 16px 96px; }
+  header .kicker {
+    font: 600 13px/1.4 Inter, system-ui, sans-serif;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+  }
+  h1 {
+    font: 600 clamp(32px, 6vw, 44px)/1.15 "Source Serif 4", Georgia, serif;
+    margin: 10px 0 14px; letter-spacing: -.01em;
+  }
+  .dek { font-size: 21px; color: var(--ink-2); margin: 0 0 22px; }
+  .byline {
+    font: 14px/1.5 Inter, system-ui, sans-serif; color: var(--ink-3);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 12px 0; display: flex; flex-wrap: wrap; gap: 6px 18px;
+  }
+  .byline a { color: var(--ink-2); }
+  h2 {
+    font: 600 28px/1.25 "Source Serif 4", Georgia, serif;
+    margin: 56px 0 12px;
+  }
+  h2 .n { color: var(--ink-3); font-weight: 400; margin-right: 8px; }
+  h3 { font: 600 17px/1.4 Inter, system-ui, sans-serif; margin: 30px 0 6px; }
+  p { margin: 0 0 18px; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  ul, ol { padding-left: 22px; margin: 0 0 18px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+  figure { margin: 26px 0 30px; }
+  figure img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--rule); border-radius: 4px; background: #fff;
+  }
+  figcaption {
+    font: 14px/1.5 Inter, system-ui, sans-serif; color: var(--ink-2);
+    margin-top: 8px;
+  }
+  .table-wrap { overflow-x: auto; margin: 22px 0 26px; }
+  table {
+    border-collapse: collapse; width: 100%;
+    font: 15px/1.45 Inter, system-ui, sans-serif;
+  }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; color: var(--ink-2); border-bottom: 2px solid var(--ink-3); }
+  th:first-child, td:first-child { min-width: 150px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr.hi td { background: #eaf2fc; font-weight: 600; }
+  pre {
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 4px;
+    padding: 14px 16px; overflow-x: auto;
+    font: 14px/1.55 "JetBrains Mono", ui-monospace, monospace;
+  }
+  code { font: 15px "JetBrains Mono", ui-monospace, monospace; background: var(--panel); padding: 1px 4px; border-radius: 3px; }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  .callout {
+    border-left: 3px solid var(--accent); background: var(--panel);
+    padding: 14px 18px; margin: 24px 0; border-radius: 0 4px 4px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .caveat { border-left-color: var(--away); }
+  .label { font: 600 12px/1.4 Inter, system-ui, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 4px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 24px 0 30px; }
+  .stat { border: 1px solid var(--rule); border-radius: 4px; padding: 12px 14px; background: #fff; }
+  .stat b { display: block; font: 600 26px/1.2 Inter, system-ui, sans-serif; }
+  .stat span { font: 13px/1.4 Inter, system-ui, sans-serif; color: var(--ink-2); }
+  nav.toc { font: 15px/1.6 Inter, system-ui, sans-serif; margin: 28px 0 0; }
+  nav.toc ol { columns: 2; column-gap: 28px; padding-left: 20px; }
+  nav.toc a { color: var(--ink-2); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); }
+  footer { margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--rule); font: 14px/1.5 Inter, system-ui, sans-serif; color: var(--ink-3); }
+  @media (max-width: 560px) {
+    body { font-size: 17px; }
+    .dek { font-size: 19px; }
+    nav.toc ol { columns: 1; }
+    h2 { font-size: 24px; margin-top: 44px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="kicker">Project walkthrough · Sports analytics</div>
+  <h1>Is home advantage real? What ten seasons and an empty-stadium experiment say</h1>
+  <p class="dek">I collected 8,972 matches from the Premier League, La Liga and the Champions League, rated every team before kick-off, and used COVID-19's closed doors to test how much of the home edge comes from the crowd.</p>
+  <div class="byline">
+    <span>By Anuv</span>
+    <span>Seasons 2016/17 to 2025/26</span>
+    <a href="https://github.com/Anubhavlfc/Home-Match-Advantage-Analyzer">Code on GitHub</a>
+  </div>
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#question">The question</a></li>
+      <li><a href="#data">Collecting the data</a></li>
+      <li><a href="#cleaning">Cleaning and checking</a></li>
+      <li><a href="#features">Feature engineering</a></li>
+      <li><a href="#eda">Exploring the data</a></li>
+      <li><a href="#covid">The empty-stadium test</a></li>
+      <li><a href="#models">Building the models</a></li>
+      <li><a href="#clusters">Grouping the clubs</a></li>
+      <li><a href="#dashboard">The dashboard</a></li>
+      <li><a href="#improve">Limitations and next steps</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ol>
+  </nav>
+</header>
+
+<h2 id="question"><span class="n">1</span>The question</h2>
+
+<p>Everyone in football "knows" that playing at home helps. But most home-advantage numbers you see are misleading, because the clubs that win most at home are simply the best clubs. Manchester City win a lot at home; they also win a lot away.</p>
+
+<p>So this project asks three narrower questions:</p>
+<ul>
+  <li>Between two <em>equally strong</em> teams, how much is playing at home worth?</li>
+  <li>Has that edge changed over the last decade, and does it differ between competitions or clubs?</li>
+  <li>When COVID-19 forced matches behind closed doors, how much of the edge disappeared?</li>
+</ul>
+
+<p>The COVID period is the interesting part. For about a season and a half, the crowd was removed while the stadium, the travel and the referees stayed the same. It is the closest football has come to a natural experiment on the crowd.</p>
+
+<div class="stats">
+  <div class="stat"><b>8,972</b><span>matches analysed</span></div>
+  <div class="stat"><b>3</b><span>competitions: EPL, La Liga, UCL</span></div>
+  <div class="stat"><b>10</b><span>seasons, 2016/17 to 2025/26</span></div>
+  <div class="stat"><b>+0.30</b><span>goals per match for the EPL home side between equal teams</span></div>
+</div>
+
+<h2 id="data"><span class="n">2</span>Collecting the data</h2>
+
+<p>Everything comes from free, public sources that anyone can download again:</p>
+<ul>
+  <li><strong>football-data.co.uk</strong> for Premier League and La Liga results and match statistics (shots, shots on target, corners, fouls, cards, and the referee's name for the Premier League).</li>
+  <li><strong>openfootball</strong> on GitHub for Champions League results, stages and dates, and for the domestic cup and Europa League fixtures used to count rest days.</li>
+  <li><strong>A hand-built table of COVID-19 crowd rules</strong> for each country and period, with sources, because per-match attendance is not available from any free, stable source.</li>
+  <li><strong>Stadium coordinates</strong> for every club, to measure how far the away team travelled.</li>
+</ul>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Competition</th><th class="num">Seasons</th><th class="num">Matches</th><th>What we have</th></tr></thead>
+  <tbody>
+    <tr><td>Premier League</td><td class="num">10</td><td class="num">3,800</td><td>Results, match statistics, referee</td></tr>
+    <tr><td>La Liga</td><td class="num">10</td><td class="num">3,800</td><td>Results, match statistics</td></tr>
+    <tr><td>Champions League</td><td class="num">10</td><td class="num">1,372</td><td>Results and stages only</td></tr>
+    <tr class="hi"><td>Total</td><td class="num">10</td><td class="num">8,972</td><td></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The pipeline downloads each file once, records where it came from in a manifest, and never edits raw files by hand.</p>
+
+<h2 id="cleaning"><span class="n">3</span>Cleaning and checking</h2>
+
+<p>The raw files go through three layers: raw downloads, one cleaned match table, and a final "gold" table with every feature. The main cleaning steps were:</p>
+<ul>
+  <li><strong>One name per club.</strong> "Man United", "Manchester Utd" and "Manchester United FC" all become one club ID, through an alias table.</li>
+  <li><strong>Neutral venues flagged.</strong> 33 matches (finals, the Lisbon 2020 mini-tournament, ties moved during COVID) had no real home team, so they are left out of every home-advantage measure.</li>
+  <li><strong>90-minute scores for knockouts.</strong> Extra time and penalty shoot-outs are stored separately so every match is scored the same way.</li>
+  <li><strong>Crowd status for every match:</strong> normal, restricted, closed doors, or unknown, joined from the rules table by country and date.</li>
+</ul>
+
+<p>Then every season was checked against the real world. The rebuilt league tables match the published final tables for all 400 team-seasons, every Premier League and La Liga score agrees with a second independent source, and the Champions League structure (groups, two-legged ties, who went through, the winner) matches what happened. If a hard check fails, the pipeline stops before writing anything.</p>
+
+<h2 id="features"><span class="n">4</span>Feature engineering</h2>
+
+<p>The most important feature is <strong>team strength before kick-off</strong>. I used an <a href="https://en.wikipedia.org/wiki/Elo_rating_system">Elo rating</a>, the same idea used in chess: each team has a rating, it goes up after a win and down after a loss, and bigger upsets move it more. Ratings use only earlier matches, so nothing from the future leaks in.</p>
+
+<p>From the ratings comes the measure used throughout the project:</p>
+
+<div class="callout">
+  <span class="label">Home excess</span>
+  <p><strong>Home excess = the home side's actual result − the result Elo expected if there were no home advantage.</strong> If two equal teams meet, Elo expects a draw on average, so anything above that is home advantage. This removes "good teams win more" from the picture.</p>
+</div>
+
+<p>The other features, all known before kick-off:</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Feature</th><th>What it captures</th></tr></thead>
+  <tbody>
+    <tr><td>Elo difference</td><td>How much stronger the home side is</td></tr>
+    <tr><td>Recent form</td><td>Points from each team's previous five matches</td></tr>
+    <tr><td>Rest days</td><td>Days since each team's last match</td></tr>
+    <tr><td>Travel distance</td><td>Kilometres between the two stadiums</td></tr>
+    <tr><td>Crowd status</td><td>Normal, restricted or closed doors</td></tr>
+    <tr><td>Competition, knockout, neutral venue</td><td>The context of the match</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="eda"><span class="n">5</span>Exploring the data</h2>
+
+<p>First, the plain picture: home teams win more than away teams in all three competitions.</p>
+
+<figure>
+  <img src="assets/figures/eda_a_results.png" alt="Share of home wins, draws and away wins in each competition" loading="lazy">
+  <figcaption>Home wins, draws and away wins by competition. Home sides win more everywhere.</figcaption>
+</figure>
+
+<p>Once team strength is taken out, the home edge between equal teams with normal crowds is <strong>+0.30 goals per match in the Premier League, +0.38 in La Liga and +0.44 in the Champions League</strong>. Over a 19-match home season, +0.30 goals adds up to about six goals of goal difference.</p>
+
+<p>Has it been fading, as some people claim? Not in this decade. With normal crowds, it changes by −0.001 goals per season, which is effectively zero. The one visible dip is the empty-stadium period.</p>
+
+<figure>
+  <img src="assets/figures/eda_b_trend.png" alt="Strength-adjusted home advantage by season" loading="lazy">
+  <figcaption>Strength-adjusted home advantage by season. Flat, apart from the closed-doors seasons.</figcaption>
+</figure>
+
+<p>Travel and rest barely matter. Longer domestic trips go with slightly better home results, but the effect is small and not reliable once many tests are accounted for. Rest days show nothing once team strength is controlled.</p>
+
+<figure>
+  <img src="assets/figures/eda_g_travel_rest.png" alt="Home advantage by away travel distance and by rest difference" loading="lazy">
+  <figcaption>Home advantage by the away side's travel distance and by the difference in rest days.</figcaption>
+</figure>
+
+<h2 id="covid"><span class="n">6</span>The empty-stadium test</h2>
+
+<p>Home sides won <strong>46.2%</strong> of matches with normal crowds and <strong>41.2%</strong> behind closed doors.</p>
+
+<figure>
+  <img src="assets/figures/eda_c_crowd.png" alt="Home win rate and home excess by crowd status" loading="lazy">
+  <figcaption>Results by crowd status. The home edge drops sharply when the stands are empty.</figcaption>
+</figure>
+
+<p>A raw comparison could be fooled if different teams happened to play at home in those months, so I used a regression that holds team strength and competition equal, with standard errors grouped by club. Because I ran 14 main tests, every p-value is corrected for multiple testing (the Holm method), so one lucky result cannot slip through.</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>What changed behind closed doors</th><th class="num">Change</th><th class="num">95% interval</th><th class="num">Corrected p</th></tr></thead>
+  <tbody>
+    <tr class="hi"><td>Home goal-difference edge</td><td class="num">−0.20 goals</td><td class="num">−0.31 to −0.08</td><td class="num">0.006</td></tr>
+    <tr><td>Odds of a home win</td><td class="num">−22%</td><td class="num"></td><td class="num"></td></tr>
+    <tr><td>Away side's extra yellow cards</td><td class="num">−0.22 per match</td><td class="num"></td><td class="num">0.015</td></tr>
+    <tr><td>Difference between competitions</td><td class="num">none</td><td class="num"></td><td class="num">0.66</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>So the empty stadiums took away about <strong>two-thirds</strong> of the normal home advantage. Home teams also lost some of their edge in shots, shots on target and corners, and the away side's extra yellow cards (about 0.22 a match with crowds) disappeared.</p>
+
+<figure>
+  <img src="assets/figures/eda_c_performance.png" alt="Home minus away match statistics by crowd status" loading="lazy">
+  <figcaption>Home-minus-away shots, shots on target, corners, fouls and cards, with and without crowds.</figcaption>
+</figure>
+
+<div class="callout caveat">
+  <span class="label">The honest caveat</span>
+  <p>When I compare only matches within the same season, the drop keeps its direction (−0.14 goals) but the interval crosses zero. Closed doors came with packed fixture lists, five substitutes and no travelling fans, so "behind closed doors" means that whole package. The card change fits referees being swayed by crowds, but it also fits away teams defending differently. The data cannot separate the two.</p>
+</div>
+
+<p>The drop was similar in every competition, and no single club stands out as a true "fortress": after adjusting for how few matches each club has, no club's home advantage is reliably different from the average.</p>
+
+<figure>
+  <img src="assets/figures/stats_clubs.png" alt="Club home advantage estimates after shrinkage" loading="lazy">
+  <figcaption>Club-by-club home advantage after shrinkage. Every interval overlaps the average.</figcaption>
+</figure>
+
+<h2 id="models"><span class="n">7</span>Building the models</h2>
+
+<p>I built two kinds of model with different jobs. <strong>Model A predicts</strong>: using only what is known before kick-off, will the home side win? <strong>Model B explains</strong>: given what happened on the pitch, how does the result relate to the match statistics?</p>
+
+<h3>Model A: predicting a home win</h3>
+
+<p>I chose logistic regression on purpose. It is not the most powerful model, but every coefficient can be read as "this factor multiplies the odds of a home win by X", which matters when the goal is to understand home advantage, not just to predict it.</p>
+
+<p>To keep the test honest, the data are split by time, never at random, so the model is always judged on seasons it has never seen:</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Set</th><th>Seasons</th><th class="num">Matches</th><th>Used for</th></tr></thead>
+  <tbody>
+    <tr><td>Train</td><td>2016/17 to 2022/23</td><td class="num">6,189</td><td>Fitting</td></tr>
+    <tr><td>Validation</td><td>2023/24</td><td class="num">885</td><td>Choosing settings</td></tr>
+    <tr><td>Test</td><td>2024/25 to 2025/26</td><td class="num">1,898</td><td>One final evaluation</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Results on the test seasons:</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Model</th><th class="num">Accuracy</th><th class="num">ROC-AUC</th><th class="num">Log loss</th><th class="num">Brier</th></tr></thead>
+  <tbody>
+    <tr class="hi"><td>Model A (all features)</td><td class="num">0.648</td><td class="num">0.704</td><td class="num">0.622</td><td class="num">0.217</td></tr>
+    <tr><td>Elo difference only</td><td class="num">0.654</td><td class="num">0.701</td><td class="num">0.623</td><td class="num">0.217</td></tr>
+    <tr><td>Always guess "no home win"</td><td class="num">0.545</td><td class="num">0.500</td><td class="num">0.689</td><td class="num">0.248</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The model clearly beats guessing, and its probabilities are well calibrated: when it says 60%, the home side wins about 60% of the time. But it barely beats Elo on its own. That is a finding, not a failure: <strong>before kick-off, team strength explains almost everything a model can predict</strong>, and form, rest and travel add nothing on top.</p>
+
+<figure>
+  <img src="assets/figures/ml_model_a_performance.png" alt="ROC curve and calibration plot for Model A" loading="lazy">
+  <figcaption>Model A on the test seasons: ROC curve and calibration.</figcaption>
+</figure>
+
+<p>Reading the coefficients as odds ratios:</p>
+
+<figure>
+  <img src="assets/figures/ml_model_a_effects.png" alt="Odds ratios from Model A" loading="lazy">
+  <figcaption>Odds ratios with 95% intervals. Above 1 raises the odds of a home win, below 1 lowers them.</figcaption>
+</figure>
+
+<ul>
+  <li><strong>Strength:</strong> a home side one standard deviation stronger (about 186 Elo points) has <strong>2.3×</strong> the odds of winning.</li>
+  <li><strong>Empty stadium:</strong> closed doors cut the odds of a home win to <strong>0.76×</strong>, about a quarter lower.</li>
+  <li><strong>Form, rest, competition:</strong> all close to 1 and not significant once strength is included.</li>
+</ul>
+
+<h3>Home, draw or away</h3>
+
+<p>A three-way version predicts all three outcomes. Its probabilities are honest (test accuracy 53% against 46% for always picking "home win"), but a draw is almost never the single most likely result, picked in only 5 of 1,898 test matches. That is normal for football models: draws happen about a quarter of the time but are rarely the favourite.</p>
+
+<h3>Model B: what happens on the pitch</h3>
+
+<p>Model B adds in-match statistics for 7,579 league matches, so it can only explain, not predict. Shots on target dominate (5× the odds per standard deviation). The surprise: adding the statistics did <em>not</em> explain away the closed-doors effect. Even with the same shot balance, home sides turned it into fewer wins behind closed doors.</p>
+
+<h2 id="clusters"><span class="n">8</span>Grouping the clubs</h2>
+
+<p>Finally, I used K-Means clustering on the 45 clubs with enough matches, to see if there are "types" of home team. The method picked two groups, but they split mainly by quality: <strong>strong home sides</strong> (17 clubs, 1.97 home points per game) and <strong>modest home sides</strong> (28 clubs, 1.40). When clustering on the home-away gap alone, the two groups turned out to be two halves of one continuum, not genuinely different kinds of club.</p>
+
+<figure>
+  <img src="assets/figures/ml_cluster_pca.png" alt="Club clusters plotted on two principal components" loading="lazy">
+  <figcaption>Clubs on the first two principal components, coloured by cluster.</figcaption>
+</figure>
+
+<h2 id="dashboard"><span class="n">9</span>The dashboard</h2>
+
+<p>To make the results explorable, everything is wrapped in a Streamlit dashboard with eight pages: the overview, trends over time, the COVID experiment, competition comparison, a team explorer, travel and rest, clusters and the models. It reads only the small summary tables committed to the repository, so it runs straight after cloning:</p>
+
+<pre><code>git clone https://github.com/Anubhavlfc/Home-Match-Advantage-Analyzer
+cd Home-Match-Advantage-Analyzer
+pip install -r requirements.txt
+streamlit run dashboard/app.py</code></pre>
+
+<p>To rebuild everything from the raw data instead, the full pipeline runs with <code>python -m src.pipeline --all</code>, followed by the feature, analysis and model steps described in the README.</p>
+
+<h2 id="improve"><span class="n">10</span>Limitations and next steps</h2>
+
+<p>The biggest gap is <strong>attendance</strong>: crowd status comes from published rules, not head counts, so a "restricted" match could mean 2,000 fans or 10,000. Champions League matches have no shot or card data, and rest days are only complete for 2020/21 to 2024/25. Next steps would be real attendance figures, expected-goals data to separate chance quality from finishing, and more leagues to tell whether the closed-doors drop is a crowd effect or a one-off season effect.</p>
+
+<h2 id="conclusion"><span class="n">11</span>Conclusion</h2>
+
+<p>Home advantage is real and steady: about a third of a goal per match between equal teams, the same across the decade and across competitions, with no club proven to be special. When the crowds disappeared, about two-thirds of it went with them, together with the away side's extra yellow cards, although the strictest comparison cannot rule out other things that changed in those seasons. And if you want to predict a match before it starts, how good the two teams are matters far more than anything else.</p>
+
+<p>The code, data pipeline, full reports and dashboard are on <a href="https://github.com/Anubhavlfc/Home-Match-Advantage-Analyzer">GitHub</a>. The detailed write-ups behind this article are the <a href="https://github.com/Anubhavlfc/Home-Match-Advantage-Analyzer/blob/main/reports/eda.md">exploratory analysis</a>, the <a href="https://github.com/Anubhavlfc/Home-Match-Advantage-Analyzer/blob/main/reports/statistics.md">statistical tests</a> and the <a href="https://github.com/Anubhavlfc/Home-Match-Advantage-Analyzer/blob/main/reports/ml.md">machine learning report</a>.</p>
+
+<footer>
+  Data: football-data.co.uk and openfootball, 2016/17 to 2025/26. All numbers come from the project's committed report tables.
+</footer>
+
+</main>
+</body>
+</html>
